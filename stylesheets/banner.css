@@ -1,0 +1,26 @@
+/* line 3, ../sass/banner.scss */
+.bg-blue {
+  background-color: #2E97CB;
+}
+/* line 5, ../sass/banner.scss */
+.bg-blue a {
+  color: white;
+}
+
+/* line 10, ../sass/banner.scss */
+.logo_b {
+  width: 55px;
+  background: #3281a9;
+}
+
+/* line 15, ../sass/banner.scss */
+.logo_ab .logo_w2 {
+  width: 100%;
+}
+
+/* line 20, ../sass/banner.scss */
+.logo_ab img {
+  line-height: 55px;
+  margin: auto;
+  float: none;
+}

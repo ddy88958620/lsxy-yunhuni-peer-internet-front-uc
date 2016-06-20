@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>用户账号</title>
+<meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet" href="css/app.v2.css" type="text/css" />
+<link rel="stylesheet" href="css/own.css" type="text/css"/>
+<!--[if lt IE 9]> <script src="js/ie/html5shiv.js" cache="false"></script> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+<section class="vbox">
+    <header class="bg-green bg header navbar navbar-fixed-top-xs">
+        <div class="navbar-header aside logo_b"> <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen" data-target="#nav"> <i class="fa fa-bars"></i> </a> <a href="#" class="navbar-brand logo_ab" data-toggle="fullscreen"><img src="images/logo_01.png" class="m-r-sm logo_w1"><img src="images/logo_02.png" class="m-r-sm logo_w2"></a> <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".nav-user"> <i class="fa fa-cog"></i> </a> </div>
+        <ul class="nav navbar-nav hidden-xs nav_b">
+            <li class="dropdown"> <a href="index.html" class="dropdown-toggle" data-toggle="dropdown"><span class="font-bold">商户管理控制台</span> </a> </li>
+            <li class="dropdown a-color"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="font-bold">产品与服务</span> </a>
+                <section class="dropdown-menu aside-xxl on animated fadeInLeft no-borders lt">
+                    <div class="row m-l-none m-r-none m-b-n-xs text-center">
+                        <div class="col-xs-3">
+                            <div class="padder_w"><a href="#" class="media list-group-item media_w border_r"><span class="block"><img src="images/home.png"/></span> <small class="text-muted">首页</small></a></div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="padder_w"><a href="#" class="media list-group-item media_w"><span class="block"><img src="images/distribution.png"/></span> <small class="text-muted">云分销</small></a></div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="padder_w"><a href="#" class="media list-group-item media_w"><span class="block"><img src="images/cloud.png"/></span> <small class="text-muted">云众筹</small></a></div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="padder_w"><a href="#" class="media list-group-item media_w"><span class="block"> <img src="images/User.png"/></span> <small class="text-muted">云客服</small></a></div>
+                        </div>
+                    </div>
+                </section>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right hidden-xs nav-user nav_b">
+            <li class="dropdown hidden-xs a-color"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-question"></i></a></li>
+            <li class="hidden-xs"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-bell"></i> <span class="badge badge-sm up bg-danger m-l-n-sm count">2</span> </a>
+                <section class="dropdown-menu aside-xl">
+                    <section class="panel bg-white">
+                        <header class="panel-heading b-light bg-light"> <strong>您有<span class="count">2</span>通知</strong> </header>
+                        <div class="list-group list-group-alt animated fadeInRight"><a href="#" class="media list-group-item"> <span class="pull-left thumb-sm"> <img src="images/avatar.jpg" alt="John said" class="img-circle"> </span> <span class="media-body block m-b-none">提醒<br>
+                            <small class="text-muted">10分钟以前</small></span></a><a href="#" class="media list-group-item"> <span class="media-body block m-b-none">待办<br>
+                            <small class="text-muted">1小时以前</small></span></a></div>
+                        <footer class="panel-footer text-sm"> <a href="#" class="pull-right"> <i class="fa fa-cog"></i> </a> <a href="#notes" data-toggle="class:show animated fadeInRight">查看所有通知</a> </footer>
+                    </section>
+                </section>
+            </li>
+            <li class="dropdown a-color"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="thumb-sm avatar pull-left"> <img src="images/avatar.jpg"> </span>渠道商<b class="caret"></b> </a>
+                <ul class="dropdown-menu animated fadeInRight">
+                    <span class="arrow top"></span>
+                    <li> <a href="#">设置</a> </li>
+                    <li> <a href="profile.html">简介</a> </li>
+                    <li> <a href="modal.lockme.html" data-toggle="ajaxModal" >退出</a> </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <section>
+        <section class="hbox stretch"> <!-- .aside -->
+            <aside class="bg-Green lter aside hidden-print" id="nav">
+                <section class="w-f scrollable">
+                    <header class="head bg_green lter text-center clearfix"> <a href="#nav" data-toggle="class:nav-xs" class="text-center btn btn_b"> <img class="text" src="images/left.png"/><img class="text-active" src="images/right.png"/></a> </header>
+                    <section class="w-f scrollable" id="top_h">
+                        <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="5px" data-color="#2a9a88"> <!-- nav -->
+                            <nav class="nav-primary nav_green hidden-xs">
+                                <ul class="list">
+                                    <li > <a href="#" > <i class="fa fa-caret-down icon"> </i><span>产品服务</span> </a>
+                                        <ul class="nav lt list">
+                                            <li> <a href="no_distribution.html"> <i class="fa fa-dashboard icon"> </i> <span>云分销</span> </a> </li>
+                                            <li> <a href="no_service.html"> <i class="fa fa-headphones icon"> </i> <span>云客服</span> </a> </li>
+                                        </ul>
+                                    </li>
+                                    <li > <a href="#"> <i class="fa fa-caret-down icon"> </i><span>个人中心</span> </a>
+                                        <ul class="nav lt list">
+                                            <li> <a href="fee.html"> <b class="badge bg-primary pull-right">3</b> <i class="fa fa-money icon"></i> <span>费用管理</span> </a> </li>
+                                            <li> <a href="message.html"> <b class="badge bg-danger pull-right">3</b> <i class="fa fa-envelope icon"> </i> <span>消息公告</span> </a> </li>
+                                            <li> <a href="Work_order.html"> <b class="badge bg-warning pull-right">3</b> <i class="fa fa-edit icon"> </i> <span>工单处理</span> </a> </li>
+                                            <li> <a href="user.html"> <i class="fa fa-user icon"></i> <span>账户账号</span> </a> </li>
+                                        </ul>
+                                    </li>
+                                    <li > <a href="#" > <i class="fa fa-caret-down icon"> </i><span>基础服务</span> </a>
+                                        <ul class="nav lt list">
+                                            <li> <a href="wechat.html"> <i class="fa fa-comments icon"></i><span>微信服务</span> </a> </li>
+                                            <li> <a href="fans.html"> <i class="fa fa-users icon"></i><span>粉丝服务</span> </a> </li>
+                                            <li> <a href="content.html"> <i class="fa fa-floppy-o icon"></i> <span>内容服务</span> </a> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- / nav --> </div>
+                    </section>
+                </section>
+            </aside>
+            <!-- /.aside -->
+            <section id="content">
+                <section class="hbox stretch"> 
+                    <!-- .aside -->
+                    <aside class="bg-green lter aside-sm hidden-print ybox" id="subNav">
+                        <section class="vbox">
+                            <div class="wrapper header"><span class="margin_lr"></span> <i class="fa fa-user icon"> </i><span class="margin_lr"></span>账户账号</div>
+                            <section class="scrollable  b-line">
+                                <div class="slim-scroll"> 
+                                    <!-- nav -->
+                                    <nav class="hidden-xs">
+                                        <ul class="nav">
+                                            <li>
+                                                <ul class="nav lt">
+                                                    <a href="basic_information.html">
+                                                        <li class="b-light">基本资料</li>
+                                                    </a>
+                                                    <a href="safe_setting.html">
+                                                        <li class="b-light">安全设置</li>
+                                                    </a>
+                                                    <a href="user.html">
+                                                        <li class="b-light">账户管理</li>
+                                                    </a>
+                                                    <a href="user_plus.html">
+                                                        <li class="b-light">新增账号</li>
+                                                    </a>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </section>
+                        </section>
+                    </aside>
+                    <aside>
+                        <section class="vbox xbox">
+                            <div class="head-box"> <a href="#subNav" data-toggle="class:hide"> <i class="fa fa-angle-left text"></i> <i class="fa fa-angle-right text-active"></i> </a> </div>
+                            <ul class="breadcrumb no-borders no-radius b-b b-light color_a">
+                                <li><a href="index.html"><strong>首页</strong></a></li>
+                                <li><a href="#"><strong>个人中心</strong></a></li>
+                                <li><a href="#"><strong>账户账号</strong></a></li>
+                                <li class="active">账户管理</li>
+                            </ul>
+                            <section class="scrollable wrapper w-f">
+                                <div class="row">
+                                    <div class="col-sm-9">
+                                        <a href="#" class="btn btn-rounded btn-sm btn-info"><i class="fa fa-fw fa-plus"></i> 增加</a>
+                                    </div>
+                                    <div class="col-sm-3 m-t-xs m-b-xs">
+                                        <div class="input-group search datagrid-search">
+                                            <input type="text" class="input-sm form-control" placeholder="搜索">
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-default btn-sm"><i class="fa fa-search"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <section class="panel panel-default portlet-item">
+                                                <header class="panel-heading">
+                                                    <ul class="nav nav-pills pull-right">
+                                                        <li> <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a> </li>
+                                                    </ul>
+                                                    超级管理员 <span class="bg-cl">账号个数：1</span> </header>
+                                                <section class="panel-body">
+                                                    <div class="col-lg-12">
+                                                        <article class="media">
+                                                            <div class="pull-left"> <span class="pull-left pull-left-img thumb"><img src="images/avatar.jpg" alt="John said" class="img-circle"></span> </div>
+                                                            <div class="media-body"> <a href="#" class="h5">admin</a> <small class="block m-t-xs">适用商户：龙米，集美汇等3个</small></div>
+                                                        </article>
+                                                    </div>
+                                                </section>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <section class="panel panel-default portlet-item">
+                                                <header class="panel-heading">
+                                                    <ul class="nav nav-pills pull-right">
+                                                        <li> <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a> </li>
+                                                    </ul>
+                                                    供应商 <span class="bg-cl">账号个数：3</span> </header>
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <section class="panel-body">
+                                                            <div class="col-lg-12">
+                                                                <article class="media">
+                                                                    <div class="pull-left"> <span class="pull-left pull-left-img thumb"><img src="images/avatar.jpg" alt="John said" class="img-circle"></span> </div>
+                                                                    <div class="media-body"> <a href="#" class="h5">大米供应</a> <small class="block m-t-xs">适用商户：龙米，集美汇等3个</small></div>
+                                                                </article>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <section class="panel-body">
+                                                            <div class="col-lg-12">
+                                                                <article class="media">
+                                                                    <div class="pull-left"> <span class="pull-left pull-left-img thumb"><img src="images/avatar.jpg" alt="John said" class="img-circle"></span> </div>
+                                                                    <div class="media-body"> <a href="#" class="h5">大米供应</a> <small class="block m-t-xs">适用商户：龙米，集美汇等3个</small></div>
+                                                                </article>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <section class="panel-body">
+                                                            <div class="col-lg-12">
+                                                                <article class="media">
+                                                                    <div class="pull-left"> <span class="pull-left pull-left-img thumb"><img src="images/avatar.jpg" alt="John said" class="img-circle"></span> </div>
+                                                                    <div class="media-body"> <a href="#" class="h5">大米供应</a> <small class="block m-t-xs">适用商户：龙米，集美汇等3个</small></div>
+                                                                </article>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <section class="panel panel-default portlet-item">
+                                                <header class="panel-heading">
+                                                    <ul class="nav nav-pills pull-right">
+                                                        <li> <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a> </li>
+                                                    </ul>
+                                                    供应商 <span class="bg-cl">账号个数：3</span> </header>
+                                                <div class="row">
+                                                    <div class="col-sm-4 b-r">
+                                                        <section class="panel-body">
+                                                            <div class="col-lg-12">
+                                                                <article class="media">
+                                                                    <div class="pull-left"> <span class="pull-left pull-left-img thumb"><img src="images/avatar.jpg" alt="John said" class="img-circle"></span> </div>
+                                                                    <div class="media-body"> <a href="#" class="h5">大米供应</a> <small class="block m-t-xs">适用商户：龙米，集美汇等3个</small></div>
+                                                                </article>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <section class="panel-body">
+                                                            <div class="col-lg-12">
+                                                                <article class="media">
+                                                                    <div class="pull-left"> <span class="pull-left pull-left-img thumb"><img src="images/avatar.jpg" alt="John said" class="img-circle"></span> </div>
+                                                                    <div class="media-body"> <a href="#" class="h5">大米供应</a> <small class="block m-t-xs">适用商户：龙米，集美汇等3个</small></div>
+                                                                </article>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <section class="panel-body">
+                                                            <div class="col-lg-12">
+                                                                <article class="media">
+                                                                    <div class="pull-left"> <span class="pull-left pull-left-img thumb"><img src="images/avatar.jpg" alt="John said" class="img-circle"></span> </div>
+                                                                    <div class="media-body"> <a href="#" class="h5">大米供应</a> <small class="block m-t-xs">适用商户：龙米，集美汇等3个</small></div>
+                                                                </article>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <section class="panel panel-default portlet-item">
+                                                <header class="panel-heading">
+                                                    <ul class="nav nav-pills pull-right">
+                                                        <li> <a href="#" class="panel-toggle text-muted"><i class="fa fa-caret-down text-active"></i><i class="fa fa-caret-up text"></i></a> </li>
+                                                    </ul>
+                                                    供应商 <span class="bg-cl">账号个数：3</span> </header>
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <section class="panel-body">
+                                                            <div class="col-lg-12">
+                                                                <article class="media">
+                                                                    <div class="pull-left"> <span class="pull-left pull-left-img thumb"><img src="images/avatar.jpg" alt="John said" class="img-circle"></span> </div>
+                                                                    <div class="media-body"> <a href="#" class="h5">大米供应</a> <small class="block m-t-xs">适用商户：龙米，集美汇等3个</small></div>
+                                                                </article>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <section class="panel-body">
+                                                            <div class="col-lg-12">
+                                                                <article class="media">
+                                                                    <div class="pull-left"> <span class="pull-left pull-left-img thumb"><img src="images/avatar.jpg" alt="John said" class="img-circle"></span> </div>
+                                                                    <div class="media-body"> <a href="#" class="h5">大米供应</a> <small class="block m-t-xs">适用商户：龙米，集美汇等3个</small></div>
+                                                                </article>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <section class="panel-body">
+                                                            <div class="col-lg-12">
+                                                                <article class="media">
+                                                                    <div class="pull-left"> <span class="pull-left pull-left-img thumb"><img src="images/avatar.jpg" alt="John said" class="img-circle"></span> </div>
+                                                                    <div class="media-body"> <a href="#" class="h5">大米供应</a> <small class="block m-t-xs">适用商户：龙米，集美汇等3个</small></div>
+                                                                </article>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </section>
+                            </section>
+                    </aside>
+                </section>
+                <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen" data-target="#nav"></a> </section>
+            <aside class="bg-light lter b-l aside-md hide" id="notes">
+                <div class="wrapper">Notification</div>
+            </aside>
+        </section>
+    </section>
+</section>
+<script src="js/app.v2.js"></script> <!-- Bootstrap --> <!-- App --> <script src="js/jquery.ui.touch-punch.min.js" cache="false"></script><script src="js/jquery-ui-1.10.3.custom.min.js" cache="false"></script>
+</body>
+</html>

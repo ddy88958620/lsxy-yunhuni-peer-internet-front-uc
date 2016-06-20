@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>微信服务</title>
+<meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/app.v2.css" type="text/css" />
+<link rel="stylesheet" href="css/own.css" type="text/css"/>
+<link href="css/main1.css" rel="stylesheet" type="text/css" />
+<link href="css/cropper.css" rel="stylesheet" type="text/css" />
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-switch.css" rel="stylesheet">
+<!--[if lt IE 9]> <script src="js/ie/html5shiv.js" cache="false"></script> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head>
+<body>
+<section class="vbox">
+    <header class="bg-green bg header navbar navbar-fixed-top-xs">
+        <div class="navbar-header aside logo_b"> <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen" data-target="#nav"> <i class="fa fa-bars"></i> </a> <a href="#" class="navbar-brand logo_ab" data-toggle="fullscreen"><img src="images/logo_01.png" class="m-r-sm logo_w1"><img src="images/logo_02.png" class="m-r-sm logo_w2"></a> <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".nav-user"> <i class="fa fa-cog"></i> </a> </div>
+        <ul class="nav navbar-nav hidden-xs nav_b">
+            <li class="dropdown"> <a href="index.html" class="dropdown-toggle" data-toggle="dropdown"><span class="font-bold">商户管理控制台</span> </a> </li>
+            <li class="dropdown a-color"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="font-bold">产品与服务</span> </a>
+                <section class="dropdown-menu aside-xxl on animated fadeInLeft no-borders lt">
+                    <div class="row m-l-none m-r-none m-b-n-xs text-center">
+                        <div class="col-xs-3">
+                            <div class="padder_w"><a href="#" class="media list-group-item media_w border_r"><span class="block"><img src="images/home.png"/></span> <small class="text-muted">首页</small></a></div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="padder_w"><a href="#" class="media list-group-item media_w"><span class="block"><img src="images/distribution.png"/></span> <small class="text-muted">云分销</small></a></div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="padder_w"><a href="#" class="media list-group-item media_w"><span class="block"><img src="images/cloud.png"/></span> <small class="text-muted">云众筹</small></a></div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="padder_w"><a href="#" class="media list-group-item media_w"><span class="block"> <img src="images/User.png"/></span> <small class="text-muted">云客服</small></a></div>
+                        </div>
+                    </div>
+                </section>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right hidden-xs nav-user nav_b">
+            <li class="dropdown hidden-xs a-color"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-question"></i></a></li>
+            <li class="hidden-xs"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-bell"></i> <span class="badge badge-sm up bg-danger m-l-n-sm count">2</span> </a>
+                <section class="dropdown-menu aside-xl">
+                    <section class="panel bg-white">
+                        <header class="panel-heading b-light bg-light"> <strong>您有<span class="count">2</span>通知</strong> </header>
+                        <div class="list-group list-group-alt animated fadeInRight"><a href="#" class="media list-group-item"> <span class="pull-left thumb-sm"> <img src="images/avatar.jpg" alt="John said" class="img-circle"> </span> <span class="media-body block m-b-none">提醒<br>
+                            <small class="text-muted">10分钟以前</small></span></a><a href="#" class="media list-group-item"> <span class="media-body block m-b-none">待办<br>
+                            <small class="text-muted">1小时以前</small></span></a></div>
+                        <footer class="panel-footer text-sm"> <a href="#" class="pull-right"> <i class="fa fa-cog"></i> </a> <a href="#notes" data-toggle="class:show animated fadeInRight">查看所有通知</a> </footer>
+                    </section>
+                </section>
+            </li>
+            <li class="dropdown a-color"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="thumb-sm avatar pull-left"> <img src="images/avatar.jpg"> </span>渠道商<b class="caret"></b> </a>
+                <ul class="dropdown-menu animated fadeInRight">
+                    <span class="arrow top"></span>
+                    <li> <a href="#">设置</a> </li>
+                    <li> <a href="profile.html">简介</a> </li>
+                    <li> <a href="modal.lockme.html" data-toggle="ajaxModal" >退出</a> </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <section>
+        <section class="hbox stretch"> <!-- .aside -->
+            <aside class="bg-Green lter aside hidden-print" id="nav">
+                <section class="w-f scrollable">
+                    <header class="head bg_green lter text-center clearfix"> <a href="#nav" data-toggle="class:nav-xs" class="text-center btn btn_b"> <img class="text" src="images/left.png"/><img class="text-active" src="images/right.png"/></a> </header>
+                    <section class="w-f scrollable" id="top_h">
+                        <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="5px" data-color="#2a9a88" scrolling="no"> <!-- nav -->
+                            <nav class="nav-primary nav_green hidden-xs">
+                                <ul class="list">
+                                    <li > <a href="#" > <i class="fa fa-caret-down icon"> </i><span>产品服务</span> </a>
+                                        <ul class="nav lt list">
+                                            <li> <a href="no_distribution.html"> <i class="fa fa-dashboard icon"> </i> <span>云分销</span> </a> </li>
+                                            <li> <a href="no_service.html"> <i class="fa fa-headphones icon"> </i> <span>云客服</span> </a> </li>
+                                        </ul>
+                                    </li>
+                                    <li > <a href="#"> <i class="fa fa-caret-down icon"> </i><span>个人中心</span> </a>
+                                        <ul class="nav lt list">
+                                            <li> <a href="fee.html"> <b class="badge bg-primary pull-right">3</b> <i class="fa fa-money icon"></i> <span>费用管理</span> </a> </li>
+                                            <li> <a href="message.html"> <b class="badge bg-danger pull-right">3</b> <i class="fa fa-envelope icon"> </i> <span>消息公告</span> </a> </li>
+                                            <li> <a href="Work_order.html"> <b class="badge bg-warning pull-right">3</b> <i class="fa fa-edit icon"> </i> <span>工单处理</span> </a> </li>
+                                            <li> <a href="user.html"> <i class="fa fa-user icon"></i> <span>账户账号</span> </a> </li>
+                                        </ul>
+                                    </li>
+                                    <li > <a href="#" > <i class="fa fa-caret-down icon"> </i><span>基础服务</span> </a>
+                                        <ul class="nav lt list">
+                                            <li> <a href="wechat.html"> <i class="fa fa-comments icon"></i><span>微信服务</span> </a> </li>
+                                            <li> <a href="fans.html"> <i class="fa fa-users icon"></i><span>粉丝服务</span> </a> </li>
+                                            <li> <a href="content.html"> <i class="fa fa-floppy-o icon"></i> <span>内容服务</span> </a> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- / nav --> </div>
+                    </section>
+                </section>
+            </aside>
+            <!-- /.aside -->
+            <section id="content">
+                <section class="hbox stretch">
+                    <aside>
+                        <section class="vbox xbox">
+                            <ul class="breadcrumb no-borders no-radius b-b b-light color_a">
+                                <li><a href="index.html"><strong>首页</strong></a></li>
+                                <li><a href="#"><strong>基础服务</strong></a></li>
+                                <li class="active">微信服务</li>
+                            </ul>
+                            <section class="scrollable wrapper w-f">
+                                <div class="m-b-md">
+                                    <div class="row">
+                                        <div class="col-sm-6"> <span class="h5">龙米</span></div>
+                                    </div>
+                                </div>
+                                <section class="vbox">
+                                    <section class="panel">
+                                        <header class="header bg_cyan_blue bg-gradient">
+                                            <ul class="nav nav-tabs nav-white">
+                                                <li><a href="#" style="width:10px;height:49px;background:#fff;border-bottom:solid 1px #31b5a0;"></a></li>
+                                                <li class="active"><a href="#detail" data-toggle="tab">详情</a></li>
+                                                <li><a href="#custom" data-toggle="tab">自定义菜单</a></li>
+                                                <li class="dropdown"> <a href="#service" data-toggle="tab">常用服务接入</a></li>
+                                                <li> <a href="#message" data-toggle="tab">消息自动回复</a></li>
+                                                <li> <a href="#bulk" data-toggle="tab">消息群发</a></li>
+                                            </ul>
+                                        </header>
+                                        <section class="scrollable">
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade active in" id="detail">
+                                                    <div class="well m-t color_b c1" id="d1">
+                                                        <div class="col-xs-6 padding-h">
+                                                            <div class="col-md-12"> <img src="images/trademark.png"/>
+                                                                <hr/>
+                                                            </div>
+                                                            <div class="col-md-4"> <span class="h6"> <span>公众号名称：</span>
+                                                                <hr/>
+                                                                <span>原始ID：</span>
+                                                                <hr/>
+                                                                <span>级别：</span>
+                                                                <hr/>
+                                                                <span>二维码：</span> </span> </div>
+                                                            <div class="col-md-8"> <span class="h6"> <span>国泰商城</span>
+                                                                <hr/>
+                                                                <span>135195215655</span>
+                                                                <hr/>
+                                                                <span>认证服务号</span>
+                                                                <hr/>
+                                                                <img src="images/code.png" width="100px"/> </span> </div>
+                                                            <div class="col-md-12 padding-t"> <span class="margin_h">
+                                                                <input  class="btn btn-s-md btn-info" type="button" value="修改" onclick="f1(2);">
+                                                                </span> </div>
+                                                        </div>
+                                                        <div class="col-xs-6">
+                                                            <div class="col-md-4"> <span class="h6"> <span>接入状态：</span>
+                                                                <hr/>
+                                                                <span>接口地址：</span>
+                                                                <hr/>
+                                                                <span>Token：</span>
+                                                                <hr/>
+                                                                <span>AppID：</span>
+                                                                <hr/>
+                                                                <span>AppSecretl：</span>
+                                                                <hr/>
+                                                                <span>EncodingAESKey：</span>
+                                                                <hr/>
+                                                                <span>描述：</span> </span> </div>
+                                                            <div class="col-md-8"> <span class="h6"> <span>接入成功</span>
+                                                                <hr/>
+                                                                <span>第三方接入&nbsp;&nbsp; URL接入</span>
+                                                                <hr/>
+                                                                <span>fsdfgsdg55wet54we5t4er1yt45er5fe4yf5d45y4f5ty4ererrerer</span>
+                                                                <hr/>
+                                                                <span>wx5e60e80da88bff10</span>
+                                                                <hr/>
+                                                                <span>adwadwa5f5fs480da88bff10</span>
+                                                                <hr/>
+                                                                <span>fsad4414fsdf454fgds4g5451fdg41545</span>
+                                                                <hr/>
+                                                                <span>公众号用于什么的什么</span> </span> </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="well m-t color_b c1"  id="d2"  style="display:none">
+                                                        <div class="col-xs-6">
+                                                            <div class="panel-body">
+                                                                <form class="bs-example form-horizontal">
+                                                                    <div class="form-group">
+                                                                        <div class="col-lg-3"> <img src="images/trademark.png"/> </div>
+                                                                        <div class="col-lg-9"> <a href="#modal-logo" class="btn btn-success" data-toggle="modal">修改logo</a> </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-lg-3 control-label">公众号名称：</label>
+                                                                        <div class="col-lg-9">
+                                                                            <input type="email" class="form-control" placeholder="Email">
+                                                                            <span class="help-block m-b-none">名称为了方便标识此公众号的作用及身份。可以为商户、组织或是公司的名称.</span> </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-lg-3 control-label">公众号账号：</label>
+                                                                        <div class="col-lg-9">
+                                                                            <input type="email" class="form-control" placeholder="Email">
+                                                                            <span class="help-block m-b-none">公众号账号一般为英文账号</span> </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-lg-3 control-label">原始ID：</label>
+                                                                        <div class="col-lg-9">
+                                                                            <input type="email" class="form-control" placeholder="Email">
+                                                                            <span class="help-block m-b-none">原始ID不能为空</span> </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-lg-3 control-label">公众号类别：</label>
+                                                                        <div class="col-lg-9">
+                                                                            <input type="公众号类别" class="form-control" placeholder="Email">
+                                                                            <span class="help-block m-b-none">只要【公众号设置】/【账号详情】下【认证情况】显示资质审核通过，即可认定为认证号</span> </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                            <div class="col-md-12 padding-h">
+                                                                <input  class="btn btn-s-md btn-info" type="button" value="保存" onclick="f1(1);">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-6">
+                                                            <div class="panel-body">
+                                                                <form class="bs-example form-horizontal">
+                                                                    <div class="form-group">
+                                                                        <label class="col-lg-3 control-label">公众号名称：</label>
+                                                                        <div class="col-lg-9">
+                                                                            <input type="email" class="form-control" placeholder="Email">
+                                                                            <span class="help-block m-b-none">名称为了方便标识此公众号的作用及身份。可以为商户、组织或是公司的名称.</span> </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-lg-3 control-label">公众号账号：</label>
+                                                                        <div class="col-lg-9">
+                                                                            <input type="email" class="form-control" placeholder="Email">
+                                                                            <span class="help-block m-b-none">公众号账号一般为英文账号</span> </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-lg-3 control-label">原始ID：</label>
+                                                                        <div class="col-lg-9">
+                                                                            <input type="email" class="form-control" placeholder="Email">
+                                                                            <span class="help-block m-b-none">原始ID不能为空</span> </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="col-lg-3 control-label">公众号类别：</label>
+                                                                        <div class="col-lg-9">
+                                                                            <input type="公众号类别" class="form-control" placeholder="Email">
+                                                                            <span class="help-block m-b-none">只要【公众号设置】/【账号详情】下【认证情况】显示资质审核通过，即可认定为认证号</span> </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="custom">
+                                                    <div class="well m-t color_b c1 margin_box">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th><span class="h5">入驻建业宝</span></th>
+                                                                    <th><span class="h5">人工服务</span></th>
+                                                                    <th><span class="h5">建业宝</span></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>文字回复</td>
+                                                                    <td>音乐回复</td>
+                                                                    <td>语音回复</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>文字回复</td>
+                                                                    <td>图片回复</td>
+                                                                    <td>图文回复</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>文字回复</td>
+                                                                    <td>图片回复</td>
+                                                                    <td>图文回复</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>文字回复</td>
+                                                                    <td>图片回复</td>
+                                                                    <td><a href="#" class="btn btn-success">添加</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>文字回复</td>
+                                                                    <td><a href="#" class="btn btn-success">添加</a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="service">
+                                                    <div class="padding_box">
+                                                        <div class="col-sm-12"> <span class="h5">健业宝提供常用服务接入功能可快速接入相关功能丰富客户商城和网站功能</span></div>
+                                                    </div>
+                                                    <div class="well m-t color_b c1 border_n box_s">
+                                                        <table class="table">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>城市天气</td>
+                                                                    <td>“城市名+天气”，入“北京天气”</td>
+                                                                    <td>
+                                                                        <div>
+                                                                            <input type="checkbox" checked>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>城市天气</td>
+                                                                    <td>“城市名+天气”，入“北京天气”</td>
+                                                                    <td>
+                                                                        <div>
+                                                                            <input type="checkbox" checked>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>城市天气</td>
+                                                                    <td>“城市名+天气”，入“北京天气”</td>
+                                                                    <td>
+                                                                        <div>
+                                                                            <input type="checkbox" checked>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>城市天气</td>
+                                                                    <td>“城市名+天气”，入“北京天气”</td>
+                                                                    <td>
+                                                                        <div>
+                                                                            <input type="checkbox" checked>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="message">
+                                                    <div class="well m-t color_b c1" id="a1">
+                                                        <div class="col-xs-12 padding-h">
+                                                            <div class="col-md-12"> <span class="margin_h">
+                                                                <input  class="btn btn-s-md btn-info" type="button" value="被关注自动消息" onclick="e1(1);">
+                                                                </span> <span class="margin_h">
+                                                                <input  class="btn btn-s-md" type="button" value="关键词自动回复" onclick="e1(2);">
+                                                                </span> </div>
+                                                            <div class="col-sm-12  margin_box box_p">
+                                                                <div class="btn-toolbar m-b-sm btn-editor" data-role="editor-toolbar" data-target="#editor">
+                                                                    <div class="btn-group"> <a href="#" class="btn btn-sm"><i class="fa fa-picture-o"></i> 图片回复</a> </div>
+                                                                    <div class="btn-group"> <a href="#" class="btn btn-sm"><i class="fa fa-file-text-o"></i> 文字回复</a> </div>
+                                                                    <div class="btn-group"> <a href="#" class="btn btn-sm"><i class="fa fa-heart"></i> 关注回复</a> </div>
+                                                                    <div class="btn-group"> <a href="#" class="btn btn-sm"><i class="fa fa-music"></i> 音乐回复</a> </div>
+                                                                    <div class="btn-group"> <a href="#" class="btn btn-sm"><i class="fa fa-video-camera"></i> 视频回复</a> </div>
+                                                                    <div class="btn-group"> <a href="#" class="btn btn-sm"><i class="fa fa-microphone"></i> 语音回复</a> </div>
+                                                                </div>
+                                                                <textarea class="form-control" rows="6" data-minwords="6" data-required="true" placeholder="Type your message"></textarea>
+                                                            </div>
+                                                            <div class="col-sm-12 box_m"> <span class="margin_h">
+                                                                <input  class="btn btn-s-md btn-info" type="button" value="确认" onclick="f1(2);">
+                                                                </span> </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="well m-t color_b c1"  id="a2"  style="display:none">
+                                                        <div class="col-xs-12">
+                                                            <div class="col-md-12"> <span class="margin_h">
+                                                                <input  class="btn btn-s-md" type="button" value="被关注自动消息" onclick="e1(1);">
+                                                                </span> <span class="margin_h">
+                                                                <input  class="btn btn-s-md btn-info" type="button" value="关键词自动回复" onclick="e1(2);">
+                                                                </span> </div>
+                                                            <div class="col-md-12  margin_box box_p">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th><span class="h5">关键词</span></th>
+                                                                            <th><span class="h5">回复</span></th>
+                                                                            <th width="60%"></th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>关键词自动回复</td>
+                                                                            <td>关键词自动回复模板</td>
+                                                                            <td> <a href="#" class="btn btn-sm"><i class="fa fa-edit"></i> 编辑</a> <a href="#" class="btn btn-sm"><i class="fa fa-times"></i> 删除</a> </td>
+                                                                            <td></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>关键词自动回复</td>
+                                                                            <td>关键词自动回复模板</td>
+                                                                            <td> <a href="#" class="btn btn-sm"><i class="fa fa-edit"></i> 编辑</a> <a href="#" class="btn btn-sm"><i class="fa fa-times"></i> 删除</a> </td>
+                                                                            <td></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>关键词自动回复</td>
+                                                                            <td>关键词自动回复模板</td>
+                                                                            <td> <a href="#" class="btn btn-sm"><i class="fa fa-edit"></i> 编辑</a> <a href="#" class="btn btn-sm"><i class="fa fa-times"></i> 删除</a> </td>
+                                                                            <td></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>关键词自动回复</td>
+                                                                            <td>关键词自动回复模板</td>
+                                                                            <td> <a href="#" class="btn btn-sm"><i class="fa fa-edit"></i> 编辑</a> <a href="#" class="btn btn-sm"><i class="fa fa-times"></i> 删除</a> </td>
+                                                                            <td></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="col-sm-12 box_m"> <span class="margin_h">
+                                                                <input  class="btn btn-s-md btn-info" type="button" value="确认" onclick="f1(2);">
+                                                                </span> </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="bulk">
+                                                    <div class="well m-t color_b c1" id="b1">
+                                                        <div class="col-xs-12 padding-h">
+                                                            <div class="col-md-12"> <span class="margin_h">
+                                                                <input  class="btn btn-s-md btn-info" type="button" value="被关注自动消息" onclick="g1(1);">
+                                                                </span> <span class="margin_h">
+                                                                <input  class="btn btn-s-md" type="button" value="已发送列表" onclick="g1(2);">
+                                                                </span> </div>
+                                                            <div class="col-sm-12  margin_box box_p">
+                                                                <div class="btn-toolbar m-b-sm btn-editor" data-role="editor-toolbar" data-target="#editor">
+                                                                    <div class="btn-group"> <a href="#" class="btn btn-sm"><i class="fa fa-picture-o"></i> 图片回复</a> </div>
+                                                                    <div class="btn-group"> <a href="#" class="btn btn-sm"><i class="fa fa-file-text-o"></i> 文字回复</a> </div>
+                                                                    <div class="btn-group"> <a href="#" class="btn btn-sm"><i class="fa fa-heart"></i> 关注回复</a> </div>
+                                                                    <div class="btn-group"> <a href="#" class="btn btn-sm"><i class="fa fa-music"></i> 音乐回复</a> </div>
+                                                                    <div class="btn-group"> <a href="#" class="btn btn-sm"><i class="fa fa-video-camera"></i> 视频回复</a> </div>
+                                                                    <div class="btn-group"> <a href="#" class="btn btn-sm"><i class="fa fa-microphone"></i> 语音回复</a> </div>
+                                                                </div>
+                                                                <textarea class="form-control" rows="6" data-minwords="6" data-required="true" placeholder="Type your message"></textarea>
+                                                            </div>
+                                                            <div class="col-sm-12 box_m"> <span class="margin_h">
+                                                                <input  class="btn btn-s-md btn-info" type="button" value="确认" onclick="f1(2);">
+                                                                </span> </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="well m-t color_b c1"  id="b2"  style="display:none">
+                                                        <div class="col-xs-12">
+                                                            <div class="col-md-12"> <span class="margin_h">
+                                                                <input  class="btn btn-s-md" type="button" value="被关注自动消息" onclick="g1(1);">
+                                                                </span> <span class="margin_h">
+                                                                <input  class="btn btn-s-md btn-info" type="button" value="已发送列表" onclick="g1(2);">
+                                                                </span> </div>
+                                                            <div class="col-md-12  margin_box box_p">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th><span class="h5">内容</span></th>
+                                                                            <th><span class="h5">状态</span></th>
+                                                                            <th><span class="h5">发送时间</span></th>
+                                                                            <th width="40%"></th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>关键词自动回复</td>
+                                                                            <td>关键词自动回复模板</td>
+                                                                            <td>2015-11-11</td>
+                                                                            <td></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>关键词自动回复</td>
+                                                                            <td>关键词自动回复模板</td>
+                                                                            <td>2015-11-11</td>
+                                                                            <td></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>关键词自动回复</td>
+                                                                            <td>关键词自动回复模板</td>
+                                                                            <td>2015-11-11</td>
+                                                                            <td></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>关键词自动回复</td>
+                                                                            <td>关键词自动回复模板</td>
+                                                                            <td>2015-11-11</td>
+                                                                            <td></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="col-sm-12 box_m"> <span class="margin_h">
+                                                                <input  class="btn btn-s-md btn-info" type="button" value="确认" onclick="f1(2);">
+                                                                </span> </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </section>
+                                </section>
+                            </section>
+                        </section>
+                    </aside>
+                </section>
+            </section>
+        </section>
+    </section>
+</section>
+<script src="js/app.v2.js"></script> <!-- Bootstrap --> <!-- App -->
+<div class="modal fade" id="modal-logo">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12"> <span class="h5">修改logo</span> </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8"> 
+                        <!-- <h3 class="page-header">Demo:</h3> -->
+                        <div class="img-container"> <img id="image" src="images/picture.jpg" alt="Picture"> </div>
+                    </div>
+                    <div class="col-md-4"> 
+                        <!-- <h3 class="page-header">Preview:</h3> -->
+                        <div class="docs-preview clearfix">
+                            <div class="img-preview preview-lg"></div>
+                        </div>
+                        
+                        <!-- <h3 class="page-header">Data:</h3> -->
+                        <div class="docs-data">
+                            <div class="btn-group">
+                                <label class="btn btn-primary btn-upload" for="inputImage" title="Upload image file">
+                                    <input type="file" class="sr-only" id="inputImage" name="file" accept="image/*">
+                                    <span class="docs-tooltip" data-toggle="tooltip" title="选择本地图片地址"> <span>上传</span> </span> </label>
+                            </div>
+                            <p>格式为jpg,bmp,ipeg,gif,png</p>
+                            <p>图片大小不可大于2M</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12"> <a href="#modal-logo" class="btn btn-success" data-toggle="modal">保存</a> </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content --> </div>
+    <!-- /.modal-dialog --> </div>
+<script src="js/charts/flot/jquery.flot.min.js" cache="false"></script> 
+<script src="js/charts/flot/demo.js" cache="false"></script> 
+<script src="js/own.js"></script> 
+<script src="js/cropper.js"></script> 
+<script src="js/main.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap-switch.js"></script>
+<script>
+    $(function(argument) {
+      $('[type="checkbox"]').bootstrapSwitch.defaults.onColor = 'success';
+      $('[type="checkbox"]').bootstrapSwitch();
+    })
+    </script>
+</body>
+</html>

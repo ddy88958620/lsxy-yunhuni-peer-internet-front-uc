@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>未开通云分销</title>
+<meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<!-- Custom CSS -->
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/app.v2.css" type="text/css" />
+<link rel="stylesheet" href="css/own.css" type="text/css"/>
+<!--[if lt IE 9]> <script src="js/ie/html5shiv.js" cache="false"></script> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
+</head><body>
+<section class="vbox">
+    <header class="bg-green bg header navbar navbar-fixed-top-xs">
+        <div class="navbar-header aside logo_b"> <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen" data-target="#nav"> <i class="fa fa-bars"></i> </a> <a href="#" class="navbar-brand logo_ab" data-toggle="fullscreen"><img src="images/logo_01.png" class="m-r-sm logo_w1"><img src="images/logo_02.png" class="m-r-sm logo_w2"></a> <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".nav-user"> <i class="fa fa-cog"></i> </a> </div>
+        <ul class="nav navbar-nav hidden-xs nav_b">
+            <li class="dropdown"> <a href="index.html" class="dropdown-toggle" data-toggle="dropdown"><span class="font-bold">商户管理控制台</span> </a> </li>
+            <li class="dropdown a-color"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="font-bold">产品与服务</span> </a>
+                <section class="dropdown-menu aside-xxl on animated fadeInLeft no-borders lt">
+                    <div class="row m-l-none m-r-none m-b-n-xs text-center">
+                        <div class="col-xs-3">
+                            <div class="padder_w"><a href="#" class="media list-group-item media_w border_r"><span class="block"><img src="images/home.png"/></span> <small class="text-muted">首页</small></a></div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="padder_w"><a href="#" class="media list-group-item media_w"><span class="block"><img src="images/distribution.png"/></span> <small class="text-muted">云分销</small></a></div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="padder_w"><a href="#" class="media list-group-item media_w"><span class="block"><img src="images/cloud.png"/></span> <small class="text-muted">云众筹</small></a></div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="padder_w"><a href="#" class="media list-group-item media_w"><span class="block"> <img src="images/User.png"/></span> <small class="text-muted">云客服</small></a></div>
+                        </div>
+                    </div>
+                </section>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right hidden-xs nav-user nav_b">
+            <li class="dropdown hidden-xs a-color"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-question"></i></a></li>
+            <li class="hidden-xs"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-bell"></i> <span class="badge badge-sm up bg-danger m-l-n-sm count">2</span> </a>
+                <section class="dropdown-menu aside-xl">
+                    <section class="panel bg-white">
+                        <header class="panel-heading b-light bg-light"> <strong>您有<span class="count">2</span>通知</strong> </header>
+                        <div class="list-group list-group-alt animated fadeInRight"><a href="#" class="media list-group-item"> <span class="pull-left thumb-sm"> <img src="images/avatar.jpg" alt="John said" class="img-circle"> </span> <span class="media-body block m-b-none">提醒<br>
+                            <small class="text-muted">10分钟以前</small></span></a><a href="#" class="media list-group-item"> <span class="media-body block m-b-none">待办<br>
+                            <small class="text-muted">1小时以前</small></span></a></div>
+                        <footer class="panel-footer text-sm"> <a href="#" class="pull-right"> <i class="fa fa-cog"></i> </a> <a href="#notes" data-toggle="class:show animated fadeInRight">查看所有通知</a> </footer>
+                    </section>
+                </section>
+            </li>
+            <li class="dropdown a-color"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="thumb-sm avatar pull-left"> <img src="images/avatar.jpg"> </span>渠道商<b class="caret"></b> </a>
+                <ul class="dropdown-menu animated fadeInRight">
+                    <span class="arrow top"></span>
+                    <li> <a href="#">设置</a> </li>
+                    <li> <a href="profile.html">简介</a> </li>
+                    <li> <a href="modal.lockme.html" data-toggle="ajaxModal" >退出</a> </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <section>
+        <section class="hbox stretch"> <!-- .aside -->
+            <aside class="bg-Green lter aside hidden-print" id="nav">
+                <section class="w-f scrollable">
+                    <header class="head bg_green lter text-center clearfix"> <a href="#nav" data-toggle="class:nav-xs" class="text-center btn btn_b"> <img class="text" src="images/left.png"/><img class="text-active" src="images/right.png"/></a> </header>
+                    <section class="w-f scrollable" id="top_h">
+                        <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="5px" data-color="#2a9a88"> <!-- nav -->
+                            <nav class="nav-primary nav_green hidden-xs">
+                                <ul class="list">
+                                    <li > <a href="#" > <i class="fa fa-caret-down icon"> </i><span>产品服务</span> </a>
+                                        <ul class="nav lt list">
+                                            <li> <a href="no_distribution.html"> <i class="fa fa-dashboard icon"> </i> <span>云分销</span> </a> </li>
+                                            <li> <a href="no_service.html"> <i class="fa fa-headphones icon"> </i> <span>云客服</span> </a> </li>
+                                        </ul>
+                                    </li>
+                                    <li > <a href="#"> <i class="fa fa-caret-down icon"> </i><span>个人中心</span> </a>
+                                        <ul class="nav lt list">
+                                            <li> <a href="fee.html"> <b class="badge bg-primary pull-right">3</b> <i class="fa fa-money icon"></i> <span>费用管理</span> </a> </li>
+                                            <li> <a href="message.html"> <b class="badge bg-danger pull-right">3</b> <i class="fa fa-envelope icon"> </i> <span>消息公告</span> </a> </li>
+                                            <li> <a href="Work_order.html"> <b class="badge bg-warning pull-right">3</b> <i class="fa fa-edit icon"> </i> <span>工单处理</span> </a> </li>
+                                            <li> <a href="user.html"> <i class="fa fa-user icon"></i> <span>账户账号</span> </a> </li>
+                                        </ul>
+                                    </li>
+                                    <li > <a href="#" > <i class="fa fa-caret-down icon"> </i><span>基础服务</span> </a>
+                                        <ul class="nav lt list">
+                                            <li> <a href="wechat.html"> <i class="fa fa-comments icon"></i><span>微信服务</span> </a> </li>
+                                            <li> <a href="fans.html"> <i class="fa fa-users icon"></i><span>粉丝服务</span> </a> </li>
+                                            <li> <a href="content.html"> <i class="fa fa-floppy-o icon"></i> <span>内容服务</span> </a> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- / nav --> </div>
+                    </section>
+                </section>
+            </aside>
+            <!-- /.aside -->
+            <section id="content">
+                <section class="hbox stretch"> 
+                    <!-- .aside -->
+                    <aside class="bg-green lter aside-sm hidden-print ybox" id="subNav">
+                        <section class="vbox">
+                            <div class="wrapper header"><span class="margin_lr"></span> <i class="fa fa-dashboard icon"> </i><span class="margin_lr"></span>云分销</div>
+                            <section class="scrollable  b-line">
+                                <div class="slim-scroll"> 
+                                    <!-- nav -->
+                                    <nav class="hidden-xs">
+                                        <ul class="nav">
+                                            <li>
+                                                <div class="width_h"><span><i class="fa fa-angle-down text"></i> <i class="fa fa-angle-up text-active"></i></span><span class="margin_lr">粉丝管理</span></div>
+                                                <ul class="nav lt">
+                                                    <a href="#">
+                                                    <li class="b-light">关系管理</li>
+                                                    </a> <a href="#">
+                                                    <li class="b-light">分组管理</li>
+                                                    </a> <a href="#">
+                                                    <li class="b-light">店铺管理</li>
+                                                    </a>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <div class="width_h"><span><i class="fa fa-angle-down text"></i> <i class="fa fa-angle-up text-active"></i></span><span class="margin_lr">商铺商品</span></div>
+                                                <ul class="nav lt">
+                                                    <a href="#">
+                                                    <li class="b-light">商品列表</li>
+                                                    </a> <a href="#">
+                                                    <li class="b-light">商品分类</li>
+                                                    </a> <a href="#">
+                                                    <li class="b-light">配送方式</li>
+                                                    </a>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <div class="width_h"><span><i class="fa fa-angle-down text"></i> <i class="fa fa-angle-up text-active"></i></span><span class="margin_lr">订单管理</span></div>
+                                                <ul class="nav lt">
+                                                    <a href="#">
+                                                    <li class="b-light">订单列表</li>
+                                                    </a> <a href="#">
+                                                    <li class="b-light">批量发货</li>
+                                                    </a>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <div class="width_h"><span><i class="fa fa-angle-down text"></i> <i class="fa fa-angle-up text-active"></i></span><span class="margin_lr">佣金管理</span></div>
+                                                <ul class="nav lt">
+                                                    <a href="#">
+                                                    <li class="b-light">佣金记录</li>
+                                                    </a> <a href="#">
+                                                    <li class="b-light">体现管理</li>
+                                                    </a> <a href="#">
+                                                    <li class="b-light">流量变现</li>
+                                                    </a>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <div class="width_h"><span><i class="fa fa-angle-down text"></i> <i class="fa fa-angle-up text-active"></i></span><span class="margin_lr">优惠营销</span></div>
+                                                <ul class="nav lt">
+                                                    <a href="#">
+                                                    <li class="b-light">卡券列表</li>
+                                                    </a> <a href="#">
+                                                    <li class="b-light">赠券</li>
+                                                    </a> <a href="#">
+                                                    <li class="b-light">购物得券</li>
+                                                    </a>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <div class="width_h"><span><i class="fa fa-angle-down text"></i> <i class="fa fa-angle-up text-active"></i></span><span class="margin_lr">文章</span></div>
+                                                <ul class="nav">
+                                                    <a href="#">
+                                                    <li class="b-light">文章列表</li>
+                                                    </a>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <div class="width_h"><span><i class="fa fa-angle-down text"></i> <i class="fa fa-angle-up text-active"></i></span><span class="margin_lr">店铺设置</span></div>
+                                                <ul  class="nav lt">
+                                                    <a href="#">
+                                                    <li class="b-light">店铺规则</li>
+                                                    </a> <a href="#">
+                                                    <li class="b-light">嵌入代码</li>
+                                                    </a> <a href="#">
+                                                    <li class="b-light">常见问答</li>
+                                                    </a>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <div class="width_h"><span><i class="fa fa-angle-down text"></i> <i class="fa fa-angle-up text-active"></i></span><span class="margin_lr">魔法页面</span></div>
+                                                <ul  class="nav lt">
+                                                    <a href="#">
+                                                    <li class="b-light">魔法列表</li>
+                                                    </a>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </section>
+                        </section>
+                    </aside>
+                    <aside>
+                        <section class="vbox xbox">
+                            <div class="head-box"> <a href="#subNav" data-toggle="class:hide"> <i class="fa fa-angle-left text"></i> <i class="fa fa-angle-right text-active"></i> </a> </div>
+                            <section class="scrollable wrapper w-f">
+                                <div class="m-b-md">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                        <span class="h5">云分销</span>
+                                        <span class="margin_r"></span>
+                                        <a class="color_a" href="#"><strong>未开通</strong></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <section class="panel panel-default  color_b">
+                                <div class="alert alert-write alert-block">
+                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                    <div class="text-center "> <img src="images/error.png"/>
+                                        <h5><i class="fa fa-bell-alt"></i>抱歉，您还未注册健业宝云分销服务，您可以：</h5>
+                                        <div class="">
+                                            <span class="color_g">
+                                                <h6><a href="#">■ 申请开通分销商城</a></h6>
+                                            </span>
+                                        </div>
+                                        <div class=" float_r">
+                                            <div class="radio">
+                                               <a href="#" data-toggle="class:nav-xs" class="text-center"><i class="fa fa-square-o fa-3x text"></i> <i class="fa fa-check-square-o fa-3x text-active"></i></a>不再显示
+                                            </div>
+                                            <div class=""></div>
+                                            <div class="color_g">
+                                                <h5><a href="#">我知道了</a></h5>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                </section>
+                            </section>
+                        </section>
+                    </aside>
+                </section>
+            </section>
+        </section>
+    </section>
+</section>
+<script src="js/app.v2.js"></script> <!-- Bootstrap --> <!-- App --> 
+<script src="js/charts/flot/jquery.flot.min.js" cache="false"></script> 
+<script src="js/charts/flot/demo.js" cache="false"></script>
+</body>
+</html>

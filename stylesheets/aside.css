@@ -1,0 +1,52 @@
+/* line 4, ../sass/aside.scss */
+.bg-Green.lter, .bg-Green .lter, #top_h {
+  background: #0E2835;
+  background-color: #0E2835;
+}
+
+/* line 10, ../sass/aside.scss */
+.bg-green {
+  background-color: #EAEDF1;
+  color: #333;
+}
+/* line 14, ../sass/aside.scss */
+.bg-green a {
+  color: #0d0d0d;
+}
+/* line 18, ../sass/aside.scss */
+.bg-green .wrapper {
+  background: #EAEDF1;
+}
+
+/* line 23, ../sass/aside.scss */
+.list li .nav > li > a {
+  background: #103345;
+}
+
+/* line 27, ../sass/aside.scss */
+.width_h {
+  color: #090909;
+}
+
+/* line 31, ../sass/aside.scss */
+.aside-mini {
+  width: 55px;
+}
+/* line 33, ../sass/aside.scss */
+.aside-mini span {
+  display: none;
+}
+/* line 36, ../sass/aside.scss */
+.aside-mini .list li a {
+  padding: 20px 4px;
+  height: 40px;
+  line-height: 40px;
+}
+/* line 41, ../sass/aside.scss */
+.aside-mini ul.nav > li > a {
+  padding: 21px 3px;
+}
+/* line 45, ../sass/aside.scss */
+.aside-mini .nav_green li > a > i {
+  margin: -23px 0px;
+}

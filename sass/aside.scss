@@ -1,0 +1,48 @@
+$bgcolor: #0E2835; 
+$siderbar-child: #EAEDF1;
+
+.bg-Green.lter,.bg-Green .lter, #top_h {
+  background: $bgcolor;
+  background-color: $bgcolor;
+}
+
+
+.bg-green {
+  background-color: $siderbar-child;
+  color: #333;
+
+  a {
+    color: #0d0d0d;
+  }
+
+  .wrapper {
+    background: $siderbar-child;
+  }
+}
+
+.list li .nav>li>a {
+    background: #103345;
+}
+
+.width_h {
+  color: #090909;
+}
+
+.aside-mini {
+  width: 55px;
+  span {
+    display: none;
+  }
+  .list li a {
+    padding: 20px 4px;
+    height:40px;
+    line-height:40px;
+  }
+  ul.nav>li>a {
+    padding: 21px 3px;
+  }
+
+  .nav_green li>a>i {
+    margin: -23px 0px;
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Browserasyc",
+  "version": "0.0.1",
+  "devDependencies": {
+    "browser-sync": "^2.13.0"
+  },
+  "scripts": {
+    "sync": "browser-sync start --server './' --files './'"
+  }
+}
