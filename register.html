@@ -76,8 +76,8 @@
 </div>
 <!--/footer-->
 <!--modal-->
-<div class="shadow-bg" id="shadow-bg" style="display: none"></div>
-<div id="modal-phone" class="modal-phone" style="display: none">
+<div class="shadow-bg" id="shadow-bg" ></div>
+<div id="modal-phone" class="modal-phone">
    <div class="title">验证手机号</div>
    <div class="content">
         <div class="input">
@@ -100,11 +100,13 @@
 <!--jquery-->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <!--bootstrapvalidator-->
-<script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.js"></script>
+<script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
 
 
 <!--must-->
 <script type="text/javascript">
+    var countdown = 60;
+
     $('#modal-hidden').click(function(){
         $('#shadow-bg').fadeOut();
         $('#modal-phone').fadeOut();
@@ -116,13 +118,30 @@
     }
     /*获取验证码*/
     $('#send-code').click(function(){
-        alert('sendcode');
+        alert(1);
+        settime(countdown);
     });
     /*确认*/
     $('#modal-sendphone').click(function(){
         alert('sure');
 
     });
+
+
+    function settime(val) {
+        if (countdown == 0) {
+            val.val('发送验证码');
+            countdown = 60;
+        } else {
+            val.setAttribute("disabled", true);
+            val.value="重新发送(" + countdown + ")";
+            countdown--;
+        }
+        setTimeout(function() {
+            settime(val)
+        },1000)
+    }
+
     $(document).ready(function() {
         $('#defaultForm').bootstrapValidator({
             message: '',
