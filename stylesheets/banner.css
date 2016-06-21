@@ -8,19 +8,36 @@
 }
 
 /* line 10, ../sass/banner.scss */
+header {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* line 15, ../sass/banner.scss */
 .logo_b {
   width: 55px;
   background: #3281a9;
 }
 
-/* line 15, ../sass/banner.scss */
+/* line 20, ../sass/banner.scss */
 .logo_ab .logo_w2 {
-  width: 100%;
+  width: 130%;
+  transform: translate(-4px);
 }
 
-/* line 20, ../sass/banner.scss */
+/* line 25, ../sass/banner.scss */
+.navbar-brand img {
+  max-height: none;
+}
+
+/* line 29, ../sass/banner.scss */
 .logo_ab img {
   line-height: 55px;
   margin: auto;
   float: none;
+}
+
+/* line 35, ../sass/banner.scss */
+.nav_b > li > a:hover, .nav_b > li > a:focus {
+  background-color: #3281a9;
 }

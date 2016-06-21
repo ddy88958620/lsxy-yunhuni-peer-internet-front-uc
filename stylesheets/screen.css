@@ -7,55 +7,65 @@ body, html {
   background: white;
 }
 
-/* line 4, ../sass/aside.scss */
+/* line 6, ../sass/aside.scss */
+.w-f .head.lter {
+  background: #193643;
+}
+
+/* line 11, ../sass/aside.scss */
 .bg-Green.lter, .bg-Green .lter, #top_h {
   background: #0E2835;
   background-color: #0E2835;
 }
 
-/* line 10, ../sass/aside.scss */
+/* line 17, ../sass/aside.scss */
 .bg-green {
   background-color: #EAEDF1;
   color: #333;
 }
-/* line 14, ../sass/aside.scss */
+/* line 21, ../sass/aside.scss */
 .bg-green a {
   color: #0d0d0d;
 }
-/* line 18, ../sass/aside.scss */
+/* line 25, ../sass/aside.scss */
 .bg-green .wrapper {
   background: #EAEDF1;
 }
 
-/* line 23, ../sass/aside.scss */
+/* line 30, ../sass/aside.scss */
 .list li .nav > li > a {
   background: #103345;
 }
 
-/* line 27, ../sass/aside.scss */
+/* line 34, ../sass/aside.scss */
 .width_h {
   color: #090909;
 }
 
-/* line 31, ../sass/aside.scss */
+/* line 38, ../sass/aside.scss */
 .aside-mini {
   width: 55px;
+  transition: 0.5s;
 }
-/* line 33, ../sass/aside.scss */
+/* line 42, ../sass/aside.scss */
 .aside-mini span {
   display: none;
 }
-/* line 36, ../sass/aside.scss */
+/* line 45, ../sass/aside.scss */
 .aside-mini .list li a {
   padding: 20px 4px;
   height: 40px;
   line-height: 40px;
 }
-/* line 41, ../sass/aside.scss */
+/* line 50, ../sass/aside.scss */
 .aside-mini ul.nav > li > a {
   padding: 21px 3px;
 }
-/* line 45, ../sass/aside.scss */
+/* line 54, ../sass/aside.scss */
+.aside-mini .img-shrink {
+  transform: rotate(90deg);
+}
+/* line 58, ../sass/aside.scss */
 .aside-mini .nav_green li > a > i {
   margin: -23px 0px;
 }
@@ -70,26 +80,50 @@ body, html {
 }
 
 /* line 10, ../sass/banner.scss */
+header {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* line 15, ../sass/banner.scss */
 .logo_b {
   width: 55px;
   background: #3281a9;
 }
 
-/* line 15, ../sass/banner.scss */
+/* line 20, ../sass/banner.scss */
 .logo_ab .logo_w2 {
-  width: 100%;
+  width: 130%;
+  transform: translate(-4px);
 }
 
-/* line 20, ../sass/banner.scss */
+/* line 25, ../sass/banner.scss */
+.navbar-brand img {
+  max-height: none;
+}
+
+/* line 29, ../sass/banner.scss */
 .logo_ab img {
   line-height: 55px;
   margin: auto;
   float: none;
 }
 
+/* line 35, ../sass/banner.scss */
+.nav_b > li > a:hover, .nav_b > li > a:focus {
+  background-color: #3281a9;
+}
+
 /* line 1, ../sass/common.scss */
 .nav_green ul.nav > li:hover > a, .nav_green ul.nav > li:focus > a, .nav_green ul.nav > li > a:hover, .nav_green ul.nav > li > a:focus, .nav_green ul.nav > li > a:active, .nav_green ul.nav > li.active > a {
   background-color: #2e97cb !important;
+}
+
+/* line 5, ../sass/common.scss */
+.border-left {
+  border-left: 2px solid #2e97cb;
+  padding-left: 5px;
+  font-weight: bold;
 }
 
 /* line 18, ../sass/screen.scss */
@@ -129,69 +163,76 @@ a {
 
 /* line 48, ../sass/screen.scss */
 .scrollable .panel.panel-default {
-  border-color: white;
+  border: none;
+  box-shadow: none;
 }
 
-/* line 53, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
 .yunhuni-personal .account-number {
   color: #FC8408;
   font-size: 23px;
 }
-/* line 58, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 .yunhuni-personal .account-number-decimal {
   color: #FC8408;
 }
-/* line 62, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 .yunhuni-personal .box-footer {
   margin: 5px;
   position: absolute;
   bottom: 20px;
   right: 20px;
 }
-/* line 69, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 .yunhuni-personal .account-left {
   margin-top: 10px;
 }
-/* line 71, ../sass/screen.scss */
+/* line 72, ../sass/screen.scss */
 .yunhuni-personal .account-left .account-number-small {
   color: #FC8408;
   font-size: 15px;
 }
-/* line 77, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 .yunhuni-personal .w-half {
   display: inline-block;
   width: 50%;
   float: right;
 }
 
-/* line 84, ../sass/screen.scss */
+/* line 85, ../sass/screen.scss */
 .none-app {
   text-align: center;
 }
-/* line 86, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 .none-app span {
   display: inline-block;
   margin-left: 25px;
   vertical-align: middle;
 }
 
-/* line 95, ../sass/screen.scss */
+/* line 96, ../sass/screen.scss */
 .app-list .app-status-center {
   width: 100%;
 }
-/* line 99, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 .app-list .app-status-right {
   width: 600px;
 }
-/* line 103, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 .app-list .app-status-left {
   width: 300px;
 }
-/* line 107, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 .app-list .app-status-list {
   list-style: none;
 }
-/* line 109, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 .app-list .app-status-list li {
   margin-top: 5px;
+}
+
+/* line 116, ../sass/screen.scss */
+.panel-body {
+  border: 1px solid rgba(28, 27, 27, 0.08);
+  box-shadow: 1px 1px 1px #dddddd;
 }

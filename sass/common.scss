@@ -1,3 +1,10 @@
 .nav_green  ul.nav>li:hover>a, .nav_green  ul.nav>li:focus>a, .nav_green  ul.nav>li>a:hover, .nav_green  ul.nav>li>a:focus, .nav_green  ul.nav>li>a:active, .nav_green  ul.nav>li.active>a {
   background-color: #2e97cb !important;
 }
+
+.border-left {
+  border-left: 2px solid #2e97cb;
+  padding-left: 5px;
+  font-weight: bold;
+}
+

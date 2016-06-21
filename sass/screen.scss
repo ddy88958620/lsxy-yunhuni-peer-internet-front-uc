@@ -46,7 +46,8 @@ a {
 }
 
 .scrollable .panel.panel-default {
-  border-color: white;
+  border: none;
+  box-shadow: none;
 }
 
 .yunhuni-personal {
@@ -110,4 +111,9 @@ a {
       margin-top: 5px;
     }
   }
+}
+
+.panel-body {
+  border: 1px solid rgba(28, 27, 27, 0.08);
+  box-shadow: 1px 1px 1px #dddddd;
 }

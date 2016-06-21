@@ -7,18 +7,31 @@ $bg-banner:#2E97CB;
   }
 }
 
+header {
+  font-size: 15px;
+  font-weight: bold;
+}
+
 .logo_b {
   width: 55px;
   background: #3281a9;
 }
 
 .logo_ab .logo_w2 {
-  width: 100%;
+  width: 130%;
+  transform: translate(-4px);
 }
 
+.navbar-brand img {
+  max-height: none;
+}
 
 .logo_ab img {
   line-height: 55px;
   margin: auto;
   float: none;
+}
+
+.nav_b>li>a:hover, .nav_b>li>a:focus {
+  background-color: #3281a9;
 }

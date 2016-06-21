@@ -1,6 +1,13 @@
 $bgcolor: #0E2835; 
 $siderbar-child: #EAEDF1;
 
+
+.w-f {
+  .head.lter {
+    background: #193643;
+  }
+}
+
 .bg-Green.lter,.bg-Green .lter, #top_h {
   background: $bgcolor;
   background-color: $bgcolor;
@@ -30,6 +37,8 @@ $siderbar-child: #EAEDF1;
 
 .aside-mini {
   width: 55px;
+  transition: 0.5s;
+
   span {
     display: none;
   }
@@ -40,6 +49,10 @@ $siderbar-child: #EAEDF1;
   }
   ul.nav>li>a {
     padding: 21px 3px;
+  }
+
+  .img-shrink {
+    transform: rotate(90deg)
   }
 
   .nav_green li>a>i {
