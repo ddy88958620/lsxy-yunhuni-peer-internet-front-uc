@@ -8,7 +8,7 @@
     <!--bootstrap.css-->
     <link   href="bower_components/bootstrap/dist/css/bootstrap.css"  rel="stylesheet" type="text/css"  />
     <!--index.css-->
-    <link href="stylesheets/register.css" rel="stylesheet"  type="text/css" />
+    <link href="stylesheets/screen.css" rel="stylesheet"  type="text/css" />
     <!--vaildator.css-->
     <link rel="stylesheet" href="bower_components/bootstrapvalidator/dist/css/bootstrapValidator.css">
 
@@ -20,53 +20,51 @@
     <div class="box">
         <img class="logo" src="images/index/logo_top.png" />
         <div class="text">
-            如以有云呼你账号，<a>立即登录</a> <a href="#">立即注册</a>
+            如以有云呼你账号，<a href="login.html">立即登录</a> <a href=register.html">立即注册</a>
         </div>
     </div>
 </div>
 
 <div class="register_container">
-    <div class="row">
+    <div class="row box">
         <div class="col-md-5">
             <img src="images/register/reg_img.jpg" />
         </div>
-
-        <div class="col-md-7">
+        <div class="col-md-7 register-box">
             <div class="row">
-                <p>云呼你会员注册</p>
+                <P class="col-md-3 text-right">云呼你会员注册</P>
             </div>
             <div class="row">
                 <form role="form" action="" method="post" class="register-form" id="defaultForm">
                     <div class="form-group">
-                        <lable class="col-md-3">sadas</lable>
-                        <input type="text" name="username" placeholder="请输入账号" class="form-username form-control" id="form-username">
+                        <lable class="col-md-3 text-right">会员名称</lable>
+                        <div class="col-md-9 ">
+                            <input type="text" name="username" placeholder="请输入账号" class="form-control input-form" id="form-username">
+                             <p class="tips">6~25个字符，建议中文名称</p>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <input type="password" name="password" placeholder="请输入密码" class="form-password form-control" id="form-password" >
-                    </div>
-                    <div class="form-group form-block"   >
-                        <div class="col-md-6 remove-padding">
-                            <input type="text" name="code" placeholder="验证码" class="form-control" id="form-code">
-                        </div>
-                        <div class="col-md-6 remove-padding border">
-                            <span><img src="images/index/login-code.png" /></span>
-                            <input type="hidden" value="4222" id="verficatycode" />
-                        </div>
-                    </div>
-
-                    <div class="form-group form-block"  >
-                        <div class="col-md-6 remove-padding remember" >
-                            <input type="checkbox" class="remember-check" />   记住我
-                        </div>
-                        <div class="col-md-6 remove-padding border text-right">
-                            <a href="#">忘记密码?</a>
+                        <lable class="col-md-3 text-right">绑定手机</lable>
+                        <div class="col-md-9">
+                            <input type="text" name="phone" placeholder="请输入账号" class="form-control input-form" id="form-phone">
+                            <p class="tips"></p>
                         </div>
                     </div>
 
                     <div class="form-group">
-
+                        <lable class="col-md-3 text-right">绑定邮箱地址</lable>
+                        <div class="col-md-9">
+                            <input type="text" name="email" placeholder="请输入账号" class="form-control input-form" id="form-email">
+                            <p class="tips">注册后，邮箱地址收到账号激活邮件</p>
+                        </div>
                     </div>
-                    <button id="validateBtn" class="btn btn-primary  btn-form">登录</button>
+
+                    <div class="form-group">
+                        <div class="col-md-9 col-lg-offset-3">
+                            <button id="validateBtn" class="btn btn-primary  btn-form">注册</button>
+                        </div>
+                    </div>
+
                 </form>
             </div>
 
@@ -86,7 +84,7 @@
 
 <!--bootstrapvalidator-->
 <script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.js"></script>
-<script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.min.js.js"></script>
+
 
 
 <script type="text/javascript">
@@ -108,52 +106,36 @@
                         stringLength: {
                             min: 6,
                             max: 30,
-                            message: '用户名必须大于6，小于30个字'
-                        },
-                        regexp: {
-                            regexp: /^[a-zA-Z0-9_\.]+$/,
-                            message: '用户名只能由字母、数字、点和下划线组成'
-                        },
+                            message: '用户名必须大于6，小于25个字符'
+                        }
+                        /**
+                         * 添加方法 异步验证用户名是否存在
                         remote: {
                             url: '#',
                             message: '用户名不可用'
+                        },**/
+                    }
+                },
+                email: {
+                    validators: {
+                        notEmpty: {
+                            message: '邮箱地址不能为空'
                         },
-                        different: {
-                            field: 'password',
-                            message: '用户名和密码不能相同'
+                        emailAddress: {
+                            message: '请输入正确的邮箱地址格式'
                         }
                     }
                 },
-                code: {
+                phone: {
                     validators: {
                         notEmpty: {
-                            message: '验证码不能为空'
+                            message: '手机不能位空'
                         },
                         stringLength: {
-                            min: 4,
-                            max: 4,
-                            message: '请输入4位数的验证码'
-                        }
-                    }
-                },
-                password: {
-                    validators: {
-                        notEmpty: {
-                            message: '密码不能位空'
+                            min: 11,
+                            max: 11,
+                            message: '请输入11位数的手机号码'
                         },
-                        identical: {
-                            field: 'confirmPassword',
-                            message: '两次密码不一致'
-                        },
-                        stringLength: {
-                            min: 6,
-                            max: 18,
-                            message: '密码必须大于6，小于18个字'
-                        },
-                        different: {
-                            field: 'username',
-                            message: '用户名和密码不能相同'
-                        }
                     }
                 }
             }
