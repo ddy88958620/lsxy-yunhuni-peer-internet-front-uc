@@ -56,10 +56,7 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-
-                </div>
-                <button id="validateBtn" class="btn btn-primary  btn-form">登录</button>
+                <button id="validateBtn" type="submit" class="btn btn-primary  btn-form">登录</button>
             </form>
 
             <div class="row margin-block"  >
@@ -84,13 +81,12 @@
 </div>
 <!-- /container -->
 
+
 <!--jquery-->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
 <!--bootstrapvalidator-->
-<script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.js"></script>
 <script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
-
 
 <script type="text/javascript">
     $(document).ready(function() {
@@ -100,6 +96,9 @@
                 valid: 'glyphicon glyphicon-ok',
                 invalid: 'glyphicon glyphicon-remove',
                 validating: 'glyphicon glyphicon-refresh'
+            },
+            submitHandler: function(){
+               console.log(1);
             },
             fields: {
                 username: {
@@ -117,10 +116,12 @@
                             regexp: /^[a-zA-Z0-9_\.]+$/,
                             message: '用户名只能由字母、数字、点和下划线组成'
                         },
+                        /**
+                         *异步请求用户名是否存在
                         remote: {
                             url: '#',
                             message: '用户名不可用'
-                        },
+                        },*/
                         different: {
                             field: 'password',
                             message: '用户名和密码不能相同'

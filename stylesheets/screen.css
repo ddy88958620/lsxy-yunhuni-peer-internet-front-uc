@@ -230,43 +230,48 @@
 .register_container .box {
   margin-top: 95px;
 }
-/* line 30, ../sass/register.scss */
+/* line 27, ../sass/register.scss */
+.register_container .box .p {
+  line-height: 32px;
+  color: #737373;
+  font-size: 16px;
+}
+/* line 35, ../sass/register.scss */
 .register_container .register-box {
   color: #686868;
   font-size: 16px;
 }
-/* line 34, ../sass/register.scss */
+/* line 39, ../sass/register.scss */
 .register_container .input-form {
   height: 45px;
 }
-/* line 38, ../sass/register.scss */
+/* line 43, ../sass/register.scss */
 .register_container .btn-form {
   width: 100%;
   height: 45px;
 }
-/* line 42, ../sass/register.scss */
+/* line 47, ../sass/register.scss */
 .register_container .tips {
   color: #b4b5b5;
   font-size: 14px;
 }
-/* line 46, ../sass/register.scss */
+/* line 51, ../sass/register.scss */
 .register_container .register-active {
   color: #686868;
   font-size: 16px;
 }
 
-/* line 53, ../sass/register.scss */
+/* line 58, ../sass/register.scss */
 #pw-strength {
   float: right;
-  margin-bottom: 20px;
 }
 
-/* line 57, ../sass/register.scss */
+/* line 62, ../sass/register.scss */
 .tbl-txt {
   font-size: 14px;
 }
 
-/* line 58, ../sass/register.scss */
+/* line 66, ../sass/register.scss */
 .tbl-txt input {
   padding: 0 5px;
   height: 22px;
@@ -274,7 +279,7 @@
   margin-bottom: 6px;
 }
 
-/* line 59, ../sass/register.scss */
+/* line 73, ../sass/register.scss */
 .pw-strength {
   clear: both;
   position: relative;
@@ -282,7 +287,7 @@
   width: 180px;
 }
 
-/* line 60, ../sass/register.scss */
+/* line 80, ../sass/register.scss */
 .pw-bar {
   background: url(../images/pwd-1.png) no-repeat;
   position: relative;
@@ -292,7 +297,7 @@
   width: 179px;
 }
 
-/* line 61, ../sass/register.scss */
+/* line 89, ../sass/register.scss */
 .pw-bar-on {
   background: url(../images/pwd-2.png) no-repeat;
   width: 0px;
@@ -306,40 +311,128 @@
   -o-transition: width .5s ease-in;
 }
 
-/* line 62, ../sass/register.scss */
+/* line 102, ../sass/register.scss */
 .pw-weak .pw-defule {
   width: 0px;
 }
 
-/* line 63, ../sass/register.scss */
+/* line 106, ../sass/register.scss */
 .pw-weak .pw-bar-on {
   width: 60px;
 }
 
-/* line 64, ../sass/register.scss */
+/* line 110, ../sass/register.scss */
 .pw-medium .pw-bar-on {
   width: 120px;
 }
 
-/* line 65, ../sass/register.scss */
+/* line 114, ../sass/register.scss */
 .pw-strong .pw-bar-on {
   width: 179px;
 }
 
-/* line 66, ../sass/register.scss */
+/* line 118, ../sass/register.scss */
 .pw-txt {
   padding-top: 2px;
   width: 180px;
   overflow: hidden;
 }
 
-/* line 67, ../sass/register.scss */
+/* line 124, ../sass/register.scss */
 .pw-txt span {
   color: #707070;
   float: left;
   font-size: 12px;
   text-align: center;
   width: 58px;
+}
+
+/* line 132, ../sass/register.scss */
+.shadow-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.82);
+}
+
+/* line 142, ../sass/register.scss */
+.modal-phone {
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  margin-left: -231px;
+  margin-top: -169px;
+  width: 462px;
+  height: 338px;
+  background-color: #FFF;
+}
+/* line 152, ../sass/register.scss */
+.modal-phone .title {
+  height: 65px;
+  background-color: #0099cc;
+  text-align: center;
+  color: #FFF;
+  line-height: 65px;
+  font-size: 18px;
+}
+/* line 161, ../sass/register.scss */
+.modal-phone .content .input {
+  display: block;
+  width: 320px;
+  margin: 15px auto;
+  height: auto;
+  line-height: 45px;
+  font-size: 16px;
+  color: #737373;
+}
+/* line 170, ../sass/register.scss */
+.modal-phone .content .code-title {
+  float: left;
+  width: 72px;
+}
+/* line 174, ../sass/register.scss */
+.modal-phone .content .code {
+  float: left;
+  height: 45px;
+  width: 130px !important;
+}
+/* line 179, ../sass/register.scss */
+.modal-phone .content .code-button {
+  border: 1px solid transparent;
+  float: right;
+  height: 45px;
+}
+/* line 186, ../sass/register.scss */
+.modal-phone .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  border-top: 1px solid #ebebeb;
+}
+/* line 192, ../sass/register.scss */
+.modal-phone .footer .cancel, .modal-phone .footer .sure {
+  width: 49%;
+  float: left;
+  display: block;
+  font-size: 18px;
+  color: #5d5d5d;
+  text-align: center;
+  line-height: 70px;
+  height: 70px;
+}
+
+/* line 205, ../sass/register.scss */
+.register_footer {
+  position: absolute;
+  bottom: 15px;
+  text-align: center;
+  width: 100%;
+  color: #848484;
 }
 
 /* line 15, ../sass/screen.scss */
