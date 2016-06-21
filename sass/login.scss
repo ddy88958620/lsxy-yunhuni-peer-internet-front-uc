@@ -1,0 +1,91 @@
+.login-bg {
+  color: #000;
+  font-weight: 400;
+  line-height: 1.25;
+  font-family: 'MicrosoftYaHei';
+  background-image: url(../images/index/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow-x: hidden;
+  height: auto;
+}
+
+.login-logo {
+  margin-top: 120px;
+}
+
+
+.login-box {
+  padding: 16px 16px;
+  margin: 10px auto 24px auto;
+  max-width: 484px;
+  background-color: #FFF;
+  border-radius: 5px;
+  display: block;
+
+  .login-text{ color:#686868;}
+  .login-form {
+    display: block;
+    padding: 0 5px;
+    margin: 10px auto;
+    width: 90%;
+    input[type="text"],
+    input[type="password"] {
+      height: 50px;
+    }
+      .form-username {
+        background: url('../images/index/icon_10.png') left center no-repeat;
+        padding-left: 40px;
+      }
+      .form-password {
+        background: url('../images/index/icon_11.png') left center no-repeat;
+        padding-left: 40px;
+      }
+      .form-block{
+        display: inline-block;
+        width: 100%;
+      }
+      .btn-form {
+        height: 48px;
+        width: 100%;
+        font-size: 20px;
+      }
+  }
+  .remember-check {
+    width: 14px;
+    height: 14px;
+    border:1px solid #c3c3c3;
+    background-color: #FFF;
+  }
+  .margin-block{
+    margin-top: 20px;
+  }
+  .register{
+    text-decoration:underline;
+  }
+  .tips{
+    background: url('../images/tips.png') no-repeat left center;
+    height: 35px;
+    display: inline-block;
+    line-height: 35px;
+    padding-left: 25px;
+    color:red !important;
+  }
+  .tips:hover{
+    text-decoration: none;
+  }
+}
+
+.border {
+  border: 1px solid transparent;
+}
+
+.remove-padding {
+  padding: 0;
+}
+
+.login-footer {
+  color: #848484 !important;
+}
+
+

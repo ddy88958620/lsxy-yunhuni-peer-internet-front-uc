@@ -9,7 +9,7 @@ $bg-banner:#2E97CB;
 
 header {
   font-size: 15px;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .logo_b {
@@ -34,4 +34,9 @@ header {
 
 .nav_b>li>a:hover, .nav_b>li>a:focus {
   background-color: #3281a9;
+}
+
+.a-color {
+  border-left: solid 1px #008AB5;
+  border-right: solid 1px #008AB5;
 }

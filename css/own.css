@@ -205,7 +205,7 @@ b-green{
     color:#0d4038;
 }
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-    background-color: #008b79;
+    background-color: #3281a9;
     border-color: #428BCA;
 }
 .nav_b>li>a:hover, .nav_b>li>a:focus {
@@ -277,7 +277,7 @@ b-green{
 }
 .nav_green  li>a>i {
 	margin:-10px 0-15px;
-	line-height:44px;
+	line-height:40px;
 	width:44px;
 	float:left;
 	font-size:18px;

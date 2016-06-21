@@ -10,7 +10,7 @@
 /* line 10, ../sass/banner.scss */
 header {
   font-size: 15px;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 /* line 15, ../sass/banner.scss */
@@ -40,4 +40,10 @@ header {
 /* line 35, ../sass/banner.scss */
 .nav_b > li > a:hover, .nav_b > li > a:focus {
   background-color: #3281a9;
+}
+
+/* line 39, ../sass/banner.scss */
+.a-color {
+  border-left: solid 1px #008AB5;
+  border-right: solid 1px #008AB5;
 }

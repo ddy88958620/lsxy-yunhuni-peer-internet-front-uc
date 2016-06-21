@@ -1,6 +1,15 @@
 $bgcolor: #0E2835; 
 $siderbar-child: #EAEDF1;
 
+.nav_green  ul.nav>li:hover>a, .nav_green  ul.nav>li:focus>a, .nav_green  ul.nav>li>a:hover, .nav_green  ul.nav>li>a:focus, .nav_green  ul.nav>li>a:active, .nav_green  ul.nav>li.active>a {
+  background-color: #2e97cb !important;
+}
+
+.list .nav a {
+  &.active {
+    background-color: #2e97cb !important;
+  }
+}
 
 .w-f {
   .head.lter {
@@ -58,4 +67,28 @@ $siderbar-child: #EAEDF1;
   .nav_green li>a>i {
     margin: -23px 0px;
   }
+}
+
+.aside-li-a {
+  a {
+    font-size: 1.4rem;
+    font-weight: normal;
+    display: inline-block;
+    text-align: center;
+    height: 44px;
+    width: 100%;
+    line-height: 44px;
+  }
+
+  &.active {
+    background: white;
+  }
+
+  a:hover {
+    background: white;
+  }
+}
+
+.bg-white {
+  background: white;
 }

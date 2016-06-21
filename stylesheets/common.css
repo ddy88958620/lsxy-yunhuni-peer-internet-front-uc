@@ -1,11 +1,21 @@
-/* line 1, ../sass/common.scss */
-.nav_green ul.nav > li:hover > a, .nav_green ul.nav > li:focus > a, .nav_green ul.nav > li > a:hover, .nav_green ul.nav > li > a:focus, .nav_green ul.nav > li > a:active, .nav_green ul.nav > li.active > a {
-  background-color: #2e97cb !important;
-}
-
-/* line 5, ../sass/common.scss */
+/* line 2, ../sass/common.scss */
 .border-left {
   border-left: 2px solid #2e97cb;
   padding-left: 5px;
   font-weight: bold;
+}
+
+/* line 8, ../sass/common.scss */
+.bootbox-body {
+  font-size: 15px;
+}
+
+/* line 12, ../sass/common.scss */
+.number {
+  color: #FC8408;
+}
+
+/* line 16, ../sass/common.scss */
+.fa-database:before {
+  content: '\f1c0';
 }
