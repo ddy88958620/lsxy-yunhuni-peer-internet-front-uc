@@ -4,94 +4,89 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>登陆</title>
+    <title>注册</title>
     <!--bootstrap.css-->
     <link   href="bower_components/bootstrap/dist/css/bootstrap.css"  rel="stylesheet" type="text/css"  />
     <!--index.css-->
-    <link href="stylesheets/screen.css" rel="stylesheet"  type="text/css" />
+    <link href="stylesheets/register.css" rel="stylesheet"  type="text/css" />
     <!--vaildator.css-->
     <link rel="stylesheet" href="bower_components/bootstrapvalidator/dist/css/bootstrapValidator.css">
 
 </head>
-<body class="login-bg">
+<body class="register-bg">
 <!--  container -->
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12 text-center">
-            <div class="login-logo">
-                <img src="images/index/logo_plus.png" />
-            </div>
+
+<div class="register-header">
+    <div class="box">
+        <img class="logo" src="images/index/logo_top.png" />
+        <div class="text">
+            如以有云呼你账号，<a>立即登录</a> <a href="#">立即注册</a>
         </div>
     </div>
-    <div class="login-box">
-        <div class="row">
-            <div class="col-sm-12 text-center">
-                <h3 class="login-text">登录云呼你</h3>
-            </div>
-        </div>
-        <div class="row">
-            <form role="form" action="" method="post" class="login-form" id="defaultForm">
-                <div class="form-group">
-                    <input type="text" name="username" placeholder="请输入账号" class="form-username form-control" id="form-username">
-                </div>
-                <div class="form-group">
-                    <input type="password" name="password" placeholder="请输入密码" class="form-password form-control" id="form-password" >
-                </div>
-                <div class="form-group form-block"   >
-                    <div class="col-md-6 remove-padding">
-                        <input type="text" name="code" placeholder="验证码" class="form-control" id="form-code">
-                    </div>
-                    <div class="col-md-6 remove-padding border">
-                        <span><img src="images/index/login-code.png" /></span>
-                        <input type="hidden" value="4222" id="verficatycode" />
-                    </div>
-                </div>
-
-                <div class="form-group form-block"  >
-                    <div class="col-md-6 remove-padding remember" >
-                        <input type="checkbox" class="remember-check" />   记住我
-                    </div>
-                    <div class="col-md-6 remove-padding border text-right">
-                        <a href="#">忘记密码?</a>
-                    </div>
-                </div>
-
-                <div class="form-group">
-
-                </div>
-                <button id="validateBtn" class="btn btn-primary  btn-form">登录</button>
-            </form>
-
-            <div class="row margin-block"  >
-                <div class="col-sm-12 text-center" >
-                    <a href="#" class="register">还没注册账号，注册新账号</a>
-                </div>
-            </div>
-            <div class="row margin-block" >
-                <div class="col-sm-12 text-center " >
-                    <a class="tips" style="display: none;">用户名或密码错误</a>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-    <footer>
-        <div class="row">
-            <div class="col-sm-12 text-center login-footer">
-                Copyright 2016 云呼你 粤ICP备16048993号 All Rights Reserved 广州流水行云科技有限公司
-            </div>
-        </div>
-    </footer>
 </div>
+
+<div class="register_container">
+    <div class="row">
+        <div class="col-md-5">
+            <img src="images/register/reg_img.jpg" />
+        </div>
+
+        <div class="col-md-7">
+            <div class="row">
+                <p>云呼你会员注册</p>
+            </div>
+            <div class="row">
+                <form role="form" action="" method="post" class="register-form" id="defaultForm">
+                    <div class="form-group">
+                        <lable class="col-md-3">sadas</lable>
+                        <input type="text" name="username" placeholder="请输入账号" class="form-username form-control" id="form-username">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" placeholder="请输入密码" class="form-password form-control" id="form-password" >
+                    </div>
+                    <div class="form-group form-block"   >
+                        <div class="col-md-6 remove-padding">
+                            <input type="text" name="code" placeholder="验证码" class="form-control" id="form-code">
+                        </div>
+                        <div class="col-md-6 remove-padding border">
+                            <span><img src="images/index/login-code.png" /></span>
+                            <input type="hidden" value="4222" id="verficatycode" />
+                        </div>
+                    </div>
+
+                    <div class="form-group form-block"  >
+                        <div class="col-md-6 remove-padding remember" >
+                            <input type="checkbox" class="remember-check" />   记住我
+                        </div>
+                        <div class="col-md-6 remove-padding border text-right">
+                            <a href="#">忘记密码?</a>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                    </div>
+                    <button id="validateBtn" class="btn btn-primary  btn-form">登录</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</div>
+
+
 <!-- /container -->
+
 
 <!--jquery-->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
 <!--bootstrapvalidator-->
 <script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.js"></script>
-<script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
+<script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.min.js.js"></script>
 
 
 <script type="text/javascript">

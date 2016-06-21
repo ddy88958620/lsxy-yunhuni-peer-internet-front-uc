@@ -7,14 +7,11 @@
 $font-color: #FC8408;
 
 
-body, html {
-  background: white;
-}
-
 @import './aside.scss';
 @import './banner.scss';
 @import './common.scss';
 @import './login.scss';
+@import './register.scss';
 a {
   color: #428bca;
 }

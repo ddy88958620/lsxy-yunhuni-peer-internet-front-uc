@@ -1,0 +1,40 @@
+/* line 1, ../sass/register.scss */
+.register-header {
+  width: 100%;
+  height: 79px;
+  border: 1px solid #e0e0e0;
+}
+/* line 5, ../sass/register.scss */
+.register-header .box {
+  width: 1200px;
+  margin: 0 auto;
+}
+/* line 9, ../sass/register.scss */
+.register-header .logo {
+  float: left;
+  margin-top: 12px;
+  display: block;
+}
+/* line 14, ../sass/register.scss */
+.register-header .text {
+  float: right;
+  line-height: 79px;
+}
+
+/* line 21, ../sass/register.scss */
+.register_container {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+/* line 26, ../sass/register.scss */
+.register_container .leftbox {
+  float: left;
+  width: 500px;
+}
+/* line 30, ../sass/register.scss */
+.register_container .rightbox {
+  float: right;
+  width: 600px;
+}

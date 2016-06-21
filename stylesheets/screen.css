@@ -2,11 +2,6 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 10, ../sass/screen.scss */
-body, html {
-  background: white;
-}
-
 /* line 4, ../sass/aside.scss */
 .bg-Green.lter, .bg-Green .lter, #top_h {
   background: #0E2835;
@@ -101,16 +96,17 @@ body, html {
   background-image: url(../images/index/bg.jpg);
   background-repeat: no-repeat;
   background-position: center top;
+  background-size: cover;
   overflow-x: hidden;
   height: auto;
 }
 
-/* line 13, ../sass/login.scss */
+/* line 15, ../sass/login.scss */
 .login-logo {
   margin-top: 120px;
 }
 
-/* line 18, ../sass/login.scss */
+/* line 20, ../sass/login.scss */
 .login-box {
   padding: 16px 16px;
   margin: 10px auto 24px auto;
@@ -119,59 +115,59 @@ body, html {
   border-radius: 5px;
   display: block;
 }
-/* line 26, ../sass/login.scss */
+/* line 28, ../sass/login.scss */
 .login-box .login-text {
   color: #686868;
 }
-/* line 27, ../sass/login.scss */
+/* line 29, ../sass/login.scss */
 .login-box .login-form {
   display: block;
   padding: 0 5px;
   margin: 10px auto;
   width: 90%;
 }
-/* line 32, ../sass/login.scss */
+/* line 34, ../sass/login.scss */
 .login-box .login-form input[type="text"],
 .login-box .login-form input[type="password"] {
   height: 50px;
 }
-/* line 36, ../sass/login.scss */
+/* line 38, ../sass/login.scss */
 .login-box .login-form .form-username {
-  background: url("../images/index/icon_10.png") left center no-repeat;
+  background: url("../images/index/icon_10.png") 20px center no-repeat;
   padding-left: 40px;
 }
-/* line 40, ../sass/login.scss */
+/* line 42, ../sass/login.scss */
 .login-box .login-form .form-password {
-  background: url("../images/index/icon_11.png") left center no-repeat;
+  background: url("../images/index/icon_11.png") 20px center no-repeat;
   padding-left: 40px;
 }
-/* line 44, ../sass/login.scss */
+/* line 46, ../sass/login.scss */
 .login-box .login-form .form-block {
   display: inline-block;
   width: 100%;
 }
-/* line 48, ../sass/login.scss */
+/* line 50, ../sass/login.scss */
 .login-box .login-form .btn-form {
   height: 48px;
   width: 100%;
   font-size: 20px;
 }
-/* line 54, ../sass/login.scss */
+/* line 56, ../sass/login.scss */
 .login-box .remember-check {
   width: 14px;
   height: 14px;
   border: 1px solid #c3c3c3;
   background-color: #FFF;
 }
-/* line 60, ../sass/login.scss */
+/* line 62, ../sass/login.scss */
 .login-box .margin-block {
   margin-top: 20px;
 }
-/* line 63, ../sass/login.scss */
+/* line 65, ../sass/login.scss */
 .login-box .register {
   text-decoration: underline;
 }
-/* line 66, ../sass/login.scss */
+/* line 68, ../sass/login.scss */
 .login-box .tips {
   background: url("../images/tips.png") no-repeat left center;
   height: 35px;
@@ -180,53 +176,94 @@ body, html {
   padding-left: 25px;
   color: red !important;
 }
-/* line 74, ../sass/login.scss */
+/* line 76, ../sass/login.scss */
 .login-box .tips:hover {
   text-decoration: none;
 }
 
-/* line 79, ../sass/login.scss */
+/* line 81, ../sass/login.scss */
 .border {
   border: 1px solid transparent;
 }
 
-/* line 83, ../sass/login.scss */
+/* line 85, ../sass/login.scss */
 .remove-padding {
   padding: 0;
 }
 
-/* line 87, ../sass/login.scss */
+/* line 89, ../sass/login.scss */
 .login-footer {
   color: #848484 !important;
 }
 
-/* line 18, ../sass/screen.scss */
+/* line 1, ../sass/register.scss */
+.register-header {
+  width: 100%;
+  height: 79px;
+  border: 1px solid #e0e0e0;
+}
+/* line 5, ../sass/register.scss */
+.register-header .box {
+  width: 1200px;
+  margin: 0 auto;
+}
+/* line 9, ../sass/register.scss */
+.register-header .logo {
+  float: left;
+  margin-top: 12px;
+  display: block;
+}
+/* line 14, ../sass/register.scss */
+.register-header .text {
+  float: right;
+  line-height: 79px;
+}
+
+/* line 21, ../sass/register.scss */
+.register_container {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+/* line 26, ../sass/register.scss */
+.register_container .leftbox {
+  float: left;
+  width: 500px;
+}
+/* line 30, ../sass/register.scss */
+.register_container .rightbox {
+  float: right;
+  width: 600px;
+}
+
+/* line 15, ../sass/screen.scss */
 a {
   color: #428bca;
 }
 
-/* line 22, ../sass/screen.scss */
+/* line 19, ../sass/screen.scss */
 .bg-light {
   background-color: #f1f1f1r;
 }
 
-/* line 26, ../sass/screen.scss */
+/* line 23, ../sass/screen.scss */
 .fr {
   float: right;
 }
 
-/* line 30, ../sass/screen.scss */
+/* line 27, ../sass/screen.scss */
 .fl {
   float: left;
 }
 
-/* line 34, ../sass/screen.scss */
+/* line 31, ../sass/screen.scss */
 .admin-padding {
   padding-right: 15px;
   padding-left: 15px;
 }
 
-/* line 39, ../sass/screen.scss */
+/* line 36, ../sass/screen.scss */
 .wrapperBox {
   min-height: 130px;
   background: whitesmoke;
@@ -235,71 +272,71 @@ a {
   padding: 15px;
 }
 
-/* line 48, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 .scrollable .panel.panel-default {
   border-color: white;
 }
 
-/* line 53, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 .yunhuni-personal .account-number {
   color: #FC8408;
   font-size: 23px;
 }
-/* line 58, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 .yunhuni-personal .account-number-decimal {
   color: #FC8408;
 }
-/* line 62, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 .yunhuni-personal .box-footer {
   margin: 5px;
   position: absolute;
   bottom: 20px;
   right: 20px;
 }
-/* line 69, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 .yunhuni-personal .account-left {
   margin-top: 10px;
 }
-/* line 71, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 .yunhuni-personal .account-left .account-number-small {
   color: #FC8408;
   font-size: 15px;
 }
-/* line 77, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 .yunhuni-personal .w-half {
   display: inline-block;
   width: 50%;
   float: right;
 }
 
-/* line 84, ../sass/screen.scss */
+/* line 81, ../sass/screen.scss */
 .none-app {
   text-align: center;
 }
-/* line 86, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 .none-app span {
   display: inline-block;
   margin-left: 25px;
   vertical-align: middle;
 }
 
-/* line 95, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
 .app-list .app-status-center {
   width: 100%;
 }
-/* line 99, ../sass/screen.scss */
+/* line 96, ../sass/screen.scss */
 .app-list .app-status-right {
   width: 600px;
 }
-/* line 103, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 .app-list .app-status-left {
   width: 300px;
 }
-/* line 107, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 .app-list .app-status-list {
   list-style: none;
 }
-/* line 109, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 .app-list .app-status-list li {
   margin-top: 5px;
 }

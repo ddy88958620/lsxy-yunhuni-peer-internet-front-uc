@@ -1,0 +1,35 @@
+.register-header {
+  width: 100%;
+  height: 79px;
+  border: 1px solid #e0e0e0;
+  .box {
+    width: 1200px;
+    margin: 0 auto  ;
+  }
+  .logo {
+    float: left;
+    margin-top: 12px;
+    display: block;
+  }
+  .text {
+    float: right;
+    line-height: 79px;
+  }
+}
+
+
+.register_container{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    .leftbox{
+      float: left;
+      width: 500px;
+    }
+    .rightbox{
+      float: right;
+      width: 600px;
+    }
+
+}
