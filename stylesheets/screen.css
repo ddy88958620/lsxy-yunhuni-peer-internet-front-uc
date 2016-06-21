@@ -92,6 +92,114 @@ body, html {
   background-color: #2e97cb !important;
 }
 
+/* line 1, ../sass/login.scss */
+.login-bg {
+  color: #000;
+  font-weight: 400;
+  line-height: 1.25;
+  font-family: 'MicrosoftYaHei';
+  background-image: url(../images/index/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow-x: hidden;
+  height: auto;
+}
+
+/* line 13, ../sass/login.scss */
+.login-logo {
+  margin-top: 120px;
+}
+
+/* line 18, ../sass/login.scss */
+.login-box {
+  padding: 16px 16px;
+  margin: 10px auto 24px auto;
+  max-width: 484px;
+  background-color: #FFF;
+  border-radius: 5px;
+  display: block;
+}
+/* line 26, ../sass/login.scss */
+.login-box .login-text {
+  color: #686868;
+}
+/* line 27, ../sass/login.scss */
+.login-box .login-form {
+  display: block;
+  padding: 0 5px;
+  margin: 10px auto;
+  width: 90%;
+}
+/* line 32, ../sass/login.scss */
+.login-box .login-form input[type="text"],
+.login-box .login-form input[type="password"] {
+  height: 50px;
+}
+/* line 36, ../sass/login.scss */
+.login-box .login-form .form-username {
+  background: url("../images/index/icon_10.png") left center no-repeat;
+  padding-left: 40px;
+}
+/* line 40, ../sass/login.scss */
+.login-box .login-form .form-password {
+  background: url("../images/index/icon_11.png") left center no-repeat;
+  padding-left: 40px;
+}
+/* line 44, ../sass/login.scss */
+.login-box .login-form .form-block {
+  display: inline-block;
+  width: 100%;
+}
+/* line 48, ../sass/login.scss */
+.login-box .login-form .btn-form {
+  height: 48px;
+  width: 100%;
+  font-size: 20px;
+}
+/* line 54, ../sass/login.scss */
+.login-box .remember-check {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #c3c3c3;
+  background-color: #FFF;
+}
+/* line 60, ../sass/login.scss */
+.login-box .margin-block {
+  margin-top: 20px;
+}
+/* line 63, ../sass/login.scss */
+.login-box .register {
+  text-decoration: underline;
+}
+/* line 66, ../sass/login.scss */
+.login-box .tips {
+  background: url("../images/tips.png") no-repeat left center;
+  height: 35px;
+  display: inline-block;
+  line-height: 35px;
+  padding-left: 25px;
+  color: red !important;
+}
+/* line 74, ../sass/login.scss */
+.login-box .tips:hover {
+  text-decoration: none;
+}
+
+/* line 79, ../sass/login.scss */
+.border {
+  border: 1px solid transparent;
+}
+
+/* line 83, ../sass/login.scss */
+.remove-padding {
+  padding: 0;
+}
+
+/* line 87, ../sass/login.scss */
+.login-footer {
+  color: #848484 !important;
+}
+
 /* line 18, ../sass/screen.scss */
 a {
   color: #428bca;
