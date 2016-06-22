@@ -1,4 +1,55 @@
 /* line 1, ../sass/common.scss */
-.nav_green ul.nav > li:hover > a, .nav_green ul.nav > li:focus > a, .nav_green ul.nav > li > a:hover, .nav_green ul.nav > li > a:focus, .nav_green ul.nav > li > a:active, .nav_green ul.nav > li.active > a {
-  background-color: #2e97cb !important;
+.admin-padding {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+/* line 6, ../sass/common.scss */
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+/* line 12, ../sass/common.scss */
+.border-left {
+  border-left: 2px solid #2e97cb;
+  padding-left: 5px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* line 19, ../sass/common.scss */
+.border-top {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* line 23, ../sass/common.scss */
+.border-top-none {
+  border-top: none;
+}
+
+/* line 27, ../sass/common.scss */
+.bootbox-body {
+  font-size: 15px;
+}
+
+/* line 31, ../sass/common.scss */
+.number {
+  color: #FC8408;
+}
+
+/* line 35, ../sass/common.scss */
+.fa-database:before {
+  content: '\f1c0';
+}
+
+/* line 39, ../sass/common.scss */
+.fa-clone:before {
+  content: '\f24d';
+}
+
+/* line 44, ../sass/common.scss */
+.fa-caret-down.active {
+  transform: rotate(-90deg);
 }

@@ -214,7 +214,6 @@ body {
 	font-size:14px;
 	line-height:1.428571429;
 	color:#333333;
-	background-color:#ffffff;
 }
 input, button, select, textarea {
 	font-family:inherit;
@@ -320,9 +319,6 @@ cite {
 .text-success {
 	color:#468847;
 }
-.text-success:hover {
-	color:#356635;
-}
 .text-info {
 	color:#3a87ad;
 }
@@ -343,11 +339,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-weight:500;
 	line-height:1.1;
 	color:inherit;
-}
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small {
-	font-weight:normal;
-	line-height:1;
-	color:#999999;
 }
 h1, h2, h3 {
 	margin-top:20px;
@@ -7300,14 +7291,12 @@ filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
 	content:"\f196"
 }
 html {
-	background-color:#f7f7f7;
 	overflow-x:hidden;
 }
 body {
 	font-family: '微软雅黑',Arial, Helvetica,sans-serif;
 	font-size:12px;
 	color:#717171;
-	background-color:transparent;
 	-webkit-font-smoothing:antialiased;
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {

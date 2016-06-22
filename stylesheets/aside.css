@@ -1,52 +1,138 @@
-/* line 4, ../sass/aside.scss */
-.bg-Green.lter, .bg-Green .lter, #top_h {
-  background: #0E2835;
-  background-color: #0E2835;
+/* line 6, ../sass/aside.scss */
+.aside.canbehover:hover, .nav_green ul.nav > li:hover > a, .nav_green ul.nav > li:focus > a, .nav_green ul.nav > li > a:hover, .nav_green ul.nav > li > a:focus, .nav_green ul.nav > li > a:active, .nav_green ul.nav > li.active > a {
+  background-color: #2e97cb !important;
 }
 
-/* line 10, ../sass/aside.scss */
+/* line 12, ../sass/aside.scss */
+aside.aside.bg-Green.lter {
+  background: linear-gradient(to bottom, #0E2835 53%, #415966);
+}
+
+/* line 17, ../sass/aside.scss */
+.aside-section {
+  height: 100%;
+}
+/* line 20, ../sass/aside.scss */
+.aside-section .hbox {
+  height: 100%;
+}
+
+/* line 26, ../sass/aside.scss */
+.bg-green .wrapper {
+  height: 36px;
+  min-height: 0px;
+}
+
+/* line 33, ../sass/aside.scss */
+.nav_green li > a > i {
+  font-size: 1.5rem;
+  line-height: 37px;
+}
+
+/* line 39, ../sass/aside.scss */
+.list li .nav > li > a {
+  font-size: 1.2rem;
+}
+
+/* line 44, ../sass/aside.scss */
+.list li a, .list span {
+  font-size: 1.2rem;
+}
+
+/* line 50, ../sass/aside.scss */
+.list .nav a:hover, a.canbehover:hover {
+  background-color: #2e97cb !important;
+}
+
+/* line 56, ../sass/aside.scss */
+.w-f .head.lter {
+  background: #193643;
+}
+
+/* line 61, ../sass/aside.scss */
+.bg-Green.lter, .bg-Green .lter, #top_h {
+  background: #0E2835;
+}
+
+/* line 68, ../sass/aside.scss */
 .bg-green {
   background-color: #EAEDF1;
   color: #333;
 }
-/* line 14, ../sass/aside.scss */
+/* line 72, ../sass/aside.scss */
 .bg-green a {
   color: #0d0d0d;
 }
-/* line 18, ../sass/aside.scss */
+/* line 76, ../sass/aside.scss */
 .bg-green .wrapper {
   background: #EAEDF1;
 }
 
-/* line 23, ../sass/aside.scss */
+/* line 81, ../sass/aside.scss */
 .list li .nav > li > a {
   background: #103345;
 }
 
-/* line 27, ../sass/aside.scss */
+/* line 85, ../sass/aside.scss */
 .width_h {
   color: #090909;
 }
 
-/* line 31, ../sass/aside.scss */
+/* line 89, ../sass/aside.scss */
 .aside-mini {
   width: 55px;
+  transition: 0.5s;
 }
-/* line 33, ../sass/aside.scss */
+/* line 93, ../sass/aside.scss */
 .aside-mini span {
   display: none;
 }
-/* line 36, ../sass/aside.scss */
+/* line 97, ../sass/aside.scss */
 .aside-mini .list li a {
   padding: 20px 4px;
   height: 40px;
   line-height: 40px;
 }
-/* line 41, ../sass/aside.scss */
+/* line 103, ../sass/aside.scss */
 .aside-mini ul.nav > li > a {
   padding: 21px 3px;
 }
-/* line 45, ../sass/aside.scss */
+/* line 107, ../sass/aside.scss */
+.aside-mini .img-shrink {
+  transform: rotate(90deg);
+}
+/* line 111, ../sass/aside.scss */
 .aside-mini .nav_green li > a > i {
-  margin: -23px 0px;
+  margin: -19px 0px;
+  width: 100%;
+}
+
+/* line 118, ../sass/aside.scss */
+.aside-li-a a {
+  font-size: 1.2rem;
+  font-weight: normal;
+  display: inline-block;
+  text-align: center;
+  height: 44px;
+  width: 100%;
+  line-height: 44px;
+}
+/* line 128, ../sass/aside.scss */
+.aside-li-a.active {
+  background: white;
+}
+/* line 132, ../sass/aside.scss */
+.aside-li-a a:hover {
+  background: white;
+}
+
+/* line 137, ../sass/aside.scss */
+.xbox .head-box {
+  background: #f7f7f7;
+  left: -15px;
+}
+
+/* line 142, ../sass/aside.scss */
+.bg-white {
+  background: white;
 }

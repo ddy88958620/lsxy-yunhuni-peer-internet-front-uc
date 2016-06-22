@@ -8,19 +8,51 @@
 }
 
 /* line 10, ../sass/banner.scss */
+header {
+  font-size: 15px;
+  font-weight: normal;
+}
+
+/* line 15, ../sass/banner.scss */
+.panel-footer {
+  text-align: center;
+}
+/* line 16, ../sass/banner.scss */
+.panel-footer a {
+  color: #333;
+}
+
+/* line 22, ../sass/banner.scss */
 .logo_b {
   width: 55px;
   background: #3281a9;
 }
 
-/* line 15, ../sass/banner.scss */
+/* line 27, ../sass/banner.scss */
 .logo_ab .logo_w2 {
-  width: 100%;
+  width: 130%;
+  transform: translate(-4px, -2px);
 }
 
-/* line 20, ../sass/banner.scss */
+/* line 32, ../sass/banner.scss */
+.navbar-brand img {
+  max-height: none;
+}
+
+/* line 36, ../sass/banner.scss */
 .logo_ab img {
   line-height: 55px;
   margin: auto;
   float: none;
+}
+
+/* line 42, ../sass/banner.scss */
+.nav_b > li > a:hover, .nav_b > li > a:focus {
+  background-color: #3281a9;
+}
+
+/* line 46, ../sass/banner.scss */
+.a-color {
+  border-left: solid 1px #008AB5;
+  border-right: solid 1px #008AB5;
 }

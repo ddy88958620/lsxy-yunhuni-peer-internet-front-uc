@@ -2,9 +2,11 @@
   "name": "Browserasyc",
   "version": "0.0.1",
   "devDependencies": {
+    "bower": "^1.7.9",
     "browser-sync": "^2.13.0"
   },
   "scripts": {
-    "sync": "browser-sync start --server '/' --files './'"
+    "sync": "browser-sync start --server './' --files './'",
+    "bower": "bower install"
   }
 }

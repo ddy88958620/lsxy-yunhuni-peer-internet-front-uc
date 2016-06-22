@@ -1,0 +1,109 @@
+// 后台首页
+$font-color: #FC8408;
+
+.padder-v {
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+.app-list {
+
+  .app-status-center {
+    width: 100%;
+  }
+
+  .app-status-right {
+    width: 50%;
+    text-align: left;
+  }
+
+  .app-status-left {
+    width: 28%;
+    a {
+      padding-right: 10px;
+    }
+  }
+
+  .app-status-list {
+    list-style: none;
+    li {
+      margin-top: 5px;
+    }
+  }
+
+  .app-icon {
+    width: 50px;
+  }
+}
+
+// 和 admin-padding 值一样
+.fix-padding {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.panel {
+  margin-bottom: 10px;
+}
+
+section.yunhuni-personal {
+  margin-top: 5px;
+
+  &.panel {
+    border: none;
+    box-shadow: none;
+  }
+
+  .account-number {
+    color: $font-color;
+    font-size: 23px;
+  }
+
+  .account-number-decimal{
+    color: $font-color;
+  }
+
+  .box-footer {
+    margin: 5px;
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+  }
+
+  .account-left {
+    margin-top: 10px;
+    .account-number-small {
+      color: $font-color;
+      font-size: 15px;
+    }
+  }
+
+  .w-half {
+    display: inline-block;
+    width: 50%;
+    float: right;
+  }
+}
+
+.wrapperBox {
+  min-height: 130px;
+  background: whitesmoke;
+  border: 1px solid rgba(28, 27, 27, 0.08);
+  box-shadow: 0px 1px 1px #dddddd;
+  padding: 15px;
+}
+
+section.panel.pos-rlt {
+  border: none;
+  box-shadow: none;
+  padding-right: 5px;
+  padding-left: 5px;
+
+  .sectionWrap {
+    border: 1px solid rgba(28, 27, 27, 0.08);
+    box-shadow: 0px 1px 1px #dddddd;
+    .panel-heading {
+       background-color: #f5f5f5; 
+    }
+  }
+}
