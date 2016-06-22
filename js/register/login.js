@@ -28,7 +28,7 @@ $(document).ready(function() {
                     }
                 }
             },
-            code: {
+            validateCode : {
                 validators: {
                     notEmpty: {
                         message: '验证码不能为空'
