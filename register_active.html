@@ -35,7 +35,7 @@
                 <p class="col-lg-offset-1 text-center register-active">账号激活初始化登陆密码</p>
             </div>
             <div class="row">
-                <form role="form" action="./math.html" method="post" class="register-form" id="defaultForm">
+                <form role="form" action="" method="post" class="register-form" id="defaultForm">
                     <div class="form-group">
                         <lable class="col-lg-2 text-right">会员名称</lable>
                         <div class="col-lg-9 ">
@@ -95,11 +95,7 @@
 <!--bootstrapvalidator-->
 <script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.js"></script>
 
-<script type="text/javascript">
-    $(function(){
 
-    })
-</script>
 
 <script type="text/javascript">
     $(document).ready(function() {
@@ -145,7 +141,7 @@
                 validating: 'glyphicon glyphicon-refresh'
             },
             submitHandler: function(){
-
+                alert(2);return false;
             },
             fields: {
                 username: {
@@ -159,12 +155,6 @@
                             max: 30,
                             message: '用户名必须大于6，小于25个字符'
                         }
-                        /**
-                         * 添加方法 异步验证用户名是否存在
-                        remote: {
-                            url: '#',
-                            message: '用户名不可用'
-                        },**/
                     }
                 },
                 password: {
@@ -197,10 +187,8 @@
                 }
             }
         });
-        // Validate the form manually
-        $('#validateBtn').click(function() {
-            $('#defaultForm').bootstrapValidator('validate');
-        });
+
+
         $('#resetBtn').click(function() {
             $('#defaultForm').data('bootstrapValidator').resetForm(true);
         });

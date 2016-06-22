@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="row">
-            <form role="form" action="baidu.com" method="post" class="login-form" id="defaultForm">
+            <form role="form" action="./index2.html" method="post" class="login-form" id="defaultForm">
                 <div class="form-group">
                     <input type="text" name="username" placeholder="请输入账号" class="form-username form-control" id="form-username">
                 </div>
@@ -56,7 +56,7 @@
                     </div>
                 </div>
 
-                <button id="validateBtn" type="submit" class="btn btn-primary  btn-form">登录</button>
+                <button id="validateBtn" type="submit" name="submit" class="btn btn-primary  btn-form">登录</button>
             </form>
 
             <div class="row margin-block"  >
@@ -97,9 +97,6 @@
                 invalid: 'glyphicon glyphicon-remove',
                 validating: 'glyphicon glyphicon-refresh'
             },
-            submitHandler: function(){
-               
-            },
             fields: {
                 username: {
                     message: '用户名无效',
@@ -116,12 +113,6 @@
                             regexp: /^[a-zA-Z0-9_\.]+$/,
                             message: '用户名只能由字母、数字、点和下划线组成'
                         },
-                        /**
-                         *异步请求用户名是否存在
-                        remote: {
-                            url: '#',
-                            message: '用户名不可用'
-                        },*/
                         different: {
                             field: 'password',
                             message: '用户名和密码不能相同'
@@ -161,10 +152,6 @@
                     }
                 }
             }
-        });
-        // Validate the form manually
-        $('#validateBtn').click(function() {
-            $('#defaultForm').bootstrapValidator('validate');
         });
         $('#resetBtn').click(function() {
             $('#defaultForm').data('bootstrapValidator').resetForm(true);

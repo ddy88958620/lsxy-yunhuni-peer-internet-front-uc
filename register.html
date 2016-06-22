@@ -10,8 +10,7 @@
     <!--index.css-->
     <link href="stylesheets/screen.css" rel="stylesheet"  type="text/css" />
     <!--vaildator.css-->
-    <link rel="stylesheet" href="bower_components/bootstrapvalidator/dist/css/bootstrapValidator.css">
-
+    <link rel="stylesheet" href="bower_components/bootstrapvalidator/dist/css/bootstrapValidator.min.css">
 </head>
 <body class="register-bg">
 <!--  container -->
@@ -20,7 +19,7 @@
     <div class="box">
         <img class="logo" src="images/index/logo_top.png" />
         <div class="text">
-            如以有云呼你账号，<a href="login.html">立即登录</a> <a href="register.html">立即注册</a>
+            如果有云呼你账号，<a href="login.html">立即登录</a>
         </div>
     </div>
 </div>
@@ -36,31 +35,31 @@
                 <P class="col-md-3 text-right">云呼你会员注册</P>
             </div>
             <div class="row">
-                <form role="form" action="./idenx.html" method="post" class="register-form" id="defaultForm">
+                <form role="form" action="" method="post" class="register-form" id="defaultForm" data-toggle="validator" >
                     <div class="form-group">
                         <lable class="col-lg-3 text-right">会员名称</lable>
                         <div class="col-md-9 ">
-                            <input type="text" name="username" placeholder="请输入账号" class="form-control input-form" id="form-username" value="chenjunjia" />
+                            <input type="text" name="username" placeholder="请输入账号" class="form-control input-form" id="form-username" />
                              <p class="tips">6~25个字符，建议中文名称</p>
                         </div>
                     </div>
                     <div class="form-group">
                         <lable class="col-lg-3 text-right">绑定手机</lable>
                         <div class="col-lg-9">
-                            <input type="text" name="phone" placeholder="请输入账号" class="form-control input-form" id="form-phone" maxlength="11" value="13611460986" />
+                            <input type="text" name="phone" placeholder="请输入账号" class="form-control input-form" id="form-phone" maxlength="11"  />
                             <p class="tips"></p>
                         </div>
                     </div>
                     <div class="form-group">
                         <lable class="col-lg-3 text-right">绑定邮箱地址</lable>
                         <div class="col-lg-9">
-                            <input type="text" name="email" placeholder="请输入账号" class="form-control input-form" id="form-email" value="4756@qq.com" />
+                            <input type="text" name="email" placeholder="请输入账号" class="form-control input-form" id="form-email"  />
                             <p class="tips">注册后，邮箱地址收到账号激活邮件</p>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-lg-9 col-lg-offset-3">
-                            <button id="validateBtn" type="submit" class="btn btn-primary  btn-form">注册</button>
+                            <a id="validateBtn"  class="btn btn-primary  btn-form">注册</a>
                         </div>
                     </div>
                 </form>
@@ -126,8 +125,6 @@
     $('#modal-sendphone').click(function(){
         alert('sure');
     });
-
-
     function settime(val) {
         if (countdown == 0) {
             val.html('发送验证码');
@@ -135,30 +132,22 @@
             return;
         } else {
             val.html("重新发送(" + countdown + ")");
-            console.log(countdown);
             countdown--;
         }
         setTimeout(function() {
             settime(val)
         },1000)
     }
-
     $(document).ready(function() {
         $('#defaultForm').bootstrapValidator({
-            message: 'this is not ot',
+            message: '',
             feedbackIcons: {
                 valid: 'glyphicon glyphicon-ok',
                 invalid: 'glyphicon glyphicon-remove',
                 validating: 'glyphicon glyphicon-refresh'
             },
-
-            submitHandler: function(form){
-                console.log(2);
-                alert(2);
-                return false;
-                //showmodal();
+            submitHandler: function(){
             },
-
             fields: {
                 username: {
                     message: '用户名无效',
@@ -202,10 +191,15 @@
                 }
             }
         });
-        // Validate the form manually
-        $('#validateBtn').click(function() {
-            $('#defaultForm').bootstrapValidator('validate');
+
+        $('#validateBtn').click(function(){
+            var login = $('#defaultForm').data('bootstrapValidator').isValid();
+            if(login==true)
+                showmodal();
+            else
+                $('#defaultForm').bootstrapValidator('validate');
         });
+
         $('#resetBtn').click(function() {
             $('#defaultForm').data('bootstrapValidator').resetForm(true);
         });
