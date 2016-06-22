@@ -24,6 +24,11 @@
   padding: 0 10px;
   height: auto;
   margin: 0 auto 50px auto;
+  .form-control-feedback{
+    top: 5px;
+    right: 15px;
+  }
+
   .box {
     margin-top: 95px;
     .p{
@@ -33,6 +38,7 @@
     }
   }
   .active-box {
+    color:#686868;
   }
   .register-box {
     color: #686868;
@@ -134,6 +140,7 @@
 
 .shadow-bg {
   position: fixed;
+  display: none;
   top: 0;
   left: 0;
   width: 100%;
@@ -144,6 +151,7 @@
 
 .modal-phone {
   position: fixed;
+  display: none;
   z-index: 2;
   top: 50%;
   left: 50%;
@@ -193,6 +201,7 @@
     height: 70px;
     border-top: 1px solid #ebebeb;
     .cancel, .sure {
+      cursor:pointer;
       width: 49%;
       float: left;
       display: block;
@@ -201,14 +210,19 @@
       text-align: center;
       line-height: 70px;
       height: 70px;
+      &:hover{
+        text-decoration: none;
+        color:#0099cc;
+      }
+    }
+    .cancel{
+      border-right:1px solid #ebebeb ;
     }
   }
 }
 
 
-
-
-@media screen and (min-width:800px) {
+@media screen and (min-width:1000px) {
   .register_footer{
     position: fixed;
     bottom:15px;
@@ -217,12 +231,13 @@
     color:#848484;
   }
 }
-@media screen and (max-width:799px) {
+@media screen and (max-width:999px) {
   .register_footer {
     display: block;
     width: 90%;
-    margin: 0 auto;
+    margin: 100px auto 0 auto;
     color:#848484;
+    text-align: center;
   }
 }
 

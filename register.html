@@ -28,11 +28,11 @@
 
 <div class="register_container">
     <div class="row box">
-        <div class="col-md-5">
-            <img src="images/register/reg_img.jpg" />
+        <div class="col-md-5 text-center">
+            <img src="images/register/reg_img.jpg" width="100%" />
         </div>
         <div class="col-md-7 register-box">
-            <div class="row">
+            <div class="row te">
                 <P class="col-md-3 text-right">云呼你会员注册</P>
             </div>
             <div class="row">
@@ -47,7 +47,7 @@
                     <div class="form-group">
                         <lable class="col-lg-3 text-right">绑定手机</lable>
                         <div class="col-lg-9">
-                            <input type="text" name="phone" placeholder="请输入账号" class="form-control input-form" id="form-phone">
+                            <input type="text" name="phone" placeholder="请输入账号" class="form-control input-form" id="form-phone" maxlength="11" />
                             <p class="tips"></p>
                         </div>
                     </div>
@@ -76,13 +76,12 @@
 </div>
 <!--/footer-->
 <!--modal-->
-<div class="shadow-bg" id="shadow-bg" ></div>
+<div class="shadow-bg" id="shadow-bg"  ></div>
 <div id="modal-phone" class="modal-phone">
    <div class="title">验证手机号</div>
    <div class="content">
         <div class="input">
-            手机号 :  <span>1361****986</span>
-
+            手机号 :  <span id="phone_number">1361****986</span>
         </div>
         <div class="input">
             <div class="code-title">验证码 :</div>
@@ -113,13 +112,15 @@
     });
     /*显示modal*/
     function showmodal() {
+        var phone = $('input[name="phone"]').val();
+        var spring =  phone.substring(0,4) + '****' + phone.substring(8,11) ;
+        $('#phone_number').html(spring);
         $('#shadow-bg').fadeIn();
         $('#modal-phone').fadeIn();
     }
     /*获取验证码*/
     $('#send-code').click(function(){
-        alert(1);
-        settime(countdown);
+        settime($(this));
     });
     /*确认*/
     $('#modal-sendphone').click(function(){
@@ -130,11 +131,12 @@
 
     function settime(val) {
         if (countdown == 0) {
-            val.val('发送验证码');
+            val.html('发送验证码');
             countdown = 60;
+            return;
         } else {
-            val.setAttribute("disabled", true);
-            val.value="重新发送(" + countdown + ")";
+            val.html("重新发送(" + countdown + ")");
+            console.log(countdown);
             countdown--;
         }
         setTimeout(function() {
@@ -151,8 +153,7 @@
                 validating: 'glyphicon glyphicon-refresh'
             },
             submitHandler: function(){
-                console.log(1);
-                return;
+                showmodal();
             },
             fields: {
                 username: {
@@ -189,19 +190,17 @@
                         notEmpty: {
                             message: '手机不能位空'
                         },
-                        stringLength: {
-                            min: 11,
-                            max: 11,
-                            message: '请输入11位数的手机号码'
-                        },
+                        regexp: {
+                            regexp: /^(13[0-9]|14[0-9]|15[0-9]|18[0-9]|17[0-9])\d{8}$/,
+                            message: '请输入正确的手机格式'
+                        }
                     }
                 }
             }
         });
         // Validate the form manually
         $('#validateBtn').click(function() {
-
-            //$('#defaultForm').bootstrapValidator('validate');
+            $('#defaultForm').bootstrapValidator('validate');
         });
         $('#resetBtn').click(function() {
             $('#defaultForm').data('bootstrapValidator').resetForm(true);
