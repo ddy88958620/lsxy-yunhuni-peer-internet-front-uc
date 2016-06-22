@@ -3,22 +3,22 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
+body {
+  font-size: 12px;
+}
 
-$font-color: #FC8408;
-
-
-body, html {
-  background: white;
+a {
+  color: #428bca;
 }
 
 @import './aside.scss';
+@import './index.scss';
 @import './banner.scss';
 @import './common.scss';
 @import './admin-index.scss';
 @import './login.scss';
-a {
-  color: #428bca;
-}
+@import './register.scss';
+
 
 .bg-light {
   background-color: #f1f1f1r
@@ -32,57 +32,6 @@ a {
   float: left;
 }
 
-.admin-padding {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-.wrapperBox {
-  min-height: 130px;
-  background: whitesmoke;
-  border: 1px solid rgba(28, 27, 27, 0.08);
-  box-shadow: 1px 1px 1px #dddddd;
-  padding: 15px;
-  
-}
-
-.scrollable .panel.panel-default {
-  border: none;
-  box-shadow: none;
-}
-
-.yunhuni-personal {
-  .account-number {
-    color: $font-color;
-    font-size: 23px;
-  }
-
-  .account-number-decimal{
-    color: $font-color;
-  }
-
-  .box-footer {
-    margin: 5px;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-  }
-
-  .account-left {
-    margin-top: 10px;
-    .account-number-small {
-      color: $font-color;
-      font-size: 15px;
-    }
-  }
-
-  .w-half {
-    display: inline-block;
-    width: 50%;
-    float: right;
-  }
-}
-
 .none-app {
   text-align: center;
   span {
@@ -90,31 +39,4 @@ a {
     margin-left: 25px;
     vertical-align: middle;
   }
-}
-
-.app-list {
-
-  .app-status-center {
-    width: 100%;
-  }
-
-  .app-status-right {
-    width: 600px;
-  }
-
-  .app-status-left {
-    width: 300px;
-  }
-
-  .app-status-list {
-    list-style: none;
-    li {
-      margin-top: 5px;
-    }
-  }
-}
-
-.panel-body {
-  border: 1px solid rgba(28, 27, 27, 0.08);
-  box-shadow: 1px 1px 1px #dddddd;
 }

@@ -1,139 +1,57 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8" />
-<title>云分销</title>
-<meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<!-- Custom CSS -->
-<link href="css/style.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="css/app.v2.css" type="text/css" />
-<link rel="stylesheet" href="css/own.css" type="text/css"/>
-<link rel="stylesheet" href="./stylesheets/screen.css" type="text/css" media="screen" charset="utf-8">
-<!--[if lt IE 9]> <script src="js/ie/html5shiv.js" cache="false"></script> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
-</head>
 <body>
-<section class="vbox">
-    <header class="bg-green bg header navbar navbar-fixed-top-xs bg-blue">
-        <div class="navbar-header aside logo_b">
-          <a href="#" class="navbar-brand logo_ab" data-toggle="fullscreen">
-            <img src="./images/index/logo.png" class="m-r-sm logo_w2">
-          </a>
-        </div>
-        <ul class="nav navbar-nav hidden-xs nav_b">
-            <li class="dropdown">
-              <a href="index.html" class="dropdown-toggle" data-toggle="dropdown">
-                <span class="">商户管理控制台</span>
-              </a>
-            </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right hidden-xs nav-user nav_b">
-            <li class="dropdown hidden-xs a-color"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-fw fa-book"></i>文档中心
-              </a></li>
-            <li class="hidden-xs"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-bell"></i> <span class="badge badge-sm up bg-danger m-l-n-sm count">2</span> </a>
-                <section class="dropdown-menu aside-xl">
-                    <section class="panel bg-white">
-                        <header class="panel-heading b-light bg-light"> <strong>您有<span class="count">2</span>通知</strong> </header>
-                        <div class="list-groulist-group-alt animated fadeInRight"><a href="#" class="media list-group-item"> <span class="pull-left thumb-sm"> <img src="images/avatar.jpg" alt="John said" class="img-circle"> </span> <span class="media-body block m-b-none">提醒<br>
-                            <small class="tmuted">10分钟以前</small></span></a><a href="#" class="media list-group-item"> <span class="media-body block m-b-none">待办<br>
-                            <small class="text-muted">1小时以前</small></span></a></div>
-                        <footer class="panel-footer text-sm"> <a href="#" class="pull-right"> <i class="fa fa-cog"></i> </a> <a href="#notes" data-toggle="class:show animated fadeInRight">查看所有通知</a> </footer>
-                    </section>
-                </section>
-            </li>
-            <li class="dropdown a-color"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="thumb-sm avatar pull-left"> <img src="images/avatar.jpg"> </span>渠道商<b class="caret"></b> </a>
-                <ul class="dropdown-menu animated fadeInRight">
-                    <span class="arrow top"></span>
-                    <li> <a href="#">设置</a> </li>
-                    <li> <a href="profile.html">简介</a> </li>
-                    <li> <a href="modal.lockme.html" data-toggle="ajaxModal" >退出</a> </li>
-                </ul>
-            </li>
-        </ul>
-    </header>
-    <section>
-        <section class="hbox stretch"> <!-- .aside -->
-            <aside class="bg-Green lter aside hidden-print" id="nav">
-                <section class="w-f scrollable">
-                    <header class="head bg_green lter text-center clearfix">
-                      <a href="#nav" data-toggle="class:nav-xs" class="text-center btn btn_b"> 
-                        <img class="img-shrink" src="./images/index/shrink.png"/>
-                      </a> 
-                    </header>
-                    <section class="w-f scrollable" id="top_h">
-                        <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="5px" data-color="#2a9a88"> <!-- nav -->
-                            <nav class="nav-primary nav_green hidden-xs">
-                                <ul class="list">
-                                    <li > <a href="#" > <i class="fa fa-caret-down icon"> </i><span>用户中心</span> </a>
-                                        <ul class="nav lt list">
-                                            <li> <a class="active" href="no_distribution.html"> <i class="fa fa-user icon"> </i> <span>账号管理</span> </a> </li>
-                                            <li> <a href="no_service.html"> <i class="fa fa-database icon" aria-hidden="true"> </i> <span>费用管理</span> </a> </li>
-                                        </ul>
-                                    </li>
-                                    <li > <a href="#"> <i class="fa fa-caret-down icon"> </i><span>开发者中心</span> </a>
-                                        <ul class="nav lt list">
-                                            <li> <a href="fee.html"> <i class="fa fa-desktop" icon"></i> <span>应用管理</span> </a> </li>
-                                            <li> <a href="message.html"><i class="fa fa-envelope icon"> </i> <span>号码管理</span> </a> </li>
-                                        </ul>
-                                    </li>
-                                    <li > <a href="#" >
-                                        <i class="fa fa-caret-down icon"> </i>
-                                        <span>消息中心</span> </a>
-                                    <li > <a href="#" > 
-                                        <i class="fa fa-caret-down icon"> </i>
-                                        <span>客服中心</span> </a>
-                                    </li>
-                                    <li > <a href="#" > 
-                                        <i class="fa fa-caret-down icon"> </i>
-                                        <span>统计查询</span> </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <!-- / nav --> </div>
-                    </section>
-                </section>
-            </aside>
+
+  <!-- header -->
+  <div class="include" data-include="header"></div>
+  <!-- end header -->
+
+    <section class='aside-section'>
+        <section class="hbox stretch">
+          <!-- .aside -->
+          <aside class="bg-Green lter aside hidden-print include" data-include="aside" id="nav"></aside>
             <!-- /.aside -->
+
             <section id="content">
                 <section class="hbox stretch"> 
                     <!-- .aside -->
-                    <aside class="bg-green lter aside-sm hidden-print ybox" id="subNav">
-                        <section class="vbox">
-                            <div class="wrapper header"><span class="margin_lr"></span><span class="margin_lr border-left">&nbsp;账号管理</span></div>
-                            <section class="scrollable">
-                                <div class="slim-scroll"> 
-                                    <!-- nav -->
-                                    <nav class="hidden-xs">
-                                        <ul class="nav">
-                                            <li>
-                                                <div class="aside-li-a active">
-                                                  <a href="">安全设置</a>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="aside-li-a">
-                                                  <a href="">基本设置</a>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="aside-li-a">
-                                                  <a href="">实名认证</a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </section>
-                        </section>
-                    </aside>
+                    <!-- <aside class="bg&#45;green lter aside&#45;sm hidden&#45;print ybox" id="subNav"> -->
+                    <!--     <section class="vbox"> -->
+                    <!--         <div class="wrapper header"><span class="margin_lr"></span><span class="margin_lr border&#45;left">&#38;nbsp;账号管理</span></div> -->
+                    <!--         <section class="scrollable"> -->
+                    <!--             <div class="slim&#45;scroll">  -->
+                    <!--                 <!&#45;&#45; nav &#45;&#45;> -->
+                    <!--                 <nav class="hidden&#45;xs"> -->
+                    <!--                     <ul class="nav"> -->
+                    <!--                         <li> -->
+                    <!--                             <div class="aside&#45;li&#45;a active"> -->
+                    <!--                               <a href="">安全设置</a> -->
+                    <!--                             </div> -->
+                    <!--                         </li> -->
+                    <!--                         <li> -->
+                    <!--                             <div class="aside&#45;li&#45;a"> -->
+                    <!--                               <a href="">基本设置</a> -->
+                    <!--                             </div> -->
+                    <!--                         </li> -->
+                    <!--                         <li> -->
+                    <!--                             <div class="aside&#45;li&#45;a"> -->
+                    <!--                               <a href="">实名认证</a> -->
+                    <!--                             </div> -->
+                    <!--                         </li> -->
+                    <!--                     </ul> -->
+                    <!--                 </nav> -->
+                    <!--             </div> -->
+                    <!--         </section> -->
+                    <!--     </section> -->
+                    <!-- </aside> -->
                     <aside>
                         <section class="vbox xbox">
-                            <div class="head-box"> <a href="#subNav" data-toggle="class:hide"> <i class="fa fa-angle-left text"></i> <i class="fa fa-angle-right text-active"></i> </a> </div>
+                          <!-- 如果没有三级导航 这段代码注释-->
+                            <!-- <div class="head&#45;box"> <a href="#subNav" data&#45;toggle="class:hide"> <i class="fa fa&#45;angle&#45;left text"></i> <i class="fa fa&#45;angle&#45;right text&#45;active"></i> </a> </div> -->
                             <section class="scrollable wrapper w-f">
                                 <section class="panel panel-default yunhuni-personal">
                                     <div class="row m-l-none m-r-none bg-light lter">
-                                        <div class="col-md-4 padder-v">
+                                        <div class="col-md-4 padder-v fix-padding">
                                           <div class='wrapperBox'>
                                             <span class="pull-left m-r-sm">
                                               <img src="images/photo.png" width="50"/>
@@ -152,7 +70,7 @@
                                             </div>
                                           </div>
                                         </div>
-                                        <div class="col-md-4 padder-v">
+                                        <div class="col-md-4 padder-v fix-padding">
                                           <div class='wrapperBox'>
                                             <span class="h5 block m-t-xs">
                                               <strong>线路状况</strong>
@@ -164,7 +82,7 @@
                                             </span>
                                           </div>
                                         </div>
-                                        <div class="col-md-4 padder-v">
+                                        <div class="col-md-4 padder-v fix-padding">
                                           <div class='wrapperBox'>
                                             <span class="h5 block m-t-xs">
                                               <strong>套餐剩余量</strong>
@@ -190,11 +108,12 @@
                                         </div>
                                     </div>
                                 </section>
-                                <section class="panel panel-default pos-rlt clearfix admin-padding">
+                                <section class="panel panel-default pos-rlt clearfix ">
+                                  <div class="sectionWrap">
                                     <header class="panel-heading">
                                         <div class="h5 border-left">开发者账号</div>
                                     </header>
-                                    <div class="panel-body clearfix">
+                                    <div class="panel-body clearfix border-top-none">
                                       <p>
                                         REST API: http://api.yunhuni.com/1234135312321414134/
                                         <span>
@@ -208,8 +127,10 @@
                                         </span>
                                       </p>
                                     </div>
+                                  </div>
                                 </section>
-                                <section class="panel panel-default pos-rlt clearfix admin-padding">
+                                <section class="panel panel-default pos-rlt clearfix ">
+                                  <div class="sectionWrap">
                                     <div class="panel-body clearfix">
                                       <div class="none-app">
                                         <img src="./images/index/chicken.png" alt="">
@@ -219,15 +140,17 @@
                                         </span>
                                       </div>
                                     </div>
+                                  </div>
                                 </section>
-                                <section class="panel panel-default pos-rlt clearfix admin-padding app-list">
+                                <section class="panel panel-default pos-rlt clearfix  app-list">
+                                  <div class="sectionWrap">
                                     <header class="panel-heading">
                                         <div class="h5 border-left">应用1</div>
                                     </header>
-                                    <div class="panel-body clearfix">
+                                    <div class="panel-body clearfix border-top-none">
                                         <div class="app-status-right dropdown fl">
-                                          <span class="pull-left m-r-sm">
-                                            <img src="./images/index/cp.png" width="50"/></span> 
+                                          <span class="app-icon pull-left m-r-sm">
+                                            <img src="./images/index/cp.png" width="50px"/></span> 
                                           <span class="h5 block m-t-xs text-muted">APPID :
                                             <span>214132513515135132512334134</span>
                                             <small class="text-success">已上线</small>
@@ -243,15 +166,17 @@
                                           <a href="" class="fr">详情</a>
                                         </div>
                                     </div>
+                                  </div>
                                 </section>
-                                <section class="panel panel-default pos-rlt clearfix admin-padding app-list">
+                                <section class="panel panel-default pos-rlt clearfix  app-list">
+                                  <div class="sectionWrap">
                                     <header class="panel-heading">
                                         <div class="h5 border-left">应用2</div>
                                     </header>
-                                    <div class="panel-body clearfix">
+                                    <div class="panel-body clearfix border-top-none">
                                         <div class="app-status-center dropdown fl">
-                                          <span class="pull-left m-r-sm">
-                                            <img src="./images/index/cp.png" width="50"/></span> 
+                                          <span class="app-icon pull-left m-r-sm">
+                                            <img src="./images/index/cp.png" width="50px"/></span> 
                                           <span class="h5 block m-t-xs text-muted">APPID :
                                             <span>214132513515135132512334134</span>
                                             <small class="text-danger">未上线</small>
@@ -259,6 +184,7 @@
                                           <small class="text-muted m-t-xs text-uc yhn-description">这里是描述适用商户：龙米、集美汇等3个</small> 
                                         </div>
                                     </div>
+                                  </div>
                                 </section>
                             </section>
                         </section>
@@ -271,36 +197,8 @@
 </section>
 <script src="js/app.v2.js"></script> <!-- Bootstrap --> <!-- App --> 
 <script src="js/charts/flot/jquery.flot.min.js" cache="false"></script> 
-<script src="http://cdn.bootcss.com/bootbox.js/4.4.0/bootbox.min.js"></script>
+<script src="js/bootbox.min.js"></script>
 <script src="js/charts/flot/demo.js" cache="false"></script>
-<script>
-// slimScrollDiv
-setTimeout(function(){
-  var slim = document.querySelector('.slimScrollDiv')
-  slim.style.height = (window.innerHeight - 80) + 'px'
-}, 1000)
-
-$("a[href='#nav']").click(function(){
-  $('#nav').toggleClass('aside-mini')
-
-  var hasMini = $('#nav').hasClass('aside-mini')
-  if(hasMini){
-
-  }
-
-  // 防止冒泡
-  return false
-})
-
-$('.create_confirm').on('click',function(e){
-  bootbox.confirm("确定重新生成么", function(result) {
-    if(result){
-      var url = $('.create_confirm').attr('href')
-      window.location.href = url
-    }
-  }); 
-  return false
-})
-</script>
+<script src="js/include.js" aysnc></script>
 </body>
 </html>

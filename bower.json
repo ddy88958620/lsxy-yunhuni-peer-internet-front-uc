@@ -1,0 +1,23 @@
+{
+  "name": "yunhuni-peer-internet-front",
+  "description": "A project of web app for www.yunhuni.com",
+  "main": "index.js",
+  "authors": [
+    "yunhuni develop team"
+  ],
+  "license": "MIT",
+  "homepage": "http://git.liushuixingyun.com/scm/yhn/yunhuni-peer-internet-front.git",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    ".idea"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.4",
+    "bootstrap":"~3.3.6"
+  },
+  "devDependencies":{
+
+  }
+}

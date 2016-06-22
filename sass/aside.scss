@@ -1,12 +1,53 @@
 $bgcolor: #0E2835; 
 $siderbar-child: #EAEDF1;
 
-.nav_green  ul.nav>li:hover>a, .nav_green  ul.nav>li:focus>a, .nav_green  ul.nav>li>a:hover, .nav_green  ul.nav>li>a:focus, .nav_green  ul.nav>li>a:active, .nav_green  ul.nav>li.active>a {
+
+
+.aside.canbehover:hover,.nav_green  ul.nav>li:hover>a, .nav_green  ul.nav>li:focus>a, .nav_green  ul.nav>li>a:hover, .nav_green  ul.nav>li>a:focus, .nav_green  ul.nav>li>a:active, .nav_green  ul.nav>li.active>a {
   background-color: #2e97cb !important;
 }
 
-.list .nav a {
-  &.active {
+
+aside {
+  &.aside.bg-Green.lter{
+    background: linear-gradient(to bottom, #0E2835 53%, #415966);
+  }
+}
+
+.aside-section {
+  height: 100%;
+
+  .hbox {
+    height: 100%;
+  }
+}
+
+.bg-green {
+  .wrapper {
+    height: 36px;
+    min-height: 0px;
+  }
+}
+
+.nav_green {
+  li>a>i {
+    font-size: 1.5rem;
+    line-height: 37px;
+  }
+}
+
+.list li .nav>li>a {
+    font-size: 1.2rem;
+}
+
+.list {
+  li a, span {
+    font-size: 1.2rem;
+  }
+}
+
+.list .nav a, a.canbehover {
+  &:hover {
     background-color: #2e97cb !important;
   }
 }
@@ -19,8 +60,9 @@ $siderbar-child: #EAEDF1;
 
 .bg-Green.lter,.bg-Green .lter, #top_h {
   background: $bgcolor;
-  background-color: $bgcolor;
 }
+
+
 
 
 .bg-green {
@@ -51,11 +93,13 @@ $siderbar-child: #EAEDF1;
   span {
     display: none;
   }
+
   .list li a {
     padding: 20px 4px;
     height:40px;
     line-height:40px;
   }
+
   ul.nav>li>a {
     padding: 21px 3px;
   }
@@ -65,13 +109,14 @@ $siderbar-child: #EAEDF1;
   }
 
   .nav_green li>a>i {
-    margin: -23px 0px;
+    margin: -19px 0px;
+    width: 100%;
   }
 }
 
 .aside-li-a {
   a {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: normal;
     display: inline-block;
     text-align: center;
@@ -87,6 +132,11 @@ $siderbar-child: #EAEDF1;
   a:hover {
     background: white;
   }
+}
+
+.xbox .head-box {
+  background: #f7f7f7;
+  left: -15px;
 }
 
 .bg-white {

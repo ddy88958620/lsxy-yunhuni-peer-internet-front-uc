@@ -1,8 +1,27 @@
+.admin-padding {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
 
 .border-left {
   border-left: 2px solid #2e97cb;
   padding-left: 5px;
   font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.border-top {
+  border-bottom: 1px solid rgba(255,255,255,0.05)
+}
+
+.border-top-none {
+  border-top: none;
 }
 
 .bootbox-body {
@@ -16,3 +35,14 @@
 .fa-database:before {
   content: '\f1c0';
 }
+
+.fa-clone:before {
+  content: '\f24d';
+}
+
+.fa-caret-down {
+  &.active {
+    transform: rotate(-90deg);
+  }
+}
+

@@ -6,8 +6,10 @@
   background-image: url(../images/index/bg.jpg);
   background-repeat: no-repeat;
   background-position: center top;
+  background-size:cover;
   overflow-x: hidden;
   height: auto;
+
 }
 
 .login-logo {
@@ -34,11 +36,11 @@
       height: 50px;
     }
       .form-username {
-        background: url('../images/index/icon_10.png') left center no-repeat;
+        background: url('../images/index/icon_10.png') 20px center no-repeat;
         padding-left: 40px;
       }
       .form-password {
-        background: url('../images/index/icon_11.png') left center no-repeat;
+        background: url('../images/index/icon_11.png') 20px center no-repeat;
         padding-left: 40px;
       }
       .form-block{

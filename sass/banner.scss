@@ -12,6 +12,13 @@ header {
   font-weight: normal;
 }
 
+.panel-footer {
+  a {
+    color: #333;
+  }
+  text-align: center;
+}
+
 .logo_b {
   width: 55px;
   background: #3281a9;
@@ -19,7 +26,7 @@ header {
 
 .logo_ab .logo_w2 {
   width: 130%;
-  transform: translate(-4px);
+  transform: translate(-4px, -2px);
 }
 
 .navbar-brand img {
