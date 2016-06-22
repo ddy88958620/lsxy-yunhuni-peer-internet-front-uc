@@ -132,42 +132,47 @@
   height: 50px;
 }
 /* line 38, ../sass/login.scss */
+.login-box .login-form .code-img {
+  display: block;
+  margin: 5px 0 0 10px;
+}
+/* line 42, ../sass/login.scss */
 .login-box .login-form .form-username {
   background: url("../images/index/icon_10.png") 20px center no-repeat;
   padding-left: 40px;
 }
-/* line 42, ../sass/login.scss */
+/* line 46, ../sass/login.scss */
 .login-box .login-form .form-password {
   background: url("../images/index/icon_11.png") 20px center no-repeat;
   padding-left: 40px;
 }
-/* line 46, ../sass/login.scss */
+/* line 50, ../sass/login.scss */
 .login-box .login-form .form-block {
   display: inline-block;
   width: 100%;
 }
-/* line 50, ../sass/login.scss */
+/* line 54, ../sass/login.scss */
 .login-box .login-form .btn-form {
   height: 48px;
   width: 100%;
   font-size: 20px;
 }
-/* line 56, ../sass/login.scss */
+/* line 60, ../sass/login.scss */
 .login-box .remember-check {
   width: 14px;
   height: 14px;
   border: 1px solid #c3c3c3;
   background-color: #FFF;
 }
-/* line 62, ../sass/login.scss */
+/* line 66, ../sass/login.scss */
 .login-box .margin-block {
   margin-top: 20px;
 }
-/* line 65, ../sass/login.scss */
+/* line 69, ../sass/login.scss */
 .login-box .register {
   text-decoration: underline;
 }
-/* line 68, ../sass/login.scss */
+/* line 72, ../sass/login.scss */
 .login-box .tips {
   background: url("../images/tips.png") no-repeat left center;
   height: 35px;
@@ -176,22 +181,22 @@
   padding-left: 25px;
   color: red !important;
 }
-/* line 76, ../sass/login.scss */
+/* line 80, ../sass/login.scss */
 .login-box .tips:hover {
   text-decoration: none;
 }
 
-/* line 81, ../sass/login.scss */
+/* line 85, ../sass/login.scss */
 .border {
   border: 1px solid transparent;
 }
 
-/* line 85, ../sass/login.scss */
+/* line 89, ../sass/login.scss */
 .remove-padding {
   padding: 0;
 }
 
-/* line 89, ../sass/login.scss */
+/* line 93, ../sass/login.scss */
 .login-footer {
   color: #848484 !important;
 }

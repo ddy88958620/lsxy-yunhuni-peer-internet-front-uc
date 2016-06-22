@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="row">
-            <form role="form" action="./index2.html" method="post" class="login-form" id="defaultForm">
+            <form role="form" action="" method="post" class="login-form" id="defaultForm">
                 <div class="form-group">
                     <input type="text" name="username" placeholder="请输入账号" class="form-username form-control" id="form-username">
                 </div>
@@ -42,8 +42,7 @@
                         <input type="text" name="code" placeholder="验证码" class="form-control" id="form-code">
                     </div>
                     <div class="col-md-6 remove-padding border">
-                        <span><img src="images/index/login-code.png" /></span>
-                        <input type="hidden" value="4222" id="verficatycode" />
+                        <span class="code-img"><img src="images/index/login-code.png" /></span>
                     </div>
                 </div>
 
@@ -157,6 +156,11 @@
             $('#defaultForm').data('bootstrapValidator').resetForm(true);
         });
     });
+    $('input').keyup(function(){
+        $('.tips').hide();
+    });
+
+    
 </script>
 
 </body>
