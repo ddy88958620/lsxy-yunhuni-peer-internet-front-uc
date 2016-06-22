@@ -35,7 +35,7 @@
                 <P class="col-md-3 text-right">云呼你会员注册</P>
             </div>
             <div class="row">
-                <form role="form" action="" method="post" class="register-form" id="defaultForm" data-toggle="validator" >
+                <form role="form" action="./index.html" method="post" class="register-form" id="defaultForm" >
                     <div class="form-group">
                         <lable class="col-lg-3 text-right">会员名称</lable>
                         <div class="col-md-9 ">
@@ -123,7 +123,8 @@
     });
     /*确认*/
     $('#modal-sendphone').click(function(){
-        alert('sure');
+        alert('确认提交');
+        document.getElementById('defaultForm').submit();
     });
     function settime(val) {
         if (countdown == 0) {
@@ -139,6 +140,7 @@
         },1000)
     }
     $(document).ready(function() {
+        $('#form-username').val('');
         $('#defaultForm').bootstrapValidator({
             message: '',
             feedbackIcons: {

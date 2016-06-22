@@ -193,8 +193,12 @@
     }
     .code-button {
       border: 1px solid transparent;
+      background: url('../images/register/code_bg.png') repeat-x;
       float: right;
       height: 45px;
+      width: 109px;
+      border: 1px solid #c3c3c3;
+      border-radius: 5px;
     }
   }
 

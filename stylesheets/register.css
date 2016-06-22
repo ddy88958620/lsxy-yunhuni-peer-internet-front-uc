@@ -222,10 +222,14 @@
 /* line 194, ../sass/register.scss */
 .modal-phone .content .code-button {
   border: 1px solid transparent;
+  background: url("../images/register/code_bg.png") repeat-x;
   float: right;
   height: 45px;
+  width: 109px;
+  border: 1px solid #c3c3c3;
+  border-radius: 5px;
 }
-/* line 201, ../sass/register.scss */
+/* line 205, ../sass/register.scss */
 .modal-phone .footer {
   position: absolute;
   bottom: 0;
@@ -233,7 +237,7 @@
   height: 70px;
   border-top: 1px solid #ebebeb;
 }
-/* line 207, ../sass/register.scss */
+/* line 211, ../sass/register.scss */
 .modal-phone .footer .cancel, .modal-phone .footer .sure {
   cursor: pointer;
   width: 49%;
@@ -245,18 +249,18 @@
   line-height: 70px;
   height: 70px;
 }
-/* line 217, ../sass/register.scss */
+/* line 221, ../sass/register.scss */
 .modal-phone .footer .cancel:hover, .modal-phone .footer .sure:hover {
   text-decoration: none;
   color: #0099cc;
 }
-/* line 222, ../sass/register.scss */
+/* line 226, ../sass/register.scss */
 .modal-phone .footer .cancel {
   border-right: 1px solid #ebebeb;
 }
 
 @media screen and (min-width: 1000px) {
-  /* line 230, ../sass/register.scss */
+  /* line 234, ../sass/register.scss */
   .register_footer {
     position: fixed;
     bottom: 15px;
@@ -266,7 +270,7 @@
   }
 }
 @media screen and (max-width: 999px) {
-  /* line 239, ../sass/register.scss */
+  /* line 243, ../sass/register.scss */
   .register_footer {
     display: block;
     width: 90%;
