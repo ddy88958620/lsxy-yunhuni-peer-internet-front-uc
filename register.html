@@ -134,9 +134,9 @@
             async: false,
             datatype: "text",
             success: function(msg) {
-                var msg = msg.err = "用户名存在";
+                var tips = msg.err = "用户名存在";
                 //显示showtips
-                tipsmsg(msg);
+                tipsmsg(tips);
                 if(tips==''){
                     bol = true;
                 }
