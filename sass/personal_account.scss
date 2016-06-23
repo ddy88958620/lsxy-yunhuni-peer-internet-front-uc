@@ -1,0 +1,54 @@
+
+
+
+.row,.form-group,.form-horizontal{ margin: 0; }
+.remove-padding{
+  padding: 0;
+}
+.personal_t{
+  width: 130px;
+  display: block;
+  float: left;
+  border: 1px solid #000;
+}
+
+.dotted-line{
+  border-bottom: 1px dotted #dadada;
+}
+.personal-box{
+  margin: 30px 30px 10px 30px ;
+  padding-bottom: 20px;
+}
+.account-icon{
+  i{
+    display: block;
+    height: 50px;
+    min-width: 50px;
+  }
+}
+
+.personal-password-icon{
+  background:url('../images/index/icon_13.png') no-repeat left center;
+}
+.personal-phone-icon{
+  background:url('../images/index/icon_14.png') no-repeat left center;
+}
+.personal-email-icon{
+  background:url('../images/index/icon_15.png') no-repeat left center;
+}
+.personal-protect-icon{
+  background:url('../images/index/icon_15.png') no-repeat left center;
+}
+
+.help-warning{
+  color:#e51c23;
+}
+.help-block{
+  font-size: 16px;
+  color: #3b3b3b;
+}
+
+.help-small{
+  font-size: 14px;
+  color:#4b4b4b;
+}

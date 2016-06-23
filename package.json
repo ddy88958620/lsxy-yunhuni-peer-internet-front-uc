@@ -8,6 +8,6 @@
   "scripts": {
     "sync": "browser-sync start --server './' --files './'",
     "bower": "bower install",
-    "syncs": "browser-sync start --server  --files **/*.html,*.html"
+    "syncs": "browser-sync start --server  --files **/*.html"
   }
 }
