@@ -6,8 +6,9 @@ $('#modal-hidden').click(function(){
 });
 /*显示modal*/
 function showmodal() {
-    var phone = $('input[name="phone"]').val();
-    var spring =  phone.substring(0,4) + '****' + phone.substring(8,11) ;
+    $('#showtips').hide();
+    var moible = $('input[name="moible"]').val();
+    var spring =  moible.substring(0,4) + '****' + moible.substring(8,11) ;
     $('#phone_number').html(spring);
     $('#shadow-bg').fadeIn();
     $('#modal-phone').fadeIn();
@@ -17,6 +18,12 @@ $('#send-code').click(function(){
     send_phone_code();
     settime($(this));
 });
+
+function tipsmsg(msg){
+    $('#showtips').html(msg);
+    $('#showtips').show();
+}
+
 
 function settime(val) {
     if (countdown == 0) {
@@ -46,6 +53,8 @@ $(document).ready(function() {
         },
         fields: {
             username: {
+                icon:false,
+                selector:'#form-username',
                 message: '用户名无效',
                 validators: {
                     notEmpty: {
@@ -56,25 +65,22 @@ $(document).ready(function() {
                         max: 30,
                         message: '用户名必须大于6，小于30个字符'
                     }
-                    /**
-                     * 添加方法 异步验证用户名是否存在
-                     remote: {
-                            url: '#',
-                            message: '用户名不可用'
-                        },**/
                 }
             },
             email: {
+                selector:'#form-email',
                 validators: {
                     notEmpty: {
                         message: '邮箱地址不能为空'
                     },
-                    emailAddress: {
+                    regexp:{
+                        regexp : /^[a-zA-Z0-9._%+-]+@(?!.*\.\..*)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
                         message: '请输入正确的邮箱地址格式'
                     }
                 }
             },
-            phone: {
+            mobile: {
+                selector:'#form-mobile',
                 validators: {
                     notEmpty: {
                         message: '手机不能为空'
@@ -90,11 +96,21 @@ $(document).ready(function() {
 
     $('#validateBtn').click(function(){
         var login = $('#defaultForm').data('bootstrapValidator').isValid();
-        if(login==true)
+
+
+        // 用户是否存在
+        if(login==true){
+            var reg= reg_isexit();
+            if(reg==false){
+                alert(2);
+                return  false;
+            }
             showmodal();
+        }
         else
             $('#defaultForm').bootstrapValidator('validate');
     });
+
 
     $('#emailForm').bootstrapValidator({
         message: '',

@@ -263,33 +263,34 @@
 /* line 238, ../sass/register.scss */
 .forget-box {
   width: 400px;
+  height: 420px;
   margin: 0 auto;
   border: 1px solid #d9d9d9;
 }
-/* line 242, ../sass/register.scss */
+/* line 243, ../sass/register.scss */
 .forget-box ul li {
   text-align: center;
   width: 50%;
 }
-/* line 246, ../sass/register.scss */
+/* line 247, ../sass/register.scss */
 .forget-box .box {
   width: 315px;
   margin: 10px auto;
 }
-/* line 250, ../sass/register.scss */
+/* line 251, ../sass/register.scss */
 .forget-box .row {
   margin-bottom: 20px;
 }
-/* line 254, ../sass/register.scss */
+/* line 255, ../sass/register.scss */
 .forget-box input, .forget-box button {
   height: 45px;
 }
-/* line 257, ../sass/register.scss */
+/* line 258, ../sass/register.scss */
 .forget-box .remove-padding {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 261, ../sass/register.scss */
+/* line 262, ../sass/register.scss */
 .forget-box .sendcode {
   background: url("../images/register/code_bg.png") repeat-x;
   height: 45px;
@@ -297,11 +298,11 @@
   border: 1px solid #c3c3c3;
   border-radius: 5px;
 }
-/* line 265, ../sass/register.scss */
+/* line 266, ../sass/register.scss */
 .forget-box .nav-tabs {
   border-bottom: 0;
 }
-/* line 269, ../sass/register.scss */
+/* line 270, ../sass/register.scss */
 .forget-box .nav-tabs > li a {
   margin: 0;
   height: 50px;
@@ -311,32 +312,46 @@
   border-bottom: 1px solid #c3c3c3;
   color: #686868;
 }
-/* line 279, ../sass/register.scss */
+/* line 280, ../sass/register.scss */
 .forget-box .nav-tabs > li.active > a, .forget-box .nav-tabs > li.active > a:hover, .forget-box .nav-tabs > li.active > a:focus {
   color: #0099cc;
   background-color: #FFFFFF;
-  border-right: 1px solid #c3c3c3;
   margin: 0;
   border-radius: 0;
-  border-bottom-color: transparent;
+  border: 0;
 }
 /* line 287, ../sass/register.scss */
+.forget-box .nav-tabs .right {
+  border-radius: 0;
+  border-right: 1px solid #d9d9d9;
+}
+/* line 291, ../sass/register.scss */
+.forget-box .nav-tabs .left {
+  border-radius: 0;
+  border-left: 1px solid #d9d9d9;
+}
+/* line 298, ../sass/register.scss */
 .forget-box .tab-content {
   padding: 50px 0 80px 0;
 }
-/* line 290, ../sass/register.scss */
+/* line 301, ../sass/register.scss */
 .forget-box .btn-color-bule {
   border-color: #0099cc;
   background-color: #0099cc;
 }
 
-/* line 298, ../sass/register.scss */
+/* line 307, ../sass/register.scss */
+.tips-error {
+  color: #a94442;
+}
+
+/* line 311, ../sass/register.scss */
 .help-block {
   color: #be180c;
 }
 
 @media screen and (min-width: 1000px) {
-  /* line 303, ../sass/register.scss */
+  /* line 316, ../sass/register.scss */
   .register_footer {
     position: fixed;
     bottom: 15px;
@@ -346,7 +361,7 @@
   }
 }
 @media screen and (max-width: 999px) {
-  /* line 313, ../sass/register.scss */
+  /* line 326, ../sass/register.scss */
   .register_footer {
     display: block;
     width: 90%;

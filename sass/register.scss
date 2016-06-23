@@ -237,6 +237,7 @@
 
 .forget-box {
   width: 400px;
+  height: 420px;
   margin: 0 auto;
   border: 1px solid #d9d9d9;
   ul li {
@@ -279,11 +280,21 @@
   .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
     color: #0099cc;
     background-color: #FFFFFF;
-    border-right:1px solid #c3c3c3;
     margin: 0;
     border-radius: 0;
-    border-bottom-color: transparent;
+    border: 0;
   }
+  .nav-tabs .right{
+    border-radius: 0;
+    border-right:1px solid #d9d9d9 ;
+  }
+  .nav-tabs .left{
+    border-radius: 0;
+    border-left:1px solid #d9d9d9 ;
+  }
+
+
+
   .tab-content{
      padding: 50px 0 80px 0;
   }
@@ -293,7 +304,9 @@
   }
 }
 
-
+.tips-error{
+  color:#a94442;
+}
 
 .help-block{
   color:#be180c;
