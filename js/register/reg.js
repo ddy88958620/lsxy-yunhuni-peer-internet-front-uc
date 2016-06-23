@@ -49,7 +49,7 @@ $(document).ready(function() {
                 message: '用户名无效',
                 validators: {
                     notEmpty: {
-                        message: '用户名不能位空'
+                        message: '用户名不能为空'
                     },
                     stringLength: {
                         min: 6,
@@ -77,7 +77,7 @@ $(document).ready(function() {
             phone: {
                 validators: {
                     notEmpty: {
-                        message: '手机不能位空'
+                        message: '手机不能为空'
                     },
                     regexp: {
                         regexp: /^(13[0-9]|14[0-9]|15[0-9]|18[0-9]|17[0-9])\d{8}$/,
@@ -96,7 +96,68 @@ $(document).ready(function() {
             $('#defaultForm').bootstrapValidator('validate');
     });
 
-    $('#resetBtn').click(function() {
-        $('#defaultForm').data('bootstrapValidator').resetForm(true);
+    $('#emailForm').bootstrapValidator({
+        message: '',
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        submitHandler: function(){
+        },
+        fields: {
+            email: {
+                selector:'#email',
+                validators: {
+                    notEmpty: {
+                        message: '邮箱地址不能为空'
+                    },
+                    emailAddress: {
+                        message: '请输入正确的邮箱地址格式'
+                    }
+                }
+            }
+        }
     });
+
+    $('#phoneForm').bootstrapValidator({
+        message: '',
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        submitHandler: function(){
+        },
+        fields: {
+            phone: {
+                selector: '#phone',
+                validators: {
+                    notEmpty: {
+                        message: '手机不能为空'
+                    },
+                    regexp: {
+                        regexp: /^(13[0-9]|14[0-9]|15[0-9]|18[0-9]|17[0-9])\d{8}$/,
+                        message: '请输入正确的手机格式'
+                    }
+                }
+            },
+            code: {
+                selector: '#code',
+                validators: {
+                    notEmpty: {
+                        message: '验证码不能为空'
+                    },
+                    stringLength: {
+                        min: 4,
+                        max: 4,
+                        message: '请输入四位数的手机号码'
+                    }
+                }
+            }
+
+        }
+    });
+
+
 });
