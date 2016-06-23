@@ -15,11 +15,20 @@ $("#togglerMiniSidebar").on('click',function(event){
   // $('#nav').toggleClass('aside-mini')
 
   var hasMini = $('#nav').hasClass('aside-mini')
+  console.log(hasMini);
 
   if(hasMini){
+
     $('#nav').removeClass('aside-mini')
+    // tooltips destroy
+    $('[data-toggle="tooltip"]').tooltip('destroy')
+
   }else {
+
     $('#nav').addClass('aside-mini')
+    // tooltips
+    $('[data-toggle="tooltip"]').tooltip()
+
   }
 
   // 防止冒泡
@@ -39,18 +48,16 @@ $('.list a.side-menu-link').on('click', function(){
   return false
 })
 
-
 // restfult api 重新生成confirm
-$('.create_confirm').on('click',function(e){
+$('a.create_confirm').on('click',function(e){
   bootbox.confirm("确定重新生成么", function(result) {
     if(result){
-      var url = $('.create_confirm').attr('href')
+      var url = $('a.create_confirm').attr('href')
       window.location.href = url
     }
   }); 
   return false
 })
-
 
 // 三级导航 相关
 $(".head-box a[href='#subNav']").on('click', function () {
