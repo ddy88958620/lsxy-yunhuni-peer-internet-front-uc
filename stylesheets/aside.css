@@ -38,76 +38,80 @@ aside.aside.bg-Green.lter {
 .list li a, .list span {
   font-size: 1.2rem;
 }
+/* line 47, ../sass/aside.scss */
+.list li {
+  position: inherit;
+}
 
-/* line 50, ../sass/aside.scss */
+/* line 53, ../sass/aside.scss */
 .list .nav a:hover, a.canbehover:hover {
   background-color: #2e97cb !important;
 }
 
-/* line 56, ../sass/aside.scss */
+/* line 59, ../sass/aside.scss */
 .w-f .head.lter {
   background: #193643;
 }
 
-/* line 61, ../sass/aside.scss */
+/* line 64, ../sass/aside.scss */
 .bg-Green.lter, .bg-Green .lter, #top_h {
   background: #0E2835;
 }
 
-/* line 68, ../sass/aside.scss */
+/* line 71, ../sass/aside.scss */
 .bg-green {
   background-color: #EAEDF1;
   color: #333;
 }
-/* line 72, ../sass/aside.scss */
+/* line 75, ../sass/aside.scss */
 .bg-green a {
   color: #0d0d0d;
 }
-/* line 76, ../sass/aside.scss */
+/* line 79, ../sass/aside.scss */
 .bg-green .wrapper {
   background: #EAEDF1;
 }
 
-/* line 81, ../sass/aside.scss */
+/* line 84, ../sass/aside.scss */
 .list li .nav > li > a {
   background: #103345;
 }
 
-/* line 85, ../sass/aside.scss */
+/* line 88, ../sass/aside.scss */
 .width_h {
   color: #090909;
 }
 
-/* line 89, ../sass/aside.scss */
+/* line 92, ../sass/aside.scss */
 .aside-mini {
   width: 55px;
   transition: 0.5s;
 }
-/* line 93, ../sass/aside.scss */
+/* line 96, ../sass/aside.scss */
 .aside-mini span {
   display: none;
 }
-/* line 97, ../sass/aside.scss */
+/* line 100, ../sass/aside.scss */
 .aside-mini .list li a {
   padding: 20px 4px;
   height: 40px;
   line-height: 40px;
 }
-/* line 103, ../sass/aside.scss */
+/* line 106, ../sass/aside.scss */
 .aside-mini ul.nav > li > a {
   padding: 21px 3px;
 }
-/* line 107, ../sass/aside.scss */
+/* line 114, ../sass/aside.scss */
 .aside-mini .img-shrink {
   transform: rotate(90deg);
 }
-/* line 111, ../sass/aside.scss */
+/* line 118, ../sass/aside.scss */
 .aside-mini .nav_green li > a > i {
   margin: -19px 0px;
   width: 100%;
 }
 
-/* line 118, ../sass/aside.scss */
+/* line 125, ../sass/aside.scss */
 .aside-li-a a {
   font-size: 1.2rem;
   font-weight: normal;
@@ -117,22 +121,27 @@ aside.aside.bg-Green.lter {
   width: 100%;
   line-height: 44px;
 }
-/* line 128, ../sass/aside.scss */
+/* line 135, ../sass/aside.scss */
 .aside-li-a.active {
   background: white;
 }
-/* line 132, ../sass/aside.scss */
+/* line 139, ../sass/aside.scss */
 .aside-li-a a:hover {
   background: white;
 }
 
-/* line 137, ../sass/aside.scss */
+/* line 144, ../sass/aside.scss */
 .xbox .head-box {
   background: #f7f7f7;
   left: -15px;
 }
 
-/* line 142, ../sass/aside.scss */
+/* line 149, ../sass/aside.scss */
 .bg-white {
   background: white;
+}
+
+/* line 154, ../sass/aside.scss */
+.tooltip.right {
+  width: 80px;
 }

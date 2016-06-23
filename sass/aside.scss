@@ -44,6 +44,9 @@ aside {
   li a, span {
     font-size: 1.2rem;
   }
+  li {
+    position: inherit;
+  }
 }
 
 .list .nav a, a.canbehover {
@@ -102,6 +105,10 @@ aside {
 
   ul.nav>li>a {
     padding: 21px 3px;
+    // &:hover:after {
+    //   content: attr(title);
+    //   position: relative;
+    // }
   }
 
   .img-shrink {
@@ -141,4 +148,10 @@ aside {
 
 .bg-white {
   background: white;
+}
+
+.tooltip {
+  &.right {
+    width: 80px;
+  }
 }
