@@ -54,7 +54,7 @@ $(document).ready(function() {
                     stringLength: {
                         min: 6,
                         max: 30,
-                        message: '用户名必须大于6，小于25个字符'
+                        message: '用户名必须大于6，小于30个字符'
                     }
                     /**
                      * 添加方法 异步验证用户名是否存在
