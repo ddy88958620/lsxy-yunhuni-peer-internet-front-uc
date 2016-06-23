@@ -1,29 +1,29 @@
-/* line 1, ../sass/register.scss */
+/* line 10, ../sass/register.scss */
 .register-header {
   width: 100%;
   height: 79px;
   border: 1px solid #e0e0e0;
   font-family: 'Microsoft YaHei';
 }
-/* line 7, ../sass/register.scss */
+/* line 16, ../sass/register.scss */
 .register-header .box {
   padding: 0 10px;
   max-width: 1200px;
   margin: 0 auto;
 }
-/* line 12, ../sass/register.scss */
+/* line 21, ../sass/register.scss */
 .register-header .logo {
   float: left;
   margin-top: 12px;
   display: block;
 }
-/* line 17, ../sass/register.scss */
+/* line 26, ../sass/register.scss */
 .register-header .text {
   float: right;
   line-height: 79px;
 }
 
-/* line 23, ../sass/register.scss */
+/* line 32, ../sass/register.scss */
 .register_container {
   font-family: 'Microsoft YaHei';
   max-width: 1200px;
@@ -32,64 +32,64 @@
   height: auto;
   margin: 0 auto 50px auto;
 }
-/* line 30, ../sass/register.scss */
+/* line 39, ../sass/register.scss */
 .register_container .form-control-feedback {
   top: 5px;
   right: 15px;
 }
-/* line 35, ../sass/register.scss */
+/* line 44, ../sass/register.scss */
 .register_container .box {
   margin-top: 95px;
 }
-/* line 37, ../sass/register.scss */
+/* line 46, ../sass/register.scss */
 .register_container .box .p {
   line-height: 32px;
   color: #737373;
   font-size: 16px;
 }
-/* line 43, ../sass/register.scss */
+/* line 52, ../sass/register.scss */
 .register_container .active-box {
   color: #686868;
 }
-/* line 46, ../sass/register.scss */
+/* line 55, ../sass/register.scss */
 .register_container .register-box {
   color: #686868;
   font-size: 16px;
 }
-/* line 50, ../sass/register.scss */
+/* line 59, ../sass/register.scss */
 .register_container .input-form {
   height: 50px;
 }
-/* line 54, ../sass/register.scss */
+/* line 63, ../sass/register.scss */
 .register_container .btn-form {
   width: 100%;
   height: 50px;
   font-size: 18px;
   line-height: 30px;
 }
-/* line 60, ../sass/register.scss */
+/* line 69, ../sass/register.scss */
 .register_container .tips {
   color: #b4b5b5;
   font-size: 14px;
 }
-/* line 64, ../sass/register.scss */
+/* line 73, ../sass/register.scss */
 .register_container .register-active {
   color: #686868;
   font-size: 16px;
 }
 
-/* line 71, ../sass/register.scss */
+/* line 80, ../sass/register.scss */
 #pw-strength {
   float: right;
   margin-bottom: 20px;
 }
 
-/* line 76, ../sass/register.scss */
+/* line 85, ../sass/register.scss */
 .tbl-txt {
   font-size: 14px;
 }
 
-/* line 80, ../sass/register.scss */
+/* line 89, ../sass/register.scss */
 .tbl-txt input {
   padding: 0 5px;
   height: 22px;
@@ -97,7 +97,7 @@
   margin-bottom: 6px;
 }
 
-/* line 87, ../sass/register.scss */
+/* line 96, ../sass/register.scss */
 .pw-strength {
   clear: both;
   position: relative;
@@ -105,7 +105,7 @@
   width: 180px;
 }
 
-/* line 94, ../sass/register.scss */
+/* line 103, ../sass/register.scss */
 .pw-bar {
   background: url(../images/pwd-1.png) no-repeat;
   position: relative;
@@ -115,7 +115,7 @@
   width: 179px;
 }
 
-/* line 103, ../sass/register.scss */
+/* line 112, ../sass/register.scss */
 .pw-bar-on {
   background: url(../images/pwd-2.png) no-repeat;
   width: 0px;
@@ -129,34 +129,34 @@
   -o-transition: width .5s ease-in;
 }
 
-/* line 116, ../sass/register.scss */
+/* line 125, ../sass/register.scss */
 .pw-weak .pw-defule {
   width: 0px;
 }
 
-/* line 120, ../sass/register.scss */
+/* line 129, ../sass/register.scss */
 .pw-weak .pw-bar-on {
   width: 60px;
 }
 
-/* line 124, ../sass/register.scss */
+/* line 133, ../sass/register.scss */
 .pw-medium .pw-bar-on {
   width: 120px;
 }
 
-/* line 128, ../sass/register.scss */
+/* line 137, ../sass/register.scss */
 .pw-strong .pw-bar-on {
   width: 179px;
 }
 
-/* line 132, ../sass/register.scss */
+/* line 141, ../sass/register.scss */
 .pw-txt {
   padding-top: 2px;
   width: 180px;
   overflow: hidden;
 }
 
-/* line 138, ../sass/register.scss */
+/* line 147, ../sass/register.scss */
 .pw-txt span {
   color: #707070;
   float: left;
@@ -165,7 +165,7 @@
   width: 58px;
 }
 
-/* line 146, ../sass/register.scss */
+/* line 155, ../sass/register.scss */
 .shadow-bg {
   position: fixed;
   display: none;
@@ -177,7 +177,7 @@
   background-color: rgba(0, 0, 0, 0.82);
 }
 
-/* line 157, ../sass/register.scss */
+/* line 166, ../sass/register.scss */
 .modal-phone {
   position: fixed;
   display: none;
@@ -190,7 +190,7 @@
   height: 338px;
   background-color: #FFF;
 }
-/* line 168, ../sass/register.scss */
+/* line 177, ../sass/register.scss */
 .modal-phone .title {
   height: 65px;
   background-color: #0099cc;
@@ -199,7 +199,7 @@
   line-height: 65px;
   font-size: 18px;
 }
-/* line 177, ../sass/register.scss */
+/* line 186, ../sass/register.scss */
 .modal-phone .content .input {
   display: block;
   width: 320px;
@@ -209,28 +209,28 @@
   font-size: 16px;
   color: #737373;
 }
-/* line 186, ../sass/register.scss */
+/* line 195, ../sass/register.scss */
 .modal-phone .content .code-title {
   float: left;
   width: 72px;
 }
-/* line 190, ../sass/register.scss */
+/* line 199, ../sass/register.scss */
 .modal-phone .content .code {
   float: left;
   height: 45px;
   width: 130px !important;
 }
-/* line 195, ../sass/register.scss */
+/* line 204, ../sass/register.scss */
 .modal-phone .content .code-button {
-  border: 1px solid transparent;
   background: url("../images/register/code_bg.png") repeat-x;
-  float: right;
   height: 45px;
-  width: 109px;
+  color: #737373;
   border: 1px solid #c3c3c3;
   border-radius: 5px;
+  float: right;
+  width: 109px;
 }
-/* line 206, ../sass/register.scss */
+/* line 211, ../sass/register.scss */
 .modal-phone .footer {
   position: absolute;
   bottom: 0;
@@ -238,7 +238,7 @@
   height: 70px;
   border-top: 1px solid #ebebeb;
 }
-/* line 212, ../sass/register.scss */
+/* line 217, ../sass/register.scss */
 .modal-phone .footer .cancel, .modal-phone .footer .sure {
   cursor: pointer;
   width: 49%;
@@ -250,18 +250,93 @@
   line-height: 70px;
   height: 70px;
 }
-/* line 222, ../sass/register.scss */
+/* line 227, ../sass/register.scss */
 .modal-phone .footer .cancel:hover, .modal-phone .footer .sure:hover {
   text-decoration: none;
   color: #0099cc;
 }
-/* line 227, ../sass/register.scss */
+/* line 232, ../sass/register.scss */
 .modal-phone .footer .cancel {
   border-right: 1px solid #ebebeb;
 }
 
+/* line 238, ../sass/register.scss */
+.forget-box {
+  width: 400px;
+  margin: 0 auto;
+  border: 1px solid #d9d9d9;
+}
+/* line 242, ../sass/register.scss */
+.forget-box ul li {
+  text-align: center;
+  width: 50%;
+}
+/* line 246, ../sass/register.scss */
+.forget-box .box {
+  width: 315px;
+  margin: 10px auto;
+}
+/* line 250, ../sass/register.scss */
+.forget-box .row {
+  margin-bottom: 20px;
+}
+/* line 254, ../sass/register.scss */
+.forget-box input, .forget-box button {
+  height: 45px;
+}
+/* line 257, ../sass/register.scss */
+.forget-box .remove-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 261, ../sass/register.scss */
+.forget-box .sendcode {
+  background: url("../images/register/code_bg.png") repeat-x;
+  height: 45px;
+  color: #737373;
+  border: 1px solid #c3c3c3;
+  border-radius: 5px;
+}
+/* line 265, ../sass/register.scss */
+.forget-box .nav-tabs {
+  border-bottom: 0;
+}
+/* line 269, ../sass/register.scss */
+.forget-box .nav-tabs > li a {
+  margin: 0;
+  height: 50px;
+  line-height: 25px;
+  font-size: 18px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #c3c3c3;
+  color: #686868;
+}
+/* line 279, ../sass/register.scss */
+.forget-box .nav-tabs > li.active > a, .forget-box .nav-tabs > li.active > a:hover, .forget-box .nav-tabs > li.active > a:focus {
+  color: #0099cc;
+  background-color: #FFFFFF;
+  border-right: 1px solid #c3c3c3;
+  margin: 0;
+  border-radius: 0;
+  border-bottom-color: transparent;
+}
+/* line 287, ../sass/register.scss */
+.forget-box .tab-content {
+  padding: 50px 0 80px 0;
+}
+/* line 290, ../sass/register.scss */
+.forget-box .btn-color-bule {
+  border-color: #0099cc;
+  background-color: #0099cc;
+}
+
+/* line 298, ../sass/register.scss */
+.help-block {
+  color: #be180c;
+}
+
 @media screen and (min-width: 1000px) {
-  /* line 235, ../sass/register.scss */
+  /* line 303, ../sass/register.scss */
   .register_footer {
     position: fixed;
     bottom: 15px;
@@ -271,7 +346,7 @@
   }
 }
 @media screen and (max-width: 999px) {
-  /* line 244, ../sass/register.scss */
+  /* line 313, ../sass/register.scss */
   .register_footer {
     display: block;
     width: 90%;
