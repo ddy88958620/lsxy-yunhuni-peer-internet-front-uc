@@ -75,7 +75,7 @@
                                 class="fa fa-angle-left text"></i> <i class="fa fa-angle-right text-active"></i> </a>
                         </div>
                         <div class="wrapper header">
-                            <span class="border-left">&nbsp;账号管理</span></div>
+                            <span class="border-left">&nbsp;充值</span></div>
 
                         <section class="scrollable wrapper w-f">
                             <section class="panel panel-default yunhuni-personal">
@@ -87,11 +87,10 @@
                                                     <div class="col-md-12 remove-padding width-130">
                                                         <strong>余额</strong>
                                                     </div>
-
                                                 </div>
                                                 <div class="row ">
                                                     <div class="col-md-12 remove-padding ">
-                                                        <strong>998</strong> 元
+                                                        <div class="cost-money">998.00 <span>元</span></div>
                                                     </div>
                                                 </div>
 
@@ -105,69 +104,57 @@
 
                             <section class="panel panel-default pos-rlt clearfix ">
                                 <div class="sectionWrap">
-                                    <div class="form-horizontal ">
-                                        <div class="row dotted-line personal-box ">
-                                            <div class="col-md-1 account-icon  "><i class="personal-password-icon"></i>
+                                    <div class="row">
+                                        <div class="cost-box" >
+                                            <p><strong>银行对公汇款</strong></p>
+                                            <p>开户名称：广州流水行云科技有限公司</p>
+                                            <p>收款账号：62260548778786548</p>
+                                            <p>开户银行：招商银行</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="panel panel-default pos-rlt clearfix ">
+                                <div class="sectionWrap">
+                                    <div class="personal-auth cost-box" >
+                                        <div class="form-group">
+                                            <lable class="col-md-3 text-right">充值方式：</lable>
+                                            <div class="col-md-2 input-box" >
+                                                <input type="radio" name="modepay" value="zhifubao" /><img src="images/zhifubao.png" />
                                             </div>
-                                            <div class="col-md-9 ">
-                                                    <span class="help-block"><a href="#">登录密码</a><br/>
-                                                        <small class="help-small">安全性高的密码可以使账号更安全，设置一个包含字母符号或数字中至少两项且长度超过6位的密码</small>
-                                                    </span>
-                                            </div>
-                                            <div class="col-md-2 right">
-                                                <span><img src="images/index/ok_green.png"/>已设置</span>
-                                                <span class="tips-color"><img src="images/index/tip.png"/> 未设置</span>
-                                                <a class="personal-edit" data-toggle="modal"
-                                                   data-target="#passwordModal">修改</a>
+                                            <div class="col-md-2 input-box">
+                                                <input type="radio" name="modepay" value="yinlian" /><img src="images/yinlian.png" />
                                             </div>
                                         </div>
-                                        <div class="row dotted-line personal-box ">
-                                            <div class="col-md-1 account-icon "><i class="personal-email-icon"></i>
+                                        <div class="form-group">
+                                            <lable class="col-md-3 text-right">充值金额：</lable>
+                                            <div class="col-md-2">
+                                                <input type="text" name="" placeholder=""
+                                                       class="form-control input-form notEmpty" id="form-email"/>
                                             </div>
-                                            <div class="col-md-9 ">
-                                                    <span class="help-block"><a href="#">邮箱绑定</a><br/>
-                                                        <small class="help-small">您可以绑定邮箱地址，绑定邮箱地址后，可使用邮箱地址登陆，并可接受来自云呼你相关邮件通知</small>
-                                                    </span>
-                                            </div>
-                                            <div class="col-md-2 right">
-                                                <span><img src="images/index/ok_green.png"/>已设置</span>
-                                                <span class="tips-color"><img src="images/index/tip.png"/> 未设置</span>
-                                                <a href="" class="personal-edit" data-toggle="modal"
-                                                   data-target="#emailModal">修改</a>
+                                            <div class="col-md-1">
+                                                <span class="line30">元</span>
                                             </div>
                                         </div>
-                                        <div class="row dotted-line personal-box">
-                                            <div class="col-md-1 account-icon "><i class="personal-phone-icon"></i>
-                                            </div>
-                                            <div class="col-md-9 ">
-                                                    <span class="help-block"><a href="#">手机绑定</a><br/>
-                                                        <small class="help-small">您已经绑定了手机  139*****8693</small>
-                                                    </span>
-                                            </div>
-                                            <div class="col-md-2 right">
-                                                <span><img src="images/index/ok_green.png"/>已设置</span>
-                                                <span class="tips-color"><img src="images/index/tip.png"/> 未设置</span>
-                                                <a href="" class="personal-edit">修改</a>
+                                        <div class="form-group cost-tips-box" >
+                                            <div class="col-md-12">
+                                                <p>温馨提示：</p>
+                                                <p>1、如您有欠费账单，充值后会优先补扣欠费账单。</p>
+                                                <p>2、充值后请及时对支付订单进行结算，以免影响正常服务。</p>
                                             </div>
                                         </div>
-                                        <div class="row  personal-box">
-                                            <div class="col-md-1 account-icon "><i class="personal-protect-icon"></i>
-                                            </div>
-                                            <div class="col-md-9 ">
-                                                    <span class="help-block "><a href="#">密码保护</a><br/>
-                                                        <small class="help-small">设置3个容易记住且最不容易被他人获取的问题及答案，可用于密码找回</small>
-                                                    </span>
-                                            </div>
-                                            <div class="col-md-2 right">
-                                                <span><img src="images/index/ok_green.png"/>已设置</span>
-                                                <span class="tips-color"><img src="images/index/tip.png"/> 未设置</span>
-                                                <a href="" class="personal-edit" >修改</a>
+                                        <div class="form-group " >
+                                            <div class="col-md-1">
+                                                <button type="submit" class="btn btn-primary  btn-form ">充值</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </section>
                         </section>
+
+
                     </section>
                 </aside>
             </section>
@@ -175,10 +162,6 @@
         </section>
     </section>
 </section>
-
-
-
-
 
 
 <script src="js/app.v2.js"></script> <!-- Bootstrap --> <!-- App -->
