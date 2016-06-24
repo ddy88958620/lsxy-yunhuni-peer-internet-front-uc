@@ -58,13 +58,9 @@
                                 <div class="row">
                                     <form role="form" action="./index.html" method="post" class="register-form"
                                           id="personalAuthForm">
-                                        <div class="form-group " style="border-bottom:1px dotted #d8d8d8;">
-                                            <p class="hr text-success" style="font-weight: bold;">请完善以下信息，方便我们更好的为您服务 </p>
-
-                                            <p></p>
-                                        </div>
+                                        <p class="noticeInfo hr text-success" style="font-weight: bold;">请完善以下信息，方便我们更好的为您服务 </p>
                                         <div class="form-group">
-                                            <span style="color:#0099cc; font-weight: bold;">业务信息</span>
+                                            <span class="hr" style="color:#0099cc; font-weight: bold;">业务信息</span>
                                         </div>
 
                                         <div class="form-group">
@@ -84,7 +80,7 @@
                                                        class="form-control input-form notEmpty"/>
                                             </div>
                                         </div>
-                                        <div class="form-group" style="border-bottom:1px dotted #d8d8d8;">
+                                        <div class="form-group" style="">
                                             <lable class="col-md-3 text-right">网站：</lable>
                                             <div class="col-md-4">
                                                 <input type="text" name="" placeholder=""
@@ -92,7 +88,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group" >
-                                            <span style="color:#0099cc; font-weight: bold;">联系信息</span>
+                                            <span class="hr" style="color:#0099cc; font-weight: bold;">联系信息</span>
                                         </div>
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right">所在地区：</lable>
@@ -128,7 +124,7 @@
 
                                         <div class="form-group">
                                             <div class="col-md-9">
-                                                <a id="validateBtn" class="btn btn-primary  btn-form">保存</a>
+                                                <a id="validateBtn" class="validateBtnNormal btn btn-primary  btn-form">保存</a>
                                             </div>
                                         </div>
                                     </form>
@@ -155,13 +151,12 @@
 <script>
     function initPCAS()
     {
-        new PCAS("province","city","area","广东省","广州市","");
+        new PCAS("province","city","河北省","");
         var myselect = $(".province");
-        myselect.selectmenu("refresh");
+        // myselect.selectmenu("refresh");
         myselect = $(".city");
-        myselect.selectmenu("refresh");
-        myselect = $(".area");
-        myselect.selectmenu("refresh");
+        // myselect.selectmenu("refresh");
+        // myselect = $(".area");
     }
 
 

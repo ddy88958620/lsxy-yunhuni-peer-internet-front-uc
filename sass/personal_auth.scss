@@ -1,29 +1,41 @@
 @import '../bower_components/bootstrapvalidator/dist/css/bootstrapValidator.min.css';
 
 .personal-auth {
+  
+
   form {
     padding: 15px;
   }
 
+  .noticeInfo {
+    margin-bottom: 20px;
+  }
+
   .auth_select, .radio-form {
-    height: 80px;
     line-height: 36px;
   }
 
   .company {
     display: none;
-    p.hr {
+
+    p {
       &.text-success {
         color: #3F8A3B;
         padding-bottom: 15px;
-        border-bottom: 1px dash gray;
+        border-bottom: 1px solid #eee;
       }
-      border-bottom: 1px dashed gray;
+    }
+
+    .extend_label {
+      width: 120px;
+    }
+
+    .noticeInfo {
+      margin-bottom: 25px;
     }
   }
   
   .text-right {
-    min-width: 110px;
     width: auto;
     text-align: left;
     padding-left: 0px;
@@ -43,8 +55,10 @@
     .help-block {
       display: block;
       position: absolute;
-      font-size:12px;
-      top: -22px;
+      font-size: 12px;
+      top: 6px;
+      left: 310px;
+      width: 150px;
     }
   }
 
@@ -53,13 +67,28 @@
   }
 
   .form-group {
-    height: 50px;
+    height: 38px;
     clear: both;
     
     lable {
-      height: 80px;
+      height: 55px;
+      width: 60px;
       line-height: 34px;
       padding-right: 0px;
+    }
+    .col-md-2 {
+      width: 150px;
+    }
+
+    .col-md-4 {
+      width: 300px;
+    }
+
+    .hr {
+      padding-top: 10px;
+      display: block;
+      width: 100%;
+      border-top: 1px solid #eee;
     }
 
     input[type='radio'] {
@@ -118,6 +147,11 @@
 
 
 }
-#validateBtn {
-  margin-left: 110px;
+
+.validateBtnExtend {
+  margin-left: 120px;
+}
+
+.validateBtnNormal {
+  margin-left: 60px;
 }

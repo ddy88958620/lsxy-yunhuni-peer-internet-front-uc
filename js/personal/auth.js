@@ -1,19 +1,19 @@
 $(function(){
     $(".province").change(function(){
-        setTimeout('initCity()',100);
+        // setTimeout('initCity()',100);
     });
-    $(".city").change(function(){
-        setTimeout('initArea()',100);
-    });
+    // $(".city").change(function(){
+    //     setTimeout('initArea()',100);
+    // });
     setTimeout('initPCAS()',100);
     function initCity()
     {
         var myselect = $(".city");
         myselect[0].selectedIndex = 0;
         myselect.selectmenu("refresh");
-        myselect = $(".area");
-        myselect[0].selectedIndex = 0;
-        myselect.selectmenu("refresh");
+        // myselect = $(".area");
+        // myselect[0].selectedIndex = 0;
+        // myselect.selectmenu("refresh");
     }
 
     function initArea()
@@ -123,7 +123,7 @@ $('#personalAuthForm').bootstrapValidator({
     }
 });
 
-$('#validateBtn').click(function(){
+$('#validateBtn, #validateBtnPersonal').click(function(){
   $('#personalAuthForm').bootstrapValidator('validate')
     console.log('here');
 });
