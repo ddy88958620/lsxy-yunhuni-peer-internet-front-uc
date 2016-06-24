@@ -1,0 +1,45 @@
+.cost_month {
+  background: none;
+  lable {
+    display: inline-block;
+    text-align: left;
+    width: 50px;
+  }
+
+  .form-control {
+    margin: 0 5px;
+    display: inline-block;
+    width: 180px;
+  }
+}
+
+.price_info {
+  text-align: center;
+  color: #555;
+  padding: 20px;
+  background-color: #dff0d8;
+  .text-warning {
+    color: #FF940B;
+  }
+}
+
+.cost-table {
+
+  tr td {
+    text-align: left;
+  }
+
+  .extend_width {
+    width: 90px;
+  }
+
+  caption {
+    margin: 20px 10px 10px 0px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+
+.cost_history_download {
+  margin: 10px auto;
+}

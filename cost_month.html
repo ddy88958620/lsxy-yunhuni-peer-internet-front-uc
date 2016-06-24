@@ -17,7 +17,7 @@
                 <!-- 如果没有三级导航 这段代码注释-->
                 <aside class="bg-green lter aside-sm hidden-print ybox" id="subNav">
                     <section class="vbox">
-                        <div class="wrapper header"><span class="margin_lr"></span><span class="margin_lr border-left">&nbsp;安全设置</span>
+                        <div class="wrapper header"><span class="margin_lr"></span><span class="margin_lr border-left">&nbsp;账号管理</span>
                         </div>
                         <section class="scrollable">
                             <div class="slim-scroll">
@@ -51,111 +51,59 @@
                         <div class="head-box"><a href="#subNav" data-toggle="class:hide"> <i
                                 class="fa fa-angle-left text"></i> <i class="fa fa-angle-right text-active"></i> </a>
                         </div>
-                        <div class="wrapper header"><span class="border-left">&nbsp;安全设置</span></div>
-                        <section class=" wrapper w-f">
+                         <div class="wrapper header">
+                           <span class="border-left">&nbsp;月结账单</span>
+                         </div>
+                        <section class="scrollable wrapper w-f">
                             <section class="panel panel-default yunhuni-personal">
                                 <div class="row m-l-none m-r-none bg-light lter">
                                     <div class="col-md-12 padder-v fix-padding">
-                                        <div class='wrapperBox'>
+                                        <div class='wrapperBox cost_month'>
                                             <div class="panel-body clearfix border-top-none personal-base">
-                                                <div class="row ">
-                                                    <div class="col-md-1 remove-padding width-130">
-                                                        登陆账号(会员名称)：
-                                                    </div>
-                                                    <div class="col-md-10 ">
-                                                        <span>流水行云科技</span>
-                                                        <span><img src="images/index/renzheng.png"/><a
-                                                                href="#">点击进行实名认证</a></span>
-                                                        <span><img src="images/index/ok_green.png"/> 已认证</span>
-                                                    </div>
+                                                <div class="row">
+                                                    <lable class="">月份：</lable>
+                                                    <input type="text" class="datepicker form-control" value='' data-date-end-date="0m" />
+                                                    <button class="btn btn-primary query">查询</button>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-md-1 remove-padding width-130">
-                                                        账号ID：
-                                                    </div>
-                                                    <div class="col-md-10 ">
-                                                        <span>GZ005001</span>
-                                                    </div>
+                                                    <lable class="">按应用：</lable>
+                                                    <select class="form-control">
+                                                      <option value="0">全局</option>
+                                                      <option value="1">身份证</option>
+                                                    </select>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-md-1 remove-padding width-130">
-                                                        注册时间：
-                                                    </div>
-                                                    <div class="col-md-10 ">
-                                                        <span>2016-10-10 22:30:00</span>
-                                                    </div>
-                                                </div>
-
                                             </div>
                                         </div>
                                     </div>
 
                                 </div>
                             </section>
+                          <section class="panel panel-default yunhuni-personal">
+                            <div class="fix-padding">
+                              <p class="bg-success price_info">
+                              2016-05 消费总额  <span class="text-warning"> 2000.00</span> 元
+                              </p>
+                            </div>
+                          </section>
 
                             <section class="panel panel-default pos-rlt clearfix ">
-                                <div class="sectionWrap">
-                                    <div class="form-horizontal ">
-                                        <div class="row dotted-line personal-box ">
-                                            <div class="col-md-1 account-icon  "><i class="personal-password-icon"></i>
-                                            </div>
-                                            <div class="col-md-9 ">
-                                                    <span class="help-block"><a href="#">登录密码</a><br/>
-                                                        <small class="help-small">安全性高的密码可以使账号更安全，设置一个包含字母符号或数字中至少两项且长度超过6位的密码</small>
-                                                    </span>
-                                            </div>
-                                            <div class="col-md-2 right">
-                                                <span><img src="images/index/ok_green.png"/>已设置</span>
-                                                <span class="tips-color"><img src="images/index/tip.png"/> 未设置</span>
-                                                <a class="personal-edit" data-toggle="modal"
-                                                   data-target="#passwordModal">修改</a>
-                                            </div>
-                                        </div>
-                                        <div class="row dotted-line personal-box ">
-                                            <div class="col-md-1 account-icon "><i class="personal-email-icon"></i>
-                                            </div>
-                                            <div class="col-md-9 ">
-                                                    <span class="help-block"><a href="#">邮箱绑定</a><br/>
-                                                        <small class="help-small">您可以绑定邮箱地址，绑定邮箱地址后，可使用邮箱地址登陆，并可接受来自云呼你相关邮件通知</small>
-                                                    </span>
-                                            </div>
-                                            <div class="col-md-2 right">
-                                                <span><img src="images/index/ok_green.png"/>已设置</span>
-                                                <span class="tips-color"><img src="images/index/tip.png"/> 未设置</span>
-                                                <a href="" class="personal-edit" data-toggle="modal"
-                                                   data-target="#emailModal">修改</a>
-                                            </div>
-                                        </div>
-                                        <div class="row dotted-line personal-box">
-                                            <div class="col-md-1 account-icon "><i class="personal-phone-icon"></i>
-                                            </div>
-                                            <div class="col-md-9 ">
-                                                    <span class="help-block"><a href="#">手机绑定</a><br/>
-                                                        <small class="help-small">您已经绑定了手机  139*****8693</small>
-                                                    </span>
-                                            </div>
-                                            <div class="col-md-2 right">
-                                                <span><img src="images/index/ok_green.png"/>已设置</span>
-                                                <span class="tips-color"><img src="images/index/tip.png"/> 未设置</span>
-                                                <a href="" class="personal-edit">修改</a>
-                                            </div>
-                                        </div>
-                                        <div class="row  personal-box">
-                                            <div class="col-md-1 account-icon "><i class="personal-protect-icon"></i>
-                                            </div>
-                                            <div class="col-md-9 ">
-                                                    <span class="help-block "><a href="#">密码保护</a><br/>
-                                                        <small class="help-small">设置3个容易记住且最不容易被他人获取的问题及答案，可用于密码找回</small>
-                                                    </span>
-                                            </div>
-                                            <div class="col-md-2 right">
-                                                <span><img src="images/index/ok_green.png"/>已设置</span>
-                                                <span class="tips-color"><img src="images/index/tip.png"/> 未设置</span>
-                                                <a href="" class="personal-edit" >修改</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
+                              <table class="cost-table table table-striped">
+                                <caption>消费项目</caption>
+                                <tr>
+                                  <td class="extend_width">单向外呼 : </td>
+                                  <td> 120 元</td>
+                                  <td class="extend_width">双向外呼 :</td>
+                                  <td> 120 元</td>
+                                </tr>
+                                <tr>
+                                  <td class="extend_width">单向外呼 : </td>
+                                  <td> 120 元</td>
+                                  <td class="extend_width">双向外呼 :</td>
+                                  <td> 120 元</td>
+                                </tr>
+                              </table>
+                              <button class="cost_history_download btn btn-default btn-sm">账单下载</button>
                             </section>
                         </section>
                     </section>
@@ -287,6 +235,23 @@
 <script src="js/charts/flot/demo.js" cache="false"></script>
 <script src="js/include.js"></script>
 <script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
-<script src="js/personal_account/personal_account.js"></script><!--must-->
+<script type="text/javascript" src='./js/bootstrap-datepicker/js/bootstrap-datepicker.js'> </script>
+<script type="text/javascript">
+$(function () {
+  $.fn.datepicker.defaults.autoclose = true;
+    
+  $('.datepicker').datepicker({
+    setDate: '10/2015',
+    format: 'yyyy-mm',
+    viewMode: "months",
+    minViewMode: "months",
+    todayHighlight: true,
+    todayBtn: true,
+    autoclose: true //fail
+  }).on('changeDate',function(e){
+    $(this).datepicker('hide')
+  });
+});
+</script>
 </body>
 </html>
