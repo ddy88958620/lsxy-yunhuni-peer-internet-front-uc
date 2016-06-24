@@ -369,8 +369,18 @@
   margin-bottom: 20px;
 }
 
+/* line 328, ../sass/register.scss */
+.article-box {
+  font-size: 14px;
+}
+
+/* line 331, ../sass/register.scss */
+.size16 {
+  font-size: 16px;
+}
+
 @media screen and (min-width: 1000px) {
-  /* line 330, ../sass/register.scss */
+  /* line 336, ../sass/register.scss */
   .register_footer {
     position: fixed;
     bottom: 15px;
@@ -380,7 +390,7 @@
   }
 }
 @media screen and (max-width: 999px) {
-  /* line 340, ../sass/register.scss */
+  /* line 346, ../sass/register.scss */
   .register_footer {
     display: block;
     width: 90%;
