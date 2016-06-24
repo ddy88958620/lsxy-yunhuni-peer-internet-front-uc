@@ -1,5 +1,4 @@
-
-@mixin codeimg{
+@mixin codeimg {
   background: url("../images/register/code_bg.png") repeat-x;
   height: 45px;
   color: #737373;
@@ -202,7 +201,7 @@
       width: 130px !important;
     }
     .code-button {
-      @include codeimg ;
+      @include codeimg;
       float: right;
       width: 109px;
     }
@@ -248,33 +247,33 @@
     width: 315px;
     margin: 10px auto;
   }
-  .row{
+  .row {
     margin-bottom: 20px;
 
   }
   input, button {
     height: 45px;
   }
- .remove-padding{
+  .remove-padding {
     padding-left: 0;
     padding-right: 0;
   }
-  .sendcode{
-    @include codeimg ;
+  .sendcode {
+    @include codeimg;
   }
 
   .nav-tabs {
-    border-bottom:0;
+    border-bottom: 0;
   }
   .nav-tabs > li {
-    a{
-      margin:0;
+    a {
+      margin: 0;
       height: 50px;
       line-height: 25px;
       font-size: 18px;
       background-color: #f7f7f7;
       border-bottom: 1px solid #c3c3c3;
-      color:#686868;
+      color: #686868;
     }
   }
   .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
@@ -284,32 +283,53 @@
     border-radius: 0;
     border: 0;
   }
-  .nav-tabs .right{
+  .nav-tabs .right {
     border-radius: 0;
-    border-right:1px solid #d9d9d9 ;
+    border-right: 1px solid #d9d9d9;
   }
-  .nav-tabs .left{
+  .nav-tabs .left {
     border-radius: 0;
-    border-left:1px solid #d9d9d9 ;
+    border-left: 1px solid #d9d9d9;
   }
 
-
-
-  .tab-content{
-     padding: 50px 0 80px 0;
+  .tab-content {
+    padding: 50px 0 80px 0;
   }
-  .btn-color-bule{
-    border-color:#0099cc;
-    background-color:#0099cc;
+  .btn-color-bule {
+    border-color: #0099cc;
+    background-color: #0099cc;
   }
 }
 
-.tips-error{
-  color:#a94442;
+.tips-error {
+  color: #a94442;
 }
 
-.help-block{
-  color:#be180c;
+.help-block {
+  color: #be180c;
+}
+
+.email-box {
+  margin: 0 auto;
+  width: 490px;
+  padding: 70px 30px 40px 30px;
+  height: 284px;
+  margin-top: 100px;
+  background-color: white;
+  text-align: center;
+  border: 1px solid #eaeaea;
+  -moz-box-shadow: 0px 3px 9px #EAEAEA;
+  -webkit-box-shadow: 0px 3px 9px #EAEAEA;
+  box-shadow: 0px 3px 9px #EAEAEA;
+  img{
+    margin-bottom: 20px;
+  }
+}
+.article-box{
+  font-size: 14px;
+}
+.size16{
+  font-size: 16px;
 }
 
 @media screen and (min-width: 1000px) {

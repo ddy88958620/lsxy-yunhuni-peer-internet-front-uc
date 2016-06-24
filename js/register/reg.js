@@ -2,26 +2,27 @@ var countdown = 60;
 
 $('#modal-hidden').click(function(){
     $('#shadow-bg').fadeOut();
-    $('#modal-phone').fadeOut();
+    $('#modal-mobile').fadeOut();
 });
 /*显示modal*/
 function showmodal() {
     $('#showtips').hide();
-    var moible = $('input[name="moible"]').val();
-    var spring =  moible.substring(0,4) + '****' + moible.substring(8,11) ;
-    $('#phone_number').html(spring);
+    var mobile = $('input[name="mobile"]').val();
+    var spring =  mobile.substring(0,4) + '****' + mobile.substring(8,11) ;
+    $('#mobile_number').html(spring);
     $('#shadow-bg').fadeIn();
-    $('#modal-phone').fadeIn();
+    $('#modal-mobile').fadeIn();
 }
 /*获取验证码*/
 $('#send-code').click(function(){
-    send_phone_code();
+    send_mobile_code();
     settime($(this));
 });
 
-function tipsmsg(msg){
-    $('#showtips').html(msg);
-    $('#showtips').show();
+function tipsmsg(msg,id){
+	id = ((id==null||id=="")?"showtips":id);
+    $('#' + id).html(msg);
+    $('#' + id).show();
 }
 
 
@@ -96,13 +97,10 @@ $(document).ready(function() {
 
     $('#validateBtn').click(function(){
         var login = $('#defaultForm').data('bootstrapValidator').isValid();
-
-
         // 用户是否存在
         if(login==true){
             var reg= reg_isexit();
             if(reg==false){
-                alert(2);
                 return  false;
             }
             showmodal();
@@ -128,7 +126,8 @@ $(document).ready(function() {
                     notEmpty: {
                         message: '邮箱地址不能为空'
                     },
-                    emailAddress: {
+                    regexp:{
+                        regexp : /^[a-zA-Z0-9._%+-]+@(?!.*\.\..*)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
                         message: '请输入正确的邮箱地址格式'
                     }
                 }
@@ -136,7 +135,7 @@ $(document).ready(function() {
         }
     });
 
-    $('#phoneForm').bootstrapValidator({
+    $('#mobileForm').bootstrapValidator({
         message: '',
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
@@ -146,8 +145,8 @@ $(document).ready(function() {
         submitHandler: function(){
         },
         fields: {
-            phone: {
-                selector: '#phone',
+            mobile: {
+                selector: '#mobile',
                 validators: {
                     notEmpty: {
                         message: '手机不能为空'
@@ -174,6 +173,8 @@ $(document).ready(function() {
 
         }
     });
+});
 
-
+$('input').keyup(function(){
+    $('.tips-error').hide();
 });
