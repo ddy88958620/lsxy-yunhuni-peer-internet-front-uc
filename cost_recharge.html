@@ -17,33 +17,56 @@
                 <!-- 如果没有三级导航 这段代码注释-->
                 <aside class="bg-green lter aside-sm hidden-print ybox" id="subNav">
                     <section class="vbox">
-                        <div class="wrapper header"><span class="margin_lr"></span><span class="margin_lr border-left">&nbsp;安全设置</span>
+                        <div class="wrapper header"><span class="margin_lr"></span><span class="margin_lr border-left">&nbsp;费用管理</span>
                         </div>
-                        <section class="scrollable">
+                        <section class="scrollable" >
                             <div class="slim-scroll">
                                 <!-- nav -->
                                 <nav class="hidden-xs">
                                     <ul class="nav">
                                         <li>
+                                            <div class="aside-li-a ">
+                                                <a href="#">消费记录</a>
+                                            </div>
+                                        </li>
+                                        <li>
                                             <div class="aside-li-a active">
-                                                <a href="personal_account.html">安全设置</a>
+                                                <a href="cost_recharge.html">充值</a>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="aside-li-a">
-                                                <a href="personal_base.html">基本设置</a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="aside-li-a">
-                                                <a href="personal_auth.html">实名认证</a>
+                                                <a href="#">月结账单</a>
                                             </div>
                                         </li>
                                     </ul>
                                 </nav>
                             </div>
+
+                            <div class="wrapper header"><span class="margin_lr"></span><span class="margin_lr border-left">&nbsp;发票管理</span>
+                            </div>
+                            <section class="scrollable" >
+                                <div class="slim-scroll">
+                                    <!-- nav -->
+                                    <nav class="hidden-xs">
+                                        <ul class="nav">
+                                            <li>
+                                                <div class="aside-li-a">
+                                                    <a href="#">索取发票</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="aside-li-a">
+                                                    <a href="#">发票记录</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </section>
                         </section>
                     </section>
+
                 </aside>
                 <aside>
                     <section class="vbox xbox">
@@ -51,6 +74,9 @@
                         <div class="head-box"><a href="#subNav" data-toggle="class:hide"> <i
                                 class="fa fa-angle-left text"></i> <i class="fa fa-angle-right text-active"></i> </a>
                         </div>
+                        <div class="wrapper header">
+                            <span class="border-left">&nbsp;账号管理</span></div>
+
                         <section class="scrollable wrapper w-f">
                             <section class="panel panel-default yunhuni-personal">
                                 <div class="row m-l-none m-r-none bg-light lter">
@@ -58,30 +84,14 @@
                                         <div class='wrapperBox'>
                                             <div class="panel-body clearfix border-top-none personal-base">
                                                 <div class="row ">
-                                                    <div class="col-md-1 remove-padding width-130">
-                                                        登陆账号(会员名称)：
+                                                    <div class="col-md-12 remove-padding width-130">
+                                                        <strong>余额</strong>
                                                     </div>
-                                                    <div class="col-md-10 ">
-                                                        <span>流水行云科技</span>
-                                                        <span><img src="images/index/renzheng.png"/><a
-                                                                href="#">点击进行实名认证</a></span>
-                                                        <span><img src="images/index/ok_green.png"/> 已认证</span>
-                                                    </div>
+
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-md-1 remove-padding width-130">
-                                                        账号ID：
-                                                    </div>
-                                                    <div class="col-md-10 ">
-                                                        <span>GZ005001</span>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-1 remove-padding width-130">
-                                                        注册时间：
-                                                    </div>
-                                                    <div class="col-md-10 ">
-                                                        <span>2016-10-10 22:30:00</span>
+                                                <div class="row ">
+                                                    <div class="col-md-12 remove-padding ">
+                                                        <strong>998</strong> 元
                                                     </div>
                                                 </div>
 
@@ -166,117 +176,7 @@
     </section>
 </section>
 
-<section style="display:none ;">
-    <form action="" method="post" class="form-horizontal">
-        <div class="form-group">
-            <div class="col-md-3 text-right">新密码 :</div>
-            <div class="col-md-6">
-                <input type="text" value="" class="form-control"/>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-3 text-right">重复密码 :</div>
-            <div class="col-md-6">
-                <input type="text" value="" name="" class="form-control"/>
-            </div>
-        </div>
-    </form>
-</section>
 
-<!-- 修改账号密码（Modal） -->
-<div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                    &times;
-                </button>
-                <h4 class="modal-title" >修改登录密码</h4>
-            </div>
-            <form action="" method="post" class="form-horizontal" id="passwordForm">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <div class="col-md-3 text-right">新密码 :</div>
-                        <div class="col-md-6">
-                            <input type="password" value="" name="newpassword" id="newpassword" class="form-control"/>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-3 text-right">重复密码 :</div>
-                        <div class="col-md-6">
-                            <input type="password" value="" name="newrepassword" id="newrepassword"
-                                   class="form-control"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="submit" class="btn btn-primary">确认</button>
-                </div>
-            </form>
-        </div><!-- /.modal-content -->
-    </div>
-</div>
-<!-- /.modal -->
-
-
-<!-- 修改邮箱（Modal） -->
-<div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                    &times;
-                </button>
-                <h4 class="modal-title" >绑定邮箱</h4>
-            </div>
-            <form action="" method="post" class="form-horizontal" id="emailForm">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <div class="col-md-3 text-right">邮箱地址 :</div>
-                        <div class="col-md-6">
-                            <input type="password" value="" name="email" class="form-control"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="submit" class="btn btn-primary">确认</button>
-                </div>
-            </form>
-        </div><!-- /.modal-content -->
-    </div>
-</div>
-<!-- /.modal -->
-
-<!-- 修改手机号码（Modal） -->
-<div class="modal fade" id="phoneModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                    &times;
-                </button>
-                <h4 class="modal-title" >绑定邮箱</h4>
-            </div>
-            <form action="" method="post" class="form-horizontal" id="phoneForm">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <div class="col-md-3 text-right">邮箱地址 :</div>
-                        <div class="col-md-6">
-                            <input type="password" value="" name="email" class="form-control"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="submit" class="btn btn-primary">确认</button>
-                </div>
-            </form>
-        </div><!-- /.modal-content -->
-    </div>
-</div>
-<!-- /.modal -->
 
 
 
@@ -287,6 +187,6 @@
 <script src="js/charts/flot/demo.js" cache="false"></script>
 <script src="js/include.js"></script>
 <script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
-<script src="js/personal_account/personal_account.js"></script><!--must-->
+<script src="js/cost/recharge.js"></script><!--must-->
 </body>
 </html>
