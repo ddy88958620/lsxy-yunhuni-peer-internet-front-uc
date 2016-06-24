@@ -82,21 +82,21 @@
 <!--/footer-->
 <!--modal-->
 <div class="shadow-bg" id="shadow-bg"  ></div>
-<div id="modal-phone" class="modal-phone">
+<div id="modal-mobile" class="modal-phone">
    <div class="title">验证手机号</div>
    <div class="content">
         <div class="input">
-            手机号 :  <span id="phone_number">1361****986</span>
+            手机号 :  <span id="mobile_number">1361****986</span>
         </div>
         <div class="input">
             <div class="code-title">验证码 :</div>
-            <input class="code form-control" type="text" name="phone" />
+            <input class="code form-control" type="text" name="mobile" />
             <button class="code-button" id="send-code" >发送验证码</button>
         </div>
     </div>
     <div class="footer">
         <a id="modal-hidden" class="cancel">返回</a>
-        <a id="modal-sendphone" class="sure">确认</a>
+        <a id="modal-sendmobile" class="sure">确认</a>
     </div>
 </div>
 <!--modalend--->
@@ -111,13 +111,13 @@
 <script src="js/register/reg.js" ></script>
 <script type="text/javascript">
     /*确认*/
-    $('#modal-sendphone').click(function(){
+    $('#modal-sendmobile').click(function(){
         alert('确认验证码是否正确，提交表单');
         document.getElementById('defaultForm').submit();
     });
 
 
-    function send_phone_code(){
+    function send_mobile_code(){
         //异步发送验证码
     }
 
