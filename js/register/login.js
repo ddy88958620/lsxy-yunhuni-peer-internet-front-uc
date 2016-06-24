@@ -67,5 +67,5 @@ $(document).ready(function() {
     });
 });
 $('input').keyup(function(){
-    $('.tips').hide();
+    $('.tips-error').hide();
 });

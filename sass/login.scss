@@ -73,7 +73,7 @@
   .register {
     text-decoration: underline;
   }
-  .tips {
+  .tips-error {
     background: url('../images/tips.png') no-repeat left center;
     height: 35px;
     display: inline-block;
@@ -81,7 +81,7 @@
     padding-left: 25px;
     color: red !important;
   }
-  .tips:hover {
+  .tips-error:hover {
     text-decoration: none;
   }
 }

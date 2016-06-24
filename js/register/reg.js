@@ -97,8 +97,6 @@ $(document).ready(function() {
 
     $('#validateBtn').click(function(){
         var login = $('#defaultForm').data('bootstrapValidator').isValid();
-
-
         // 用户是否存在
         if(login==true){
             var reg= reg_isexit();
@@ -128,7 +126,8 @@ $(document).ready(function() {
                     notEmpty: {
                         message: '邮箱地址不能为空'
                     },
-                    emailAddress: {
+                    regexp:{
+                        regexp : /^[a-zA-Z0-9._%+-]+@(?!.*\.\..*)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
                         message: '请输入正确的邮箱地址格式'
                     }
                 }
@@ -174,6 +173,8 @@ $(document).ready(function() {
 
         }
     });
+});
 
-
+$('input').keyup(function(){
+    $('.tips-error').hide();
 });

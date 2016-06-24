@@ -87,9 +87,11 @@ $(document).ready(function() {
             }
         }
     });
-
-
     $('#resetBtn').click(function() {
         $('#defaultForm').data('bootstrapValidator').resetForm(true);
     });
+});
+
+$('input').keyup(function(){
+    $('.tips-error').hide();
 });

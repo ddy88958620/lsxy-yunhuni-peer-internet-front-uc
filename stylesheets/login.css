@@ -87,7 +87,7 @@
   text-decoration: underline;
 }
 /* line 76, ../sass/login.scss */
-.login-box .tips {
+.login-box .tips-error {
   background: url("../images/tips.png") no-repeat left center;
   height: 35px;
   display: inline-block;
@@ -96,7 +96,7 @@
   color: red !important;
 }
 /* line 84, ../sass/login.scss */
-.login-box .tips:hover {
+.login-box .tips-error:hover {
   text-decoration: none;
 }
 
