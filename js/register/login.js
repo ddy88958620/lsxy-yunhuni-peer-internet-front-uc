@@ -17,11 +17,7 @@ $(document).ready(function() {
                         min: 6,
                         max: 30,
                         message: '用户名必须大于6，小于30个字'
-                    },
-                    regexp: {
-                        regexp: /^[a-zA-Z0-9_\.]+$/,
-                        message: '用户名只能由字母、数字、点和下划线组成'
-                    },
+                    }
                     different: {
                         field: 'password',
                         message: '用户名和密码不能相同'
