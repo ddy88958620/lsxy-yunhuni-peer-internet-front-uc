@@ -185,14 +185,16 @@
       float: left;
       display: block;
       font-size: 18px;
-      color: #5d5d5d;
+      color: #686868;
       text-align: center;
       line-height: 70px;
       height: 70px;
       &:hover {
         text-decoration: none;
-        color: #0099cc;
       }
+    }
+    .sure{
+      color: #0099cc;
     }
     .cancel {
       border-right: 1px solid #ebebeb;

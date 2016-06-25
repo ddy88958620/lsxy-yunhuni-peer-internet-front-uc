@@ -15,31 +15,34 @@ function settime(val) {
         settime(val)
     },1000)
 }
-function showmsg(tips){
-    $('.tips-error').html(tips).show();
+function showmsg(tips,cls){
+    $("."+cls).html(tips).show();
 }
 $('#send-code').click(function(){
-    var mobile = $('.modalMobile').val();
-    reg = /^(13[0-9]|14[0-9]|15[0-9]|18[0-9]|17[0-9])\d{8}$/;
-    if(!reg.test(mobile)){
-        showmsg('请输入正确的手机格式');return false;
+    if(!regMobile()){
+        showmsg('请输入正确的手机格式','moadltips2'); return false;
     }
     sendCode();
     settime($(this));
 });
 
+function regMobile(){
+    var mobile = $('.modalMobile').val();
+    reg = /^(13[0-9]|14[0-9]|15[0-9]|18[0-9]|17[0-9])\d{8}$/;
+    if(!reg.test(mobile)){
+        return false;
+    }
+    return true;
+}
+
 $('.modalCancel').click(function(){
     $('#mobilebox').fadeOut();
     $('#show-bg').fadeOut();
 });
-
 $('.showMobilebox').click(function(){
     $('#mobilebox').fadeIn();
     $('#show-bg').fadeIn();
 });
-
-
-
 $('input').keyup(function(){
     $('.tips-error').hide();
 });

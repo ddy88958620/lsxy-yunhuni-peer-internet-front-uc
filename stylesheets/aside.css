@@ -64,7 +64,7 @@ aside.aside.bg-Green.lter {
   color: #333;
 }
 /* line 75, ../sass/aside.scss */
-.bg-green a {
+.bg-green a, .bg-green a:hover {
   color: #0d0d0d;
 }
 /* line 79, ../sass/aside.scss */

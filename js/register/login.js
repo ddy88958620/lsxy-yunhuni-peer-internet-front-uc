@@ -52,7 +52,7 @@ $(document).ready(function() {
                     stringLength: {
                         min: 6,
                         max: 18,
-                        message: '密码必须大于6，小于18个字'
+                        message: '密码必须大于6，小于18个字符'
                     },
                     different: {
                         field: 'username',
