@@ -1,0 +1,51 @@
+.panel .table-striped>thead th {
+    background: 0px;
+    border-right: 0;
+}
+
+.cost_month_select {
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .current_month {
+  
+  }
+  .last_month {
+    margin-left: 0px;
+  }
+
+  padding: 0px;
+  min-height: 0px;
+
+  .row {
+    margin-bottom: 0px;
+  }
+
+}
+
+.cost-table-history {
+  margin: 15px auto;
+}
+
+nav {
+  position: relative;
+  height: 200px;
+}
+
+.pagination {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  .active a {
+    background-color: #428bca !important;
+    border-color: #428bca !important;
+  }
+
+  .active a:hover {
+    background-color: #428bca !important;
+    border-color: #428bca !important;
+  }
+}

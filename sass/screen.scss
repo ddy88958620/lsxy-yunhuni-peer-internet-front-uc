@@ -20,6 +20,9 @@ a {
 @import './register.scss';
 @import './personal_account.scss';
 @import './personal_auth.scss';
+@import './cost_month.scss';
+@import './cost_history.scss';
+@import '../js/bootstrap-datepicker/css/bootstrap-datepicker.css';
 @import './cost_recharge.scss';
 
 
@@ -42,4 +45,11 @@ a {
     margin-left: 25px;
     vertical-align: middle;
   }
+}
+
+.wrapper.header {
+    padding: 0 15px !important;
+    height: 36px;
+    line-height: 40px;
+    font-size: 1.6rem;
 }
