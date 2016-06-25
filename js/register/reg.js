@@ -143,8 +143,7 @@ $(document).ready(function() {
             invalid: 'glyphicon glyphicon-remove',
             validating: 'glyphicon glyphicon-refresh'
         },
-        submitHandler: function(){
-        },
+        submitButtons : '.btn-mobile-submit',
         fields: {
             mobile: {
                 selector: '#mobile',
