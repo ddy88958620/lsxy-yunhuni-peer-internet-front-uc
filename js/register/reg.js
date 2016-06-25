@@ -15,8 +15,9 @@ function showmodal() {
 }
 /*获取验证码*/
 $('#send-code').click(function(){
-    send_mobile_code();
-    settime($(this));
+	if(send_mobile_code()){
+		settime($(this));
+	}  
 });
 
 function tipsmsg(msg,id){
