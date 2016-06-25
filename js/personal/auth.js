@@ -106,6 +106,36 @@ $('#personalAuthForm').bootstrapValidator({
                 }
             }
         },
+        password: {
+            selector: '.password',
+            validators: {
+                notEmpty: {
+                    message: '密码不能位空'
+                },
+                identical: {
+                    field: 'confirmPassword',
+                    message: '两次密码不一致'
+                },
+                stringLength: {
+                    min: 6,
+                    max: 18,
+                    message: '密码必须大于6，小于18个字'
+                }
+            }
+        },
+        repassword: {
+            selector: '.repassword',
+            validators: {
+                notEmpty: {
+                    message: '确认密码不能为空'
+                },
+                identical: {
+                    field: 'password',
+                    message: '两次密码不一致'
+                },
+
+            }
+        },
         file: {
           selector: '.limitImageFile',
           validators: {
