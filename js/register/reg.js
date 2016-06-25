@@ -143,7 +143,6 @@ $(document).ready(function() {
             invalid: 'glyphicon glyphicon-remove',
             validating: 'glyphicon glyphicon-refresh'
         },
-        submitButtons : '.btn-mobile-submit',
         fields: {
             mobile: {
                 selector: '#mobile',
@@ -173,6 +172,21 @@ $(document).ready(function() {
 
         }
     });
+
+    $('#mobileBtn').click(function(){
+        var login = $('#mobileForm').data('bootstrapValidator').isValid();
+        // 手机验证码是否通过
+        if(login==true){
+            var reg= reg_code();
+            if(reg==false){
+                return  false;
+            }
+        }
+        else
+            $('#mobileForm').bootstrapValidator('validate');
+    });
+
+
 });
 
 $('input').keyup(function(){
