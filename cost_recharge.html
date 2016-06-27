@@ -105,14 +105,15 @@
                             <section class="panel panel-default pos-rlt clearfix ">
                                 <div class="sectionWrap">
                                     <div class="personal-auth cost-box">
+                                        <form action="" id="costDefulat" method="post" >
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right line30">充值方式：</lable>
                                             <div class="col-md-2 input-box">
-                                                <input type="radio" name="modepay" value="zhifubao"/><img
+                                                <input type="radio" name="modepay" class="radiovalid" value="zhifubao"/><img
                                                     src="images/zhifubao.png"/>
                                             </div>
                                             <div class="col-md-2 input-box">
-                                                <input type="radio" name="modepay" value="yinlian"/><img
+                                                <input type="radio" name="modepay" class="radiovalid" value="yinlian"/><img
                                                     src="images/yinlian.png"/>
                                             </div>
                                         </div>
@@ -120,7 +121,7 @@
                                             <lable class="col-md-3 text-right line30">充值金额：</lable>
                                             <div class="col-md-2">
                                                 <input type="text" name="" placeholder=""
-                                                       class="form-control input-form notEmpty" id="form-email"/>
+                                                       class="form-control input-form costprice help-block" />
                                             </div>
                                             <div class="col-md-1">
                                                 <span class="line30">元</span>
@@ -138,6 +139,7 @@
                                                 <button type="submit" class="btn btn-primary  btn-form ">充值</button>
                                             </div>
                                         </div>
+                                        </form>
                                     </div>
                                 </div>
                             </section>
