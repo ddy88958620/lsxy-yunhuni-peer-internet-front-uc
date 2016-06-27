@@ -27,11 +27,14 @@ $(function () {
     var date = new Date()
     var str = date.getFullYear() +'-' + (date.getMonth() +1)
     $( ".currentMonth" ).datepicker( "setDate", str);
+    $( ".lastMonth" ).datepicker( "setDate", str);
   })
 
   $('.last_month').on('click',function(e){
     var date = new Date()
     var str = date.getFullYear() +'-' + (date.getMonth())
-    $( ".lastMonth" ).datepicker( "setDate", str);
+    var secondMonth = date.getFullYear() +'-' + (date.getMonth() +1 )
+    $( ".currentMonth" ).datepicker( "setDate", str);
+    $( ".lastMonth" ).datepicker( "setDate", secondMonth);
   })
 });
