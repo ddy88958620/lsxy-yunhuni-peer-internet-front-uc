@@ -155,7 +155,6 @@ $('#personalAuthForm').bootstrapValidator({
 
 $('#validateBtn, #validateBtnPersonal').click(function(){
   $('#personalAuthForm').bootstrapValidator('validate')
-    console.log('here');
 });
 
 $('.auth_select').on('click',function(){
