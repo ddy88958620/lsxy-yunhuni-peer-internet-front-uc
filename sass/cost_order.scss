@@ -1,0 +1,21 @@
+.nosuccess{
+  color:#ff0000;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+.text-underline{
+  text-decoration: underline;
+}
+
+.success{
+  color:#9dc940;
+  &:hover{
+    color:#9dc940;
+    text-decoration: none;
+  }
+}
+
+.surecolor{
+  color:#9dc940;
+}

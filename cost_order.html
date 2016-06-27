@@ -25,17 +25,17 @@
                                 <nav class="hidden-xs">
                                     <ul class="nav">
                                         <li>
-                                            <div class="aside-li-a active">
+                                            <div class="aside-li-a ">
                                                 <a href="./cost_history.html">消费记录</a>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="aside-li-a">
-                                                <a href="cost_recharge.html">充值</a>
+                                                <a href="./cost_recharge.html">充值</a>
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="aside-li-a">
+                                            <div class="aside-li-a active">
                                                 <a href="./cost_order.html">充值订单</a>
                                             </div>
                                         </li>
@@ -81,7 +81,7 @@
                                 class="fa fa-angle-left text"></i> <i class="fa fa-angle-right text-active"></i> </a>
                         </div>
                          <div class="wrapper header">
-                           <span class="border-left">&nbsp;消费记录</span>
+                           <span class="border-left">&nbsp;充值订单记录</span>
                          </div>
                         <section class="scrollable wrapper w-f">
                             <section class="panel panel-default yunhuni-personal">
@@ -90,9 +90,6 @@
                                         <div class='wrapperBox cost_month cost_month_select'>
                                             <div class="panel-body clearfix border-top-none personal-base">
                                                 <div class="row">
-                                                    <a class="current_month">本月</a>
-                                                    <a class="last_month">上月</a>
-
                                                     从
                                                     <input type="text" class="datepicker currentMonth form-control" value='' data-date-end-date="0m" />
                                                     到
@@ -110,33 +107,45 @@
                                     <thead>
                                       <tr>
                                         <th>#</th>
-                                        <th>消费时间</th>
-                                        <th>消费金额</th>
-                                        <th>消费类型</th>
-                                        <th>备注</th>
+                                        <th>订单号</th>
+                                        <th>金额</th>
+                                        <th>充值方式</th>
+                                        <th>订单创建时间</th>
+                                        <th>支付状态</th>
                                       </tr>
                                     </thead>
                                     <tbody>
                                       <tr>
                                         <td scope="row">1</td>
-                                        <td>2016-01-01 10:10:00</td>
+                                        <td>123456789123456</td>
                                         <td>100.00</td>
-                                        <td>套餐加油包</td>
+                                        <td>支付宝</td>
                                         <td>100分钟语音加油包</td>
+                                        <td><a href="" class="nosuccess text-underline" >未支付</a></td>
                                       </tr>
                                       <tr>
-                                        <td scope="row">1</td>
-                                        <td>2016-01-01 10:10:00</td>
-                                        <td>100.00</td>
-                                        <td>套餐加油包</td>
-                                        <td>100分钟语音加油包</td>
+                                          <td scope="row">1</td>
+                                          <td>123456789123456</td>
+                                          <td>100.00</td>
+                                          <td>支付宝</td>
+                                          <td>100分钟语音加油包</td>
+                                          <td><a class="success">已支付</a></td>
                                       </tr>
                                       <tr>
-                                        <td scope="row">1</td>
-                                        <td>2016-01-01 10:10:00</td>
-                                        <td>100.00</td>
-                                        <td>套餐加油包</td>
-                                        <td>100分钟语音加油包</td>
+                                          <td scope="row">1</td>
+                                          <td>123456789123456</td>
+                                          <td>100.00</td>
+                                          <td>支付宝</td>
+                                          <td>100分钟语音加油包</td>
+                                          <td><a class="success">已支付</a></td>
+                                      </tr>
+                                      <tr>
+                                          <td scope="row">1</td>
+                                          <td>123456789123456</td>
+                                          <td>100.00</td>
+                                          <td>支付宝</td>
+                                          <td>100分钟语音加油包</td>
+                                          <td><a class="success">已支付</a></td>
                                       </tr>
                                     </tbody>
                                   </table>
@@ -172,119 +181,6 @@
     </section>
 </section>
 
-<section style="display:none ;">
-    <form action="" method="post" class="form-horizontal">
-        <div class="form-group">
-            <div class="col-md-3 text-right">新密码 :</div>
-            <div class="col-md-6">
-                <input type="text" value="" class="form-control"/>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-3 text-right">重复密码 :</div>
-            <div class="col-md-6">
-                <input type="text" value="" name="" class="form-control"/>
-            </div>
-        </div>
-    </form>
-</section>
-
-<!-- 修改账号密码（Modal） -->
-<div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                    &times;
-                </button>
-                <h4 class="modal-title" >修改登录密码</h4>
-            </div>
-            <form action="" method="post" class="form-horizontal" id="passwordForm">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <div class="col-md-3 text-right">新密码 :</div>
-                        <div class="col-md-6">
-                            <input type="password" value="" name="newpassword" id="newpassword" class="form-control"/>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-3 text-right">重复密码 :</div>
-                        <div class="col-md-6">
-                            <input type="password" value="" name="newrepassword" id="newrepassword"
-                                   class="form-control"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="submit" class="btn btn-primary">确认</button>
-                </div>
-            </form>
-        </div><!-- /.modal-content -->
-    </div>
-</div>
-<!-- /.modal -->
-
-
-<!-- 修改邮箱（Modal） -->
-<div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                    &times;
-                </button>
-                <h4 class="modal-title" >绑定邮箱</h4>
-            </div>
-            <form action="" method="post" class="form-horizontal" id="emailForm">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <div class="col-md-3 text-right">邮箱地址 :</div>
-                        <div class="col-md-6">
-                            <input type="password" value="" name="email" class="form-control"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="submit" class="btn btn-primary">确认</button>
-                </div>
-            </form>
-        </div><!-- /.modal-content -->
-    </div>
-</div>
-<!-- /.modal -->
-
-<!-- 修改手机号码（Modal） -->
-<div class="modal fade" id="phoneModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                    &times;
-                </button>
-                <h4 class="modal-title" >绑定邮箱</h4>
-            </div>
-            <form action="" method="post" class="form-horizontal" id="phoneForm">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <div class="col-md-3 text-right">邮箱地址 :</div>
-                        <div class="col-md-6">
-                            <input type="password" value="" name="email" class="form-control"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="submit" class="btn btn-primary">确认</button>
-                </div>
-            </form>
-        </div><!-- /.modal-content -->
-    </div>
-</div>
-<!-- /.modal -->
-
-
 
 
 <script src="js/app.v2.js"></script> <!-- Bootstrap --> <!-- App -->
@@ -295,7 +191,7 @@
 <script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
 <script type="text/javascript" src='./js/bootstrap-datepicker/js/bootstrap-datepicker.js'> </script>
 <script type="text/javascript" src='./js/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js'> </script>
-<script type="text/javascript" src='./js/cost/history.js'> </script>
+<script type="text/javascript" src='./js/cost/order.js'> </script>
 </body>
 </html>
 
