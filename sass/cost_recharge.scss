@@ -1,3 +1,9 @@
+@import "personal_auth";
+.cost-rechage {
+  @extend .personal-auth;
+}
+
+
 .cost-box{
   padding: 15px;
   font-size: 14px;
