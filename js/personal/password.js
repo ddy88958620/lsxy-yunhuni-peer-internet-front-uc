@@ -47,6 +47,20 @@ $(function(){
                     }
                 }
             },
+            newpassword: {
+                selector: '.newpassword',
+                validators: {
+                    notEmpty: {
+                        message: '密码不能位空'
+                    },
+                    stringLength: {
+                        min: 6,
+                        max: 18,
+                        message: '密码必须大于6，小于18个字'
+                    }
+                }
+            },
+
             repassword: {
                 selector: '.repassword',
                 validators: {
@@ -54,24 +68,10 @@ $(function(){
                         message: '确认密码不能为空'
                     },
                     identical: {
-                        field: 'password',
+                        field: 'newpassword',
                         message: '两次密码不一致'
                     },
 
-                }
-            },
-            file: {
-                selector: '.limitImageFile',
-                validators: {
-                    notEmpty: {
-                        message: '请上传文件'
-                    },
-                    file: {
-                        extension: 'jpg,jpeg,png,bmp,gif',
-                        type: 'image/jpeg,image/png,image/gif,image/x-ms-bmp',
-                        maxSize: 2*1024*1024,   // 5 MB,
-                        message: '文件大小或者格式不正确'
-                    },
                 }
             }
         }
