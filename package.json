@@ -3,11 +3,13 @@
   "version": "0.0.1",
   "devDependencies": {
     "bower": "^1.7.9",
-    "browser-sync": "^2.13.0"
+    "browser-sync": "^2.13.0",
+    "compass": "^0.1.1"
   },
   "scripts": {
     "sync": "browser-sync start --server './' --files './'",
     "bower": "bower install",
-    "syncs": "browser-sync start --server  --files **/*.html"
+    "syncs": "browser-sync start --server  --files **/*.html",
+    "build": "compass compile"
   }
 }
