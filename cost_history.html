@@ -304,43 +304,8 @@
 <script src="js/include.js"></script>
 <script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
 <script type="text/javascript" src='./js/bootstrap-datepicker/js/bootstrap-datepicker.js'> </script>
-<script type="text/javascript">
-$(function () {
-  $('.lastMonth ').datepicker({
-    format: 'yyyy-mm',
-    startView: "months",
-    minViewMode: "months",
-    todayHighlight: true,
-    todayBtn: true,
-    autoclose: true //fail
-  }).on('changeDate',function(e){
-    $(this).datepicker('hide')
-  });
-
-  $('.currentMonth ').datepicker({
-    format: 'yyyy-mm',
-    startView: "months",
-    minViewMode: "months",
-    todayHighlight: true,
-    todayBtn: true,
-    autoclose: true //fail
-  }).on('changeDate',function(e){
-    $(this).datepicker('hide')
-  });
-
-  $('.current_month').on('click',function(e){
-    var date = new Date()
-    var str = date.getFullYear() +'-' + (date.getMonth() +1)
-    $( ".currentMonth" ).datepicker( "setDate", str);
-  })
-
-  $('.last_month').on('click',function(e){
-    var date = new Date()
-    var str = date.getFullYear() +'-' + (date.getMonth())
-    $( ".lastMonth" ).datepicker( "setDate", str);
-  })
-});
-</script>
+<script type="text/javascript" src='./js/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js'> </script>
+<script type="text/javascript" src='./js/cost/history.js'> </script>
 </body>
 </html>
 
