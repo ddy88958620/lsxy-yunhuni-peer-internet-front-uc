@@ -1,11 +1,25 @@
+@import "personal_auth";
+.cost-rechage {
+  @extend .personal-auth;
+}
+
+
 .cost-box{
   padding: 15px;
   font-size: 14px;
+  color:#4a4a4a;
   .input-box{
     width: auto !important;
     img{
       border: 0;
     }
+  }
+  .help-block{
+    position: absolute;
+    top: 0;
+    left: 188px;
+    font-size: 12px;
+    width: 150px;
   }
 }
 .cost-tips-box {
@@ -18,7 +32,9 @@
 .cost-money{
   color:#ff9900;
   font-size: 32px;
-  display: block;float: left;
+  .floatmoney{
+    font-size: 24px;
+  }
   .unit{
     color:#717171;
     line-height: 30px;
@@ -35,3 +51,5 @@
   font-size: 24px;
   font-family: monospace;
 }
+
+

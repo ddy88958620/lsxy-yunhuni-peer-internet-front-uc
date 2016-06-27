@@ -17,7 +17,7 @@
                 <!-- 如果没有三级导航 这段代码注释-->
                 <aside class="bg-green lter aside-sm hidden-print ybox" id="subNav">
                     <section class="vbox">
-                        <div class="wrapper header"><span class="margin_lr"></span><span class="margin_lr border-left">&nbsp;费用管理</span>
+                        <div class="wrapper header"><span class="margin_lr"></span><span class="margin_lr border-left">&nbsp;应用管理</span>
                         </div>
                         <section class="scrollable">
                             <div class="slim-scroll">
@@ -25,51 +25,18 @@
                                 <nav class="hidden-xs">
                                     <ul class="nav">
                                         <li>
-                                            <div class="aside-li-a ">
-                                              <a href="./cost_history.html">消费记录</a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="aside-li-a">
-                                                <a href="cost_recharge.html">充值</a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="aside-li-a">
-                                                <a href="./cost_order.html">充值订单</a>
-                                            </div>
-                                        </li>
-                                        <li>
                                             <div class="aside-li-a active">
-                                                <a href="./cost_month.html">月结账单</a>
+                                                <a href="application_list.html">应用列表</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="aside-li-a">
+                                                <a href="cost_recharge.html">创建应用</a>
                                             </div>
                                         </li>
                                     </ul>
                                 </nav>
                             </div>
-
-                            <div class="wrapper header"><span class="margin_lr"></span><span
-                                    class="margin_lr border-left">&nbsp;发票管理</span>
-                            </div>
-                            <section class="scrollable">
-                                <div class="slim-scroll">
-                                    <!-- nav -->
-                                    <nav class="hidden-xs">
-                                        <ul class="nav">
-                                            <li>
-                                                <div class="aside-li-a">
-                                                    <a href="#">索取发票</a>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="aside-li-a">
-                                                    <a href="#">发票记录</a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </section>
                         </section>
                     
                     </section>
@@ -81,59 +48,77 @@
                                 class="fa fa-angle-left text"></i> <i class="fa fa-angle-right text-active"></i> </a>
                         </div>
                          <div class="wrapper header">
-                           <span class="border-left">&nbsp;月结账单</span>
+                           <span class="border-left">&nbsp;应用列表</span>
                          </div>
                         <section class="scrollable wrapper w-f">
                             <section class="panel panel-default yunhuni-personal">
                                 <div class="row m-l-none m-r-none bg-light lter">
                                     <div class="col-md-12 padder-v fix-padding">
-                                        <div class='wrapperBox cost_month'>
-                                            <div class="panel-body clearfix border-top-none personal-base">
-                                                <div class="row">
-                                                    <lable class="">月份：</lable>
-                                                    <input type="text" class="datepicker form-control" value='' data-date-end-date="0m" />
-                                                    <button class="btn btn-primary query">查询</button>
-                                                </div>
-                                                <div class="row">
-                                                    <lable class="">按应用：</lable>
-                                                    <select class="form-control">
-                                                      <option value="0">全局</option>
-                                                      <option value="1">身份证</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <a href="#" class="btn btn-primary query">创建应用</a>
                                     </div>
-
                                 </div>
                             </section>
-                          <section class="panel panel-default yunhuni-personal">
-                            <div class="fix-padding">
-                              <p class="bg-success price_info">
-                              2016-05 消费总额  <span class="text-warning"> 2000.00</span> 元
-                              </p>
-                            </div>
-                          </section>
-
                             <section class="panel panel-default pos-rlt clearfix ">
-
-                              <table class="cost-table table table-striped">
-                                <caption>消费项目</caption>
-                                <tr>
-                                  <td class="extend_width">单向外呼 : </td>
-                                  <td> 120 元</td>
-                                  <td class="extend_width">双向外呼 :</td>
-                                  <td> 120 元</td>
-                                </tr>
-                                <tr>
-                                  <td class="extend_width">单向外呼 : </td>
-                                  <td> 120 元</td>
-                                  <td class="extend_width">双向外呼 :</td>
-                                  <td> 120 元</td>
-                                </tr>
-                              </table>
-                              <button class="cost_history_download btn btn-default btn-sm">账单下载</button>
+                              <table class="table table-striped cost-table-history">
+                                    <thead>
+                                      <tr>
+                                        <th>#</th>
+                                        <th>应用名称</th>
+                                        <th>APPID</th>
+                                        <th>应用状态</th>
+                                        <th>应用创建时间</th>
+                                        <th>操作</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td scope="row">1</td>
+                                        <td>应用名称</td>
+                                        <td>123456789456123456</td>
+                                        <td >已上线</td>
+                                        <td>2016-01-01 10:10:00</td>
+                                        <td><a href="">详情</a><a href="">删除</a><a href="">申请上线</a></td>
+                                      </tr>
+                                      <tr>
+                                          <td scope="row">2</td>
+                                          <td>应用名称</td>
+                                          <td>123456789456123456</td>
+                                          <td>未上线</td>
+                                          <td>2016-01-01 10:10:00</td>
+                                          <td><a href="">详情</a><a href="">删除</a><a href="">申请上线</a></td>
+                                      </tr> <tr>
+                                          <td scope="row">3</td>
+                                          <td>应用名称</td>
+                                          <td>123456789456123456</td>
+                                          <td>未上线</td>
+                                          <td>2016-01-01 10:10:00</td>
+                                          <td><a href="">详情</a><a href="">删除</a><a href="">申请上线</a></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
                             </section>
+                            <section class="panel panel-default yunhuni-personal">
+                             <nav class='pageWrap'>
+                                <ul class="pagination">
+                                  <li>
+                                    <a href="#" aria-label="Previous">
+                                      <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                  </li>
+                                  <li class="active"><a href="#">1</a></li>
+                                  <li><a href="#">2</a></li>
+                                  <li><a href="#">3</a></li>
+                                  <li><a href="#">4</a></li>
+                                  <li><a href="#">5</a></li>
+                                  <li>
+                                    <a href="#" aria-label="Next">
+                                      <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </nav> 
+                            </section>
+
                         </section>
                     </section>
                 </aside>
@@ -266,6 +251,7 @@
 <script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
 <script type="text/javascript" src='./js/bootstrap-datepicker/js/bootstrap-datepicker.js'> </script>
 <script type="text/javascript" src='./js/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js'> </script>
-<script type="text/javascript" src='./js/cost/month.js'> </script>
+<script type="text/javascript" src='./js/cost/history.js'> </script>
 </body>
 </html>
+
