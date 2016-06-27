@@ -15,8 +15,9 @@ function showmodal() {
 }
 /*获取验证码*/
 $('#send-code').click(function(){
-    send_mobile_code();
-    settime($(this));
+	if(send_mobile_code()){
+		settime($(this));
+	}  
 });
 
 function tipsmsg(msg,id){
@@ -142,8 +143,6 @@ $(document).ready(function() {
             invalid: 'glyphicon glyphicon-remove',
             validating: 'glyphicon glyphicon-refresh'
         },
-        submitHandler: function(){
-        },
         fields: {
             mobile: {
                 selector: '#mobile',
@@ -173,6 +172,21 @@ $(document).ready(function() {
 
         }
     });
+
+    $('#mobileBtn').click(function(){
+        var login = $('#mobileForm').data('bootstrapValidator').isValid();
+        // 手机验证码是否通过
+        if(login==true){
+            var reg= reg_code();
+            if(reg==false){
+                return  false;
+            }
+        }
+        else
+            $('#mobileForm').bootstrapValidator('validate');
+    });
+
+
 });
 
 $('input').keyup(function(){
