@@ -1,0 +1,33 @@
+.application_create {
+  @extend .personal_base;
+
+  $label-width: 100px;
+
+  .text-right {
+    width: $label-width;
+  }
+  .validateBtnNormal {
+    margin-left: $label-width;
+  }
+  .tips {
+    width: 600px;
+    padding-left: 15px;
+    padding-top:0px;
+    margin-left: $label-width;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  .price_info {
+    padding: 10px 15px;
+    color: #619B5A;
+  }
+
+  .price_info_fail {
+    @extend .price_info;
+    background-color: #f2dede;
+    color: #888;
+  }
+}

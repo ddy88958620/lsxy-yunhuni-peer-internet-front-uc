@@ -1,7 +1,8 @@
 @import '../bower_components/bootstrapvalidator/dist/css/bootstrapValidator.min.css';
 
+$labelwidth: 84px;
+
 .personal-auth {
-  
 
   form {
     padding: 15px;
@@ -36,11 +37,12 @@
   }
   
   .text-right {
-    width: auto;
     text-align: left;
     padding-left: 0px;
-    min-width:74px;
+    width: $labelwidth;
+    line-height: 34px;
   }
+
   .wrapper {
     padding: 0 15px !important;
     height: 36px;
@@ -158,5 +160,5 @@
 }
 
 .validateBtnNormal {
-  margin-left: 60px;
+  margin-left: $labelwidth;
 }
