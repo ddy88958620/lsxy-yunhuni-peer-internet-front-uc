@@ -26,5 +26,4 @@ $('#application_create').bootstrapValidator({
 
 $('#validateBtn').click(function(){
   $('#application_create').bootstrapValidator('validate')
-    console.log('here');
 });
