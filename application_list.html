@@ -31,7 +31,7 @@
                                         </li>
                                         <li>
                                             <div class="aside-li-a">
-                                                <a href="cost_recharge.html">创建应用</a>
+                                                <a href="application_create.html">创建应用</a>
                                             </div>
                                         </li>
                                     </ul>
@@ -145,23 +145,98 @@
 
 <!---mobilebox-->
 <div class="shadow-bg" id="show-bg"  style="display: block"></div>
-<div id="mobilebox" class="modal-box" style="display: ;">
+<div id="mobilebox" class="appliation-modal-box" style="display: ;">
     <div class="addmobile1" style="display: ">
-        <div class="title">操作确认<a class="close_a modalCancel"></a></div>
+        <div class="title">应用上线流程<a class="close_a modalCancel"></a></div>
         <div class="content" >
-            <div class="tips-box">
-                确认是本账号操作，请再次输入用户名密码
+            <!--nav-->
+            <div class="nav-modal-box">
+                <ul class="nav-modal">
+                    <li><span class="spot s-active"></span><span class="lines"></span> </li>
+                    <li><span class="spot"></span><span class="lines"></span>  </li>
+                    <li><span class="spot"></span><span class="lines"></span>  </li>
+                    <li><span class="spot"></span> </li>
+                </ul>
+                <ul class="nav-modal-text">
+                    <li><span class="text">实名认证</span> </li>
+                    <li><span class="text">IVR号码绑定</span> </li>
+                    <li class="ml-3"><span class="text">支付</span> </li>
+                    <li class="ml-30 mr-0"><span class="text">上线</span>  </li>
+                </ul>
             </div>
+
+            <div class="contentModal" style="display: ">
+                <!--未认证显示-->
+                <div class="input text-center" style="display: none">
+                    <img src="images/index/l6.png" alt="" class="sre" />
+                    <p>您还没有经过实名认证，请进行实名认证！</p>
+                </div>
+                <div class="input text-center" style="display: none">
+                    <a href="" type="button"  class="btn btn-primary btn-box">实名认证</a>
+                </div>
+                <!---end--->
+                <!--认证显示-->
+                <div class="input text-center">
+                    <img src="images/index/l6.png" alt="" class="sre" />
+                    <p>您已成功进行实名认证，点击进入下一步!</p>
+                </div>
+                <div class="input text-center" >
+                    <a type="button"  class="btn btn-primary btn-box tabModalBtn" data-id="1">下一步</a>
+                </div>
+                <!---end--->
+            </div>
+
+            <div class="contentModal" style="display: none">
+                <div class="input text-center">
+                    <p>您选择开通IVR功能，我们给您分配了一个IVR号码供应用使用IVR功能</p>
+                </div>
+                <div class="input text-center">
+                    <div class="defulatTips">
+                        0898-77887748858
+                    </div>
+                    <a href="">不喜欢 换一个?</a>
+                </div>
+
+                <div class="input text-center" >
+                    <a type="button"  class="btn btn-primary btn-box tabModalBtn" data-id="2">下一步</a>
+                </div>
+            </div>
+
+
+            <div class="contentModal" style="display: none">
+                <div class="input text-center">
+                    <p您需要支付：998.00 元       账号余额：0.00 元</p>
+                </div>
+
+                <div class="input text-center">
+                    <div class="defulatTips">IVR号码租用费：1000元</div>
+                    <div class="defulatTips">IVR功能使用费：100元/月</div>
+                </div>
+
+                <div class="input text-center" >
+                    <a type="button"  class="btn btn-primary btn-box tabModalBtn" data-id="3">确认支付</a>
+                </div>
+            </div>
+
+            <div class="contentModal" style="display:none ">
+                <div class="input text-center" >
+                    <img src="images/index/l1.png" alt="" class="sre" />
+                    <p>上线成功</p>
+                </div>
+                <div class="input text-center" >
+                    <a href="" type="button"  class="btn btn-primary btn-box tabModalBtn">上线成功</a>
+                </div>
+            </div>
+
+
+
+
+
+
             <div class="input">
-                <input class=" form-control password" type="password" name="" placeholder="请输入当前登录用户密码   " />
+                <div class="tips-error moadltips1 text-center" style="display: none">错误提示信息</div>
             </div>
-            <div class="input">
-                <div class="tips-error moadltips1" style="display: none">密码有误</div>
-            </div>
-        </div>
-        <div class="footer">
-            <a  class="cancel modalCancel">返回</a>
-            <a  class="sure modalSuer1">确认</a>
+
         </div>
     </div>
 

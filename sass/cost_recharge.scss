@@ -1,5 +1,8 @@
 @import "personal_auth";
 .cost-rechage {
+ .text-right {
+    width: 88px;
+  }
   @extend .personal-auth;
 }
 
