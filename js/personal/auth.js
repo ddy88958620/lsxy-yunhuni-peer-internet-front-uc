@@ -159,7 +159,6 @@ $('#validateBtn, #validateBtnPersonal').click(function(){
 
 $('.auth_select').on('click',function(){
   var isPersonal = $(this).find("input[type='radio']")[0].checked
-    console.log(isPersonal);
 
   if(isPersonal) {
     $('.personal').css('display', 'block')
@@ -169,5 +168,4 @@ $('.auth_select').on('click',function(){
     $('.personal').css('display', 'none')
   }
 })
-
 })
