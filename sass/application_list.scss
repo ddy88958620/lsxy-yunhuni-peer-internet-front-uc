@@ -1,6 +1,19 @@
 
-
-
+table{
+  .operation{
+    a{
+      text-decoration: underline;
+      width: auto;
+      padding-right:5px;
+      &:hover{
+      }
+    }
+    span{
+      border-left: 1px dotted #ecedec;
+      padding: 0 5px;
+    }
+  }
+}
 
 
 

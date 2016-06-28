@@ -77,7 +77,11 @@
                                         <td>123456789456123456</td>
                                         <td >已上线</td>
                                         <td>2016-01-01 10:10:00</td>
-                                        <td><a href="">详情</a><a href="">删除</a><a href="">申请上线</a></td>
+                                        <td class="operation">
+                                            <a href="">详情</a> <span ></span>
+                                            <a href="">删除</a> <span ></span>
+                                            <a href="">已上线</a>
+                                        </td>
                                       </tr>
                                       <tr>
                                           <td scope="row">2</td>
@@ -85,14 +89,23 @@
                                           <td>123456789456123456</td>
                                           <td>未上线</td>
                                           <td>2016-01-01 10:10:00</td>
-                                          <td><a href="">详情</a><a href="">删除</a><a href="">申请上线</a></td>
-                                      </tr> <tr>
+                                          <td class="operation">
+                                              <a href="">详情</a> <span ></span>
+                                              <a href="">删除</a> <span ></span>
+                                              <a class="tabtarget" data-toggle="1">申请上线</a>
+                                          </td>
+                                      </tr>
+                                      <tr>
                                           <td scope="row">3</td>
                                           <td>应用名称</td>
                                           <td>123456789456123456</td>
                                           <td>未上线</td>
                                           <td>2016-01-01 10:10:00</td>
-                                          <td><a href="">详情</a><a href="">删除</a><a href="">申请上线</a></td>
+                                          <td class="operation">
+                                              <a href="#">详情</a> <span ></span>
+                                              <a href="">删除</a> <span ></span>
+                                              <a class="tabtarget" data-toggle="3" >申请上线</a>
+                                          </td>
                                       </tr>
                                     </tbody>
                                   </table>
@@ -128,117 +141,58 @@
     </section>
 </section>
 
-<section style="display:none ;">
-    <form action="" method="post" class="form-horizontal">
-        <div class="form-group">
-            <div class="col-md-3 text-right">新密码 :</div>
-            <div class="col-md-6">
-                <input type="text" value="" class="form-control"/>
+
+
+<!---mobilebox-->
+<div class="shadow-bg" id="show-bg"  style="display: block"></div>
+<div id="mobilebox" class="modal-box" style="display: ;">
+    <div class="addmobile1" style="display: ">
+        <div class="title">操作确认<a class="close_a modalCancel"></a></div>
+        <div class="content" >
+            <div class="tips-box">
+                确认是本账号操作，请再次输入用户名密码
+            </div>
+            <div class="input">
+                <input class=" form-control password" type="password" name="" placeholder="请输入当前登录用户密码   " />
+            </div>
+            <div class="input">
+                <div class="tips-error moadltips1" style="display: none">密码有误</div>
             </div>
         </div>
-        <div class="form-group">
-            <div class="col-md-3 text-right">重复密码 :</div>
-            <div class="col-md-6">
-                <input type="text" value="" name="" class="form-control"/>
+        <div class="footer">
+            <a  class="cancel modalCancel">返回</a>
+            <a  class="sure modalSuer1">确认</a>
+        </div>
+    </div>
+
+
+    <div class="addmobile2" style="display: none">
+        <div class="title">重新绑定手机号<a class="close_a modalCancel"></a></div>
+        <div class="content">
+            <div class="margintop30"></div>
+            <div class="input ">
+                <input class=" form-control modalMobile" type="text" name="" placeholder="输入手机号码" maxlength="11" />
+            </div>
+            <div class="input">
+                <input class="code form-control modalCode" type="text" name="mobile" placeholder="验证码" />
+                <button class="code-button" id="send-code" >发送验证码</button>
+            </div>
+            <div class="input">
+                <div class="tips-error moadltips2" style="display: none">请先填写手机号码</div>
             </div>
         </div>
-    </form>
-</section>
-
-<!-- 修改账号密码（Modal） -->
-<div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                    &times;
-                </button>
-                <h4 class="modal-title" >修改登录密码</h4>
-            </div>
-            <form action="" method="post" class="form-horizontal" id="passwordForm">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <div class="col-md-3 text-right">新密码 :</div>
-                        <div class="col-md-6">
-                            <input type="password" value="" name="newpassword" id="newpassword" class="form-control"/>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-3 text-right">重复密码 :</div>
-                        <div class="col-md-6">
-                            <input type="password" value="" name="newrepassword" id="newrepassword"
-                                   class="form-control"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="submit" class="btn btn-primary">确认</button>
-                </div>
-            </form>
-        </div><!-- /.modal-content -->
+        <div class="footer">
+            <a class="cancel modalCancel">返回</a>
+            <a class="sure modalSuer2">确认</a>
+        </div>
     </div>
+
 </div>
-<!-- /.modal -->
 
 
-<!-- 修改邮箱（Modal） -->
-<div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                    &times;
-                </button>
-                <h4 class="modal-title" >绑定邮箱</h4>
-            </div>
-            <form action="" method="post" class="form-horizontal" id="emailForm">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <div class="col-md-3 text-right">邮箱地址 :</div>
-                        <div class="col-md-6">
-                            <input type="password" value="" name="email" class="form-control"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="submit" class="btn btn-primary">确认</button>
-                </div>
-            </form>
-        </div><!-- /.modal-content -->
-    </div>
-</div>
-<!-- /.modal -->
 
-<!-- 修改手机号码（Modal） -->
-<div class="modal fade" id="phoneModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                    &times;
-                </button>
-                <h4 class="modal-title" >绑定邮箱</h4>
-            </div>
-            <form action="" method="post" class="form-horizontal" id="phoneForm">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <div class="col-md-3 text-right">邮箱地址 :</div>
-                        <div class="col-md-6">
-                            <input type="password" value="" name="email" class="form-control"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="submit" class="btn btn-primary">确认</button>
-                </div>
-            </form>
-        </div><!-- /.modal-content -->
-    </div>
-</div>
-<!-- /.modal -->
+
+
 
 
 
@@ -251,7 +205,7 @@
 <script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
 <script type="text/javascript" src='./js/bootstrap-datepicker/js/bootstrap-datepicker.js'> </script>
 <script type="text/javascript" src='./js/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js'> </script>
-<script type="text/javascript" src='./js/cost/history.js'> </script>
+<script type="text/javascript" src='./js/application/list.js'> </script>
 </body>
 </html>
 
