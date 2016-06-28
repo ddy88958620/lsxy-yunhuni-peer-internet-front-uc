@@ -144,9 +144,9 @@
 
 
 <!---mobilebox-->
-<div class="shadow-bg" id="show-bg"  style="display: block"></div>
-<div id="mobilebox" class="appliation-modal-box" style="display: ;">
-    <div class="addmobile1" style="display: ">
+<div class="shadow-bg" id="show-bg"  style="display: none"></div>
+<div id="mobilebox" class="appliation-modal-box" style="display: none;">
+    <div class="addmobile1" >
         <div class="title">应用上线流程<a class="close_a modalCancel"></a></div>
         <div class="content" >
             <!--nav-->
@@ -194,7 +194,7 @@
                     <div class="defulatTips">
                         0898-77887748858
                     </div>
-                    <a href="">不喜欢 换一个?</a>
+                    <a href="javascript:void()" onclick="nolike()" class="font14">不喜欢 换一个?</a>
                 </div>
 
                 <div class="input text-center" >
@@ -202,17 +202,14 @@
                 </div>
             </div>
 
-
             <div class="contentModal" style="display: none">
                 <div class="input text-center">
-                    <p您需要支付：998.00 元       账号余额：0.00 元</p>
+                    <p>您需要支付：<span class="money">998.00</span> 元&nbsp;&nbsp;&nbsp; 账号余额：0.00 元 &nbsp;&nbsp;&nbsp; <span class="nomoney">!!余额不足</span>&nbsp;&nbsp;&nbsp;<a href="cost_recharge_sure.html">充值</a> </p>
                 </div>
-
                 <div class="input text-center">
                     <div class="defulatTips">IVR号码租用费：1000元</div>
                     <div class="defulatTips">IVR功能使用费：100元/月</div>
                 </div>
-
                 <div class="input text-center" >
                     <a type="button"  class="btn btn-primary btn-box tabModalBtn" data-id="3">确认支付</a>
                 </div>
@@ -227,12 +224,6 @@
                     <a href="" type="button"  class="btn btn-primary btn-box tabModalBtn">上线成功</a>
                 </div>
             </div>
-
-
-
-
-
-
             <div class="input">
                 <div class="tips-error moadltips1 text-center" style="display: none">错误提示信息</div>
             </div>
@@ -265,8 +256,11 @@
 </div>
 
 
+<script>
+    function nolike(){
 
-
+    }
+</script>
 
 
 

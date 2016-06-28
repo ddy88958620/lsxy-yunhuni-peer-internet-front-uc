@@ -25,7 +25,7 @@ $(document).ready(function() {
 
     function hideModal(){
         var index = 0;
-        $('.tabModalBtn').each(function () {
+        $('.contentModal').each(function () {
             if(index==0)
                 $(this).show();
             else

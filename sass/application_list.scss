@@ -1,5 +1,7 @@
 @import "personal_account";
-
+a{
+  cursor: pointer;
+}
 .appliation-modal-box {
   margin-left: -400px;
   margin-top: -220px;
@@ -21,6 +23,15 @@
     height: 48px;
     margin: 3px auto;
     background-color: #f9f9f9;
+  }
+  .font14{
+    font-size: 14px;
+  }
+  .money{
+    color:#ff9900;
+  }
+  .nomoney{
+    color:#ff0000;
   }
 
   .nav-modal-box {
@@ -48,7 +59,6 @@
           float: left;
           height: 19px;
           background: url("../images/index/l4.png") no-repeat left center;
-
         }
         .s-active {
           background: url("../images/index/l5.png") no-repeat left center;
