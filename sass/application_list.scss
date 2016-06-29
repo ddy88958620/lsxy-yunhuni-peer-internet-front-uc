@@ -1,8 +1,9 @@
-@import "personal_account";
+
 a{
   cursor: pointer;
 }
 .appliation-modal-box {
+  @extend .modal-box;
   margin-left: -400px;
   margin-top: -220px;
   width: 800px;
@@ -14,7 +15,7 @@ a{
     font-size: 18px;
     line-height: 32px;
   }
-  @extend .modal-box;
+
   .content .input {
     width: auto;
   }

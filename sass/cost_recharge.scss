@@ -1,9 +1,10 @@
-@import "personal_auth";
+
 .cost-rechage {
+  @extend .personal-auth;
  .text-right {
     width: 88px;
   }
-  @extend .personal-auth;
+
 }
 
 
