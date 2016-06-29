@@ -19,48 +19,55 @@
   font-size: 1.2rem;
 }
 
-/* line 19, ../sass/common.scss */
+/* line 18, ../sass/common.scss */
+.border-right {
+  text-decoration: underline;
+  font-size: 1.2rem;
+  float: right;
+}
+
+/* line 24, ../sass/common.scss */
 .border-top {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* line 23, ../sass/common.scss */
+/* line 28, ../sass/common.scss */
 .border-top-none {
   border-top: none;
 }
 
-/* line 27, ../sass/common.scss */
+/* line 32, ../sass/common.scss */
 .bootbox-body {
   font-size: 15px;
 }
 
-/* line 31, ../sass/common.scss */
+/* line 36, ../sass/common.scss */
 .number {
   color: #FC8408;
 }
 
-/* line 35, ../sass/common.scss */
+/* line 40, ../sass/common.scss */
 .fa-database:before {
   content: '\f1c0';
 }
 
-/* line 39, ../sass/common.scss */
+/* line 44, ../sass/common.scss */
 .fa-clone:before {
   content: '\f24d';
 }
 
-/* line 44, ../sass/common.scss */
+/* line 49, ../sass/common.scss */
 .fa-caret-down.active {
   transform: rotate(-90deg);
 }
 
-/* line 49, ../sass/common.scss */
+/* line 54, ../sass/common.scss */
 .btn-file {
   position: relative;
   overflow: hidden;
 }
 
-/* line 49, ../sass/common.scss */
+/* line 54, ../sass/common.scss */
 .btn-file input[type=file] {
   position: absolute;
   top: 0;
