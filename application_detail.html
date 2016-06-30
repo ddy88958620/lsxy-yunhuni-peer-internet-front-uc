@@ -81,7 +81,7 @@
                                     </div>
                                     <div class="col-md-10 ">
                                         <p>启用监听    启用了鉴权</p>
-                                        <p><a href="#" >http://www.xxx.bb.com/callback</a>&nbsp;&nbsp;&nbsp;   <a class="modalShow" data-id="four">修改</a></p>
+                                        <p><a href="#" >http://www.xxx.bb.com/callback</a></p>
                                     </div>
                                 </div>
                                 <div class="row ">
@@ -109,7 +109,7 @@
                                         </a>
                                     </li>
                                     <li><a href="#voice" data-toggle="tab">录音文件</a></li>
-                                    <li class="right"><a href="#" class="btn btn-primary defind" >上传放音文件</a></li>
+                                    <li class="right"><a href="#" class="btn btn-primary defind modalShow" data-id="four" >上传放音文件</a></li>
                                 </ul>
                                 <div id="myTabContent" class="tab-content" style="">
                                     <div class="tab-pane fade in active" id="play">
@@ -297,15 +297,15 @@
 <div class="modal-box application-detail-box" id="modaltwo" style="display:none ">
     <div class="title">批量下载<a class="close_a modalCancel" data-id="two"></a></div>
     <div class="content">
-        <p class="text-center mt-20">批量下载允许下载3天范围内的录音文件</p>
+        <p class="text-center mt-20">批量下载允许下载3天范围内的录音文件 <span class="tips-error moadltipstwo text-center"></span></p>
         <div class="input-box ">
             <div class="row text-center">
-                <input type="text" value="" class="input-text datepicker"  /> 到
-                <input type="text" value="" class="input-text datepicker" />
-                <button class="btn btn-primary">查询</button>
+                <input type="text" value="" class="input-text datepicker" id="datestarttwo"  /> 到
+                <input type="text" value="" class="input-text datepicker" id="dateendtwo" />
+                <button class="btn btn-primary findfile" data-id="two">查询</button>
             </div>
 
-            <div class="row scrolldiv" id="scrolldiv">
+            <div class="row scrolldiv" id="scrolldivtwo">
                 <p>--扫描文件</p>
                 <p>--共计  200  个文件   200M</p>
                 <p>--开始压缩打包</p>
@@ -320,17 +320,23 @@
     </div>
 </div>
 
-<!---批量下载--->
+<!---批量删除--->
 <div class="modal-box application-detail-box" id="modalthree" style="display:none ">
     <div class="title">批量删除<a class="close_a modalCancel" data-id="three"></a></div>
     <div class="content">
-        <p class="text-center mt-20">批量删除录音文件</p>
+        <p class="text-center mt-20">批量删除录音文件 <span class="tips-error moadltipsthree text-center"></span></p>
+
         <div class="input-box ">
             <div class="row text-center">
-                <input type="text" value="" class="input-text datepicker"  /> 到
-                <input type="text" value="" class="input-text datepicker" />
-                <button class="btn btn-primary">查询</button>
+                <input type="text" value="" class="input-text datepicker" id="datestartthree" /> 到
+                <input type="text" value="" class="input-text datepicker" id="dateendthree" />
+                <button class="btn btn-primary findfile" data-id="three">查询</button>
             </div>
+
+            <div class="row scrolldiv" id="scrolldivthree" >
+
+            </div>
+
         </div>
     </div>
     <div class="footer">
@@ -339,15 +345,25 @@
     </div>
 </div>
 
-<!---修改监听地址--->
+<!---上传文件--->
 <div class="modal-box application-detail-box" id="modalfour" style="display:none ">
-    <div class="title">修改监听通知地址<a class="close_a modalCancel" data-id="four"></a></div>
+    <div class="title">文件上传<a class="close_a modalCancel" data-id="four"></a></div>
     <div class="content">
-        <p class="text-center mt-20">原地址：http://www.xxx.bb.com/callback  </p>
+        <p class="info">只支持 .wav 格式的文件，请将其他格式转换成wav格式（编码为 8k、16位）后再上传；单条语音最大支持 5M；文件名称只允许含英文、数字，其他字符将会造成上传失败。  </p>
         <form action="" method="post" id="">
             <div class="input-box ">
-                <div class="row text-center mt-20">
-                    <input type="text" value="" class="input-text form-control"  />
+                <div class="row  mt-10">
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-primary singlefile" >单文件上传</button>
+                    </div>
+                    <input type="file" value="" class="input-text form-control"  id="singlefile" style="display: none" />
+                </div>
+                <div class="row text-left mt-10">
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-primary batchfile">批量上传</button>
+                    </div>
+                    <input type="file" value="" class="input-text form-control" id="batchfile" style="display: none" multiple="multiple" />
+                    <p>允许一次选择20个文件，并且建议在网络环境好的情况下使用，以防止上传错误文件</p>
                 </div>
             </div>
         </form>
@@ -384,15 +400,44 @@
         hideModal(id);
     });
 
+
+
     /**
      * 批量下载处理
      */
     $('.modalSureTwo').click(function(){
         var id = $(this).attr('data-id');
-       //hideModal(id)
+        //异步查询文件信息
+
+
+        //hideModal(id)
         //添加回调数据
         var html  = '<p>--下载成功</p>';
-        $('#scrolldiv').append(html);
+        $('#scrolldiv'+id).append(html);
+    });
+
+
+    /**
+     * 查询文件
+     */
+    $('.findfile').click(function(){
+        var id = $(this).attr('data-id');
+        $('#scrolldiv'+id).html('');
+        $('.moadltips'+id).html('');
+        //异步查询文件信息
+
+        //获取时间
+        var starttime = $('#datestart'+id).val();
+        var endtime = $('#dateend'+id).val();
+        var tips = compareTime(starttime,endtime);
+        if(tips){
+            $('.moadltips'+id).html(tips); return false;
+        }
+
+        //添加加载文件信息
+        var html  = '  <p>--共计  200  个文件   200M</p>';
+        html+='<p>--统计完成</p>';
+        $('#scrolldiv'+id).append(html);
     });
 
     /**
@@ -400,24 +445,43 @@
      */
     $('.modalSureThree').click(function(){
         var id = $(this).attr('data-id');
-        hideModal(id)
+        var r=confirm("确认删除所选文件")
+        if (r==true)
+        {
+           //提交表单确认删除
+
+        }
+        else
+        {
+            hideModal(id)
+        }
     });
 
     /**
-     * 修改监听地址
+     * 文件上传地址
      */
     $('.modalSureFour').click(function(){
         var id = $(this).attr('data-id');
         hideModal(id)
     });
 
+    /**
+     * 单文件
+     */
+    $('.singlefile').click(function(){
+        $('#singlefile').click();
+    });
+
+    /**
+     * 多文件
+     */
+    $('.batchfile').click(function(){
+        $('#batchfile').click();
+    });
 
 
 
-    function hideModal(id){
-        $('#modal'+id).fadeOut();
-        $('#show-bg').fadeOut();
-    }
+
 
 </script>
 

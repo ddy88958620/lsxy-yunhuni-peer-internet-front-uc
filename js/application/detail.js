@@ -85,6 +85,27 @@ $(document).ready(function() {
         $(this).datepicker('hide')
     });
 
+
+    function hideModal(id){
+        $('#modal'+id).fadeOut();
+        $('#show-bg').fadeOut();
+    }
+
+
+
 });
 
-
+function compareTime(starttime,endtime){
+    if(!starttime){
+        return '请填写开始时间';
+    }
+    if(!endtime){
+        return '请填写结束时间';
+    }
+    var d1 = new Date(starttime.replace(/\-/g, "\/"));
+    var d2 = new Date(endtime.replace(/\-/g, "\/"));
+    if(d1>d2){
+        return '时间范围填写有误';
+    }
+    return '';
+}
