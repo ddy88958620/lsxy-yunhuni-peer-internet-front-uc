@@ -55,7 +55,7 @@ $('a.create_confirm').on('click',function(e){
       var url = $('a.create_confirm').attr('href')
       window.location.href = url
     }
-  }); 
+  });
   return false
 })
 
