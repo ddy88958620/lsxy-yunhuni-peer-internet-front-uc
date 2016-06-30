@@ -25,7 +25,7 @@
                                 <nav class="hidden-xs">
                                     <ul class="nav">
                                         <li>
-                                            <div class="aside-li-a active">
+                                            <div class="aside-li-a ">
                                                 <a href="./cost_history.html">消费记录</a>
                                             </div>
                                         </li>
@@ -40,7 +40,7 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="aside-li-a">
+                                            <div class="aside-li-a ">
                                                 <a href="./cost_month.html">月结账单</a>
                                             </div>
                                         </li>
@@ -62,7 +62,7 @@
                                                 </div>
                                             </li>
                                             <li>
-                                                <div class="aside-li-a">
+                                                <div class="aside-li-a active">
                                                     <a href="./cost_invoice_record.html">发票记录</a>
                                                 </div>
                                             </li>
@@ -71,7 +71,7 @@
                                 </div>
                             </section>
                         </section>
-                    
+
                     </section>
                 </aside>
                 <aside>
@@ -80,24 +80,38 @@
                         <div class="head-box"><a href="#subNav" data-toggle="class:hide"> <i
                                 class="fa fa-angle-left text"></i> <i class="fa fa-angle-right text-active"></i> </a>
                         </div>
-                         <div class="wrapper header">
-                           <span class="border-left">&nbsp;消费记录</span>
-                         </div>
+                        <div class="wrapper header">
+                            <span class="border-left">&nbsp;发票说明</span>
+                        </div>
+
+
                         <section class="scrollable wrapper w-f">
                             <section class="panel panel-default yunhuni-personal">
                                 <div class="row m-l-none m-r-none bg-light lter">
+                                    <div class="col-md-12 remove-padding">
+                                        <p class="number_info">
+                                            *开发票类型分为：个人增值税普通发票(100元起)，企业增值税普通发票(100元起)，企业增值税专用发票(1000元起)，共三种个人增值税普通发票与企业增值税普通发票的发票抬头修改后可直接保存，企业增值税专用票则需要用户进行企业认证后才能开具
+                                            <br/><br/>
+                                            *官方活动赠送金额不计算在开票金额内
+                                            <br/><br/>
+                                            *如果是由于您的开票信息、邮寄信息填写错误导致的发票开具、邮寄错误，将不能退票重开。请您填写发票信息时仔细
+                                        </p>
+                                    </div>
+                                    <div class="form-group">
+                                        <span class="hr text-label" ><strong>开票信息:</strong></span>
+                                    </div>
+
                                     <div class="col-md-12 padder-v fix-padding">
-                                        <div class='wrapperBox cost_month cost_month_select'>
+                                        <div class='wrapperBox cost_month'>
                                             <div class="panel-body clearfix border-top-none personal-base">
                                                 <div class="row">
-                                                    <a class="current_month">本月</a>
-                                                    <a class="last_month">上月</a>
-
-                                                    从
-                                                    <input type="text" class="datepicker currentMonth form-control" value='' data-date-end-date="0m" />
-                                                    到
-                                                    <input type="text" class="datepicker lastMonth form-control" value='' data-date-end-date="0m" />
+                                                    开票时间：
+                                                    <input type="text" class="datepicker form-control" value='' data-date-end-date="0m" />到
+                                                    <input type="text" class="datepicker form-control" value='' data-date-end-date="0m" />
                                                     <button class="btn btn-primary query">查询</button>
+                                                </div>
+                                                <div class="row invoiceapply">
+                                                    <div>可开具发票金额：  <span class="price" id="invoice-price">4553</span> 元  <button class="btn btn-primary float-right">开发发票</button></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -105,64 +119,65 @@
 
                                 </div>
                             </section>
-                            <section class="panel panel-default pos-rlt clearfix ">
-                              <table class="table table-striped cost-table-history">
-                                    <thead>
-                                      <tr>
-                                        <th>#</th>
-                                        <th>消费时间</th>
-                                        <th>消费金额</th>
-                                        <th>消费类型</th>
-                                        <th>备注</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                      <tr>
-                                        <td scope="row">1</td>
-                                        <td>2016-01-01 10:10:00</td>
-                                        <td>100.00</td>
-                                        <td>套餐加油包</td>
-                                        <td>100分钟语音加油包</td>
-                                      </tr>
-                                      <tr>
-                                        <td scope="row">1</td>
-                                        <td>2016-01-01 10:10:00</td>
-                                        <td>100.00</td>
-                                        <td>套餐加油包</td>
-                                        <td>100分钟语音加油包</td>
-                                      </tr>
-                                      <tr>
-                                        <td scope="row">1</td>
-                                        <td>2016-01-01 10:10:00</td>
-                                        <td>100.00</td>
-                                        <td>套餐加油包</td>
-                                        <td>100分钟语音加油包</td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                            </section>
-                            <section class="panel panel-default yunhuni-personal">
-                             <nav class='pageWrap'>
-                                <ul class="pagination">
-                                  <li>
-                                    <a href="#" aria-label="Previous">
-                                      <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                  </li>
-                                  <li class="active"><a href="#">1</a></li>
-                                  <li><a href="#">2</a></li>
-                                  <li><a href="#">3</a></li>
-                                  <li><a href="#">4</a></li>
-                                  <li><a href="#">5</a></li>
-                                  <li>
-                                    <a href="#" aria-label="Next">
-                                      <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </nav> 
-                            </section>
+                            <!--<section class="panel panel-default yunhuni-personal">
+                                <div class="fix-padding">
+                                    <p class="bg-success price_info">
+                                        2016-05 消费总额  <span class="text-warning"> 2000.00</span> 元
+                                    </p>
+                                </div>
+                            </section>-->
 
+                            <section class="panel panel-default pos-rlt clearfix ">
+                                <div class="form-group">
+                                    <span class="hr text-label" ><strong>发票申请列表:</strong></span>
+                                </div>
+                                <table class="cost-table table table-striped">
+                                    <!--<caption>消费项目</caption>-->
+                                    <thead>
+                                        <th>申请时间</th>
+                                        <th>开票金额（元）</th>
+                                        <th>发票类型</th>
+                                        <th>状态</th>
+                                        <th>开票抬头</th>
+                                        <th>操作</th>
+                                    </thead>
+
+                                    <tr>
+                                        <td>2016-06-06 16:00</td>
+                                        <td>1000</td>
+                                        <td>普通发票</td>
+                                        <td><span class="success">处理完成，发票已寄出</span></td>
+                                        <td>谭老师</td>
+                                        <td><a href="cost_invoice_detail.html">查看详情</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016-06-06 16:00</td>
+                                        <td>1000</td>
+                                        <td>普通发票</td>
+                                        <td><span class="success">处理完成，发票已寄出</span></td>
+                                        <td>谭老师</td>
+                                        <td><a href="cost_invoice_detail.html">查看详情</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016-06-06 16:00</td>
+                                        <td>1000</td>
+                                        <td>普通发票</td>
+                                        <td>正在处理中</td>
+                                        <td>谭老师</td>
+                                        <td><a href="cost_invoice_detail.html">查看详情</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016-06-06 16:00</td>
+                                        <td>1000</td>
+                                        <td>普通发票</td>
+                                        <td><span class="nosuccess">异常</span></td>
+                                        <td>谭老师</td>
+                                        <td><a href="cost_invoice_detail.html">查看详情</a></td>
+                                    </tr>
+
+                                </table>
+
+                            </section>
                         </section>
                     </section>
                 </aside>
@@ -171,6 +186,13 @@
         </section>
     </section>
 </section>
+
+
+
+<!--modal-->
+
+
+
 
 
 
@@ -184,7 +206,6 @@
 <script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
 <script type="text/javascript" src='./js/bootstrap-datepicker/js/bootstrap-datepicker.js'> </script>
 <script type="text/javascript" src='./js/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js'> </script>
-<script type="text/javascript" src='./js/cost/history.js'> </script>
+<script type="text/javascript" src='./js/cost/invoice_record.js'> </script>
 </body>
 </html>
-
