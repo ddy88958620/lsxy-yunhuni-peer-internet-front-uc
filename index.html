@@ -122,10 +122,14 @@
                                         </span>
                                       </p>
                                       <p>
-                                        SecretKey 1234135312321414134
+                                        SecretKey <span class="secretkey">1234135312321414134</span>
                                         <span>
                                           <a class='reset_confirm' >重新生成</a>
                                         </span>
+                                        <span>
+                                          <a class='tips-error tips-key'>提示</a>
+                                        </span>
+
                                       </p>
                                     </div>
                                   </div>
@@ -204,33 +208,15 @@
 <script src="js/include.js"></script>
 <script type="text/javascript">
     $('.reset_confirm').click(function(){
-        bootbox.dialog({
-                title: "重新生成",
-                message: '<div class="row">  ' +
-                '<div class="col-md-12"> ' +
-                '<p class="text-center">文字</p> ' +
-                '<p class="text-center tips modaltips"></p> ' +
-                ' </div>  </div>',
-                buttons: {
-                    cancel:{
-                        label: "取消",
-                        className: "btn-default",
-                        callback: function () {
-                            alert('取消');
-                        }
-                    },
-                    success: {
-                        label: "确认",
-                        className: "btn-success",
-                        callback: function () {
-                            $('.modaltips').html('错误提示');
-                            alert('确认');
-                            return false;
-                        }
-                    }
-                }
+        bootbox.confirm("确认重新生成？", function(result) {
+            if(result){
+                $('.tips-key').html('错误提示');
+                $('.secretkey').html('aaaaaaaaaaaaaaaaaaaa');
+
+
             }
-        );
+        });
+
     });
 
 </script>
