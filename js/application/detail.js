@@ -84,16 +84,16 @@ $(document).ready(function() {
     }).on('changeDate',function(e){
         $(this).datepicker('hide')
     });
+    
 
-
-    function hideModal(id){
-        $('#modal'+id).fadeOut();
-        $('#show-bg').fadeOut();
-    }
-
-
-
+    
 });
+
+function hideModal(id){
+    $('#modal'+id).fadeOut();
+    $('#show-bg').fadeOut();
+}
+
 
 function compareTime(starttime,endtime){
     if(!starttime){
