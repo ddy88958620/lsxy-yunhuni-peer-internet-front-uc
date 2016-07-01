@@ -1,4 +1,4 @@
 .cost_invoice{
-  @extend  .personal-auth;
+  @extend .personal-auth !optional
 }
 
