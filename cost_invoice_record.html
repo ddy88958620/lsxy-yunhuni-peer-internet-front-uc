@@ -111,36 +111,43 @@
                                     <section class="col-md-12 padder-v fix-padding">
                                         <div class='wrapperBox cost_month'>
                                             <div class="panel-body clearfix border-top-none ">
-                                                <div class="row">
-                                                    选择开票时间：
-                                                    <input type="text" class="datepicker form-control"
-                                                           value='2016-06-01' data-date-end-date="0m" id="datestart"/>到
-                                                    <input type="text" class="datepicker form-control" value=''
-                                                           data-date-end-date="0m" id="dateend"/>
-                                                    <button class="btn btn-primary query">查询</button>
-                                                    <span class="tips-error querytips"></span>
-                                                </div>
-                                                <div class="row invoiceapply">
-                                                    发票类型：
-                                                    <!--<a class="invoice-type" href="cost_invoice.html" data-type="0">您还未填写发票信息，请先填写完成</a>-->
-                                                    <span class="invoice-type" href="cost_invoice.html" data-type="2">企业增值税普通票</span>
-                                                    <!--<span class="invoice-type" href="cost_invoice.html" data-type="1">个人增值税普通发票</span>
-                                                    <!--<span class="invoice-type" href="cost_invoice.html" data-type="3">企业增值税专用票</span>-->
-                                                </div>
-                                                <div class="row invoiceapply">
-                                                    <div>开票时间：
-                                                        <span id="ininvoicetime">请选择 </span>
+                                                <form action="" method="post" >
+                                                    <div class="row">
+                                                        选择开票时间：
+                                                        <input type="text" class="datepicker form-control"
+                                                               value='2016-06-01' data-date-end-date="0m"
+                                                               id="datestart"/>到
+                                                        <input type="text" class="datepicker form-control" value=''
+                                                               data-date-end-date="0m" id="dateend"/>
+                                                        <a class="btn btn-primary query">查询</a>
+                                                        <span class="tips-error querytips"></span>
                                                     </div>
-                                                </div>
-                                                <div class="row invoiceapply">
-                                                    <div>已选开具发票金额：
-                                                        <span class="price" id="invoice-price" data-money="0">0.</span><span class="point" id="invoice-point">00</span> 元
-                                                        <a href="" id="invoice-url" target="_blank"></a>
-                                                        <button class="btn btn-primary float-right" id="sendinvoice"
-                                                                disabled>开发发票
-                                                        </button>
+                                                    <div class="row invoiceapply">
+                                                        发票类型：
+                                                        <!--<a class="invoice-type" href="cost_invoice.html" data-type="0">您还未填写发票信息，请先填写完成</a>-->
+                                                        <span class="invoice-type" href="cost_invoice.html"
+                                                              data-type="2">企业增值税普通票</span>
+                                                        <!--<span class="invoice-type" href="cost_invoice.html" data-type="1">个人增值税普通发票</span>
+                                                        <!--<span class="invoice-type" href="cost_invoice.html" data-type="3">企业增值税专用票</span>-->
                                                     </div>
-                                                </div>
+                                                    <div class="row invoiceapply">
+                                                        <div>开票时间：
+                                                            <span id="ininvoicetime">请选择 </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row invoiceapply">
+                                                        <div>已选开具发票金额：
+                                                            <span class="price" id="invoice-price"
+                                                                  data-money="0">0.</span><span class="point"
+                                                                                                id="invoice-point">00</span>
+                                                            元
+                                                            <a id="invoice-url"></a>
+                                                            <button class="btn btn-primary float-right" id="sendinvoice" type="submit"
+                                                                    disabled>开发发票
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </form>
                                             </div>
                                         </div>
                                     </section>
@@ -189,7 +196,7 @@
                                         <td>2016-06-06 16:00</td>
                                         <td>1000</td>
                                         <td>普通发票</td>
-                                        <td>正在处理中</td>
+                                        <td><span>申请已提交</span></td>
                                         <td>谭老师</td>
                                         <td><a href="cost_invoice_detail.html">查看详情</a></td>
                                     </tr>
@@ -207,8 +214,7 @@
                                         <td>普通发票</td>
                                         <td><span>申请已提交</span></td>
                                         <td>谭老师</td>
-                                        <td><a href="cost_invoice_detail.html">查看详情</a> &nbsp;<a
-                                                href="cost_invoice.html">编辑</a></td>
+                                        <td><a href="cost_invoice_detail.html">查看详情</a></td>
                                     </tr>
 
                                 </table>
@@ -269,48 +275,95 @@
             return false;
         }
         //清空数据
-        $('#invoice-price').html('0.').attr('data-money','0');
+        $('#invoice-price').html('0.').attr('data-money', '0');
         $('#invoice-point').html('00');
-        $('#invoice-url').removeAttr('href').html('');
+        $('#invoice-url').html('');
 
 
         //显示时间
-        $('#ininvoicetime').html(starttime+' 至 '+ endtime);
+        $('#ininvoicetime').html(starttime + ' 至 ' + endtime);
 
         //异步获取开局发票金额
-        var price       = "100.01";
-        //查看详情
-        var url         ="cost_invoice_record_detail.html?starttiem="+starttime+"&endtime="+endtime;
+        var price = "100.01";
 
 
 
-
-
-        var priceInt    = parseInt(price);
-        var priceFloat  = parseFloat(price).toFixed(2);
-        var strs= new Array(); //定义一数组
-        strs=price.split("."); //字符分割
-        for (i=0;i<strs.length ;i++ )
-        {
+        var priceInt = parseInt(price);
+        var priceFloat = parseFloat(price).toFixed(2);
+        var strs = new Array(); //定义一数组
+        strs = price.split("."); //字符分割
+        for (i = 0; i < strs.length; i++) {
             strs[i];
         }
-        $('#invoice-price').html(priceInt+'.').attr('data-money',priceInt);
-        if(strs[1]!=''){
+        $('#invoice-price').html(priceInt + '.').attr('data-money', priceInt);
+        if (strs[1] != '') {
             priceFloat = strs[1];
         }
 
         $('#invoice-point').html(priceFloat);
-        $('#invoice-url').attr('href',url).html('查看详情');
+
+        $('#invoice-url').html('查看详情');
+
+        var con =  condition();
+        if(con){
+            $('#sendinvoice').removeAttr('disabled');
+        }
 
 
-        //查询信息
+    });
 
-        $('#sendinvoice').removeAttr('disabled');
+    $('#invoice-url').click(function(){
+
+
+
+
+
+       var html = '<table class="cost-table table table-striped"><thead> <th>消费时间</th><th>消费金额（元）</th><th>消费类型</th><th>备注</th> </thead>';
+           html +='<tr><td>2016-06-06 16:00</td><td>1000.00</td><td>套餐加油包</td> <td>IVR号码资源</td></tr>';
+           html +='<tr><td>2016-06-06 16:00</td><td>1000.00</td><td>套餐加油包</td> <td>IVR号码资源</td></tr>';
+           html +='<tr><td>2016-06-06 16:00</td><td>1000.00</td><td>套餐加油包</td> <td>IVR号码资源</td></tr>';
+           html +='<tr><td>2016-06-06 16:00</td><td>1000.00</td><td>套餐加油包</td> <td>IVR号码资源</td></tr>';
+           html +='<tr><td>2016-06-06 16:00</td><td>1000.00</td><td>套餐加油包</td> <td>IVR号码资源</td></tr>';
+           html +='<tr><td>2016-06-06 16:00</td><td>1000.00</td><td>套餐加油包</td> <td>IVR号码资源</td></tr>';
+
+
+
+        html +='</table>';
+
+        html +='<nav class="pageWrap "><ul class="pagination">';
+        html +='<li><a  aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>';
+        html +='<li class="active"><a class="aherf">1</a></li>';
+        html +='<li ><a class="aherf">2</a></li>';
+        html +='<li ><a class="aherf">3</a></li>';
+        html +='<li ><a class="aherf">4</a></li>';
+        html +='<li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>';
+        html +='</ul></nav>';
+
+
+
+
+
+
+
+        bootbox.dialog({
+                    title: "开票详情",
+                    message: html,
+                    buttons: {
+                        success: {
+                            label: "关闭",
+                            className: "btn-default",
+                            callback: function () {
+
+                            }
+                        }
+                    }
+                }
+        );
 
     });
 
 
-    function sendsubmit(){
+    function sendsubmit() {
         alert('提交表单');
     }
 

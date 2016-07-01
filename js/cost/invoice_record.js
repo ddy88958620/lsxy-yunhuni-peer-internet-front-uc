@@ -18,8 +18,7 @@ $(function () {
 
 });
 
-
-$('#sendinvoice').click(function () {
+function condition() {
     //0 填写  1，2 大于100 3大于1000
     var type = $('.invoice-type').attr('data-type');
     var currentprice = parseInt($('#invoice-price').attr('data-money'));
@@ -39,9 +38,12 @@ $('#sendinvoice').click(function () {
             tips('您还未填写发票信息，请先填写完成，再进行开票申请');return false;
             break;
     }
-    sendsubmit();
+    return true;
+}
 
-});
+    
+    
+
 
 
 function tips(title) {

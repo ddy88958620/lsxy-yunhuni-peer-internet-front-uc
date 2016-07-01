@@ -57,12 +57,12 @@
                                     <nav class="hidden-xs">
                                         <ul class="nav">
                                             <li>
-                                                <div class="aside-li-a active">
+                                                <div class="aside-li-a ">
                                                     <a href="./cost_invoice.html">发票信息</a>
                                                 </div>
                                             </li>
                                             <li>
-                                                <div class="aside-li-a">
+                                                <div class="aside-li-a active">
                                                     <a href="./cost_invoice_record.html">发票申请</a>
                                                 </div>
                                             </li>
@@ -82,74 +82,86 @@
                         </div>
                         <section class=" w-f cost_invoice">
                             <div class="wrapper header">
-                                <span class="border-left">&nbsp;发票说明</span>
+                                <span class="border-left">&nbsp;开票申请</span>
                             </div>
                             <div class="row m-l-none m-r-none bg-light lter">
                                 <div class="row">
-                                    <form role="form" action="./index.html" method="post" class="register-form"
+                                    <form role="form" action="./index.html" method="post" class="invoice-form"
                                           id="costInvoiceForm">
-
+                                        <div class="form-group">
+                                            <span class=" text-label"><strong>开票信息:</strong></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <lable class="col-md-3 text-right">开具发票金额：</lable>
+                                            <lable class="col-md-9 line34">1000元</lable>
+                                        </div>
+                                        <div class="form-group">
+                                            <lable class="col-md-3 text-right">开票时间：</lable>
+                                            <lable class="col-md-9 line34">2016-06-06 至 2016-06-15</lable>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="hr text-label"><strong>发票信息:</strong></span>
+                                        </div>
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right ">发票类型：</lable>
                                             <lable class="col-md-6  line34">企业增值税专用票</lable>
                                         </div>
-
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right ">发票抬头：</lable>
                                             <lable class="col-md-9 line34 "> 流水行云</lable>
                                         </div>
-                                        <!--企业增值税专用显示-->
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right ">纳税人识别号：</lable>
                                             <lable class="col-md-9 line34 "> 509175918471494</lable>
                                         </div>
-
                                         <div class="form-group">
-                                            <lable class="col-md-3 text-right ">银行账号：</lable>
-                                            <lable class="col-md-9 line34 ">4412345646541165165</lable>
+                                            <lable class="col-md-3 text-right ">银行账户：</lable>
+                                            <lable class="col-md-9 line34 "> 123564564561651561654</lable>
                                         </div>
-
-
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right ">开户行：</lable>
                                             <lable class="col-md-9 line34 ">广东省广州市天河区建设银行龙口东分行</lable>
                                         </div>
-
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right ">注册地址：</lable>
-                                            <lable class="col-md-9 line34 ">广东省广州市天河区羊城创意园311号B座24</lable>
+                                            <lable class="col-md-9 line34 ">广东省广州市天河区建设银行龙口东分行</lable>
                                         </div>
-
-
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right ">企业电话：</lable>
-                                            <lable class="col-md-9 line34 ">0202200220</lable>
+                                            <lable class="col-md-9 line34 ">广东省广州市天河区羊城创意园311号B座24</lable>
                                         </div>
-                                        <!--企业增值税专用显示-->
-
                                         <div class="form-group">
                                             <span class="hr text-label"><strong>邮寄信息:</strong></span>
                                         </div>
-
-                                        <div class="form-group">
-                                            <lable class="col-md-3 text-right ">收取地址：</lable>
-                                            <lable class="col-md-9 line34 ">广东省广州市天河区羊城创意园311号B座24</lable>
-
-                                        </div>
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right ">收件人：</lable>
-                                            <lable class="col-md-9 line34 ">谭老师</lable>
+                                            <lable class="col-md-9 line34 ">成小明</lable>
                                         </div>
                                         <div class="form-group">
-                                            <lable class="col-md-3 text-right ">手机号：</lable>
-                                            <lable class="col-md-9 line34 ">13611460986</lable>
+                                            <lable class="col-md-3 text-right ">手机 ：</lable>
+                                            <lable class="col-md-9 line34 ">1546548455</lable>
                                         </div>
+                                        <div class="form-group">
+                                            <lable class="col-md-3 text-right ">快递公司：</lable>
+                                            <lable class="col-md-9 line34 ">申通快递</lable>
+                                        </div>
+                                        <div class="form-group">
+                                            <lable class="col-md-3 text-right ">快递单号：</lable>
+                                            <lable class="col-md-9 line34 ">23123123123123</lable>
+                                        </div>
+
 
                                         <div class="form-group">
                                             <div class="col-md-3 text-right">
-                                                <a class=" btn btn-primary  btn-form" href="cost_invoice_edit.html">编辑</a>
+                                                <button
+                                                   class="btn btn-primary  btn-form ">提交申请</button>
+                                            </div>
+                                            <div class="col-md-3 text-right">
+                                                <button class=" btn btn-default  btn-form">取消</button>
                                             </div>
                                         </div>
+
+
 
                                     </form>
                                 </div>
@@ -167,5 +179,6 @@
 <script src="js/charts/flot/demo.js" cache="false"></script>
 <script src="./bower_components/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
 <script src="js/include.js"></script>
+<script type="text/javascript" src='./js/cost/invoice.js'></script>
 </body>
 </html>
