@@ -81,138 +81,64 @@
                                 class="fa fa-angle-left text"></i> <i class="fa fa-angle-right text-active"></i> </a>
                         </div>
                         <div class="wrapper header">
-                            <span class="border-left">&nbsp;发票说明</span>
+                            <span class="border-left">&nbsp;发票列表</span>
                         </div>
 
 
                         <section class="scrollable wrapper w-f">
-                            <section class="panel panel-default yunhuni-personal">
-                                <div class="row m-l-none m-r-none bg-light lter">
-                                    <div class="col-md-12 remove-padding">
-                                        <p class="number_info">
-                                            *开发票类型分为：个人增值税普通发票(100元起)，企业增值税普通发票(100元起)，企业增值税专用发票(1000元起)，共三种个人增值税普通发票与企业增值税普通发票的发票抬头修改后可直接保存，企业增值税专用票则需要用户进行企业认证后才能开具
-                                            <br/><br/>
-                                            *官方活动赠送金额不计算在开票金额内
-                                            <br/><br/>
-                                            *如果是由于您的开票信息、邮寄信息填写错误导致的发票开具、邮寄错误，将不能退票重开。请您填写发票信息时仔细
-                                        </p>
-                                    </div>
-                                    <div class="form-group">
-                                        <span class="hr text-label"><strong>开票信息:</strong></span>
-                                    </div>
-                                    <section class="panel panel-default yunhuni-personal">
-                                        <div class="fix-padding">
-                                            <p class="bg-success price_info price-box invoiceapply text-l">
-                                                可开具发票金额： <span class="price">4399.</span><span class="point">00</span> 元
-                                            </p>
-                                        </div>
-                                    </section>
 
-                                    <section class="col-md-12 padder-v fix-padding">
-                                        <div class='wrapperBox cost_month'>
-                                            <div class="panel-body clearfix border-top-none ">
-                                                <div class="row">
-                                                    选择开票时间：
-                                                    <input type="text" class="datepicker form-control"
-                                                           value='2016-06-01' data-date-end-date="0m" id="datestart"/>到
-                                                    <input type="text" class="datepicker form-control" value=''
-                                                           data-date-end-date="0m" id="dateend"/>
-                                                    <button class="btn btn-primary query">查询</button>
-                                                    <span class="tips-error querytips"></span>
-                                                </div>
-                                                <div class="row invoiceapply">
-                                                    发票类型：
-                                                    <!--<a class="invoice-type" href="cost_invoice.html" data-type="0">您还未填写发票信息，请先填写完成</a>-->
-                                                    <span class="invoice-type" href="cost_invoice.html" data-type="2">企业增值税普通票</span>
-                                                    <!--<span class="invoice-type" href="cost_invoice.html" data-type="1">个人增值税普通发票</span>
-                                                    <!--<span class="invoice-type" href="cost_invoice.html" data-type="3">企业增值税专用票</span>-->
-                                                </div>
-                                                <div class="row invoiceapply">
-                                                    <div>开票时间：
-                                                        <span id="ininvoicetime">请选择 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="row invoiceapply">
-                                                    <div>已选开具发票金额：
-                                                        <span class="price" id="invoice-price" data-money="0">0.</span><span class="point" id="invoice-point">00</span> 元
-                                                        <a href="" id="invoice-url" target="_blank"></a>
-                                                        <button class="btn btn-primary float-right" id="sendinvoice"
-                                                                disabled>开发发票
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
-                                </div>
-                            </section>
-                            <!--<section class="panel panel-default yunhuni-personal">
-                                <div class="fix-padding">
-                                    <p class="bg-success price_info">
-                                        2016-05 消费总额  <span class="text-warning"> 2000.00</span> 元
-                                    </p>
-                                </div>
-                            </section>-->
 
                             <section class="panel panel-default pos-rlt clearfix ">
                                 <div class="form-group">
-                                    <span class="hr text-label"><strong>发票申请列表:</strong></span>
+                                    <span class="hr text-label"><strong>开具发票列表:</strong></span>
                                 </div>
                                 <table class="cost-table table table-striped">
                                     <!--<caption>消费项目</caption>-->
                                     <thead>
-                                    <th>申请时间</th>
-                                    <th>开票金额（元）</th>
-                                    <th>发票类型</th>
-                                    <th>状态</th>
-                                    <th>开票抬头</th>
-                                    <th>操作</th>
+                                    <th>消费时间</th>
+                                    <th>消费金额（元）</th>
+                                    <th>消费类型</th>
+                                    <th>备注</th>
                                     </thead>
-
                                     <tr>
                                         <td>2016-06-06 16:00</td>
-                                        <td>1000</td>
-                                        <td>普通发票</td>
-                                        <td><span class="success">处理完成，发票已寄出</span></td>
-                                        <td>谭老师</td>
-                                        <td><a href="cost_invoice_detail.html">查看详情</a></td>
+                                        <td>1000.00</td>
+                                        <td>套餐加油包</td>
+                                        <td>IVR号码资源</td>
                                     </tr>
                                     <tr>
                                         <td>2016-06-06 16:00</td>
-                                        <td>1000</td>
-                                        <td>普通发票</td>
-                                        <td><span class="success">处理完成，发票已寄出</span></td>
-                                        <td>谭老师</td>
-                                        <td><a href="cost_invoice_detail.html">查看详情</a></td>
+                                        <td>1000.00</td>
+                                        <td>语音</td>
+                                        <td>回拨扣费 0.02/6s 10min</td>
                                     </tr>
                                     <tr>
                                         <td>2016-06-06 16:00</td>
-                                        <td>1000</td>
-                                        <td>普通发票</td>
-                                        <td>正在处理中</td>
-                                        <td>谭老师</td>
-                                        <td><a href="cost_invoice_detail.html">查看详情</a></td>
+                                        <td>1000.00</td>
+                                        <td>会议</td>
+                                        <td>[mid]会议拉入  0.02/6s 10min</td>
                                     </tr>
                                     <tr>
                                         <td>2016-06-06 16:00</td>
-                                        <td>1000</td>
-                                        <td>普通发票</td>
-                                        <td><span class="nosuccess">异常</span></td>
-                                        <td>谭老师</td>
-                                        <td><a href="cost_invoice_detail.html">查看详情</a></td>
+                                        <td>1000.00</td>
+                                        <td>会议</td>
+                                        <td>[mid]会议拉入  0.02/6s 10min</td>
                                     </tr>
                                     <tr>
                                         <td>2016-06-06 16:00</td>
-                                        <td>1000</td>
-                                        <td>普通发票</td>
-                                        <td><span>申请已提交</span></td>
-                                        <td>谭老师</td>
-                                        <td><a href="cost_invoice_detail.html">查看详情</a> &nbsp;<a
-                                                href="cost_invoice.html">编辑</a></td>
+                                        <td>1000.00</td>
+                                        <td>会议</td>
+                                        <td>[mid]会议拉入  0.02/6s 10min</td>
                                     </tr>
-
+                                    <tr>
+                                        <td>2016-06-06 16:00</td>
+                                        <td>1000.00</td>
+                                        <td>IVR号码资源</td>
+                                        <td>[telno]IVR号码资源  100/月</td>
+                                    </tr>
                                 </table>
                             </section>
+
                             <section class="panel panel-default yunhuni-personal">
                                 <nav class='pageWrap'>
                                     <ul class="pagination">
@@ -234,6 +160,7 @@
                                     </ul>
                                 </nav>
                             </section>
+
                         </section>
                     </section>
                 </aside>
@@ -269,9 +196,9 @@
             return false;
         }
         //清空数据
-        $('#invoice-price').html('0.').attr('data-money','0');
+        $('#invoice-price').html('0.');
         $('#invoice-point').html('00');
-        $('#invoice-url').removeAttr('href').html('');
+        $('#invoice-url').removeAttr('herf').html('');
 
 
         //显示时间
@@ -280,7 +207,7 @@
         //异步获取开局发票金额
         var price       = "100.01";
         //查看详情
-        var url         ="cost_invoice_record_detail.html?starttiem="+starttime+"&endtime="+endtime;
+        var url         ="";
 
 
 
@@ -294,13 +221,13 @@
         {
             strs[i];
         }
-        $('#invoice-price').html(priceInt+'.').attr('data-money',priceInt);
+        $('#invoice-price').html(priceInt+'.');
         if(strs[1]!=''){
             priceFloat = strs[1];
         }
 
         $('#invoice-point').html(priceFloat);
-        $('#invoice-url').attr('href',url).html('查看详情');
+        $('#invoice-url').attr('herf',url).html('查看详情');
 
 
         //查询信息
@@ -308,11 +235,6 @@
         $('#sendinvoice').removeAttr('disabled');
 
     });
-
-
-    function sendsubmit(){
-        alert('提交表单');
-    }
 
 
 </script>

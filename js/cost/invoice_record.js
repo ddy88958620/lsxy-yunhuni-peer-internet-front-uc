@@ -14,7 +14,7 @@ $(function () {
         $(this).datepicker('hide')
     });
 
-    
+
 
 });
 
@@ -22,7 +22,7 @@ $(function () {
 $('#sendinvoice').click(function () {
     //0 填写  1，2 大于100 3大于1000
     var type = $('.invoice-type').attr('data-type');
-    var currentprice = parseInt($('#invoice-price').html());
+    var currentprice = parseInt($('#invoice-price').attr('data-money'));
     switch (type) {
         case '1':
         case '2':
@@ -39,6 +39,7 @@ $('#sendinvoice').click(function () {
             tips('您还未填写发票信息，请先填写完成，再进行开票申请');return false;
             break;
     }
+    sendsubmit();
 
 });
 
@@ -49,3 +50,18 @@ function tips(title) {
     });
 }
 
+
+function compareTime(starttime,endtime){
+    if(!starttime){
+        return '请填写开始时间';
+    }
+    if(!endtime){
+        return '请填写结束时间';
+    }
+    var d1 = new Date(starttime.replace(/\-/g, "\/"));
+    var d2 = new Date(endtime.replace(/\-/g, "\/"));
+    if(d1>d2){
+        return '时间范围填写有误';
+    }
+    return '';
+}
