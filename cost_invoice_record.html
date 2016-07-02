@@ -111,14 +111,14 @@
                                     <section class="col-md-12 padder-v fix-padding">
                                         <div class='wrapperBox cost_month'>
                                             <div class="panel-body clearfix border-top-none ">
-                                                <form action="" method="post" >
+                                                <form action="" method="post">
                                                     <div class="row">
                                                         选择开票时间：
                                                         <input type="text" class="datepicker form-control"
                                                                value='2016-06-01' data-date-end-date="0m"
                                                                id="datestart"/>到
-                                                        <input type="text" class="datepicker form-control" value=''
-                                                               data-date-end-date="0m" id="dateend"/>
+                                                        <input type="text" class="datepicker form-control"
+                                                               data-date-end-date="0m" value='2016-06-02'  id="dateend"/>
                                                         <a class="btn btn-primary query">查询</a>
                                                         <span class="tips-error querytips"></span>
                                                     </div>
@@ -127,7 +127,8 @@
                                                         <!--<a class="invoice-type" href="cost_invoice.html" data-type="0">您还未填写发票信息，请先填写完成</a>-->
                                                         <!--<span class="invoice-type" href="cost_invoice.html"
                                                               data-type="2">企业增值税普通票</span>-->
-                                                        <span class="invoice-type" href="cost_invoice.html" data-type="1">个人增值税普通发票</span>
+                                                        <span class="invoice-type" href="cost_invoice.html"
+                                                              data-type="1">个人增值税普通发票</span>
                                                         <!--<span class="invoice-type" href="cost_invoice.html" data-type="3">企业增值税专用票</span>-->
                                                     </div>
                                                     <div class="row invoiceapply">
@@ -142,7 +143,8 @@
                                                                                                 id="invoice-point">00</span>
                                                             元
                                                             <a id="invoice-url"></a>
-                                                            <button class="btn btn-primary float-right" id="sendinvoice" type="submit"
+                                                            <button class="btn btn-primary float-right" id="sendinvoice"
+                                                                    type="submit"
                                                                     disabled>开发发票
                                                             </button>
                                                         </div>
@@ -165,7 +167,7 @@
                                 <div class="form-group">
                                     <span class="hr text-label"><strong>发票申请列表:</strong></span>
                                 </div>
-                                <table class="cost-table table table-striped">
+                                <table class="cost-table table table-striped ">
                                     <!--<caption>消费项目</caption>-->
                                     <thead>
                                     <th>申请时间</th>
@@ -261,9 +263,25 @@
 <script type="text/javascript" src='./js/bootstrap-datepicker/js/bootstrap-datepicker.js'></script>
 <script type="text/javascript" src='./js/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js'></script>
 <script type="text/javascript" src='./js/cost/invoice_record.js'></script>
-
+<!--syncpage-->
+<script type="text/javascript" src='./js/page.js'></script>
 
 <script>
+
+
+    var searchTable = function(nowPage,listRows)
+    {
+
+        var data = [
+            ['2016-06-06 16:00', '1000.00', '套餐加油包2', 'IVR号码资源'],
+            ['2016-06-06 16:00', '1000.00', '套餐加油包23', 'IVR号码资源'],
+            ['2016-06-06 16:00', '1000.00', '套餐加油包232', 'IVR号码资源']
+        ];
+        alert(0);
+        //removeDataRow();
+        //addNewData(data);
+    }
+
     $('.query').click(function () {
         $('.querytips').html('');
         //获取时间
@@ -287,7 +305,6 @@
         var price = "100.01";
 
 
-
         var priceInt = parseInt(price);
         var priceFloat = parseFloat(price).toFixed(2);
         var strs = new Array(); //定义一数组
@@ -304,42 +321,49 @@
 
         $('#invoice-url').html('查看详情');
 
-        var con =  condition();
-        if(con){
+        var con = condition();
+        if (con) {
             $('#sendinvoice').removeAttr('disabled');
         }
 
 
     });
 
-    $('#invoice-url').click(function(){
+    $('#invoice-url').click(function () {
+        //param  = {page : 5 , index :10 };
+
+        var data = [
+            ['2016-06-06 16:00', '1000.00', '套餐加油包', 'IVR号码资源'],
+            ['2016-06-06 16:00', '1000.00', '套餐加油包', 'IVR号码资源'],
+            ['2016-06-06 16:00', '1000.00', '套餐加油包', 'IVR号码资源']
+        ];
 
 
+        //数据列表
+        var html = '<table class="cost-table table table-striped sync-table-box"><thead> <th>消费时间</th><th>消费金额（元）</th><th>消费类型</th><th>备注</th> </thead>';
+        for(var i = 0 ; i<data.length; i++){
+            html +='<tr><td>'+data[i][0]+'</td><td>'+data[i][1]+'</td><td>'+data[i][2]+'</td><td>'+data[i][3]+'</td></tr>';
+        }
+        /*
+         html = '';
+         html += '<nav class="pageWrap pageSyncWrap"><ul class="pagination">';
+         html += '<li><a  aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>';
+         html += '<li class="active"><a class="aherf">1</a></li>';
+         html += '<li ><a class="aherf">2</a></li>';
+         html += '<li ><a class="aherf">3</a></li>';
+         html += '<li ><a class="aherf">4</a></li>';
+         html += '<li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>';
+         html += '</ul></nav>';
+         */
 
 
-
-       var html = '<table class="cost-table table table-striped"><thead> <th>消费时间</th><th>消费金额（元）</th><th>消费类型</th><th>备注</th> </thead>';
-           html +='<tr><td>2016-06-06 16:00</td><td>1000.00</td><td>套餐加油包</td> <td>IVR号码资源</td></tr>';
-           html +='<tr><td>2016-06-06 16:00</td><td>1000.00</td><td>套餐加油包</td> <td>IVR号码资源</td></tr>';
-           html +='<tr><td>2016-06-06 16:00</td><td>1000.00</td><td>套餐加油包</td> <td>IVR号码资源</td></tr>';
-           html +='<tr><td>2016-06-06 16:00</td><td>1000.00</td><td>套餐加油包</td> <td>IVR号码资源</td></tr>';
-           html +='<tr><td>2016-06-06 16:00</td><td>1000.00</td><td>套餐加油包</td> <td>IVR号码资源</td></tr>';
-           html +='<tr><td>2016-06-06 16:00</td><td>1000.00</td><td>套餐加油包</td> <td>IVR号码资源</td></tr>';
+        html += '</table>';
 
 
-
-        html +='</table>';
-
-        html +='<nav class="pageWrap pageSyncWrap"><ul class="pagination">';
-        html +='<li><a  aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>';
-        html +='<li class="active"><a class="aherf">1</a></li>';
-        html +='<li ><a class="aherf">2</a></li>';
-        html +='<li ><a class="aherf">3</a></li>';
-        html +='<li ><a class="aherf">4</a></li>';
-        html +='<li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>';
-        html +='</ul></nav>';
+        html +='<div id="datatable"></div>';
 
 
+        html+= syncpage();
 
 
 
@@ -360,7 +384,41 @@
                 }
         );
 
+        var page = new Page(2,1,5,'datatable',searchTable);
+        page.show();
+
     });
+
+
+
+
+
+    /**
+     * page
+     */
+
+    function syncpage(){
+
+
+
+        html = '';
+        html += '<nav class="pageWrap pageSyncWrap"><ul class="pagination">';
+        html += '<li><a  aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>';
+        html += '<li class="active"><a class="aherf">1</a></li>';
+        html += '<li ><a class="aherf">2</a></li>';
+        html += '<li ><a class="aherf">3</a></li>';
+        html += '<li ><a class="aherf">4</a></li>';
+        html += '<li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>';
+        html += '</ul></nav>';
+
+
+
+
+
+
+        return html;
+
+    }
 
 
     function sendsubmit() {
