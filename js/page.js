@@ -36,14 +36,14 @@ function Page(count,listRow,showPageCount,divId,getData){
 
         var html = '<nav class="pageWrap pageSyncWrap page-div"><ul class="my-page pagination">';
 
-        html +='<li><a  aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>';
+        html +='<li><a class="page-item pre-page"><span>&laquo;</span></a></li>';
         for(var i = 0 ; i < o.showPageCount ; i++)
         {
             //拼接每一个分页数组按钮，并为其设置id
             html += "<li><a href='#' id=page"+(i+1)+" class = 'page-item each-page'>"+(i+1)+"</a></li>";
         }
 
-        html +='<li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>';
+        html +='<li><a class="page-item next-page"><span aria-hidden="true">&raquo;</span></a></li>';
         html += '</ul></nav>';
         $('#'+o.obj).html(html);
         $("#page1").parent().addClass('active');
@@ -60,9 +60,9 @@ function Page(count,listRow,showPageCount,divId,getData){
         var html = "";
         if(o.nowPage != 1)
         {
-            //
+            html += '<li><a class="page-item pre-page"><span>&laquo;</span></a></li>';
         }
-        html += '<li><a class="page-item pre-page"><span>&laquo;</span></a></li>';
+
         for(var i = o.first ; i <= o.last ; i++)
         {
 
@@ -70,9 +70,9 @@ function Page(count,listRow,showPageCount,divId,getData){
         }
         if(o.nowPage != o.totalPage)
         {
-            //html+="<li><a href='#' class = 'page-item next-page'><span aria-hidden='true'>&raquo;</span></a>";
+            html+="<li><a href='#' class = 'page-item next-page'><span aria-hidden='true'>&raquo;</span></a>";
         }
-        html+="<li><a href='#' class = 'page-item next-page'><span aria-hidden='true'>&raquo;</span></a>";
+        //html+="<li><a href='#' class = 'page-item next-page'><span aria-hidden='true'>&raquo;</span></a>";
         $(".my-page").html(html);
         o.bindAction();
     }
@@ -84,6 +84,17 @@ function Page(count,listRow,showPageCount,divId,getData){
         self.parent().removeClass('active');
         obj.parent().addClass('active');
     }
+
+    /*
+     *  更新第一页颜色
+     */
+    o.updateFirstColor = function(self,obj)
+    {
+        self.parent().removeClass('active');
+        obj.parent().addClass('active');
+    }
+
+
     /*
      *  删除控件
      */

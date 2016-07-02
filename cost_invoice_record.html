@@ -114,15 +114,16 @@
                                                 <form action="" method="post">
                                                     <div class="row">
                                                         选择开票时间：
+                                                        <!--默认第一条消费记录的时间-->
                                                         <input type="text" class="datepicker form-control"
                                                                value='2016-06-01' data-date-end-date="0m"
                                                                id="datestart"/>到
                                                         <input type="text" class="datepicker form-control"
-                                                               data-date-end-date="0m" value='2016-06-02'  id="dateend"/>
+                                                               data-date-end-date="0m" value=''  id="dateend"/>
                                                         <a class="btn btn-primary query">查询</a>
                                                         <span class="tips-error querytips"></span>
                                                     </div>
-                                                    <div class="row invoiceapply">
+                                                    <div class="row invoiceapply" style="display: none">
                                                         发票类型：
                                                         <!--<a class="invoice-type" href="cost_invoice.html" data-type="0">您还未填写发票信息，请先填写完成</a>-->
                                                         <!--<span class="invoice-type" href="cost_invoice.html"
@@ -131,9 +132,9 @@
                                                               data-type="1">个人增值税普通发票</span>
                                                         <!--<span class="invoice-type" href="cost_invoice.html" data-type="3">企业增值税专用票</span>-->
                                                     </div>
-                                                    <div class="row invoiceapply">
+                                                    <div class="row invoiceapply"  >
                                                         <div>开票时间：
-                                                            <span id="ininvoicetime">请选择 </span>
+                                                            <span id="ininvoicetime"> </span>
                                                         </div>
                                                     </div>
                                                     <div class="row invoiceapply">
@@ -321,6 +322,11 @@
 
     $('#invoice-url').click(function () {
         var html ='';
+        //标题时间段
+        var starttime = $('#datestart').val();
+        var endtime   = $('#dateend').val();
+        html += '<h5>开票时间：'+starttime+' 至 '+ endtime +'</h5>';
+
         html += '<table class="cost-table table table-striped sync-table-box" id="tableModal"><thead><th>消费时间</th><th>消费金额（元）</th><th>消费类型</th><th>备注</th></thead></table>';
         html +='<div id="datatablepage"></div>';
         bootbox.dialog({
