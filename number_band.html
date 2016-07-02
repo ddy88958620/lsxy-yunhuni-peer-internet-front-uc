@@ -165,18 +165,15 @@
      */
     function sendCode(){
         if(regMobile()==false){
-            showmsg('手机格式有误','moadltips'); return false;
+            showmsg('请输入正确的手机格式','moadltips'); return false;
         }
-
     }
     /**
      * 发送成功
      */
     function sureCode(){
-
         var id =  $('#modalmobile').attr('data-id');
         var pro = $('#voild-'+id).prop('disabled');
-
         if(pro){
             //解除绑定
             $('#voild-'+id).val('');
@@ -188,10 +185,10 @@
             $('#voild-'+id).attr('disabled',"true");
             $('#btn-'+id).html('解除绑定');
         }
-
-
         $('.modalCancel').click();
     }
+
+
 
 
 

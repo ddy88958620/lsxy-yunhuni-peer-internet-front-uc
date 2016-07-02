@@ -38,7 +38,7 @@ $('.showMobilebox').click(function(){
 
     $('#modalmobile').attr('data-id',id);
 
-
+    $('.moadltips').html('');
     $('#mobilebox').fadeIn();
     $('#show-bg').fadeIn();
 });
