@@ -31,9 +31,14 @@ $('.modalCancel').click(function(){
     $('#show-bg').fadeOut();
 });
 $('.showMobilebox').click(function(){
-    //显示phone
-    $('#modalmobile').html($(this).attr('data-mobile'));
-    
+
+    var id = $(this).attr('data-id');
+    var moible = $('#voild-'+id).val();
+    $('#modalmobile').html(moible);
+
+    $('#modalmobile').attr('data-id',id);
+
+
     $('#mobilebox').fadeIn();
     $('#show-bg').fadeIn();
 });

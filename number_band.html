@@ -64,50 +64,50 @@
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right">号码1：</lable>
                                             <div class="col-md-4">
-                                                <input type="text" name="" placeholder="" value="13611460985" class="form-control input-form limit20"/>
+                                                <input type="text" name="" placeholder="" value="13611460985" class="form-control input-form limit20" id="voild-one" disabled/>
                                             </div>
                                             <div class="col-md-4">
-                                                <a  class="showMobilebox line32"  data-mobile="13611460985" >解除绑定</a>
+                                                <a  class="showMobilebox line32"  data-id="one">解除绑定</a>
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right">号码2：</lable>
                                             <div class="col-md-4">
-                                                <input type="text" name="" placeholder=""  class="form-control input-form limit20"/>
+                                                <input type="text" name="" placeholder="" class="form-control input-form limit20" id="voild-two"/>
                                             </div>
                                             <div class="col-md-4">
-                                                <a class="showMobilebox line32" data-mobile="13611460985"  >验证</a>
+                                                <a class="showMobilebox line32"   data-id="two">验证</a>
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right">号码3：</lable>
                                             <div class="col-md-4">
-                                                <input type="text" name="" placeholder="" class="form-control input-form limit20"/>
+                                                <input type="text" name="" placeholder="" class="form-control input-form limit20" id="voild-three"/>
                                             </div>
                                             <div class="col-md-4">
-                                                <a data-mobile="13611460983"  class="showMobilebox line32">验证</a>
+                                                <a   class="showMobilebox line32" data-id="three">验证</a>
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right">号码4：</lable>
                                             <div class="col-md-4">
-                                                <input type="text" name="" placeholder="" class="form-control input-form limit20"/>
+                                                <input type="text" name="" placeholder="" class="form-control input-form limit20" id="voild-four"/>
                                             </div>
                                             <div class="col-md-4">
-                                                <a data-mobile="13611460984"  class="showMobilebox line32">验证</a>
+                                                <a  class="showMobilebox line32" data-id="four">验证</a>
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right">号码5：</lable>
                                             <div class="col-md-4">
-                                                <input type="text" name="" placeholder="" class="form-control input-form limit20"/>
+                                                <input type="text" name="" placeholder="" value="13611460986" class="form-control input-form limit20" id="voild-five" disabled/>
                                             </div>
                                             <div class="col-md-4">
-                                                <a data-mobile="13611460982"  class="showMobilebox line32">解除绑定</a>
+                                                <a class="showMobilebox line32" data-id="five">解除绑定</a>
                                             </div>
                                         </div>
 
@@ -142,7 +142,7 @@
     <div class="content">
         <div class="margintop30"></div>
         <div class="input ">
-            手机号：<span id="modalmobile">13611460986</span>
+            手机号：<span id="modalmobile" >13611460986</span>
         </div>
         <div class="input">
             <input class="code form-control modalCode" type="text" name="mobile" placeholder="验证码" />
@@ -170,6 +170,21 @@
      * 发送成功
      */
     function sureCode(){
+
+        var id =  $('#modalmobile').attr('data-id');
+        var pro = $('#voild-'+id).prop('disabled');
+
+        if(pro){
+            //解除绑定
+            $('#voild-'+id).val('');
+            $('#voild-'+id).removeAttr('disabled');
+
+
+        }else{
+            //验证成功
+            $('#voild-'+id).attr('disabled',"true");
+        }
+
 
         $('.modalCancel').click();
     }
