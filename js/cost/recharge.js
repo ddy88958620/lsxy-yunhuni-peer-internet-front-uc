@@ -31,5 +31,32 @@ $(document).ready(function () {
 
         }
     });
+
+
+    bootbox.dialog({
+        message: "将在新窗口为您打开付款界面，请按提示进行操作。",
+        title: "付款提示",
+        buttons: {
+
+            danger: {
+                label: "已付款!",
+                className: "btn-primary",
+                callback: function() {
+
+                   window.location.href = '';
+                }
+            },
+            success: {
+                label: "查看订单",
+                className: "btn-success",
+                callback: function() {
+                    window.location.href = '';
+                }
+            },
+        }
+    });
 });
+
+
+
 
