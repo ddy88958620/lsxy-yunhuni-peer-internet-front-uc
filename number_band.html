@@ -164,7 +164,10 @@
      * 发送验证码
      */
     function sendCode(){
-        //showmsg('提示','moadltips');
+        if(regMobile()==false){
+            showmsg('手机格式有误','moadltips'); return false;
+        }
+
     }
     /**
      * 发送成功
