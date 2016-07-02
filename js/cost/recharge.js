@@ -42,7 +42,7 @@ $(document).ready(function () {
                 label: "已付款!",
                 className: "btn-primary",
                 callback: function() {
-
+                    
                    window.location.href = '';
                 }
             },

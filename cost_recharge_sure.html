@@ -95,7 +95,7 @@
                                             <p>充值方式：支付宝</p>
                                             <p>订单状态：未完成支付</p>
                                             <br/>
-                                            <button type="submit" class="btn btn-primary  btn-form ">付款</button>
+                                            <button type="submit" id="paysubmit" class="btn btn-primary  btn-form ">付款</button>
                                         </div>
                                     </div>
                                 </div>
@@ -117,6 +117,44 @@
 <script src="js/include.js"></script>
 <script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
 
-<script src="js/cost/recharge.js"></script><!--must-->
+<script>
+    $(document).ready(function () {
+        $('#paysubmit').click(function(){
+
+
+
+            bootbox.dialog({
+                message: "将在新窗口为您打开付款界面，请按提示进行操作。",
+                title: "付款提示",
+                buttons: {
+                    danger: {
+                        label: "我已付款!",
+                        className: "btn-primary",
+                        callback: function() {
+                            window.location.href = '';
+                        }
+                    },
+                    success: {
+                        label: "查看订单",
+                        className: "btn-success",
+                        callback: function() {
+                            window.location.href = '';
+                        }
+                    },
+                }
+            });
+        })
+    });
+
+
+
+    $('')
+
+
+
+
+
+</script>
+
 </body>
 </html>
