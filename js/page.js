@@ -1,5 +1,5 @@
 /**
- * Created by gy on 15/4/19.
+ * Created by cjj
  */
 
 function Page(count,listRow,showPageCount,divId,getData){
@@ -7,14 +7,7 @@ function Page(count,listRow,showPageCount,divId,getData){
     o.nowPage = 1;//当前为第几页
     o.listRow = listRow;//一页显示多少条数据
     o.getData = getData;//取数据的回调函数
-
-
-
     o.obj = divId ;//制定在那个元素后面显示(Jquery对象)
-
-
-
-
     o.count = count;//数据总数
     //总页数
     o.totalPage = o.count% o.listRow == 0? parseInt(o.count/ o.listRow) : parseInt(o.count/ o.listRow+1);
@@ -29,13 +22,9 @@ function Page(count,listRow,showPageCount,divId,getData){
      */
     o.show = function()
     {
-        console.log(1);
         o.delete();
-        console.log(2);
         o.createPage();
-        console.log(3);
         o.bindAction();
-        console.log(4);
     }
 
     /*
@@ -43,49 +32,47 @@ function Page(count,listRow,showPageCount,divId,getData){
      */
     o.createPage = function()
     {
+        
 
-        //拼接分页控件
-        var html = "<div class = 'page-div'><div class = 'my-page'>";
+        var html = '<nav class="pageWrap pageSyncWrap page-div"><ul class="my-page pagination">';
+
+        html +='<li><a  aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>';
         for(var i = 0 ; i < o.showPageCount ; i++)
         {
             //拼接每一个分页数组按钮，并为其设置id
-            html += "<a href='#' id=page"+(i+1)+" class = 'page-item each-page'>"+(i+1)+"</a>";
+            html += "<li><a href='#' id=page"+(i+1)+" class = 'page-item each-page'>"+(i+1)+"</a></li>";
         }
-        console.log(6);
-        //拼接下一页按钮
-        html += "<a href='#' class = 'page-item next-page'>>></a></div></div>";
-        //在指定的对象后创建控件
 
+        html +='<li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>';
+        html += '</ul></nav>';
         $('#'+o.obj).html(html);
-
-
-        $("#page1").css("background-color","gray");
-
-
-
+        $("#page1").parent().addClass('active');
         //调用获取数据的回调函数
         o.getData(o.nowPage, o.listRow);
-        console.log(8);
     }
     /*
      *  更新分页控件
      */
     o.updatePage = function()
     {
+
         //根据当前页判断重新拼接分页控件
         var html = "";
         if(o.nowPage != 1)
         {
-            html += "<a href='#' class = 'page-item pre-page'><<</a>";
+            //
         }
+        html += '<li><a class="page-item pre-page"><span>&laquo;</span></a></li>';
         for(var i = o.first ; i <= o.last ; i++)
         {
-            html += "<a href='#' id=page"+i+" class = 'page-item each-page'>"+i+"</a>";
+
+            html += "<li><a href='#' id=page"+i+" class = 'page-item each-page'>"+i+"</a></li>";
         }
         if(o.nowPage != o.totalPage)
         {
-            html+="<a href='#' class = 'page-item next-page'>>></a>";
+            //html+="<li><a href='#' class = 'page-item next-page'><span aria-hidden='true'>&raquo;</span></a>";
         }
+        html+="<li><a href='#' class = 'page-item next-page'><span aria-hidden='true'>&raquo;</span></a>";
         $(".my-page").html(html);
         o.bindAction();
     }
@@ -94,10 +81,8 @@ function Page(count,listRow,showPageCount,divId,getData){
      */
     o.updateColor = function(self,obj)
     {
-        //将所有的分页按钮背景颜色设为白色
-        self.parent().find('a').css("background-color","white");
-        //将选中的按钮背景设为灰色
-        obj.css("background-color","gray");
+        self.parent().removeClass('active');
+        obj.parent().addClass('active');
     }
     /*
      *  删除控件

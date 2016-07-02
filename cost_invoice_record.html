@@ -269,19 +269,6 @@
 <script>
 
 
-    var searchTable = function(nowPage,listRows)
-    {
-
-        var data = [
-            ['2016-06-06 16:00', '1000.00', '套餐加油包2', 'IVR号码资源'],
-            ['2016-06-06 16:00', '1000.00', '套餐加油包23', 'IVR号码资源'],
-            ['2016-06-06 16:00', '1000.00', '套餐加油包232', 'IVR号码资源']
-        ];
-        alert(0);
-        //removeDataRow();
-        //addNewData(data);
-    }
-
     $('.query').click(function () {
         $('.querytips').html('');
         //获取时间
@@ -329,46 +316,13 @@
 
     });
 
+
+
+
     $('#invoice-url').click(function () {
-        //param  = {page : 5 , index :10 };
-
-        var data = [
-            ['2016-06-06 16:00', '1000.00', '套餐加油包', 'IVR号码资源'],
-            ['2016-06-06 16:00', '1000.00', '套餐加油包', 'IVR号码资源'],
-            ['2016-06-06 16:00', '1000.00', '套餐加油包', 'IVR号码资源']
-        ];
-
-
-        //数据列表
-        var html = '<table class="cost-table table table-striped sync-table-box"><thead> <th>消费时间</th><th>消费金额（元）</th><th>消费类型</th><th>备注</th> </thead>';
-        for(var i = 0 ; i<data.length; i++){
-            html +='<tr><td>'+data[i][0]+'</td><td>'+data[i][1]+'</td><td>'+data[i][2]+'</td><td>'+data[i][3]+'</td></tr>';
-        }
-        /*
-         html = '';
-         html += '<nav class="pageWrap pageSyncWrap"><ul class="pagination">';
-         html += '<li><a  aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>';
-         html += '<li class="active"><a class="aherf">1</a></li>';
-         html += '<li ><a class="aherf">2</a></li>';
-         html += '<li ><a class="aherf">3</a></li>';
-         html += '<li ><a class="aherf">4</a></li>';
-         html += '<li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>';
-         html += '</ul></nav>';
-         */
-
-
-        html += '</table>';
-
-
-        html +='<div id="datatable"></div>';
-
-
-        html+= syncpage();
-
-
-
-
-
+        var html ='';
+        html += '<table class="cost-table table table-striped sync-table-box" id="tableModal"><thead><th>消费时间</th><th>消费金额（元）</th><th>消费类型</th><th>备注</th></thead></table>';
+        html +='<div id="datatablepage"></div>';
         bootbox.dialog({
                     title: "开票详情",
                     message: html,
@@ -383,48 +337,47 @@
                     }
                 }
         );
+        //获取数据总数
+        var count = 10;
+        //每页显示数量
+        var listRow = 3;
+        //显示多少个分页按钮
+        var showPageCount = 4;
+        //指定id，创建分页标签
+        var pageId = 'datatablepage';
+        //searchTable 为方法名
 
-        var page = new Page(2,1,5,'datatable',searchTable);
+        var page = new Page(count,listRow,showPageCount,pageId,searchTable);
         page.show();
 
     });
 
 
-
-
-
     /**
-     * page
-     */
-
-    function syncpage(){
-
-
-
-        html = '';
-        html += '<nav class="pageWrap pageSyncWrap"><ul class="pagination">';
-        html += '<li><a  aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>';
-        html += '<li class="active"><a class="aherf">1</a></li>';
-        html += '<li ><a class="aherf">2</a></li>';
-        html += '<li ><a class="aherf">3</a></li>';
-        html += '<li ><a class="aherf">4</a></li>';
-        html += '<li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>';
-        html += '</ul></nav>';
-
-
-
-
-
-
-        return html;
-
+     * 分页回调方法
+     * @param nowPage 当前页数
+     * @param listRows 每页显示多少条数据
+     * */
+    var searchTable = function(nowPage,listRows)
+    {
+        var data = [
+            ['2016-06-06 16:00', '1000.00', '套餐加油包', 'IVR号码资源'],
+            ['2016-06-06 16:00', '1000.00', '套餐加油包', 'IVR号码资源'],
+            ['2016-06-06 16:00', '1000.00', '套餐加油包', 'IVR号码资源']
+        ];
+        var html ='';
+        //数据列表
+        for(var i = 0 ; i<data.length; i++){
+            html +='<tr><td>'+data[i][0]+'</td><td>'+data[i][1]+'</td><td>'+data[i][2]+'</td><td>'+data[i][3]+'</td></tr>';
+        }
+        $('#tableModal').find("tr").remove();
+        $('#tableModal').append(html);
     }
 
 
     function sendsubmit() {
         alert('提交表单');
     }
-
 
 </script>
 
