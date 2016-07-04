@@ -65,7 +65,7 @@ aside.aside.bg-Green.lter {
 }
 /* line 75, ../sass/aside.scss */
 .bg-green a, .bg-green a:hover {
-  color: #0d0d0d;
+  color: #fff;
 }
 /* line 79, ../sass/aside.scss */
 .bg-green .wrapper {
@@ -73,45 +73,51 @@ aside.aside.bg-Green.lter {
 }
 
 /* line 84, ../sass/aside.scss */
+.padding-10 {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+/* line 89, ../sass/aside.scss */
 .list li .nav > li > a {
   background: #103345;
 }
 
-/* line 88, ../sass/aside.scss */
+/* line 93, ../sass/aside.scss */
 .width_h {
   color: #090909;
 }
 
-/* line 92, ../sass/aside.scss */
+/* line 97, ../sass/aside.scss */
 .aside-mini {
   width: 55px;
   transition: 0.5s;
 }
-/* line 96, ../sass/aside.scss */
+/* line 101, ../sass/aside.scss */
 .aside-mini span {
   display: none;
 }
-/* line 100, ../sass/aside.scss */
+/* line 105, ../sass/aside.scss */
 .aside-mini .list li a {
   padding: 20px 4px;
   height: 40px;
   line-height: 40px;
 }
-/* line 106, ../sass/aside.scss */
+/* line 111, ../sass/aside.scss */
 .aside-mini ul.nav > li > a {
   padding: 21px 3px;
 }
-/* line 114, ../sass/aside.scss */
+/* line 119, ../sass/aside.scss */
 .aside-mini .img-shrink {
   transform: rotate(90deg);
 }
-/* line 118, ../sass/aside.scss */
+/* line 123, ../sass/aside.scss */
 .aside-mini .nav_green li > a > i {
   margin: -19px 0px;
   width: 100%;
 }
 
-/* line 125, ../sass/aside.scss */
+/* line 130, ../sass/aside.scss */
 .aside-li-a a {
   font-size: 1.2rem;
   font-weight: normal;
@@ -121,27 +127,27 @@ aside.aside.bg-Green.lter {
   width: 100%;
   line-height: 44px;
 }
-/* line 135, ../sass/aside.scss */
+/* line 140, ../sass/aside.scss */
 .aside-li-a.active {
   background: white;
 }
-/* line 139, ../sass/aside.scss */
+/* line 144, ../sass/aside.scss */
 .aside-li-a a:hover {
   background: white;
 }
 
-/* line 144, ../sass/aside.scss */
+/* line 149, ../sass/aside.scss */
 .xbox .head-box {
   background: #f7f7f7;
   left: -15px;
 }
 
-/* line 149, ../sass/aside.scss */
+/* line 154, ../sass/aside.scss */
 .bg-white {
   background: white;
 }
 
-/* line 154, ../sass/aside.scss */
+/* line 159, ../sass/aside.scss */
 .tooltip.right {
   width: 80px;
 }

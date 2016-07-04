@@ -73,12 +73,17 @@ aside {
   color: #333;
 
   a ,a:hover{
-    color: #0d0d0d;
+    color: #fff;
   }
 
   .wrapper {
     background: $siderbar-child;
   }
+}
+
+.padding-10{
+  padding-left: 10px !important;
+  padding-right: 10px !important;
 }
 
 .list li .nav>li>a {
