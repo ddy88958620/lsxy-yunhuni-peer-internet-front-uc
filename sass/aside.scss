@@ -73,7 +73,7 @@ aside {
   color: #333;
 
   a ,a:hover{
-    color: #fff;
+    color: #0d0d0d;
   }
 
   .wrapper {
@@ -82,9 +82,17 @@ aside {
 }
 
 .padding-10{
-  padding-left: 10px !important;
+  padding-left: 10px  !important;
   padding-right: 10px !important;
 }
+
+.navbar-nav{
+  a:hover{
+    color:#FFF !important;
+  }
+}
+
+
 
 .list li .nav>li>a {
     background: #103345;
