@@ -47,6 +47,9 @@ aside {
   li {
     position: inherit;
   }
+  li a.active{
+    background-color: #2e97cb !important;
+  }
 }
 
 .list .nav a, a.canbehover {
@@ -54,6 +57,7 @@ aside {
     background-color: #2e97cb !important;
   }
 }
+
 
 .w-f {
   .head.lter {

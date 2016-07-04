@@ -13,9 +13,9 @@ $(function () {
 
   $('.currentMonth ').datepicker({
     language: "zh-CN",
-    format: 'yyyy-mm',
-    startView: "months",
-    minViewMode: "months",
+    format: 'yyyy-mm-dd',
+    startView: "days",
+    minViewMode: "days",
     todayHighlight: true,
     todayBtn: true,
     autoclose: true //fail
@@ -24,3 +24,4 @@ $(function () {
   });
   
 });
+

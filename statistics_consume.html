@@ -62,32 +62,62 @@
                             <section class="panel panel-default pos-rlt clearfix ">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <input type="radio" name="time" value="day" />日统计
-                                        <input type="radio" name="time" value="year" />月统计
+                                        <input type="radio" name="time" value="day" class="selectdata"/>日统计
+                                        <input type="radio" name="time" value="year" class="selectdata" />月统计
                                         <button class="btn btn-default" id="upbtn">更新</button>
                                     </div>
                                 </div>
+
                                 <div class="row">
-                                    <div class="col-md-12" >
-                                        <!--统计列表-->
-                                        <div class="ecpanel" id="ecpanel" style=" height: 600px;  ">
-
-                                        </div>
-                                        <div class="ecpanel" id="ecpanel2" style=" height: 600px; min-width:80%;float: left; ">
-
-                                        </div>
+                                    <div class="col-md-12 text-center">
+                                        <h3>消费额统计</h3>
                                     </div>
                                 </div>
 
 
 
+
+
+
+                                <div class="row" >
+                                    <div class="col-md-12">
+                                        <input type="text" class="datepicker currentMonth form-control date_block" />
+                                        <span class="">
+                                            对比 <input type="text" class="datepicker currentMonth form-control date_block"  />
+                                        </span>
+                                        <button class="btn btn-default" >查询</button>
+                                        <button class="btn btn-default" >对比</button>
+                                    </div>
+                                </div>
+
+
+                                <div class="row" >
+                                    <div class="col-md-12">
+                                        <input type="text" class="datepicker currentYear form-control date_block" />
+                                        <span class="">
+                                            对比 <input type="text" class="datepicker currentYear form-control date_block"  />
+                                        </span>
+
+                                        <button class="btn btn-default" >查询</button>
+                                        <button class="btn btn-default" >对比</button>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-12" style="margin-top: 50px;" >
+                                        <!--统计列表-->
+                                        <div class="ecpanel" id="ecpanel" style=" height: 500px;  "></div>
+                                    </div>
+                                </div>
+
+                                <div class="row" style="display: none">
+                                    <div class="col-md-12" >
+                                        <!--统计列表-->
+                                        <div class="ecpanel" id="ecpanel" style=" height: 500px;  "></div>
+                                    </div>
+                                </div>
                             </section>
-
-
-
-
-
-
 
 
 
@@ -116,7 +146,6 @@
                                         <td>2016-01-01</td>
                                         <td>123.00</td>
                                     </tr>
-
                                     </tbody>
                                 </table>
                             </section>
@@ -169,6 +198,9 @@
 <script type="text/javascript" src='./js/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js'> </script>
 <!--统计插件-->
 <script src="./js/echarts.min.js" ></script>
+<!--统计插件主题-->
+<script src="./js/echartstheme/wonderland.js" ></script>
+
 
 <script>
 
@@ -176,18 +208,21 @@
         charts();
     });
 
+    var timeData=['0时','1时','2时','3时','4时','5时','6时','7时','8时','9时','10时','11时','12时','13时','14时','15时','16时','17时','18时','19时','20时','21时','22时','23时','24时'];
+
+    var monthData=['1日','2日','3日','4日','5日','6日','7日','8日','9日','10日','11日','12日','13日','14日','15日','16日','17日','18日','19日','20日','21日','22日','23日','24日','25日','26日','27日','28日','29日','30日','31日'];
 
     function charts(){
-        var myChart = echarts.init(document.getElementById('ecpanel'));
+        var myChart = echarts.init(document.getElementById('ecpanel'),'wonderland');
         option = {
             title: {
-                text: ''
+                text: '金额元'
             },
             tooltip: {
                 trigger: 'axis'
             },
             legend: {
-                data:['邮件营销','联盟广告','视频广告','直接访问','搜索引擎']
+                data:['5月','6月']
             },
             grid: {
                 left: '3%',
@@ -202,43 +237,24 @@
             },
             xAxis: {
                 type: 'category',
-                boundaryGap: false,
-                data: ['周一','周二','周三','周四','周五','周六','周日']
+                boundaryGap: true,
+                data: monthData
             },
             yAxis: {
                 type: 'value'
             },
             series: [
                 {
-                    name:'邮件营销',
+                    name:'5月',
                     type:'line',
-                    stack: '总量',
-                    data:[120, 132, 101, 134, 90, 230, 210]
+                    data:[120, 132, 101, 134, 90, 230, 210,120, 132, 101, 134, 90, 230, 210,120, 132, 101, 134, 90, 230, 210,120, 132, 101,4000]
                 },
                 {
-                    name:'联盟广告',
+                    name:'6月',
                     type:'line',
-                    stack: '总量',
                     data:[220, 182, 191, 234, 290, 330, 310]
-                },
-                {
-                    name:'视频广告',
-                    type:'line',
-                    stack: '总量',
-                    data:[150, 232, 201, 154, 190, 330, 410]
-                },
-                {
-                    name:'直接访问',
-                    type:'line',
-                    stack: '总量',
-                    data:[320, 332, 301, 334, 390, 330, 320]
-                },
-                {
-                    name:'搜索引擎',
-                    type:'line',
-                    stack: '总量',
-                    data:[820, 932, 901, 934, 1290, 1330, 1320]
                 }
+
             ]
         };
 
