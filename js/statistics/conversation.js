@@ -10,6 +10,7 @@ $(function () {
     }).on('changeDate',function(e){
         $(this).datepicker('hide')
     });
+
     $('.currentYear ').datepicker({
         language: "zh-CN",
         format: 'yyyy',
@@ -21,5 +22,8 @@ $(function () {
     }).on('changeDate',function(e){
         $(this).datepicker('hide')
     });
+
     initchart();
+
+
 });

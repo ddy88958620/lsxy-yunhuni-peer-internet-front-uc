@@ -42,119 +42,68 @@
                                 class="fa fa-angle-left text"></i> <i class="fa fa-angle-right text-active"></i> </a>
                         </div>-->
                         <div class="wrapper header">
-                            <span class="border-left">&nbsp;消费统计</span>
+                            <span class="border-left">&nbsp;会话统计</span>
                         </div>
                         <section class="scrollable wrapper w-f">
-                            <section class="panel panel-default yunhuni-personal">
-                                <div class="row m-l-none m-r-none bg-light lter">
-                                    <div class="col-md-2 col-md-offset-9 padder-v fix-padding">
-                                        <select   class="form-control myselectapp">
-                                            <option value="1">全部应用</option>
-                                            <option value="2">应用2</option>
-                                            <option value="3">应用3</option>
-                                        </select>
-                                    </div>
-                                </div>
+
+
+
+                            <section class="panel panel-default pos-rlt clearfix ">
+                                <ul id="myTab" class="nav nav-tabs">
+                                    <li class="active"><a  data-toggle="tab" data-app="1">应用一</a></li>
+                                    <li ><a  data-toggle="tab" data-app="2">应用二</a></li>
+                                    <li ><a  data-toggle="tab" data-app="3">应用三</a></li>
+                                    <li ><a  data-toggle="tab" data-app="4">应用四</a></li>
+                                    <li ><a  data-toggle="tab" data-app="5">应用五</a></li>
+                                </ul>
                             </section>
 
 
 
                             <section class="panel panel-default pos-rlt clearfix ">
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-md-9">
                                         <input type="radio" name="stime" value="month" class="selectdata" checked/>日统计
                                         <input type="radio" name="stime" value="year" class="selectdata" />月统计
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12 text-center">
-                                        <p class="font18">消费额统计</p>
+                                        <p class="font18">会话数/消费额统计</p>
                                     </div>
                                 </div>
+
                                 <!--日统计-->
                                 <div class="row monthform" >
                                     <div class="col-md-12">
-                                        <input type="text" class="datepicker currentMonth form-control date_block monthstart" value="2016-07" />
-                                        <span class="monthcontrast"><span>对比</span><input type="text" class="datepicker currentMonth form-control date_block monthend" /></span>
+                                        <input type="text" class="datepicker currentMonth form-control date_block monthstart" value="2016-07" data-time="2016-06-07" />
                                         <button class="btn btn-primary finddatebtn" data-id="month" >查询</button>
-                                        <button class="btn btn-default compassbtn monthcbtn" data-id="month">对比</button>
                                         <span class="tips-error monthtips"></span>
+
                                     </div>
                                 </div>
 
                                 <!--月统计-->
                                 <div class="row yearform" >
                                     <div class="col-md-12">
-                                        <input type="text" class="datepicker  form-control currentYear date_block yearstart" value="2016"  />
-                                        <span class="yearcontrast"><span>对比</span><input type="text" class="datepicker currentYear form-control date_block yearend" /></span>
-                                        <button class="btn btn-default finddatebtn " data-id="year" >查询</button>
-                                        <button class="btn btn-default compassbtn yearcbtn" data-id="year">对比</button>
+                                        <input type="text" class="datepicker  form-control currentYear date_block yearstart" value="2016" data-time="2016" />
+                                        <button class="btn btn-primary finddatebtn " data-id="year" >查询</button>
                                         <span class="tips-error yeartips"></span>
                                     </div>
                                 </div>
+
                                 <div class="row">
                                     <div class="col-md-12 scanvas" >
                                         <!--统计列表-->
-                                        <div class="ecpanel" id="ecpanel" style=" height: 500px;  "></div>
+                                        <div class="ecpanel" id="ecpanel" style=" height: 600px;  "></div>
                                     </div>
                                 </div>
                             </section>
 
 
 
-                            <section class="panel panel-default pos-rlt clearfix ">
-                                <div class="form-group">
-                                    <span class="hr text-label"><strong>详情数据</strong></span>
-                                </div>
-                                <table class="table table-striped ">
-                                    <thead>
-                                    <tr>
-                                        <th>日期</th>
-                                        <th>消费（元）</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>2016-01-01</td>
-                                        <td>123.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2016-01-01</td>
-                                        <td>123.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2016-01-01</td>
-                                        <td>123.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2016-01-01</td>
-                                        <td>123.00</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </section>
 
-                            <section class="panel panel-default yunhuni-personal">
-                                <nav class='pageWrap'>
-                                    <ul class="pagination">
-                                        <li>
-                                            <a href="#" aria-label="Previous">
-                                                <span aria-hidden="true">&laquo;</span>
-                                            </a>
-                                        </li>
-                                        <li class="active"><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
-                                        <li>
-                                            <a href="#" aria-label="Next">
-                                                <span aria-hidden="true">&raquo;</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </section>
+
 
                         </section>
                     </section>
@@ -190,14 +139,13 @@
 
 
     $('input[name="stime"]').click(function(){
-        //参数
         var v = $(this).val();
         if(v=='year'){
             $('.yearform').show();
             $('.monthform').hide();
         }else{
             $('.monthform').show();
-            $('.yearform').hide();s
+            $('.yearform').hide();
         }
         initchart();
     });
@@ -208,15 +156,8 @@
         var tipsclass  = '.'+id+'tips';
         $(tipsclass).html('');
         var starttime =  $('.'+id+'start').val();
-        var endtime = '';
         if(starttime==''){
             tips(tipsclass,'请先填写时间'); return;
-        }
-        if($('.'+id+'cbtn').html()=='取消对比'){
-             endtime =  $('.'+id+'end').val();
-            if(endtime==''){
-                tips(tipsclass,'请填写对比时间'); return;
-            }
         }
         initchart();
     });
@@ -227,53 +168,33 @@
         $(tipsclass).html(tips);
     }
 
-    //对比
-    $('.compassbtn').click(function(){
-        var id = $(this).attr('data-id');
-        var val = $(this).html();
-        $('.'+id+'tips').html('');
-        if(val=='对比'){
-            $('.'+id+'contrast').show();
-            //$('.'+id+'end').val('');
-            $(this).html('取消对比');
-        }else{
-            $('.'+id+'contrast').hide();
-            $(this).html('对比');
-        }
-    });
-
     //应用
-    $('.myselectapp').change(function(){
+    $('#myTab li a').click(function(){
         initchart();
     });
+
+
+    //获取当前选中应用
+    function getapp(){
+        var appname = '';
+        $('#myTab li').each(function(){
+            var res = $(this).hasClass('active');
+            if(!res){
+                appname = $(this).find('a').attr('data-app');
+            }
+        });
+        return appname;
+    }
 
 
     //初始时间
     function initialStartTime(id){
         var starttime =  $('.'+id+'start').val();
-        var endtime = '';
         if(starttime==''){
             starttime = $('.'+id+'start').attr('data-time');
         }
-        if($('.'+id+'cbtn').html()=='取消对比'){
-            endtime =  $('.'+id+'end').val();
-            if(endtime==''){
-
-            }
-        }
         return starttime;
     }
-
-
-    //初始结束时间
-    function initialEndTime(id){
-        var endtime = '';
-        if($('.'+id+'cbtn').html()=='取消对比'){
-            endtime =  $('.'+id+'end').val();
-        }
-        return endtime;
-    }
-
 
 
     //触发函数
@@ -282,14 +203,18 @@
      * endtime 对比时间
      */
     function initchart(){
-        var type = $('input[name="stime"]:checked').val();
-        var app = $('.myselectapp').val();
+        var type = 'year';
+        var app = getapp();
         var starttime = initialStartTime(type);
-        var endtime = initialEndTime(type);
-        //console.log(starttime+','+endtime+','+type+','+app);
+        var endtime = '';
         var param  = {starttime:starttime,endtime:endtime,type:type,app:app};
-        console.log(param);
         //异步查询 返回json 数据
+
+
+        //消费额最大值
+
+        //会话次数最大值
+        //数据处理
         if(type=='year'){
             //注意 tdata 等于 seriesjson[name]
             var tdata = new Array('2016年','2017年');
@@ -300,15 +225,64 @@
             var tdata = new Array('5月','6月');
             var seriesjson  ="[{name:'5月',type:'line',data:[120, 132, 101, 134, 90, 230, 210,120, 132, 101, 134, 90, 230, 210,120, 132, 101, 134, 90, 230, 210,120, 132, 101,4000]},{name:'6月',type:'line',data:[220, 182, 191, 234, 290, 330, 310]}]";
             var seriesjson = eval('('+seriesjson+')');
-
         }
-
         charts(tdata,seriesjson,type);
     }
 
-
-    var timeData  = ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月']
+    var t = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+    var timeData  = ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'];
     var monthData = ['1日','2日','3日','4日','5日','6日','7日','8日','9日','10日','11日','12日','13日','14日','15日','16日','17日','18日','19日','20日','21日','22日','23日','24日','25日','26日','27日','28日','29日','30日','31日'];
+
+
+
+    //测试随机生成数据
+    function moneyDataMonth(){
+        var res = [];
+        var len = 31;
+        while (len--) {
+            res.push(Math.round(Math.random() * 1000));
+        }
+        return res;
+    }
+
+
+    //测试随机生成数据
+    function moneyDataYear(){
+        var res = [];
+        var len = 12;
+        while (len--) {
+            res.push(Math.round(Math.random() * 1000));
+        }
+        return res;
+    }
+
+
+
+    //测试随机生成数据
+    function meetDataMonth(){
+        var res = [];
+        var len = 0;
+        while (len < 31) {
+            res.push((Math.random()*10 + 5).toFixed(1) - 0);
+            len++;
+        }
+        return res;
+    }
+
+
+    //测试随机生成数据
+    function meetDataYear(){
+        var res = [];
+        var len = 0;
+        while (len < 12) {
+            res.push((Math.random()*10 + 5).toFixed(1) - 0);
+            len++;
+        }
+        return res;
+    }
+
+
+
 
     /**
      * 回调数据
@@ -317,42 +291,96 @@
      * @param tdata 标题项
      */
     function charts(tdata,series,type){
+        var type = $('input[name="stime"]:checked').val();
         var Xdata = monthData;
+
         if(type=='year'){
             Xdata = timeData;
+            var xd = moneyDataYear();
+            var yd = meetDataYear();
+        }else{
+            var xd = moneyDataMonth();
+            var yd = meetDataMonth();
         }
+
         var myChart = echarts.init(document.getElementById('ecpanel'),'wonderland');
         option = {
             title: {
                 text: '',
-                subtext:'金额（元）'
+                subtext: ''
             },
             tooltip: {
                 trigger: 'axis'
             },
             legend: {
-                data:tdata
-            },
-            grid: {
-                left: '3%',
-                right: '4%',
-                bottom: '3%',
-                containLabel: true
+                data:['会话数', '消费额']
             },
             toolbox: {
+                show: true,
                 feature: {
+                    dataView: {readOnly: false},
+                    restore: {},
                     saveAsImage: {}
                 }
             },
-            xAxis: {
-                type: 'category',
-                boundaryGap: true,
-                data: Xdata
+            dataZoom: {
+                show: false,
+                start: 0,
+                end: 100
             },
-            yAxis: {
-                type: 'value'
-            },
-            series: series
+            xAxis: [
+                {
+                    type: 'category',
+                    boundaryGap: true,
+                    data : Xdata,
+                    name: '日期',
+
+                },
+                {
+                    type: 'category',
+                    boundaryGap: true,
+                    data: (function (){
+                        var res = [];
+                        var len = 30;
+                        while (len--) {
+                            len + 5;
+                        }
+                        return res;
+                    })()
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    scale: true,
+                    name: '会话(次)',
+                    max: 30,
+                    min: 0,
+                    boundaryGap: [0.2, 0.2]
+                },
+                {
+                    type: 'value',
+                    scale: true,
+                    name: '消费额(元)',
+                    max: 1200,
+                    min: 0,
+                    boundaryGap: [0.2, 0.2]
+                }
+            ],
+            series: [
+                {
+                    name:'消费额',
+                    type:'bar',
+                    xAxisIndex: 1,
+                    yAxisIndex: 1,
+                    data:xd
+                },
+                {
+                    name:'会话数',
+                    type:'line',
+                    data:yd
+                }
+            ]
         };
 
         myChart.setOption(option);
@@ -361,11 +389,12 @@
 
 
 
+
 </script>
 
 
 <!--must-->
-<script type="text/javascript" src='./js/statistics/consume.js'> </script>
+<script type="text/javascript" src='./js/statistics/conversation.js'> </script>
 </body>
 </html>
 

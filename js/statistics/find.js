@@ -1,4 +1,20 @@
 $(function () {
+
+    $('.currentDay ').datepicker({
+        language: "zh-CN",
+        format: 'yyyy-mm-dd',
+        startView: "days",
+        minViewMode: "days",
+        todayHighlight: true,
+        todayBtn: true,
+        autoclose: true //fail
+    }).on('changeDate',function(e){
+        $(this).datepicker('hide')
+    });
+
+
+
+
     $('.currentMonth ').datepicker({
         language: "zh-CN",
         format: 'yyyy-mm',
@@ -10,6 +26,7 @@ $(function () {
     }).on('changeDate',function(e){
         $(this).datepicker('hide')
     });
+
     $('.currentYear ').datepicker({
         language: "zh-CN",
         format: 'yyyy',
@@ -21,5 +38,8 @@ $(function () {
     }).on('changeDate',function(e){
         $(this).datepicker('hide')
     });
+
     initchart();
+
+
 });
