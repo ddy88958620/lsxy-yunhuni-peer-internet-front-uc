@@ -23,4 +23,7 @@ $(function () {
         $(this).datepicker('hide')
     });
 
+    initchart();
+
+
 });
