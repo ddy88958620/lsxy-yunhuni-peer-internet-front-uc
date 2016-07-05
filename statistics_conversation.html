@@ -341,9 +341,10 @@
                     boundaryGap: true,
                     data: (function (){
                         var res = [];
-                        var len = 30;
-                        while (len--) {
-                            len + 5;
+                        var len = 0;
+                        while (len<31) {
+                            res.push(len + 1);
+                            len++
                         }
                         return res;
                     })()
