@@ -379,8 +379,17 @@
   font-size: 16px;
 }
 
+/* line 336, ../sass/register.scss */
+.register-form .text-right {
+  line-height: 50px;
+}
+/* line 339, ../sass/register.scss */
+.register-form .form-group {
+  height: 68px;
+}
+
 @media screen and (min-width: 1000px) {
-  /* line 336, ../sass/register.scss */
+  /* line 346, ../sass/register.scss */
   .register_footer {
     position: fixed;
     bottom: 15px;
@@ -388,9 +397,14 @@
     width: 100%;
     color: #848484;
   }
+
+  /* line 353, ../sass/register.scss */
+  .register-form {
+    height: 300px;
+  }
 }
 @media screen and (max-width: 999px) {
-  /* line 346, ../sass/register.scss */
+  /* line 359, ../sass/register.scss */
   .register_footer {
     display: block;
     width: 90%;

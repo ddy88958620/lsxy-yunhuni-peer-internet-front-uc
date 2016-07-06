@@ -332,6 +332,16 @@
   font-size: 16px;
 }
 
+.register-form{
+  .text-right{
+    line-height: 50px;
+  }
+  .form-group{
+    height: 68px;
+
+  }
+}
+
 @media screen and (min-width: 1000px) {
   .register_footer {
     position: fixed;
@@ -339,6 +349,9 @@
     text-align: center;
     width: 100%;
     color: #848484;
+  }
+  .register-form{
+    height: 300px;
   }
 }
 
@@ -351,6 +364,7 @@
     text-align: center;
   }
 }
+
 
 
 
