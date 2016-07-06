@@ -385,11 +385,11 @@
 }
 /* line 339, ../sass/register.scss */
 .register-form .form-group {
-  height: 68px;
+  min-height: 68px;
 }
 
 @media screen and (min-width: 1000px) {
-  /* line 346, ../sass/register.scss */
+  /* line 345, ../sass/register.scss */
   .register_footer {
     position: fixed;
     bottom: 15px;
@@ -398,18 +398,28 @@
     color: #848484;
   }
 
-  /* line 353, ../sass/register.scss */
+  /* line 352, ../sass/register.scss */
   .register-form {
-    height: 300px;
+    margin: 20px;
   }
 }
 @media screen and (max-width: 999px) {
-  /* line 359, ../sass/register.scss */
+  /* line 358, ../sass/register.scss */
   .register_footer {
     display: block;
     width: 90%;
     margin: 100px auto 0 auto;
     color: #848484;
     text-align: center;
+  }
+
+  /* line 366, ../sass/register.scss */
+  .register-form .text-right {
+    line-height: 32px;
+    text-align: left;
+  }
+  /* line 370, ../sass/register.scss */
+  .register-form .form-group {
+    height: auto;
   }
 }

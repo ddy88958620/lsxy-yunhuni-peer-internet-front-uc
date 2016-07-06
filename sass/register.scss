@@ -337,8 +337,7 @@
     line-height: 50px;
   }
   .form-group{
-    height: 68px;
-
+    min-height: 68px;
   }
 }
 
@@ -351,7 +350,7 @@
     color: #848484;
   }
   .register-form{
-    height: 300px;
+    margin: 20px;
   }
 }
 
@@ -362,6 +361,15 @@
     margin: 100px auto 0 auto;
     color: #848484;
     text-align: center;
+  }
+  .register-form{
+    .text-right{
+      line-height: 32px;
+       text-align: left;
+    }
+    .form-group{
+      height: auto;
+    }
   }
 }
 
