@@ -106,54 +106,21 @@
                                 <div class="form-group">
                                     <span class="hr text-label"><strong>详情数据</strong></span>
                                 </div>
-                                <table class="table table-striped ">
+                                <table class="table table-striped" >
                                     <thead>
                                     <tr>
                                         <th>日期</th>
                                         <th>消费（元）</th>
                                     </tr>
                                     </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>2016-01-01</td>
-                                        <td>123.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2016-01-01</td>
-                                        <td>123.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2016-01-01</td>
-                                        <td>123.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2016-01-01</td>
-                                        <td>123.00</td>
-                                    </tr>
+                                    <tbody id="tableModal">
+
                                     </tbody>
                                 </table>
                             </section>
 
                             <section class="panel panel-default yunhuni-personal">
-                                <nav class='pageWrap'>
-                                    <ul class="pagination">
-                                        <li>
-                                            <a href="#" aria-label="Previous">
-                                                <span aria-hidden="true">&laquo;</span>
-                                            </a>
-                                        </li>
-                                        <li class="active"><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
-                                        <li>
-                                            <a href="#" aria-label="Next">
-                                                <span aria-hidden="true">&raquo;</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
+                                <div id="datatablepage"></div>
                             </section>
 
                         </section>
@@ -184,7 +151,8 @@
 <script src="./js/echarts.min.js" ></script>
 <!--统计插件主题-->
 <script src="./js/echartstheme/wonderland.js" ></script>
-
+<!--syncpage-->
+<script type="text/javascript" src='./js/page.js'></script>
 
 <script>
 
@@ -317,6 +285,7 @@
      * @param tdata 标题项
      */
     function charts(tdata,series,type){
+        updatetable();
         var Xdata = monthData;
         if(type=='year'){
             Xdata = timeData;
@@ -356,6 +325,61 @@
         };
 
         myChart.setOption(option);
+    }
+
+
+
+    function updatetable(){
+        var html ='';
+        //标题时间段
+        //var starttime = $('#datestart').val();
+        //var endtime   = $('#dateend').val();
+
+        html += '<table class="cost-table table table-striped sync-table-box" ><thead><th>日期</th><th>消费金额（元）</th></thead></table>';
+        html +='';
+        //更换数据
+
+
+
+        //获取数据总数
+        var count = 10;
+        //每页显示数量
+        var listRow = 3;
+        //显示多少个分页按钮
+        var showPageCount = 4;
+        //指定id，创建分页标签
+        var pageId = 'datatablepage';
+        //searchTable 为方法名
+
+        var page = new Page(count,listRow,showPageCount,pageId,searchTable);
+        page.show();
+
+    }
+
+
+    /**
+     * 分页回调方法
+     * @param nowPage 当前页数
+     * @param listRows 每页显示多少条数据
+     * */
+    var searchTable = function(nowPage,listRows)
+    {
+        alert(nowPage);
+        alert(listRows);
+
+        var data = [
+            ['2016-06-06 16:00', '1000.00'],
+            ['2016-06-06 16:00', '1000.00'],
+            ['2016-06-06 16:00', '1000.00']
+        ];
+        i++;
+        var html ='';
+        //数据列表
+        for(var i = 0 ; i<data.length; i++){
+            html +='<tr><td>'+data[i][0]+'</td><td>'+data[i][1]+'</td></tr>';
+        }
+        $('#tableModal').find("tr").remove();
+        $('#tableModal').append(html);
     }
 
 

@@ -40,7 +40,7 @@ function Page(count,listRow,showPageCount,divId,getData){
         for(var i = 0 ; i < o.showPageCount ; i++)
         {
             //拼接每一个分页数组按钮，并为其设置id
-            html += "<li><a href='#' id=page"+(i+1)+" class = 'page-item each-page'>"+(i+1)+"</a></li>";
+            html += "<li><a  id=page"+(i+1)+" class = 'page-item each-page'>"+(i+1)+"</a></li>";
         }
 
         html +='<li><a class="page-item next-page"><span aria-hidden="true">&raquo;</span></a></li>';
@@ -66,11 +66,11 @@ function Page(count,listRow,showPageCount,divId,getData){
         for(var i = o.first ; i <= o.last ; i++)
         {
 
-            html += "<li><a href='#' id=page"+i+" class = 'page-item each-page'>"+i+"</a></li>";
+            html += "<li><a id=page"+i+" class = 'page-item each-page'>"+i+"</a></li>";
         }
         if(o.nowPage != o.totalPage)
         {
-            html+="<li><a href='#' class = 'page-item next-page'><span aria-hidden='true'>&raquo;</span></a>";
+            html+="<li><a class = 'page-item next-page'><span aria-hidden='true'>&raquo;</span></a>";
         }
         //html+="<li><a href='#' class = 'page-item next-page'><span aria-hidden='true'>&raquo;</span></a>";
         $(".my-page").html(html);
