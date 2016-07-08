@@ -330,27 +330,15 @@
 
 
     function updatetable(){
-        var html ='';
-        //标题时间段
-        //var starttime = $('#datestart').val();
-        //var endtime   = $('#dateend').val();
-
-        html += '<table class="cost-table table table-striped sync-table-box" ><thead><th>日期</th><th>消费金额（元）</th></thead></table>';
-        html +='';
-        //更换数据
-
-
-
         //获取数据总数
-        var count = 10;
+        var count = 5;
         //每页显示数量
-        var listRow = 3;
+        var listRow = 10;
         //显示多少个分页按钮
         var showPageCount = 4;
         //指定id，创建分页标签
         var pageId = 'datatablepage';
         //searchTable 为方法名
-
         var page = new Page(count,listRow,showPageCount,pageId,searchTable);
         page.show();
 
@@ -364,8 +352,7 @@
      * */
     var searchTable = function(nowPage,listRows)
     {
-        alert(nowPage);
-        alert(listRows);
+
 
         var data = [
             ['2016-06-06 16:00', '1000.00'],
