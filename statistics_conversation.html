@@ -45,9 +45,6 @@
                             <span class="border-left">&nbsp;会话统计</span>
                         </div>
                         <section class="scrollable wrapper w-f">
-
-
-
                             <section class="panel panel-default pos-rlt clearfix ">
                                 <ul id="myTab" class="nav nav-tabs">
                                     <li class="active"><a  data-toggle="tab" data-app="1">全部应用</a></li>
@@ -57,14 +54,11 @@
                                     <li ><a  data-toggle="tab" data-app="5">应用五</a></li>
                                 </ul>
                             </section>
-
-
-
                             <section class="panel panel-default pos-rlt clearfix ">
                                 <div class="row">
                                     <div class="col-md-9">
                                         <input type="radio" name="stime" value="month" class="selectdata" checked/>日统计
-                                        <input type="radio" name="stime" value="year" class="selectdata" />月统计
+                                        <input type="radio" name="stime" value="year" class="selectdata ml-15" />月统计
                                     </div>
                                 </div>
                                 <div class="row">
@@ -99,12 +93,6 @@
                                     </div>
                                 </div>
                             </section>
-
-
-
-
-
-
                         </section>
                     </section>
                 </aside>
@@ -381,6 +369,10 @@
         myChart.setOption(option);
     }
 
+    //当浏览器大小变化时
+    $(window).resize(function () {
+        initchart()
+    });
 
 
 
