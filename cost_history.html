@@ -90,19 +90,20 @@
                                         <div class='wrapperBox cost_month cost_month_select'>
                                             <div class="panel-body clearfix border-top-none personal-base">
                                                 <div class="row">
-                                                    <a class="current_month">本月</a>
-                                                    <a class="last_month">上月</a>
-
-                                                    从
-                                                    <input type="text" class="datepicker currentMonth form-control" value='' data-date-end-date="0m" />
-                                                    到
-                                                    <input type="text" class="datepicker lastMonth form-control" value='' data-date-end-date="0m" />
-                                                    <button class="btn btn-primary query">查询</button>
+                                                    <form action="" id="command">
+                                                      <a class="current_month">本月</a>
+                                                      <a class="last_month">上月</a>
+                                                      从
+                                                      <input type="text" class="datepicker currentMonth form-control" value='' data-date-end-date="0m" />
+                                                      到
+                                                      <input type="text" class="datepicker lastMonth form-control" value='' data-date-end-date="0m" />
+                                                      <button class="btn btn-primary query" type="button"  id="findform" >查询</button>
+                                                      <span class="tips-error" ></span>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </section>
                             <section class="panel panel-default pos-rlt clearfix ">
