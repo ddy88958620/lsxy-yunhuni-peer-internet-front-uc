@@ -12,14 +12,14 @@ function Page(count,listRow,showPageCount,divId,getData){
     o.count = count;//数据总数
     //总页数
     o.totalPage = o.count % o.listRow == 0? parseInt(o.count/ o.listRow) : parseInt(o.count/ o.listRow+1);
+
     o.showPageCount = showPageCount;
     //显示多少个分页按钮
     o.showPageCount = o.showPageCount < o.totalPage? o.showPageCount : o.totalPage;
     o.first = 1;//第一个显示的分页按钮是多少
     //最后一个显示的分页按钮是多少
     o.last = o.totalPage < showPageCount? showPageCount: o.totalPage;
-
-    
+    o.lastEnd =  o.totalPage < showPageCount? showPageCount: o.totalPage;
 
     /**
      *  显示分页空间
@@ -36,24 +36,26 @@ function Page(count,listRow,showPageCount,divId,getData){
      */
     o.createPage = function()
     {
-
-
-        var html = '<nav class="pageWrap pageSyncWrap page-div"><ul class="my-page pagination">';
-        if(o.nowPage != 1)
-        {
-            html +='<li><a class="page-item pre-page"><span>&laquo;</span></a></li>';
+        var html = '<nav class="pageWrap pageSyncWrap page-div">';
+        //一页范围内  不显示
+        if(o.showPageCount>1){
+            html +='<ul class="my-page pagination">';
+            if(o.nowPage != 1)
+            {
+                html +='<li><a class="page-item pre-page"><span>&laquo;</span></a></li>';
+            }
+            for(var i = 0 ; i < o.showPageCount ; i++)
+            {
+                //拼接每一个分页数组按钮，并为其设置id
+                html += "<li><a  id=page"+(i+1)+" class = 'page-item each-page'>"+(i+1)+"</a></li>";
+            }
+            if(o.nowPage != o.totalPage)
+            {
+                html +='<li><a class="page-item next-page"><span aria-hidden="true">&raquo;</span></a></li>';
+            }
+            html +='</ul>';
         }
-
-        for(var i = 0 ; i < o.showPageCount ; i++)
-        {
-            //拼接每一个分页数组按钮，并为其设置id
-            html += "<li><a  id=page"+(i+1)+" class = 'page-item each-page'>"+(i+1)+"</a></li>";
-        }
-        if(o.nowPage != o.totalPage)
-        {
-            html +='<li><a class="page-item next-page"><span aria-hidden="true">&raquo;</span></a></li>';
-        }
-        html += '</ul></nav>';
+        html += '</nav>';
         $('#'+o.obj).html(html);
         $("#page1").parent().addClass('active');
         //调用获取数据的回调函数
@@ -71,12 +73,12 @@ function Page(count,listRow,showPageCount,divId,getData){
         {
             html += '<li><a class="page-item pre-page"><span>&laquo;</span></a></li>';
         }
-
         for(var i = o.first ; i <= o.last ; i++)
         {
 
             html += "<li><a id=page"+i+" class = 'page-item each-page'>"+i+"</a></li>";
         }
+
         if(o.nowPage != o.totalPage)
         {
             html+="<li><a class = 'page-item next-page'><span aria-hidden='true'>&raquo;</span></a>";
@@ -120,12 +122,11 @@ function Page(count,listRow,showPageCount,divId,getData){
 
             //o.nowPage = parseInt(o.nowPage) - 1;
             o.nowPage = 1;
-
-
-            if(o.nowPage < (o.totalPage-o.showPageCount/2) && o.first > 1)
-            {
-                o.first = parseInt(o.first) - 1;
-                o.last = parseInt(o.last) - 1;
+            o.first = 1 ;
+            if(o.showPageCount< o.totalPage){
+                o.last  = parseInt(o.showPageCount);
+            }else{
+                o.last =  parseInt(o.totalPage);
             }
 
             o.updatePage();
@@ -148,7 +149,7 @@ function Page(count,listRow,showPageCount,divId,getData){
                     o.last =  parseInt(o.nowPage)+parseInt(o.showPageCount/2);
                 }
             }
-            else if(o.nowPage < o.showPageCount/2)
+            else if(o.nowPage < o.showPageCount/2+1)
             {
                 o.first =  1;
                 o.last =  o.showPageCount;
@@ -164,7 +165,11 @@ function Page(count,listRow,showPageCount,divId,getData){
         });
 
         $(".next-page").click(function(){
-            o.nowPage  = o.last;
+            o.nowPage  = o.lastEnd;
+
+            o.first = parseInt(o.totalPage) - parseInt(o.showPageCount)+1;
+            o.last = parseInt(o.totalPage);
+
            /* o.nowPage = parseInt(o.nowPage) + 1;
             if(o.last < o.totalPage && o.nowPage > o.showPageCount/2+1)
             {

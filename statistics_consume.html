@@ -63,7 +63,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <input type="radio" name="stime" value="month" class="selectdata" checked/>日统计
-                                        <input type="radio" name="stime" value="year" class="selectdata" />月统计
+                                        <input type="radio" name="stime" value="year" class="selectdata ml-15" />月统计
                                     </div>
                                 </div>
                                 <div class="row">
@@ -165,7 +165,7 @@
             $('.monthform').hide();
         }else{
             $('.monthform').show();
-            $('.yearform').hide();s
+            $('.yearform').hide();
         }
         initchart();
     });
@@ -243,7 +243,6 @@
     }
 
 
-
     //触发函数
     /**
      * starttime 时间
@@ -270,7 +269,6 @@
             var seriesjson = eval('('+seriesjson+')');
 
         }
-
         charts(tdata,seriesjson,type);
     }
 
@@ -331,11 +329,11 @@
 
     function updatetable(){
         //获取数据总数
-        var count = 13;
+        var count = 22;
         //每页显示数量
         var listRow = 3;
         //显示多少个分页按钮
-        var showPageCount = 4;
+        var showPageCount = 6;
         //指定id，创建分页标签
         var pageId = 'datatablepage';
         //searchTable 为方法名
@@ -353,7 +351,6 @@
     var searchTable = function(nowPage,listRows)
     {
 
-
         var data = [
             ['2016-06-06 16:00', '1000.00'],
             ['2016-06-06 16:00', '1000.00'],
@@ -370,7 +367,10 @@
     }
 
 
-
+    //当浏览器大小变化时
+    $(window).resize(function () {
+        initchart()
+    });
 
 </script>
 
