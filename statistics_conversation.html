@@ -46,9 +46,10 @@
                         </div>
                         <section class="scrollable wrapper w-f">
                             <section class="panel panel-default pos-rlt clearfix ">
+                                <input type="hidden" value="1" id="defaultapp" />
                                 <ul id="myTab" class="nav nav-tabs">
                                     <li class="active"><a  data-toggle="tab" data-app="1">全部应用</a></li>
-                                    <li ><a  data-toggle="tab" data-app="2">应用二</a></li>
+                                    <li ><a  data-toggle="tab" data-app="phone">应用二</a></li>
                                     <li ><a  data-toggle="tab" data-app="3">应用三</a></li>
                                     <li ><a  data-toggle="tab" data-app="4">应用四</a></li>
                                     <li ><a  data-toggle="tab" data-app="5">应用五</a></li>
@@ -158,21 +159,10 @@
 
     //应用
     $('#myTab li a').click(function(){
+        var app = $(this).attr('data-app');
+        $('#defaultapp').val(app);
         initchart();
     });
-
-
-    //获取当前选中应用
-    function getapp(){
-        var appname = '';
-        $('#myTab li').each(function(){
-            var res = $(this).hasClass('active');
-            if(!res){
-                appname = $(this).find('a').attr('data-app');
-            }
-        });
-        return appname;
-    }
 
 
     //初始时间
@@ -192,9 +182,10 @@
      */
     function initchart(){
         var type = 'year';
-        var app = getapp();
+        var app =  $('#defaultapp').val();
         var starttime = initialStartTime(type);
         var endtime = '';
+
         var param  = {starttime:starttime,endtime:endtime,type:type,app:app};
         //异步查询 返回json 数据
 
@@ -268,14 +259,15 @@
 
     /**
      * 回调数据
-     * @param tdata 标题项
-     * @param tdata 标题项
-     * @param tdata 标题项
+     * @param xd 消费数据
+     * @param yd 会话数据
+     *
+     *
+     * @param type 年月
      */
-    function charts(tdata,series,type){
+    function charts(xd,yd){
         var type = $('input[name="stime"]:checked').val();
         var Xdata = monthData;
-
         if(type=='year'){
             Xdata = timeData;
             var xd = moneyDataYear();

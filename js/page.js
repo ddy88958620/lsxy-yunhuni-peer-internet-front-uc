@@ -13,12 +13,14 @@ function Page(count,listRow,showPageCount,divId,getData){
     //总页数
     o.totalPage = o.count % o.listRow == 0? parseInt(o.count/ o.listRow) : parseInt(o.count/ o.listRow+1);
 
+    console.log('总页数'+o.totalPage);
+
     o.showPageCount = showPageCount;
     //显示多少个分页按钮
     o.showPageCount = o.showPageCount < o.totalPage? o.showPageCount : o.totalPage;
     o.first = 1;//第一个显示的分页按钮是多少
     //最后一个显示的分页按钮是多少
-    o.last = o.totalPage < showPageCount? showPageCount: o.totalPage;
+    o.last = o.totalPage > showPageCount? showPageCount: o.totalPage;
     o.lastEnd =  o.totalPage < showPageCount? showPageCount: o.totalPage;
 
     /**
@@ -121,13 +123,31 @@ function Page(count,listRow,showPageCount,divId,getData){
         $(".pre-page").click(function(){
 
             //o.nowPage = parseInt(o.nowPage) - 1;
+            /*
+            第一页
             o.nowPage = 1;
             o.first = 1 ;
             if(o.showPageCount< o.totalPage){
                 o.last  = parseInt(o.showPageCount);
             }else{
                 o.last =  parseInt(o.totalPage);
+            }*/
+
+            //返回上一组
+            if(o.nowPage/o.showPageCount >1){
+                o.first   =   parseInt(o.nowPage/o.showPageCount);
+                o.last    =   parseInt(o.nowPage/o.showPageCount)*parseInt(o.showPageCount);
+            }else{
+                o.first   =   1;
+                o.last  = parseInt(o.showPageCount);
             }
+            if(parseInt(o.nowPage/o.showPageCount)*parseInt(o.showPageCount)%2 == 0) {
+                o.nowPage = o.last/2;
+            }
+            else {
+                o.nowPage = parseInt(o.last/2)+1;
+            }
+            //console.log(o.first+','+o.last+','+o.nowPage);
 
             o.updatePage();
             o.updateColor($(this),$("#page"+ o.nowPage));
@@ -165,10 +185,27 @@ function Page(count,listRow,showPageCount,divId,getData){
         });
 
         $(".next-page").click(function(){
-            o.nowPage  = o.lastEnd;
 
-            o.first = parseInt(o.totalPage) - parseInt(o.showPageCount)+1;
-            o.last = parseInt(o.totalPage);
+            console.log(o.first+','+ o.last+','+o.nowPage);
+            //o.first = parseInt(o.totalPage) - parseInt(o.showPageCount)+1;
+            //o.last = parseInt(o.totalPage);
+            if((o.first+o.showPageCount)<o.totalPage)
+                o.first = o.last +1;
+            else
+                o.first = parseInt(o.totalPage/o.nowPage)*o.showPageCount + 1 ;
+            if(o.last+showPageCount>o.totalPage)
+                o.last  = o.totalPage;
+            else
+                o.last  = o.last + showPageCount;
+
+            o.nowPage = o.last;
+
+            if(parseInt(o.nowPage/o.showPageCount)*parseInt(o.showPageCount)%2 == 0) {
+
+            }
+            else {
+                //o.nowPage  = o.lastEnd;
+            }
 
            /* o.nowPage = parseInt(o.nowPage) + 1;
             if(o.last < o.totalPage && o.nowPage > o.showPageCount/2+1)

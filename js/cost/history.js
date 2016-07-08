@@ -33,7 +33,7 @@ $(function () {
   $('.last_month').on('click',function(e){
     var date = new Date()
     var str = date.getFullYear() +'-' + (date.getMonth())
-    var secondMonth = date.getFullYear() +'-' + (date.getMonth() +1 )
+    var secondMonth = date.getFullYear() +'-' + (date.getMonth() )
     $( ".currentMonth" ).datepicker( "setDate", str);
     $( ".lastMonth" ).datepicker( "setDate", secondMonth);
   })
