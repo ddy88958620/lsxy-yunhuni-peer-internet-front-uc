@@ -8,13 +8,9 @@ function Page(count,listRow,showPageCount,divId,getData){
     o.listRow = listRow;//一页显示多少条数据
     o.getData = getData;//取数据的回调函数
     o.obj = divId ;//制定在那个元素后面显示(Jquery对象)
-
     o.count = count;//数据总数
     //总页数
     o.totalPage = o.count % o.listRow == 0? parseInt(o.count/ o.listRow) : parseInt(o.count/ o.listRow+1);
-
-    console.log('总页数'+o.totalPage);
-
     o.showPageCount = showPageCount;
     //显示多少个分页按钮
     o.showPageCount = o.showPageCount < o.totalPage? o.showPageCount : o.totalPage;
@@ -71,7 +67,7 @@ function Page(count,listRow,showPageCount,divId,getData){
 
         //根据当前页判断重新拼接分页控件
         var html = "";
-        if(o.nowPage != 1)
+        if(o.first != 1)
         {
             html += '<li><a class="page-item pre-page"><span>&laquo;</span></a></li>';
         }
@@ -81,7 +77,7 @@ function Page(count,listRow,showPageCount,divId,getData){
             html += "<li><a id=page"+i+" class = 'page-item each-page'>"+i+"</a></li>";
         }
 
-        if(o.nowPage != o.totalPage)
+        if(o.last != o.totalPage)
         {
             html+="<li><a class = 'page-item next-page'><span aria-hidden='true'>&raquo;</span></a>";
         }
@@ -132,22 +128,24 @@ function Page(count,listRow,showPageCount,divId,getData){
             }else{
                 o.last =  parseInt(o.totalPage);
             }*/
+            if(o.nowPage/o.showPageCount==1)
+                var nowPage = 0;
+            else
+                var nowPage = parseInt(o.nowPage/o.showPageCount);
 
-            //返回上一组
-            if(o.nowPage/o.showPageCount >1){
-                o.first   =   parseInt(o.nowPage/o.showPageCount);
-                o.last    =   parseInt(o.nowPage/o.showPageCount)*parseInt(o.showPageCount);
+            o.first =  (nowPage-1)*o.showPageCount+1;
+            o.last = (nowPage)*o.showPageCount;
+            if(o.first<=1){
+                o.first =  1;
+            }
+            if(o.last<=0){
+                o.last = (nowPage+1)*o.showPageCount;
+            }
+            if(parseInt(o.first+o.last)%2==0){
+                o.nowPage = parseInt(o.first+o.last)/2;
             }else{
-                o.first   =   1;
-                o.last  = parseInt(o.showPageCount);
+                o.nowPage = parseInt((o.first+o.last)/2);
             }
-            if(parseInt(o.nowPage/o.showPageCount)*parseInt(o.showPageCount)%2 == 0) {
-                o.nowPage = o.last/2;
-            }
-            else {
-                o.nowPage = parseInt(o.last/2)+1;
-            }
-            //console.log(o.first+','+o.last+','+o.nowPage);
 
             o.updatePage();
             o.updateColor($(this),$("#page"+ o.nowPage));
@@ -186,25 +184,25 @@ function Page(count,listRow,showPageCount,divId,getData){
 
         $(".next-page").click(function(){
 
-            console.log(o.first+','+ o.last+','+o.nowPage);
+            //console.log(o.first+','+ o.last+','+o.nowPage);
             //o.first = parseInt(o.totalPage) - parseInt(o.showPageCount)+1;
             //o.last = parseInt(o.totalPage);
-            if((o.first+o.showPageCount)<o.totalPage)
-                o.first = o.last +1;
+            if(o.nowPage/o.showPageCount==1)
+               var nowPage = 0;
             else
-                o.first = parseInt(o.totalPage/o.nowPage)*o.showPageCount + 1 ;
-            if(o.last+showPageCount>o.totalPage)
-                o.last  = o.totalPage;
-            else
-                o.last  = o.last + showPageCount;
-
-            o.nowPage = o.last;
-
-            if(parseInt(o.nowPage/o.showPageCount)*parseInt(o.showPageCount)%2 == 0) {
-
+               var nowPage = parseInt(o.nowPage/o.showPageCount);
+            o.first =  (nowPage+1)*o.showPageCount+1;
+            o.last = (nowPage+2)*o.showPageCount;
+            if(o.first>o.totalPage){
+                o.first =  (nowPage)*o.showPageCount+1;
             }
-            else {
-                //o.nowPage  = o.lastEnd;
+            if(o.last>=o.totalPage){
+                o.last = o.lastEnd;
+            }
+            if(parseInt(o.first+o.last)%2==0){
+                o.nowPage = parseInt(o.first+o.last)/2;
+            }else{
+                o.nowPage = parseInt((o.first+o.last)/2);
             }
 
            /* o.nowPage = parseInt(o.nowPage) + 1;
