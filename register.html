@@ -82,7 +82,7 @@
 <!--/footer-->
 <!--modal-->
 <div class="shadow-bg" id="shadow-bg"  ></div>
-<div id="modal-mobile" class="modal-phone" style="display: block">
+<div id="modal-mobile" class="modal-phone">
    <div class="title">验证手机号</div>
    <div class="content">
         <div class="input">
@@ -123,6 +123,7 @@
 
     //检验账号是否注册
     function reg_isexit(){
+        return true;
         var bol = false;
         var username = $('#form-username').val();
         var mobile = $('#form-mobile').val();
@@ -144,7 +145,6 @@
         });
         return bol;
     }
-
 
 </script>
 
