@@ -73,7 +73,9 @@
     color: #686868;
     font-size: 16px;
   }
-
+  a{
+    cursor: pointer;
+  }
 }
 
 #pw-strength {
@@ -219,7 +221,6 @@
       float: left;
       display: block;
       font-size: 18px;
-      color: #5d5d5d;
       text-align: center;
       line-height: 70px;
       height: 70px;
@@ -228,7 +229,11 @@
         color: #0099cc;
       }
     }
+    .sure{
+      color: #0099cc;
+    }
     .cancel {
+      color: #5d5d5d;
       border-right: 1px solid #ebebeb;
     }
   }
