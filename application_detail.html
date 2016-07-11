@@ -116,10 +116,11 @@
                                         <table class="table table-striped cost-table-history tablelist">
                                             <thead>
                                             <tr>
-                                                <th>标题</th>
-                                                <th>状态</th>
-                                                <th>大小</th>
-                                                <th>操作</th>
+                                                <th width="20%">标题</th>
+                                                <th width="10%">状态</th>
+                                                <th width="10%">大小</th>
+                                                <th width="45%">备注</th>
+                                                <th width="10%">操作</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -127,32 +128,40 @@
                                                 <td class="voice-format">1.wav</td>
                                                 <td class="success" >待审核</td>
                                                 <td>1M</td>
+                                                <td id="remark-a-1">你好备注</td>
                                                 <td class="operation">
                                                     <a href="">删除</a> <span ></span>
+                                                    <a class="editremark" data-id="1" data-type="2">修改备注</a>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td class="voice-format">1.wav</td>
                                                 <td ><span class="nosuccess">待审核</span></td>
                                                 <td>1M</td>
+                                                <td id="remark-a-2">你好备注</td>
                                                 <td class="operation">
                                                     <a href="">删除</a> <span ></span>
+                                                    <a class="editremark" data-id="2" data-type="1">设置备注</a>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td class="voice-format">1.wav</td>
                                                 <td ><span class="nosuccess">待审核</span></td>
                                                 <td>1M</td>
+                                                <td id="remark-a-3">你好备注</td>
                                                 <td class="operation">
-                                                    <a href="">删除</a>
+                                                    <a href="">删除</a> <span ></span>
+                                                    <a class="editremark" data-id="3" data-type="2">修改备注</a>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td class="voice-format">1.wav</td>
                                                 <td ><span class="success">已审核</span></td>
                                                 <td>1M</td>
+                                                <td id="remark-a-4">你好备注</td>
                                                 <td class="operation">
-                                                    <a href="">删除</a>
+                                                    <a href="">删除</a> <span ></span>
+                                                    <a class="editremark" data-id="4" data-type="1">设置备注</a>
                                                 </td>
                                             </tr>
                                             </tbody>
@@ -479,8 +488,50 @@
     });
 
 
+    /**
+     * 修改/设置 备注
+     * data-type 1 设置 2修改
+     */
+     $('.editremark').click(function(){
+         $('#editmark-tips').html('');
+         var id = $(this).attr('data-id');
+         var type = $(this).attr('data-type');
+         bootbox.setLocale("zh_CN");
+         bootbox.dialog({
+                     title: "设置备注",
+                     message: '<div class="row">  ' +
+                     '<div class="col-md-12"> ' +
+                     '<form class="form-horizontal"> ' +
+                     '<div class="form-group"> ' +
+                     '<label class="col-md-2 control-label" for="name">备注: </label> ' +
+                     '<div class="col-md-8"> ' +
+                     '<input id="edit-remark-content" type="text" placeholder="" class="form-control input-md"> ' +
+                     '<span class="tips-error" id="editmark-tips"></span> </div> ' +
+                     '</div> ' +
+                     '</div> </div>' +
+                     '</form> </div>  </div>',
+                     buttons: {
+                         success: {
+                             label: "保存",
+                             className: "btn-success",
+                             callback: function () {
+                                var remark = $('#edit-remark-content').val();
+                                if(!remark){
+                                    $('#editmark-tips').html('请填写备注内容'); return false;
+                                }
+                                //异步请求修改数据
 
-
+                                 //成功执行
+                                if(type==1){
+                                    $(this).html('修改备注').attr('data-type',2);
+                                }
+                                $('#remark-a-'+id).html(remark);
+                             }
+                         }
+                     }
+                 }
+         );
+     });
 
 </script>
 

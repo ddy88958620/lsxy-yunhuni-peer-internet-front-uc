@@ -154,7 +154,11 @@ $('#personalAuthForm').bootstrapValidator({
 });
 
 $('#validateBtn, #validateBtnPersonal').click(function(){
-  $('#personalAuthForm').bootstrapValidator('validate')
+  var res = $('#personalAuthForm').data('bootstrapValidator').isValid();;
+  if(res==true){
+      document.getElementById('personalAuthForm').submit(); return ;
+  }
+  $('#personalAuthForm').bootstrapValidator('validate');
 });
 
 $('.auth_select').on('click',function(){
