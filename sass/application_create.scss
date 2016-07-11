@@ -1,5 +1,5 @@
 .application_create {
-  @extend .personal_base;
+  @extend .personal_base !optional;
 
   $label-width: 100px;
 
@@ -27,14 +27,13 @@
   }
 
   .price_info_fail {
-    @extend .price_info;
+    @extend .price_info !optional;
     background-color: #f2dede;
     color: #888;
   }
 
   .app-createbox {
-
-    padding-top: 20px;
+    padding-top: 5px;
     padding-bottom: 20px;
     display: inline-table;
     width: 100%;
@@ -42,10 +41,13 @@
   .ml-36{
     margin-left: 36px;
   }
+  .min-height20{
+    min-height:20px !important ;
+  }
   .app-tips{
     padding: 10px ;
-    color: #619B5A;
-    background-color: #d8e8d1;
+    color: #676767;
+    background-color: #EAEDF1;
   }
   .border-bottom{
     border-bottom: 1px solid #eee;
