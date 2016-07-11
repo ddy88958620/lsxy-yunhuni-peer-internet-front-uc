@@ -112,12 +112,33 @@ section.panel.pos-rlt {
   }
 }
 
+
 .header-msg{
   position: relative;
-  top: -20px ;
-  left: 12px ;
-  width: 5px ;
-  border-radius:5px;
-  height: 5px ;
-  display: block !important;
+  top: -12px;
+  left: -5px;
+  width: 5px;
+  border-radius: 5px;
+  height: 5px;
+  display: inline-block;
+}
+
+.tips-toast {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  background: #000000;
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.6;
+
+  padding: 20px 30px;
+  top: 52px;
+  left: 50%;
+  margin-left: -150px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center
 }

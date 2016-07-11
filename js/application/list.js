@@ -39,20 +39,38 @@ $(document).ready(function() {
     $('.tabModalBtn').click(function(){
         var id = $(this).attr('data-id');
         var spotindex = 0;
+        var res = true;
         $('.spot').each(function () {
             if(spotindex==id){
-               $(this).addClass('s-active');
+               if(id==1){
+                   creatIVR();
+               }
+               if(id==3){
+                   var result = readbook();
+                   if(result==false){
+                       res = false; return;
+                   }
+                   //监听支付状态
+                   var result = syncpay();
+                   if(result==false){
+                       res = false; return;
+                   }
+               }
+                $(this).addClass('s-active');
             }
             spotindex++;
         });
-        var contentindex = 0;
-        $('.contentModal').each(function () {
-            if(contentindex==id)
-                $(this).show();
-            else
-                $(this).hide();
-            contentindex++;
-        });
+
+        if(res==true){
+            var contentindex = 0;
+            $('.contentModal').each(function () {
+                if(contentindex==id)
+                    $(this).show();
+                else
+                    $(this).hide();
+                contentindex++;
+            });
+        }
     });
 
 
@@ -66,5 +84,14 @@ $(document).ready(function() {
         $('#mobilebox').fadeIn();
         $('#show-bg').fadeIn();
     }
+
+    function readbook(){
+        if(!$('#readbook').is(':checked')) {
+           return false;
+        }
+        return true;
+    }
     
+    
+
 });

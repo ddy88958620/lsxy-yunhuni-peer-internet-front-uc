@@ -2,8 +2,24 @@
 a{
   cursor: pointer;
 }
+
+.hideIVR{
+  display: none;
+}
+.mb-0{
+  margin-bottom: 0 !important;
+}
+.mt-0{
+  margin-top: 0 !important;
+}
+.ivrserver{
+  margin-left:200px;
+  font-size: 12px;
+}
+
+
 .appliation-modal-box {
-  @extend .modal-box;
+  @extend .modal-box !optional;
   margin-left: -400px;
   margin-top: -220px;
   width: 800px;
