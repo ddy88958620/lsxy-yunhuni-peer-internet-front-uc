@@ -349,7 +349,7 @@
       if(result){
         $('#trb-'+id).html('');
         $('#statusapp-'+id).html('未上线').removeClass('success').addClass('nosuccess');
-        $('#trb-'+id).html('<a onclick="">申请上线</a>');
+        $('#trb-'+id).html('<a onclick="tabtarget('+id+')">申请上线</a>');
         showtoast('下线成功');
       }else{
         showtoast('取消');
@@ -366,7 +366,7 @@
     return true;
   }
 
-  showtoast('提示内容');
+
   function showtoast(tips) {
     $('.tips-toast').css('display','block').html(tips);
     setTimeout("hidetoast()",2000);

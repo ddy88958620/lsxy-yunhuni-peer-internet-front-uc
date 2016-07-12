@@ -126,13 +126,14 @@ section.panel.pos-rlt {
 .tips-toast {
   position: absolute;
   width: 300px;
+  z-index: 1003;
   height: auto;
   background: #000000;
-  filter: alpha(opacity=50);
-  -moz-opacity: 0.5;
+  filter: alpha(opacity=60);
+  -moz-opacity: 0.6;
   display: none;
-  -khtml-opacity: 0.5;
-  opacity: 0.6;
+  -khtml-opacity: 0.6;
+  opacity: 0.7;
   padding: 20px 30px;
   top: 52px;
   left: 50%;

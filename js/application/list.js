@@ -12,6 +12,7 @@ $(document).ready(function() {
                if(id==3){
                    var result = readbook();
                    if(result==false){
+                       showtoast('请先阅读IVR协议')
                        res = false; return;
                    }
                    //监听支付状态
