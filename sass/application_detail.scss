@@ -43,6 +43,10 @@
     border: 1px solid #e8e8e8;
     border-top: 1px solid transparent
   }
+  .sizebox{
+    line-height: 32px;
+    font-size: 14px;
+  }
 }
 
 .application-detail-box {
@@ -61,6 +65,9 @@
   }
   .mt-10 {
     margin-top: 10px;
+  }
+  .date-input{
+
   }
   .check-box {
     height: 14px !important;
@@ -105,3 +112,10 @@
   margin-top: 40px;
 }
 
+
+.font14{
+  font-size: 14px!important;
+}
+.line32{
+  line-height: 32px;
+}

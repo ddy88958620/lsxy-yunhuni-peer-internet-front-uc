@@ -45,7 +45,7 @@ function Page(count,listRow,showPageCount,divId,getData){
             for(var i = 0 ; i < o.showPageCount ; i++)
             {
                 //拼接每一个分页数组按钮，并为其设置id
-                html += "<li><a  id=page"+(i+1)+" class = 'page-item each-page'>"+(i+1)+"</a></li>";
+                html += "<li><a  id=page"+(i+1)+o.obj+" class = 'page-item each-page'>"+(i+1)+"</a></li>";
             }
             if(o.nowPage != o.totalPage)
             {
@@ -55,7 +55,7 @@ function Page(count,listRow,showPageCount,divId,getData){
         }
         html += '</nav>';
         $('#'+o.obj).html(html);
-        $("#page1").parent().addClass('active');
+        $("#page1"+o.obj).parent().addClass('active');
         //调用获取数据的回调函数
         o.getData(o.nowPage, o.listRow);
     }
@@ -74,7 +74,7 @@ function Page(count,listRow,showPageCount,divId,getData){
         for(var i = o.first ; i <= o.last ; i++)
         {
 
-            html += "<li><a id=page"+i+" class = 'page-item each-page'>"+i+"</a></li>";
+            html += "<li><a id=page"+i+o.obj+" class = 'page-item each-page'>"+i+"</a></li>";
         }
 
         if(o.last != o.totalPage)
@@ -148,7 +148,7 @@ function Page(count,listRow,showPageCount,divId,getData){
             }
 
             o.updatePage();
-            o.updateColor($(this),$("#page"+ o.nowPage));
+            o.updateColor($(this),$("#page"+ o.nowPage+o.obj));
             o.getData(o.nowPage, o.listRow);
         });
 
@@ -178,7 +178,7 @@ function Page(count,listRow,showPageCount,divId,getData){
                 o.last = parseInt(o.totalPage);
             }
             o.updatePage();
-            o.updateColor($(this),$("#page"+ o.nowPage));
+            o.updateColor($(this),$("#page"+ o.nowPage+o.obj));
             o.getData(o.nowPage, o.listRow);
         });
 
@@ -213,7 +213,7 @@ function Page(count,listRow,showPageCount,divId,getData){
                 o.last = parseInt(o.last) ;
             }*/
             o.updatePage();
-            o.updateColor($(this),$("#page"+ o.nowPage));
+            o.updateColor($(this),$("#page"+ o.nowPage+o.obj));
             o.getData(o.nowPage, o.listRow);
         });
     }
