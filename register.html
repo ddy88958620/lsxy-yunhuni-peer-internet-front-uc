@@ -115,7 +115,6 @@
 <script type="text/javascript">
     /*确认*/
     $('#modal-sendmobile').click(function(){
-
         //校验四位验证码是否正确
         if($('#second-code').length>0){
             var second = $('#second-code').val();
@@ -123,6 +122,14 @@
                 tipsmsg('请输入四位验证码','msgcode'); return;
             }
         }
+
+
+        return;
+        document.getElementById('defaultForm').submit();
+    });
+
+
+    function send_mobile_code(){
 
 
 
@@ -134,14 +141,6 @@
 
         //获取验证码
 
-
-
-        return;
-        document.getElementById('defaultForm').submit();
-    });
-
-
-    function send_mobile_code(){
         //异步发送验证码
         return true;
     }
