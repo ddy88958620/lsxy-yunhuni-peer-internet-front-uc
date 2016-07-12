@@ -64,8 +64,8 @@ $(document).ready(function() {
                     },
                     stringLength: {
                         min: 6,
-                        max: 30,
-                        message: '用户名必须大于6，小于30个字符'
+                        max: 25,
+                        message: '用户名必须大于6，小于25个字符'
                     }
                 }
             },
