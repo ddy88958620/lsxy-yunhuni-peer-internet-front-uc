@@ -71,7 +71,7 @@
                                       </tr>
                                     </thead>
                                     <tbody>
-                                      <tr>
+                                      <tr id="app-1">
                                         <td scope="row">1</td>
                                         <td>应用名称</td>
                                         <td>123456789456123456</td>
@@ -83,7 +83,7 @@
                                             <a class="lineapp" data-id="1">下线</a>
                                         </td>
                                       </tr>
-                                      <tr>
+                                      <tr id="app-2">
                                           <td scope="row">2</td>
                                           <td>应用名称</td>
                                           <td>123456789456123456</td>
@@ -95,7 +95,7 @@
                                               <a class="tabtarget" data-toggle="1">申请上线</a>
                                           </td>
                                       </tr>
-                                      <tr>
+                                      <tr id="app-3">
                                           <td scope="row">3</td>
                                           <td>应用名称</td>
                                           <td>123456789456123456</td>
@@ -259,16 +259,7 @@
 
 
 
-
-<div class="tips-toast">
-  内容
-</div>
-<script>
-  setTimeout("hidetoast()",3000);
-  function hidetoast(){
-      $('.tips-toast').fadeOut();
-  }
-</script>
+<div class="tips-toast"></div>
 
 
 
@@ -327,6 +318,7 @@
       bootbox.confirm("删除应用：将会使该操作即时生效，除非您非常清楚该操作带来的后续影响", function(result) {
         if(result){
           alert('确认');
+          $('#app-'+id).remove();
         }else{
           alert('删除操作');
         }
@@ -342,10 +334,10 @@
     bootbox.confirm("下线应用：将会使该操作即时生效，除非您非常清楚该操作带来的后续影响", function(result) {
       if(result){
         $('#statusapp-'+id).html('未上线');
-        
-        alert('确认');
+        showtoast('下线成功');
       }else{
-        alert('下线操作');
+
+        showtoast('取消');
       }
 
     });
@@ -356,8 +348,17 @@
     return true;
   }
 
+  showtoast('提示内容');
+  function showtoast(tips) {
+    $('.tips-toast').css('display','block').html(tips);
+    setTimeout("hidetoast()",2000);
+  }
+  function hidetoast(){
+    $('.tips-toast').fadeOut(1000);
+  }
 
 </script>
+
 </body>
 </html>
 

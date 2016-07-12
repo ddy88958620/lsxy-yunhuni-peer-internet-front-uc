@@ -68,3 +68,5 @@ $(".head-box a[href='#subNav']").on('click', function () {
     $(this).parent().css('left','0px')
   }
 })
+
+
