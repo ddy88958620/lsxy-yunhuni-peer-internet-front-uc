@@ -234,7 +234,14 @@
   float: right;
   width: 109px;
 }
-/* line 212, ../sass/register.scss */
+/* line 210, ../sass/register.scss */
+.modal-phone .content .in-block {
+  display: inline-block !important;
+  margin-left: 70px !important;
+  margin-top: 10px !important;
+  margin-bottom: 0px !important;
+}
+/* line 218, ../sass/register.scss */
 .modal-phone .footer {
   position: absolute;
   bottom: 0;
@@ -242,7 +249,7 @@
   height: 70px;
   border-top: 1px solid #ebebeb;
 }
-/* line 218, ../sass/register.scss */
+/* line 224, ../sass/register.scss */
 .modal-phone .footer .cancel, .modal-phone .footer .sure {
   cursor: pointer;
   width: 49%;
@@ -253,52 +260,52 @@
   line-height: 70px;
   height: 70px;
 }
-/* line 227, ../sass/register.scss */
+/* line 233, ../sass/register.scss */
 .modal-phone .footer .cancel:hover, .modal-phone .footer .sure:hover {
   text-decoration: none;
   color: #0099cc;
 }
-/* line 232, ../sass/register.scss */
+/* line 238, ../sass/register.scss */
 .modal-phone .footer .sure {
   color: #0099cc;
 }
-/* line 235, ../sass/register.scss */
+/* line 241, ../sass/register.scss */
 .modal-phone .footer .cancel {
   color: #5d5d5d;
   border-right: 1px solid #ebebeb;
 }
 
-/* line 242, ../sass/register.scss */
+/* line 248, ../sass/register.scss */
 .forget-box {
   width: 400px;
   height: 420px;
   margin: 0 auto;
   border: 1px solid #d9d9d9;
 }
-/* line 247, ../sass/register.scss */
+/* line 253, ../sass/register.scss */
 .forget-box ul li {
   text-align: center;
   width: 50%;
 }
-/* line 251, ../sass/register.scss */
+/* line 257, ../sass/register.scss */
 .forget-box .box {
   width: 315px;
   margin: 10px auto;
 }
-/* line 255, ../sass/register.scss */
+/* line 261, ../sass/register.scss */
 .forget-box .row {
   margin-bottom: 20px;
 }
-/* line 259, ../sass/register.scss */
+/* line 265, ../sass/register.scss */
 .forget-box input, .forget-box button {
   height: 45px;
 }
-/* line 262, ../sass/register.scss */
+/* line 268, ../sass/register.scss */
 .forget-box .remove-padding {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 266, ../sass/register.scss */
+/* line 272, ../sass/register.scss */
 .forget-box .sendcode {
   background: url("../images/register/code_bg.png") repeat-x;
   height: 45px;
@@ -306,11 +313,11 @@
   border: 1px solid #c3c3c3;
   border-radius: 5px;
 }
-/* line 270, ../sass/register.scss */
+/* line 276, ../sass/register.scss */
 .forget-box .nav-tabs {
   border-bottom: 0;
 }
-/* line 274, ../sass/register.scss */
+/* line 280, ../sass/register.scss */
 .forget-box .nav-tabs > li a {
   margin: 0;
   height: 50px;
@@ -320,7 +327,7 @@
   border-bottom: 1px solid #c3c3c3;
   color: #686868;
 }
-/* line 284, ../sass/register.scss */
+/* line 290, ../sass/register.scss */
 .forget-box .nav-tabs > li.active > a, .forget-box .nav-tabs > li.active > a:hover, .forget-box .nav-tabs > li.active > a:focus {
   color: #0099cc;
   background-color: #FFFFFF;
@@ -328,37 +335,37 @@
   border-radius: 0;
   border: 0;
 }
-/* line 291, ../sass/register.scss */
+/* line 297, ../sass/register.scss */
 .forget-box .nav-tabs .right {
   border-radius: 0;
   border-right: 1px solid #d9d9d9;
 }
-/* line 295, ../sass/register.scss */
+/* line 301, ../sass/register.scss */
 .forget-box .nav-tabs .left {
   border-radius: 0;
   border-left: 1px solid #d9d9d9;
 }
-/* line 300, ../sass/register.scss */
+/* line 306, ../sass/register.scss */
 .forget-box .tab-content {
   padding: 50px 0 80px 0;
 }
-/* line 303, ../sass/register.scss */
+/* line 309, ../sass/register.scss */
 .forget-box .btn-color-bule {
   border-color: #0099cc;
   background-color: #0099cc;
 }
 
-/* line 309, ../sass/register.scss */
+/* line 315, ../sass/register.scss */
 .tips-error {
   color: #a94442;
 }
 
-/* line 313, ../sass/register.scss */
+/* line 319, ../sass/register.scss */
 .help-block {
   color: #be180c;
 }
 
-/* line 317, ../sass/register.scss */
+/* line 323, ../sass/register.scss */
 .email-box {
   margin: 0 auto;
   width: 490px;
@@ -372,32 +379,32 @@
   -webkit-box-shadow: 0px 3px 9px #EAEAEA;
   box-shadow: 0px 3px 9px #EAEAEA;
 }
-/* line 329, ../sass/register.scss */
+/* line 335, ../sass/register.scss */
 .email-box img {
   margin-bottom: 20px;
 }
 
-/* line 333, ../sass/register.scss */
+/* line 339, ../sass/register.scss */
 .article-box {
   font-size: 14px;
 }
 
-/* line 336, ../sass/register.scss */
+/* line 342, ../sass/register.scss */
 .size16 {
   font-size: 16px;
 }
 
-/* line 341, ../sass/register.scss */
+/* line 347, ../sass/register.scss */
 .register-form .text-right {
   line-height: 50px;
 }
-/* line 344, ../sass/register.scss */
+/* line 350, ../sass/register.scss */
 .register-form .form-group {
   min-height: 68px;
 }
 
 @media screen and (min-width: 1000px) {
-  /* line 350, ../sass/register.scss */
+  /* line 356, ../sass/register.scss */
   .register_footer {
     position: fixed;
     bottom: 15px;
@@ -406,13 +413,13 @@
     color: #848484;
   }
 
-  /* line 357, ../sass/register.scss */
+  /* line 363, ../sass/register.scss */
   .register-form {
     margin: 20px;
   }
 }
 @media screen and (max-width: 999px) {
-  /* line 363, ../sass/register.scss */
+  /* line 369, ../sass/register.scss */
   .register_footer {
     display: block;
     width: 90%;
@@ -421,12 +428,12 @@
     text-align: center;
   }
 
-  /* line 371, ../sass/register.scss */
+  /* line 377, ../sass/register.scss */
   .register-form .text-right {
     line-height: 32px;
     text-align: left;
   }
-  /* line 375, ../sass/register.scss */
+  /* line 381, ../sass/register.scss */
   .register-form .form-group {
     height: auto;
   }

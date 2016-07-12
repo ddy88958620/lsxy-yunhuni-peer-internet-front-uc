@@ -90,9 +90,12 @@
         </div>
         <div class="input">
             <div class="code-title">验证码 :</div>
-            <input class="code form-control" type="text" name="mobile" />
+            <input class="code form-control" type="text" name="mobile" placeholder="手机验证码" />
             <button class="code-button" id="send-code" >发送验证码</button>
         </div>
+       <div class="input in-block" id="second-codeblock" ></div>
+
+       <p class="text-center tips-error" id="msgcode"></p>
     </div>
     <div class="footer">
         <a id="modal-hidden" class="cancel">返回</a>
@@ -112,13 +115,35 @@
 <script type="text/javascript">
     /*确认*/
     $('#modal-sendmobile').click(function(){
-        alert('确认验证码是否正确，提交表单');
+
+        //校验四位验证码是否正确
+        if($('#second-code').length>0){
+            var second = $('#second-code').val();
+            if(second.length!=4){
+                tipsmsg('请输入四位验证码','msgcode'); return;
+            }
+        }
+
+
+
+        //启动二次校验
+        $('#second-code').show();
+        var html = '<div class="code-title">验证码 :</div><input class="code form-control" type="text" name="" id="second-code" />';
+        html += '<a class="code-img"><img src="images/index/login-code.png"></a>';
+        $('#second-codeblock').html(html);
+
+        //获取验证码
+
+
+
+        return;
         document.getElementById('defaultForm').submit();
     });
 
 
     function send_mobile_code(){
         //异步发送验证码
+        return true;
     }
 
     //检验账号是否注册
