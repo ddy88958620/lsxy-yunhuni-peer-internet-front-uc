@@ -209,15 +209,13 @@
 <script src="js/include.js"></script>
 <script type="text/javascript">
     $('.reset_confirm').click(function(){
-        bootbox.confirm("确认重新生成？", function(result) {
+      bootbox.setLocale("zh_CN");
+      bootbox.confirm("确认重新生成？", function(result) {
             if(result){
                 $('.tips-key').html('错误提示');
                 $('.secretkey').html('aaaaaaaaaaaaaaaaaaaa');
-
-
             }
         });
-
     });
 
 </script>

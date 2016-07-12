@@ -38,7 +38,6 @@
                                 </nav>
                             </div>
                         </section>
-                    
                     </section>
                 </aside>
                 <aside>
@@ -124,43 +123,43 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr>
+                                            <tr id="play-1" >
                                                 <td class="voice-format">1.wav</td>
                                                 <td class="success" >待审核</td>
                                                 <td>1M</td>
                                                 <td id="remark-a-1">你好备注</td>
                                                 <td class="operation">
-                                                    <a href="">删除</a> <span ></span>
+                                                    <a class="delplay" data-id="1" >删除</a> <span ></span>
                                                     <a class="editremark" data-id="1" data-type="2">修改备注</a>
                                                 </td>
                                             </tr>
-                                            <tr>
+                                            <tr id="play-2">
                                                 <td class="voice-format">1.wav</td>
                                                 <td ><span class="nosuccess">待审核</span></td>
                                                 <td>1M</td>
                                                 <td id="remark-a-2">你好备注</td>
                                                 <td class="operation">
-                                                    <a href="">删除</a> <span ></span>
+                                                    <a class="delplay" data-id="2">删除</a> <span ></span>
                                                     <a class="editremark" data-id="2" data-type="1">设置备注</a>
                                                 </td>
                                             </tr>
-                                            <tr>
+                                            <tr id="play-3">
                                                 <td class="voice-format">1.wav</td>
                                                 <td ><span class="nosuccess">待审核</span></td>
                                                 <td>1M</td>
                                                 <td id="remark-a-3">你好备注</td>
                                                 <td class="operation">
-                                                    <a href="">删除</a> <span ></span>
+                                                    <a class="delplay" data-id="3">删除</a> <span ></span>
                                                     <a class="editremark" data-id="3" data-type="2">修改备注</a>
                                                 </td>
                                             </tr>
-                                            <tr>
+                                            <tr id="play-4">
                                                 <td class="voice-format">1.wav</td>
                                                 <td ><span class="success">已审核</span></td>
                                                 <td>1M</td>
                                                 <td id="remark-a-4">你好备注</td>
                                                 <td class="operation">
-                                                    <a href="">删除</a> <span ></span>
+                                                    <a  class="delplay" data-id="4">删除</a> <span ></span>
                                                     <a class="editremark" data-id="4" data-type="1">设置备注</a>
                                                 </td>
                                             </tr>
@@ -201,40 +200,40 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr>
+                                            <tr id="voice-1">
                                                 <td class="voice-format">20160606122333-[sessionid]</td>
                                                 <td>1M</td>
                                                 <td>1'23"</td>
                                                 <td class="operation">
                                                     <a href="">下载</a> <span ></span>
-                                                    <a href="">删除</a>
+                                                    <a  class="delvoice" data-id="1">删除</a> <span ></span>
                                                 </td>
                                             </tr>
-                                            <tr>
+                                            <tr id="voice-2">
                                                 <td class="voice-format">20160606122333-[sessionid]</td>
                                                 <td>1M</td>
                                                 <td>1'23"</td>
                                                 <td class="operation">
                                                     <a href="">下载</a> <span ></span>
-                                                    <a href="">删除</a>
+                                                    <a  class="delvoice" data-id="2">删除</a> <span ></span>
                                                 </td>
                                             </tr>
-                                            <tr>
+                                            <tr id="voice-3">
                                                 <td class="voice-format">20160606122333-[sessionid]</td>
                                                 <td>1M</td>
                                                 <td>1'23"</td>
                                                 <td class="operation">
                                                     <a href="">下载</a> <span ></span>
-                                                    <a href="">删除</a>
+                                                    <a  class="delvoice" data-id="3">删除</a> <span ></span>
                                                 </td>
                                             </tr>
-                                            <tr>
+                                            <tr id="voice-4">
                                                 <td class="voice-format">20160606122333-[sessionid]</td>
                                                 <td>1M</td>
                                                 <td>1'23"</td>
                                                 <td class="operation">
-                                                    <a href="">下载</a> <span ></span>
-                                                    <a href="">删除</a>
+                                                    <a  >下载</a> <span ></span>
+                                                    <a  class="delvoice" data-id="4">删除</a> <span ></span>
                                                 </td>
                                             </tr>
                                             </tbody>
@@ -522,8 +521,13 @@
                                 //异步请求修改数据
 
                                  //成功执行
-                                if(type==1){
-                                    $(this).html('修改备注').attr('data-type',2);
+                                if(type=='1'){
+                                    $('.editremark').each(function(){
+                                        if($(this).attr('data-id')==id){
+                                            $(this).attr('data-type','2');
+                                            $(this).text('修改备注');
+                                        }
+                                    })
                                 }
                                 $('#remark-a-'+id).html(remark);
                              }
@@ -532,6 +536,41 @@
                  }
          );
      });
+
+
+    /**
+     * 删除操作
+     */
+    //删除应用
+    $('.delvoice').click(function(){
+        id = $(this).attr('data-id');
+        bootbox.setLocale("zh_CN");
+        bootbox.confirm("确认删除文件", function(result) {
+            if(result){
+                $('#voice-'+id).remove();
+            }else{
+                alert('删除操作');
+            }
+        });
+
+    });
+
+
+    /**
+     * 删除操作
+     */
+    //删除应用
+    $('.delplay').click(function(){
+        id = $(this).attr('data-id');
+        bootbox.setLocale("zh_CN");
+        bootbox.confirm("确认删除文件", function(result) {
+            if(result){
+                $('#play-'+id).remove();
+            }else{
+                alert('删除操作');
+            }
+        });
+    });
 
 </script>
 

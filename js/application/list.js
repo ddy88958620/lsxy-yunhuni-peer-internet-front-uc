@@ -1,40 +1,4 @@
 $(document).ready(function() {
-    //或
-    $('.tabtarget').click(function(){
-        var id = $(this).attr('data-toggle');
-        cleanModal();
-        showBox();
-    });
-
-    //初始化modal 数据
-    function cleanModal(){
-        hideSpot();
-        hideModal();
-    }
-
-    function hideSpot(){
-        var index = 0;
-        $('.spot').each(function () {
-            if(index==0)
-                $(this).addClass('s-active');
-            else
-                $(this).removeClass('s-active');
-            index++;
-        });
-    }
-
-    function hideModal(){
-        var index = 0;
-        $('.contentModal').each(function () {
-            if(index==0)
-                $(this).show();
-            else
-                $(this).hide();
-            index++;
-        });
-    }
-
-
     //页面切换
     $('.tabModalBtn').click(function(){
         var id = $(this).attr('data-id');
@@ -60,7 +24,6 @@ $(document).ready(function() {
             }
             spotindex++;
         });
-
         if(res==true){
             var contentindex = 0;
             $('.contentModal').each(function () {
@@ -72,26 +35,52 @@ $(document).ready(function() {
             });
         }
     });
-
-
-
-    $('.modalCancel').click(function(){
-        $('#mobilebox').fadeOut();
-        $('#show-bg').fadeOut();
-    });
-
-    function showBox(){
-        $('#mobilebox').fadeIn();
-        $('#show-bg').fadeIn();
-    }
-
-    function readbook(){
-        if(!$('#readbook').is(':checked')) {
-           return false;
-        }
-        return true;
-    }
-    
-    
-
 });
+
+
+//初始化modal 数据
+function cleanModal(){
+    $('#modal-appid').val('');
+    hideSpot();
+    hideModal();
+}
+
+function hideSpot(){
+    var index = 0;
+    $('.spot').each(function () {
+        if(index==0)
+            $(this).addClass('s-active');
+        else
+            $(this).removeClass('s-active');
+        index++;
+    });
+}
+
+function hideModal(){
+    var index = 0;
+    $('.contentModal').each(function () {
+        if(index==0)
+            $(this).show();
+        else
+            $(this).hide();
+        index++;
+    });
+}
+
+
+$('.modalCancel').click(function(){
+    $('#mobilebox').fadeOut();
+    $('#show-bg').fadeOut();
+});
+
+function showBox(){
+    $('#mobilebox').fadeIn();
+    $('#show-bg').fadeIn();
+}
+
+function readbook(){
+    if(!$('#readbook').is(':checked')) {
+        return false;
+    }
+    return true;
+}

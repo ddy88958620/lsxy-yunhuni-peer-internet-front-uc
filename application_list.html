@@ -79,8 +79,8 @@
                                         <td>2016-01-01 10:10:00</td>
                                         <td class="operation">
                                             <a href="application_detail.html">详情</a> <span ></span>
-                                            <a class="delapp" data-status="1" data-id="1">删除</a> <span ></span>
-                                            <a class="lineapp" data-id="1">下线</a>
+                                            <a onclick="delapp(1,1)">删除</a> <span ></span>
+                                            <span class="apply" id="trb-1"><a onclick="lineapp(1)">下线</a></span>
                                         </td>
                                       </tr>
                                       <tr id="app-2">
@@ -91,8 +91,8 @@
                                           <td>2016-01-01 10:10:00</td>
                                           <td class="operation">
                                               <a href="application_detail.html">详情</a> <span ></span>
-                                              <a class="delapp" data-status="2" data-id="2">删除</a> <span ></span>
-                                              <a class="tabtarget" data-toggle="1">申请上线</a>
+                                              <a onclick="delapp(2,2)">删除</a> <span ></span>
+                                              <a onclick="tabtarget(2)" >申请上线</a>
                                           </td>
                                       </tr>
                                       <tr id="app-3">
@@ -103,8 +103,8 @@
                                           <td>2016-01-01 10:10:00</td>
                                           <td class="operation">
                                               <a href="application_detail.html">详情</a> <span ></span>
-                                              <a class="delapp" data-status="2" data-id="3">删除</a> <span ></span>
-                                              <a class="tabtarget" data-toggle="3" >申请上线</a>
+                                              <a onclick="delapp(3,2)" >删除</a> <span ></span>
+                                              <a onclick="tabtarget(3)" >申请上线</a>
                                           </td>
                                       </tr>
                                     </tbody>
@@ -146,6 +146,7 @@
 <!---mobilebox-->
 <div class="shadow-bg" id="show-bg"  style="display: none"></div>
 <div id="mobilebox" class="appliation-modal-box" style="display: none;">
+    <input type="hidden" value="" id="modal-appid" />
     <div class="addmobile1" >
         <div class="title">应用上线流程<a class="close_a modalCancel"></a></div>
         <div class="content" >
@@ -273,6 +274,17 @@
 <script type="text/javascript" src='./js/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js'> </script>
 <script type="text/javascript" src='./js/application/list.js'> </script>
 <script>
+
+
+  /**
+   * @param id 应用id
+   */
+  function tabtarget(id){
+    cleanModal();
+    $('#modal-appid').val(id);
+    showBox();
+  }
+
   var ivrnumber = 1;
 
   //生成IVR
@@ -306,10 +318,13 @@
 
 
 
-  //删除应用
-  $('.delapp').click(function(){
-    status = $(this).attr('data-status');
-    id = $(this).attr('data-id');
+
+
+  /**
+   * 应用id
+   * status 该应用状态
+   */
+  function delapp(id,status){
     bootbox.setLocale("zh_CN");
     if(status==1){
       bootbox.alert("当前应用正在运营中，请将起下线后进行删除", function(result) {}); return;
@@ -324,24 +339,27 @@
         }
       });
     }
-  });
+  }
+
 
   //应用下线
-
-  $('.lineapp').click(function(){
-    var id = $(this).attr('data-id');
+  function lineapp(id){
     bootbox.setLocale("zh_CN");
     bootbox.confirm("下线应用：将会使该操作即时生效，除非您非常清楚该操作带来的后续影响", function(result) {
       if(result){
-        $('#statusapp-'+id).html('未上线');
+        $('#trb-'+id).html('');
+        $('#statusapp-'+id).html('未上线').removeClass('success').addClass('nosuccess');
+        $('#trb-'+id).html('<a onclick="">申请上线</a>');
         showtoast('下线成功');
       }else{
-
         showtoast('取消');
       }
 
     });
-  });
+  }
+
+
+
 
   //监听支付状态 返回true success
   function syncpay(){
