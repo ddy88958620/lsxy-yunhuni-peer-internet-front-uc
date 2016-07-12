@@ -1,18 +1,20 @@
-.login-bg {
+body {
+  background-image: url(../images/index/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: fixed;
+  font-size: 14px;
+  background-size: cover;
+  height: 100%;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
   color: #000;
   font-weight: 400;
   line-height: 1.25;
-  font-family: 'MicrosoftYaHei';
-  background-image: url(../images/index/bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
-  overflow-x: hidden;
-  font-size: 14px;
   font-family: 'Microsoft YaHei';
-  height: auto;
-
 }
+
+
 
 .login-logo {
   margin-top: 120px;
