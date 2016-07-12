@@ -107,6 +107,42 @@
                                               <a onclick="tabtarget(3)" >申请上线</a>
                                           </td>
                                       </tr>
+                                      <tr id="app-4">
+                                        <td scope="row">3</td>
+                                        <td>应用名称</td>
+                                        <td>123456789456123456</td>
+                                        <td class="nosuccess" id="statusapp-4">未上线</td>
+                                        <td>2016-01-01 10:10:00</td>
+                                        <td class="operation">
+                                          <a href="application_detail.html">详情</a> <span ></span>
+                                          <a onclick="delapp(4,2)" >删除</a> <span ></span>
+                                          <a onclick="tabtarget(3)" >申请上线</a>
+                                        </td>
+                                      </tr>
+                                      <tr id="app-5">
+                                        <td scope="row">3</td>
+                                        <td>应用名称</td>
+                                        <td>123456789456123456</td>
+                                        <td class="nosuccess" id="statusapp-5">未上线</td>
+                                        <td>2016-01-01 10:10:00</td>
+                                        <td class="operation">
+                                          <a href="application_detail.html">详情</a> <span ></span>
+                                          <a onclick="delapp(5,2)" >删除</a> <span ></span>
+                                          <a onclick="tabtarget(3)" >申请上线</a>
+                                        </td>
+                                      </tr>
+                                      <tr id="app-6">
+                                        <td scope="row">3</td>
+                                        <td>应用名称</td>
+                                        <td>123456789456123456</td>
+                                        <td class="nosuccess" id="statusapp-6">未上线</td>
+                                        <td>2016-01-01 10:10:00</td>
+                                        <td class="operation">
+                                          <a href="application_detail.html">详情</a> <span ></span>
+                                          <a onclick="delapp(6,2)" >删除</a> <span ></span>
+                                          <a onclick="tabtarget(3)" >申请上线</a>
+                                        </td>
+                                      </tr>
                                     </tbody>
                                   </table>
                             </section>
@@ -332,7 +368,7 @@
     if(status==2){
       bootbox.confirm("删除应用：将会使该操作即时生效，除非您非常清楚该操作带来的后续影响", function(result) {
         if(result){
-          alert('确认');
+          showtoast('删除成功'+id);
           $('#app-'+id).remove();
         }else{
           alert('删除操作');
@@ -368,11 +404,13 @@
 
 
   function showtoast(tips) {
+    $('.tips-toast').hide().html('');
     $('.tips-toast').css('display','block').html(tips);
-    setTimeout("hidetoast()",2000);
+    setInterval(function(){hidetoast();},3000)
+
   }
   function hidetoast(){
-    $('.tips-toast').fadeOut(1000);
+    $('.tips-toast').hide();
   }
 
 </script>
