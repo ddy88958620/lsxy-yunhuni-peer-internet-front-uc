@@ -34,7 +34,7 @@ $(function(){
                 selector: '.password',
                 validators: {
                     notEmpty: {
-                        message: '密码不能位空'
+                        message: '密码不能为空'
                     },
                     identical: {
                         field: 'confirmPassword',
@@ -51,7 +51,7 @@ $(function(){
                 selector: '.newpassword',
                 validators: {
                     notEmpty: {
-                        message: '密码不能位空'
+                        message: '密码不能为空'
                     },
                     stringLength: {
                         min: 6,

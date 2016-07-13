@@ -58,7 +58,7 @@ $('#personalAuthForm').bootstrapValidator({
             message: '用户名无效',
             validators: {
                 notEmpty: {
-                    message: '用户名不能位空'
+                    message: '用户名不能为空'
                 },
                 stringLength: {
                     min: 2,
@@ -98,7 +98,7 @@ $('#personalAuthForm').bootstrapValidator({
         phone: {
             validators: {
                 notEmpty: {
-                    message: '手机不能位空'
+                    message: '手机不能为空'
                 },
                 regexp: {
                     regexp: /^(13[0-9]|14[0-9]|15[0-9]|18[0-9]|17[0-9])\d{8}$/,
