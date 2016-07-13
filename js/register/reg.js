@@ -10,6 +10,13 @@ function showmodal() {
     var mobile = $('input[name="mobile"]').val();
     var spring =  mobile.substring(0,4) + '****' + mobile.substring(8,11) ;
     $('#mobile_number').html(spring);
+	if($('#second-codeblock').length>0){
+	   $('#second-codeblock').html('');
+	}
+	if($('.tips-error').length>0){
+	   $('.tips-error').html('');
+	}
+	$('#mobileCode').val("");
     $('#shadow-bg').fadeIn();
     $('#modal-mobile').fadeIn();
 }
