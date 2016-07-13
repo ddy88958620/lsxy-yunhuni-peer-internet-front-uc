@@ -65,7 +65,7 @@ $(document).ready(function() {
                     stringLength: {
                         min: 6,
                         max: 25,
-                        message: '用户名必须大于6，小于25个字符'
+                        message: '用户名长度为6-25位'
                     }
                 }
             },

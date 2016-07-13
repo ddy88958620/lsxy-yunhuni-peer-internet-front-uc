@@ -80,8 +80,8 @@ body {
 /* line 74, ../sass/register.scss */
 .register_container .tips {
   margin-bottom: 0 !important;
-  color: #b4b5b5;
-  font-size: 14px;
+  font-size: 12px;
+  color: #be180c;
 }
 /* line 79, ../sass/register.scss */
 .register_container .register-active {
@@ -368,22 +368,21 @@ body {
 
 /* line 322, ../sass/register.scss */
 .tips-error {
-  color: #a94442;
-  font-family: 'Microsoft YaHei';
-  font-size: 14px;
+  font-size: 12px;
+  color: #be180c;
 }
 
-/* line 327, ../sass/register.scss */
+/* line 326, ../sass/register.scss */
 .pl-15 {
   padding-left: 15px;
 }
 
-/* line 331, ../sass/register.scss */
+/* line 330, ../sass/register.scss */
 .help-block {
   color: #be180c;
 }
 
-/* line 335, ../sass/register.scss */
+/* line 334, ../sass/register.scss */
 .email-box {
   margin: 0 auto;
   width: 490px;
@@ -397,32 +396,32 @@ body {
   -webkit-box-shadow: 0px 3px 9px #EAEAEA;
   box-shadow: 0px 3px 9px #EAEAEA;
 }
-/* line 347, ../sass/register.scss */
+/* line 346, ../sass/register.scss */
 .email-box img {
   margin-bottom: 20px;
 }
 
-/* line 351, ../sass/register.scss */
+/* line 350, ../sass/register.scss */
 .article-box {
   font-size: 14px;
 }
 
-/* line 354, ../sass/register.scss */
+/* line 353, ../sass/register.scss */
 .size16 {
   font-size: 16px;
 }
 
-/* line 359, ../sass/register.scss */
+/* line 358, ../sass/register.scss */
 .register-form .text-right {
   line-height: 50px;
 }
-/* line 362, ../sass/register.scss */
+/* line 361, ../sass/register.scss */
 .register-form .form-group {
   min-height: 68px;
 }
 
 @media screen and (min-width: 1000px) {
-  /* line 368, ../sass/register.scss */
+  /* line 367, ../sass/register.scss */
   .register_footer {
     position: absolute;
     bottom: 15px;
@@ -431,13 +430,13 @@ body {
     color: #848484;
   }
 
-  /* line 375, ../sass/register.scss */
+  /* line 374, ../sass/register.scss */
   .register-form {
     margin: 20px;
   }
 }
 @media screen and (max-width: 999px) {
-  /* line 381, ../sass/register.scss */
+  /* line 380, ../sass/register.scss */
   .register_footer {
     display: block;
     width: 90%;
@@ -446,12 +445,12 @@ body {
     text-align: center;
   }
 
-  /* line 389, ../sass/register.scss */
+  /* line 388, ../sass/register.scss */
   .register-form .text-right {
     line-height: 32px;
     text-align: left;
   }
-  /* line 393, ../sass/register.scss */
+  /* line 392, ../sass/register.scss */
   .register-form .form-group {
     height: auto;
   }

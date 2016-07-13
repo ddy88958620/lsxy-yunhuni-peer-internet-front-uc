@@ -91,24 +91,25 @@ body {
 .login-box .tips-error {
   height: 35px;
   display: inline-block;
-  color: #a94442;
+  font-size: 12px;
+  color: #be180c;
 }
-/* line 84, ../sass/login.scss */
+/* line 85, ../sass/login.scss */
 .login-box .tips-error:hover {
   text-decoration: none;
 }
 
-/* line 89, ../sass/login.scss */
+/* line 90, ../sass/login.scss */
 .border {
   border: 1px solid transparent;
 }
 
-/* line 93, ../sass/login.scss */
+/* line 94, ../sass/login.scss */
 .remove-padding {
   padding: 0;
 }
 
-/* line 97, ../sass/login.scss */
+/* line 98, ../sass/login.scss */
 .login-footer {
   color: #848484 !important;
 }

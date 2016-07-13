@@ -63,7 +63,7 @@ $('#personalAuthForm').bootstrapValidator({
                 stringLength: {
                     min: 2,
                     max: 5,
-                    message: '用户名必须大于2，小于5个字符'
+                    message: '用户名长度为2-5位'
                 }
                 /**
                  * 添加方法 异步验证用户名是否存在
