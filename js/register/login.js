@@ -11,7 +11,7 @@ $(document).ready(function() {
                 message: '用户名无效',
                 validators: {
                     notEmpty: {
-                        message: '用户名不能位空'
+                        message: '用户名不能为空'
                     }
                 }
             },
@@ -30,7 +30,7 @@ $(document).ready(function() {
             password: {
                 validators: {
                     notEmpty: {
-                        message: '密码不能位空'
+                        message: '密码不能为空'
                     },
                     identical: {
                         field: 'confirmPassword',

@@ -85,7 +85,7 @@ $(document).ready(function() {
                 selector:'#form-mobile',
                 validators: {
                     notEmpty: {
-                        message: '手机不能为空'
+                        message: '手机号不能为空'
                     },
                     regexp: {
                         regexp: /^(13[0-9]|14[0-9]|15[0-9]|18[0-9]|17[0-9])\d{8}$/,
