@@ -159,17 +159,16 @@
 <!---mobilebox-->
 <div class="shadow-bg" id="show-bg" ></div>
 <div id="mobilebox-1" class="appliation-modal-box" style="display: none;">
-    <input type="hidden" value="" id="modal-appid" />
     <div class="addmobile1" >
         <div class="title">应用上线流程<a class="close_a modalCancel" data-type="1"></a></div>
         <div class="content" >
             <!--nav-->
             <div class="nav-modal-box">
                 <ul class="nav-modal">
-                    <li><span class="spot s-active"></span><span class="lines"></span> </li>
-                    <li><span class="spot"></span><span class="lines"></span>  </li>
-                    <li><span class="spot"></span><span class="lines"></span>  </li>
-                    <li><span class="spot"></span> </li>
+                    <li><a class="spot" data-action="1"></a><span class="lines"></span> </li>
+                    <li><a class="spot" data-action="2"></a><span class="lines"></span></li>
+                    <li><a class="spot" data-action="3"></a><span class="lines"></span></li>
+                    <li><a class="spot" data-action="4"></a> </li>
                 </ul>
                 <ul class="nav-modal-text">
                     <li><span class="text">实名认证</span> </li>
@@ -179,7 +178,7 @@
                 </ul>
             </div>
 
-            <div class="contentModal" style="display: ">
+            <div class="contentModal" style="display: " data-action="1">
                 <!--未认证显示-->
                 <div class="input text-center" style="display: none">
                     <img src="images/index/l6.png" alt="" class="sre" />
@@ -190,17 +189,17 @@
                 </div>
                 <!---end--->
                 <!--认证显示-->
-                <div class="input text-center">
+                <div class="input text-center" >
                     <img src="images/index/l6.png" alt="" class="sre" />
                     <p>您已成功进行实名认证，点击进入下一步!</p>
                 </div>
                 <div class="input text-center" >
-                    <a type="button"  class="btn btn-primary btn-box tabModalBtn" data-id="1">下一步</a>
+                    <a type="button"  class="btn btn-primary btn-box tabModalBtn"  data-id="2" data-fun="creatIVR()">下一步</a>
                 </div>
                 <!---end--->
             </div>
 
-            <div class="contentModal" style="display: none">
+            <div class="contentModal" style="display: none" data-action="2">
                 <div class="input text-center">
                     <p>您选择开通IVR功能，我们给您分配了一个IVR号码供应用使用IVR功能</p>
                 </div>
@@ -213,12 +212,13 @@
                 <div class="hideIVR">
                 </div>
                 <div class="input text-center" >
-                    <a type="button"  class="btn btn-primary btn-box tabModalBtn" data-id="2">下一步</a>
+                    <a type="button"  class="btn btn-primary btn-box tabModalBtn" data-id="3" data-fun="createorder()" >下一步</a>
                 </div>
             </div>
 
-            <div class="contentModal" style="display: none">
-                <div class="input text-center">
+            <div class="contentModal" style="display: none" data-action="3">
+                <p class="text-center mt-0 mb-0">您选择的IVR号码是：121212121 </p>
+                <div class="input text-center mt-0">
                     <p>您需要支付：<span class="money">998.00</span> 元&nbsp;&nbsp;&nbsp; 账号余额：0.00 元 &nbsp;&nbsp;&nbsp; <span class="nomoney">!!余额不足</span>&nbsp;&nbsp;&nbsp;<a href="cost_recharge_sure.html">充值</a> </p>
                 </div>
                 <div class="input text-center mb-0 mt-0">
@@ -227,11 +227,11 @@
                 </div>
                 <div class="ivrserver"><input type="checkbox" name="readcheckbox" id="readbook" />已阅读<a target="_blank" href="ivragreement.html" >IVR服务协议</a></div>
                 <div class="input text-center mt-0" >
-                    <a type="button"  class="btn btn-primary btn-box tabModalBtn" data-id="3">确认支付</a>
+                    <a type="button"  class="btn btn-primary btn-box tabModalBtn" data-id="4" data-fun="pay()">确认支付</a>
                 </div>
             </div>
 
-            <div class="contentModal" style="display:none ">
+            <div class="contentModal" style="display:none " data-action="4">
                 <div class="input text-center" >
                     <img src="images/index/l1.png" alt="" class="sre" />
                     <p>上线成功</p>
@@ -250,20 +250,18 @@
 </div>
 
 <div id="mobilebox-2" class="appliation-modal-box" style="display: none;">
-    <input type="hidden" value="" id="modal-appid" />
     <div class="addmobile1" >
         <div class="title">应用上线流程<a class="close_a modalCancel" data-type="2"></a></div>
         <div class="content" >
             <!--nav-->
             <div class="nav-modal-box">
                 <ul class="nav-modal-md2">
-                    <li><span class=" s-active sopt-2"></span><span class="lines"></span> </li>
+                    <li><span class="  sopt-2"></span><span class="lines"></span> </li>
                     <li><span class=" sopt-2"></span><span class="lines"></span>  </li>
                     <li><span class=" sopt-2"></span></li>
                 </ul>
                 <ul class="nav-modal-text-md2">
                     <li><span class="text">实名认证</span> </li>
-                    <li class="ml-3"><span class="text">支付</span> </li>
                     <li class="ml-30 mr-0"><span class="text">上线</span>  </li>
                 </ul>
             </div>
@@ -287,14 +285,6 @@
                     <a type="button"  class="btn btn-primary btn-box tabModalBtn-2" data-id="1">下一步</a>
                 </div>
                 <!---end--->
-            </div>
-            <div class="contentModal-2" style="display: none">
-                <div class="input text-center">
-                    <p>您需要支付：<span class="money">998.00</span> 元&nbsp;&nbsp;&nbsp; 账号余额：0.00 元 &nbsp;&nbsp;&nbsp; <span class="nomoney">!!余额不足</span>&nbsp;&nbsp;&nbsp;<a href="cost_recharge_sure.html">充值</a> </p>
-                </div>
-                <div class="input text-center mt-0" >
-                    <a type="button"  class="btn btn-primary btn-box tabModalBtn-2" data-id="2">确认支付</a>
-                </div>
             </div>
             <div class="contentModal-2" style="display:none ">
                 <div class="input text-center" >
@@ -322,7 +312,7 @@
             <!--nav-->
             <div class="nav-modal-box">
                 <ul class="nav-modal-md2">
-                    <li><span class="spot s-active"></span><span class="lines"></span> </li>
+                    <li><span class="spot"></span><span class="lines"></span> </li>
                     <li><span class="spot"></span><span class="lines"></span>  </li>
                     <li><span class="spot"></span> </li>
                 </ul>
@@ -374,7 +364,7 @@
                     <p>上线成功</p>
                 </div>
                 <div class="input text-center" >
-                    <a href="" type="button"  class="btn btn-primary btn-box tabModalBtn">上线成功</a>
+                    <a href="" class="btn btn-primary btn-box tabModalBtn" onclick="">上线成功</a>
                 </div>
             </div>
             <div class="input">
@@ -408,8 +398,18 @@
    * type 1 ivr  2no ivr
    */
   function tabtarget(id,type){
-    cleanModal();
+
     $('#modal-appid').val(id);
+    //步骤
+    var index = 2;
+    if(index==0){
+        cleanModal();
+    }else{
+        //当前步骤
+        modalAction(3);
+    }
+
+
     showBox(type);
   }
 
@@ -426,6 +426,7 @@
     //赋值第一个
     $('#creatIVR').html(ivr[0]);
     ivrnumber = 1;
+    return true;
   }
 
   function nolike(){
@@ -504,6 +505,26 @@
     if(url!=undefined && url!='' && url!='undefined'){
         window.location.href=url;
     }
+  }
+
+
+
+
+
+  function createorder(){
+      return true;
+  }
+
+  function pay(){
+
+      tabModalBtn(2,'creatIVR()')
+      return false;
+      return true;
+      if(!$('#readbook').is(':checked')) {
+          showtoast('请先阅读IVR协议');
+          return false;
+      }
+      return true;
   }
 
 </script>

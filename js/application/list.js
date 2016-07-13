@@ -1,6 +1,9 @@
 $(document).ready(function() {
+
+
+
     //页面切换ivr
-    $('.tabModalBtn').click(function(){
+    $('#tabModalBtn').click(function(){
         var id = $(this).attr('data-id');
         var spotindex = 0;
         var res = true;
@@ -12,7 +15,7 @@ $(document).ready(function() {
                if(id==3){
                    var result = readbook();
                    if(result==false){
-                       showtoast('请先阅读IVR协议')
+                       showtoast('请先阅读IVR协议');
                        res = false; return;
                    }
                    //监听支付状态
@@ -37,6 +40,9 @@ $(document).ready(function() {
         }
     });
 
+
+
+   
     $('.tabModalBtn-2').click(function(){
         var id = $(this).attr('data-id');
         var spotindex = 0;
@@ -105,9 +111,40 @@ function showBox(type){
     $('#show-bg').fadeIn();
 }
 
-function readbook(){
-    if(!$('#readbook').is(':checked')) {
-        return false;
-    }
-    return true;
+function modalAction(index){
+    $('.spot').each(function () {
+        $(this).removeClass('s-active');
+    });
+    $('.spot').each(function () {
+        if($(this).attr('data-action')<=index)
+            $(this).addClass('s-active');
+    });
+    $('.contentModal').each(function () {
+        if($(this).attr('data-action')==index)
+            $(this).show();
+        else
+            $(this).hide();
+    });
 }
+
+$('.tabModalBtn').click(function(){
+    var id = $(this).attr('data-id');
+    var isfun = $(this).attr('data-fun');
+    if(isfun!=undefined){
+        if(eval($(this).attr('data-fun'))==true)
+            modalAction(id);
+        return ;
+    }
+    modalAction(id);
+});
+
+function tabModalBtn(id,fun){
+    if(fun!=undefined){
+        if(eval(fun)==true)
+            modalAction(id);
+        return ;
+    }
+    modalAction(id);
+}
+
+
