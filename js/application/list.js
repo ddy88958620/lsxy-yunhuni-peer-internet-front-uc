@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    //页面切换
+    //页面切换ivr
     $('.tabModalBtn').click(function(){
         var id = $(this).attr('data-id');
         var spotindex = 0;
@@ -36,6 +36,30 @@ $(document).ready(function() {
             });
         }
     });
+
+    $('.tabModalBtn-2').click(function(){
+        var id = $(this).attr('data-id');
+        var spotindex = 0;
+        var res = true;
+        $('.sopt-2').each(function () {
+            if(spotindex==id){
+                $(this).addClass('s-active');
+            }
+            spotindex++;
+        });
+        if(res==true){
+            var contentindex = 0;
+            $('.contentModal-2').each(function () {
+                if(contentindex==id)
+                    $(this).show();
+                else
+                    $(this).hide();
+                contentindex++;
+            });
+        }
+    });
+
+
 });
 
 
@@ -70,12 +94,14 @@ function hideModal(){
 
 
 $('.modalCancel').click(function(){
-    $('#mobilebox').fadeOut();
+
+    var type = $(this).attr('data-type');
+    $('#mobilebox-'+type).fadeOut();
     $('#show-bg').fadeOut();
 });
 
-function showBox(){
-    $('#mobilebox').fadeIn();
+function showBox(type){
+    $('#mobilebox-'+type).fadeIn();
     $('#show-bg').fadeIn();
 }
 
