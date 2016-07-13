@@ -43,7 +43,7 @@ $(function(){
                     stringLength: {
                         min: 6,
                         max: 18,
-                        message: '密码必须大于6，小于18个字'
+                        message: '密码长度为6-18位'
                     }
                 }
             },
@@ -56,7 +56,7 @@ $(function(){
                     stringLength: {
                         min: 6,
                         max: 18,
-                        message: '密码必须大于6，小于18个字'
+                        message: '密码长度为6-18位'
                     }
                 }
             },

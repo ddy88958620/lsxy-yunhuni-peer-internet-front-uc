@@ -110,7 +110,7 @@ $('#personalAuthForm').bootstrapValidator({
             selector: '.password',
             validators: {
                 notEmpty: {
-                    message: '密码不能位空'
+                    message: '密码不能为空'
                 },
                 identical: {
                     field: 'confirmPassword',
@@ -119,7 +119,7 @@ $('#personalAuthForm').bootstrapValidator({
                 stringLength: {
                     min: 6,
                     max: 18,
-                    message: '密码必须大于6，小于18个字'
+                    message: '密码长度为6-18位'
                 }
             }
         },

@@ -47,9 +47,9 @@ $(document).ready(function() {
     $('#defaultForm').bootstrapValidator({
         message: '',
         feedbackIcons: {
-            valid: 'glyphicon glyphicon-ok',
+           /* valid: 'glyphicon glyphicon-ok',
             invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
+            validating: 'glyphicon glyphicon-refresh'*/
         },
         submitHandler: function(){
         },
@@ -114,9 +114,9 @@ $(document).ready(function() {
     $('#emailForm').bootstrapValidator({
         message: '',
         feedbackIcons: {
-            valid: 'glyphicon glyphicon-ok',
+            /*valid: 'glyphicon glyphicon-ok',
             invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
+            validating: 'glyphicon glyphicon-refresh'*/
         },
         submitHandler: function(){
         },
@@ -139,16 +139,16 @@ $(document).ready(function() {
     $('#mobileForm').bootstrapValidator({
         message: '',
         feedbackIcons: {
-            valid: 'glyphicon glyphicon-ok',
+         /*   valid: 'glyphicon glyphicon-ok',
             invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
+            validating: 'glyphicon glyphicon-refresh'*/
         },
         fields: {
             mobile: {
                 selector: '#mobile',
                 validators: {
                     notEmpty: {
-                        message: '手机不能为空'
+                        message: '手机号不能为空'
                     },
                     regexp: {
                         regexp: /^(13[0-9]|14[0-9]|15[0-9]|18[0-9]|17[0-9])\d{8}$/,
@@ -165,11 +165,10 @@ $(document).ready(function() {
                     stringLength: {
                         min: 4,
                         max: 4,
-                        message: '请输入四位数的手机号码'
+                        message: '请输入四位数的手机验证码'
                     }
                 }
             }
-
         }
     });
 

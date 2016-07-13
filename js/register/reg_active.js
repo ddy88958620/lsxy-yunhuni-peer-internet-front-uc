@@ -36,12 +36,12 @@ $(document).ready(function() {
     $('#defaultForm').bootstrapValidator({
         message: '',
         feedbackIcons: {
-            valid: 'glyphicon glyphicon-ok',
+          /*  valid: 'glyphicon glyphicon-ok',
             invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
+            validating: 'glyphicon glyphicon-refresh'*/
         },
         submitHandler: function(){
-            alert(2);return false;
+
         },
         fields: {
             username: {
@@ -52,7 +52,7 @@ $(document).ready(function() {
                     },
                     stringLength: {
                         min: 6,
-                        max: 30,
+                        max: 25,
                         message: '用户名必须大于6，小于25个字符'
                     }
                 }
@@ -65,7 +65,7 @@ $(document).ready(function() {
                     stringLength: {
                         min: 6,
                         max: 18,
-                        message: '密码必须大于6，小于18个字'
+                        message: '密码长度为6-18位'
                     },
                     different: {
                         field: 'username',

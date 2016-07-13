@@ -76,12 +76,10 @@ body {
     text-decoration: underline;
   }
   .tips-error {
-    background: url('../images/tips.png') no-repeat left center;
+    //background: url('../images/tips.png') no-repeat left center;
     height: 35px;
     display: inline-block;
-    line-height: 35px;
-    padding-left: 25px;
-    color: red !important;
+    color: #a94442;
   }
   .tips-error:hover {
     text-decoration: none;

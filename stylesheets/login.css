@@ -89,29 +89,26 @@ body {
 }
 /* line 78, ../sass/login.scss */
 .login-box .tips-error {
-  background: url("../images/tips.png") no-repeat left center;
   height: 35px;
   display: inline-block;
-  line-height: 35px;
-  padding-left: 25px;
-  color: red !important;
+  color: #a94442;
 }
-/* line 86, ../sass/login.scss */
+/* line 84, ../sass/login.scss */
 .login-box .tips-error:hover {
   text-decoration: none;
 }
 
-/* line 91, ../sass/login.scss */
+/* line 89, ../sass/login.scss */
 .border {
   border: 1px solid transparent;
 }
 
-/* line 95, ../sass/login.scss */
+/* line 93, ../sass/login.scss */
 .remove-padding {
   padding: 0;
 }
 
-/* line 99, ../sass/login.scss */
+/* line 97, ../sass/login.scss */
 .login-footer {
   color: #848484 !important;
 }
