@@ -403,14 +403,16 @@
   }
 
 
-  function showtoast(tips) {
+  function showtoast(tips,url) {
     $('.tips-toast').hide().html('');
     $('.tips-toast').css('display','block').html(tips);
-    setInterval(function(){hidetoast();},3000)
-
+    setInterval(function(){hidetoast(url);},3000)
   }
-  function hidetoast(){
-    $('.tips-toast').hide();
+  function hidetoast(url){
+     $('.tips-toast').hide();
+    if(url!=undefined && url!='' && url!='undefined'){
+        window.location.href=url;
+    }
   }
 
 </script>
