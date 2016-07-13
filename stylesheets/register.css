@@ -287,36 +287,49 @@ body {
 }
 
 /* line 255, ../sass/register.scss */
+.code-img {
+  cursor: pointer;
+}
+
+/* line 259, ../sass/register.scss */
 .forget-box {
   width: 400px;
-  height: 420px;
+  height: 460px;
   margin: 0 auto;
   border: 1px solid #d9d9d9;
 }
-/* line 260, ../sass/register.scss */
+/* line 264, ../sass/register.scss */
 .forget-box ul li {
   text-align: center;
   width: 50%;
 }
-/* line 264, ../sass/register.scss */
+/* line 268, ../sass/register.scss */
 .forget-box .box {
   width: 315px;
   margin: 10px auto;
 }
-/* line 268, ../sass/register.scss */
-.forget-box .row {
-  margin-bottom: 20px;
-}
 /* line 272, ../sass/register.scss */
+.forget-box .row {
+  margin-bottom: 10px;
+}
+/* line 275, ../sass/register.scss */
+.forget-box .code-box {
+  margin: 0;
+}
+/* line 277, ../sass/register.scss */
+.forget-box .code-box .col-md-7 {
+  padding-left: 0;
+}
+/* line 281, ../sass/register.scss */
 .forget-box input, .forget-box button {
   height: 45px;
 }
-/* line 275, ../sass/register.scss */
+/* line 284, ../sass/register.scss */
 .forget-box .remove-padding {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 279, ../sass/register.scss */
+/* line 288, ../sass/register.scss */
 .forget-box .sendcode {
   background: url("../images/register/code_bg.png") repeat-x;
   height: 45px;
@@ -324,11 +337,11 @@ body {
   border: 1px solid #c3c3c3;
   border-radius: 5px;
 }
-/* line 283, ../sass/register.scss */
+/* line 292, ../sass/register.scss */
 .forget-box .nav-tabs {
   border-bottom: 0;
 }
-/* line 287, ../sass/register.scss */
+/* line 296, ../sass/register.scss */
 .forget-box .nav-tabs > li a {
   margin: 0;
   height: 50px;
@@ -338,7 +351,7 @@ body {
   border-bottom: 1px solid #c3c3c3;
   color: #686868;
 }
-/* line 297, ../sass/register.scss */
+/* line 306, ../sass/register.scss */
 .forget-box .nav-tabs > li.active > a, .forget-box .nav-tabs > li.active > a:hover, .forget-box .nav-tabs > li.active > a:focus {
   color: #0099cc;
   background-color: #FFFFFF;
@@ -346,44 +359,44 @@ body {
   border-radius: 0;
   border: 0;
 }
-/* line 304, ../sass/register.scss */
+/* line 313, ../sass/register.scss */
 .forget-box .nav-tabs .right {
   border-radius: 0;
   border-right: 1px solid #d9d9d9;
 }
-/* line 308, ../sass/register.scss */
+/* line 317, ../sass/register.scss */
 .forget-box .nav-tabs .left {
   border-radius: 0;
   border-left: 1px solid #d9d9d9;
 }
-/* line 313, ../sass/register.scss */
+/* line 322, ../sass/register.scss */
 .forget-box .tab-content {
   padding: 50px 0 80px 0;
 }
-/* line 316, ../sass/register.scss */
+/* line 325, ../sass/register.scss */
 .forget-box .btn-color-bule {
   border-color: #0099cc;
   background-color: #0099cc;
 }
 
-/* line 322, ../sass/register.scss */
+/* line 331, ../sass/register.scss */
 .tips-error {
   color: #be180c;
   font-family: 'Microsoft YaHei';
   font-size: 12px;
 }
 
-/* line 327, ../sass/register.scss */
+/* line 336, ../sass/register.scss */
 .pl-15 {
   padding-left: 15px;
 }
 
-/* line 331, ../sass/register.scss */
+/* line 340, ../sass/register.scss */
 .help-block {
   color: #be180c;
 }
 
-/* line 335, ../sass/register.scss */
+/* line 344, ../sass/register.scss */
 .email-box {
   margin: 0 auto;
   width: 490px;
@@ -397,32 +410,32 @@ body {
   -webkit-box-shadow: 0px 3px 9px #EAEAEA;
   box-shadow: 0px 3px 9px #EAEAEA;
 }
-/* line 347, ../sass/register.scss */
+/* line 356, ../sass/register.scss */
 .email-box img {
   margin-bottom: 20px;
 }
 
-/* line 351, ../sass/register.scss */
+/* line 360, ../sass/register.scss */
 .article-box {
   font-size: 14px;
 }
 
-/* line 354, ../sass/register.scss */
+/* line 363, ../sass/register.scss */
 .size16 {
   font-size: 16px;
 }
 
-/* line 359, ../sass/register.scss */
+/* line 368, ../sass/register.scss */
 .register-form .text-right {
   line-height: 50px;
 }
-/* line 362, ../sass/register.scss */
+/* line 371, ../sass/register.scss */
 .register-form .form-group {
   min-height: 68px;
 }
 
 @media screen and (min-width: 1000px) {
-  /* line 368, ../sass/register.scss */
+  /* line 377, ../sass/register.scss */
   .register_footer {
     position: absolute;
     bottom: 15px;
@@ -431,13 +444,13 @@ body {
     color: #848484;
   }
 
-  /* line 375, ../sass/register.scss */
+  /* line 384, ../sass/register.scss */
   .register-form {
     margin: 20px;
   }
 }
 @media screen and (max-width: 999px) {
-  /* line 381, ../sass/register.scss */
+  /* line 390, ../sass/register.scss */
   .register_footer {
     display: block;
     width: 90%;
@@ -446,12 +459,12 @@ body {
     text-align: center;
   }
 
-  /* line 389, ../sass/register.scss */
+  /* line 398, ../sass/register.scss */
   .register-form .text-right {
     line-height: 32px;
     text-align: left;
   }
-  /* line 393, ../sass/register.scss */
+  /* line 402, ../sass/register.scss */
   .register-form .form-group {
     height: auto;
   }
