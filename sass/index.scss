@@ -6,7 +6,6 @@ $font-color: #FC8408;
 }
 
 .app-list {
-
   .app-status-center {
     width: 100%;
   }
@@ -142,4 +141,10 @@ section.panel.pos-rlt {
   color: #ffffff;
   font-size: 14px;
   text-align: center
+}
+.inline-block{
+  display: inline-block;
+}
+.pull-left{
+  width: auto;
 }
