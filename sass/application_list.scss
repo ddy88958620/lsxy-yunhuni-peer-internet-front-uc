@@ -21,9 +21,9 @@ a{
 .appliation-modal-box {
   @extend .modal-box !optional;
   margin-left: -400px;
-  margin-top: -220px;
+  margin-top: -260px;
   width: 800px;
-  height: 440px;
+  height: 520px;
   font-size: 18px;
   .btn-box {
     height: 46px;
@@ -94,65 +94,38 @@ a{
         }
       }
     }
-    .nav-modal-md2 {
-      height: 30px;
-      display: block;
-      margin: 0 auto;
-      width: 260px;
+    .modal-nav{
+      width: 100%;
       text-align: center;
-      padding: 0;
-      li {
-        float: left;
-        height: 20px;
-        list-style: none;
-        .sopt-2 {
-          width: 19px;
-          display: block;
-          margin: 0 10px;
-          float: left;
-          height: 19px;
-          background: url("../images/index/l4.png") no-repeat left center;
-        }
-        .s-active {
-          background: url("../images/index/l5.png") no-repeat left center;
-        }
-        .lines {
-          height: 19px;
-          width: 60px;
-          display: block;
-          float: left;
-          background: url("../images/index/l2.png") no-repeat left center;
-        }
-        .text {
-          float: left;
-          display: block;;
-        }
+      border:1px solid #000;
+      height: 50px;
+
+
+      .spot {
+        width: 19px;
+        height: 19px;
+        display: inline-block;
+
+      }
+      .s-active {
+        background: url("../images/index/l5.png") no-repeat left center;
+      }
+      .lines {
+        height: 19px;
+        width: 60px;
+
+        background: url("../images/index/l2.png") no-repeat left center;
       }
     }
 
-    .nav-modal-text-md2 {
-      height: 30px;
-      display: block;
-      margin: 0 auto;
-      width: 250px;
-      padding: 0;
-      li {
-        float: left;;
-        font-size: 14px;
-        text-align: center;
-        list-style: none;
-        margin-left: 5px;
-        margin-right: 38px;
-      }
-      .ml-3 {
-        margin-left: 3px;
-      }
-      .ml-30 {
-        margin-left: 30px;
-      }
-      .mr-0 {
-        margin-right: 0;
-      }
+
+
+
+    .navw-200{
+      width: 200px !important;
+    }
+    .navw-150{
+      width: 150px !important;
     }
 
 
