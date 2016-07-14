@@ -1,7 +1,7 @@
 $(function(){
 
 
-    $('#costInvoiceForm').bootstrapValidator({
+    $('#personInvoiceForm,#comInvoiceForm,#comSpecialInvoiceForm').bootstrapValidator({
         message: '',
         // feedbackIcons: {
         //     valid: 'glyphicon glyphicon-ok',
@@ -48,18 +48,20 @@ $(function(){
     });
 
     $('#validateBtnCompany, #validateBtnPersonal, #validateBtn').click(function(){
-
-        var v = $('#costInvoiceForm').data('bootstrapValidator').isValid();
+        var form = $(this).parents("form");
+        form.bootstrapValidator('validate');
+        var v = form.data('bootstrapValidator').isValid();
         // 用户是否存在
         if(v==true)
-            document.getElementById('costInvoiceForm').submit();
-        else
-            $('#costInvoiceForm').bootstrapValidator('validate');
-
+            form.get(0).submit();
     });
 
     $('.invoice_radio').on('click',function(){
         var v = $(this).attr('data-val');
+        showTab(v)
+    })
+
+    function showTab(v){
         $('.radiotap').each(function(){
             var e = $(this).attr('data-val');
             if(v==e)
@@ -67,6 +69,13 @@ $(function(){
             else
                 $(this).hide()
         });
+    }
 
-    })
+    function getSelectRadio(){
+        return $(":radio[name='invoice']:checked").val();
+    }
+
+    showTab(getSelectRadio());
 })
+
+
