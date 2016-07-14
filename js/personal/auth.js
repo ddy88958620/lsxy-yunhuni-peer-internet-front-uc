@@ -154,7 +154,6 @@ $('#personalAuthForm').bootstrapValidator({
 });
 
 
-
 $('.auth_select').on('click',function(){
   var isPersonal = $(this).find("input[type='radio']")[0].checked
 
