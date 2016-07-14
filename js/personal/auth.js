@@ -153,13 +153,7 @@ $('#personalAuthForm').bootstrapValidator({
     }
 });
 
-$('#validateBtn, #validateBtnPersonal').click(function(){
-  var res = $('#personalAuthForm').data('bootstrapValidator').isValid();;
-  if(res==true){
-      document.getElementById('personalAuthForm').submit(); return ;
-  }
-  $('#personalAuthForm').bootstrapValidator('validate');
-});
+
 
 $('.auth_select').on('click',function(){
   var isPersonal = $(this).find("input[type='radio']")[0].checked
