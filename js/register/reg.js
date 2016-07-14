@@ -104,6 +104,7 @@ $(document).ready(function() {
     });
 
     $('#validateBtn').click(function(){
+        $('#defaultForm').bootstrapValidator('validate');
         var login = $('#defaultForm').data('bootstrapValidator').isValid();
         // 用户是否存在
         if(login==true){
@@ -112,9 +113,7 @@ $(document).ready(function() {
                 return  false;
             }
             showmodal();
-        }
-        else
-            $('#defaultForm').bootstrapValidator('validate');
+        }  
     });
 
 
