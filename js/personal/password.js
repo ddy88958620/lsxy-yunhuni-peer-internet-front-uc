@@ -57,6 +57,10 @@ $(function(){
                         min: 6,
                         max: 18,
                         message: '密码长度为6-18位'
+                    },
+                    identical: {
+                        field: 'repassword',
+                        message: '两次密码不一致'
                     }
                 }
             },
