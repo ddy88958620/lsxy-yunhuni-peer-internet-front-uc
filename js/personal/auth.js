@@ -95,7 +95,7 @@ $('#personalAuthForm').bootstrapValidator({
                 }
             }
         },
-        phone: {
+        newphone: {
             validators: {
                 notEmpty: {
                     message: '手机不能为空'
