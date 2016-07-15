@@ -1,7 +1,7 @@
 $(function(){
 
 
-    $('#personInvoiceForm,#comInvoiceForm,#comSpecialInvoiceForm').bootstrapValidator({
+    $('#invoiceForm').bootstrapValidator({
         message: '',
         // feedbackIcons: {
         //     valid: 'glyphicon glyphicon-ok',
@@ -47,7 +47,7 @@ $(function(){
         }
     });
 
-    $('#validateBtnCompany, #validateBtnPersonal, #validateBtn').click(function(){
+    $('#validateBtn').click(function(){
         var form = $(this).parents("form");
         form.bootstrapValidator('validate');
         var v = form.data('bootstrapValidator').isValid();
@@ -62,17 +62,18 @@ $(function(){
     })
 
     function showTab(v){
-        $('.radiotap').each(function(){
+        $('.invoice-type').each(function(){
             var e = $(this).attr('data-val');
             if(v==e)
-                $(this).show();
+                $(this).show().find("input").addClass("notEmpty");
             else
-                $(this).hide()
+                $(this).hide().find("input").removeClass("notEmpty").val("");
         });
+
     }
 
     function getSelectRadio(){
-        return $(":radio[name='invoice']:checked").val();
+        return $(":radio[name='type']:checked").val();
     }
 
     showTab(getSelectRadio());
