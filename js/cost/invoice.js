@@ -73,7 +73,7 @@ $(function(){
     }
 
     function getSelectRadio(){
-        return $(":radio[name='type']:checked").val();
+        return $(":radio.invoice_radio:checked").val();
     }
 
     showTab(getSelectRadio());

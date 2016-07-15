@@ -85,103 +85,28 @@
                                 <span class="border-left">编辑发票信息</span>
                             </div>
                             <div class="row m-l-none m-r-none bg-light lter">
-                                <from class="row">
-                                    <div  class="register-form padding-15"
-                                          id="costInvoiceForm">
+                                <div class="row">
+                                    <form  role="form" action="/console/cost/invoice_info/save" method="post" class="register-form"
+                                          id="invoiceForm">
                                         <div class="form-group">
                                             <span class="hr text-label" ><strong>发票信息:</strong></span>
                                         </div>
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right">发票类型：</lable>
                                             <div class="invoice_select col-md-6 ">
-                                                <input type="radio" name="invoice" class="invoice_radio"
+                                                <input type="radio" name="type" class="invoice_radio"
                                                        checked='checked' data-val="1"/>人增值税普通发票
-                                                <input type="radio" name="invoice" class="invoice_radio" data-val="2">
+                                                <input type="radio" name="type" class="invoice_radio" data-val="2">
                                                 企业增值税普通票
-                                                <input type="radio" name="invoice" class="invoice_radio" data-val="3">
+                                                <input type="radio" name="type" class="invoice_radio" data-val="3">
                                                 企业增值税专用票
                                             </div>
                                         </div>
 
-                                        <!--个人普通-->
-                                        <div class='personal radiotap' data-val="1">
-                                            <div class="form-group">
-                                                <lable class="col-md-3 text-right extend_label">发票抬头：</lable>
-                                                <div class="col-md-4 ">
-                                                    <input type="text" name="" placeholder=""
-                                                           class="form-control input-form notEmpty"/>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <span class="hr text-label"><strong>邮寄信息:</strong></span>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <lable class="col-md-3 text-right ">收取地址：</lable>
-                                                <div class="col-md-4">
-                                                    <input type="text" placeholder=""
-                                                           class="form-control input-form notEmpty"/>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <lable class="col-md-3 text-right ">收件人：</lable>
-                                                <div class="col-md-4">
-                                                    <input type="text" placeholder=""
-                                                           class="form-control input-form notEmpty"/>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <lable class="col-md-3 text-right ">手机号：</lable>
-                                                <div class="col-md-4">
-                                                    <input type="text" placeholder=""
-                                                           class="form-control input-form mobile"/>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-                                        <!--企业普通-->
-                                        <div class='company radiotap' data-val="2">
-                                            <div class="form-group">
-                                                <lable class="col-md-3 text-right ">发票抬头：</lable>
-                                                <div class="col-md-4 ">
-                                                    <input type="text" name="" placeholder=""
-                                                           class="form-control input-form notEmpty"/>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <span class="hr text-label"><strong>邮寄信息:</strong></span>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <lable class="col-md-3 text-right ">收取地址：</lable>
-                                                <div class="col-md-4">
-                                                    <input type="text" placeholder=""
-                                                           class="form-control input-form notEmpty"/>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <lable class="col-md-3 text-right ">收件人：</lable>
-                                                <div class="col-md-4">
-                                                    <input type="text" placeholder=""
-                                                           class="form-control input-form notEmpty"/>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <lable class="col-md-3 text-right ">手机号：</lable>
-                                                <div class="col-md-4">
-                                                    <input type="text" placeholder=""
-                                                           class="form-control input-form mobile"/>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
+                    
 
                                         <!--企业专用-->
-                                        <div class="companyex radiotap" data-val="3" style="display: none">
+                                        <div class="radiotap" >
                                             <div class="form-group">
                                                 <lable class="col-md-3 text-right ">发票抬头：</lable>
                                                 <div class="col-md-4 ">
@@ -189,42 +114,44 @@
                                                            class="form-control input-form notEmpty"/>
                                                 </div>
                                             </div>
-                                            <div class="form-group">
-                                                <lable class="col-md-3 text-right ">纳税人识别号：</lable>
-                                                <div class="col-md-4">
-                                                    <input type="text" name="" placeholder=""
-                                                           class="form-control input-form notEmpty"/>
+                                             <!--企业专用票start-->
+                                            <div id="comSpecial" class="invoice-type" data-val="3">
+                                                <div class="form-group">
+                                                    <lable class="col-md-3 text-right ">纳税人识别号：</lable>
+                                                    <div class="col-md-4">
+                                                        <input type="text" name="" placeholder=""
+                                                               class="form-control input-form notEmpty"/>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <lable class="col-md-3 text-right ">银行账户：</lable>
+                                                    <div class="col-md-4">
+                                                        <input type="text" placeholder=""
+                                                               class="form-control input-form notEmpty"/>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <lable class="col-md-3 text-right ">开户行：</lable>
+                                                    <div class="col-md-4">
+                                                        <input type="text" placeholder=""
+                                                               class="form-control input-form notEmpty"/>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <lable class="col-md-3 text-right ">注册地址：</lable>
+                                                    <div class="col-md-4">
+                                                        <input type="text" placeholder=""
+                                                               class="form-control input-form notEmpty"/>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <lable class="col-md-3 text-right ">企业电话：</lable>
+                                                    <div class="col-md-4">
+                                                        <input type="text" placeholder=""
+                                                               class="form-control input-form notEmpty"/>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="form-group">
-                                                <lable class="col-md-3 text-right ">银行账户：</lable>
-                                                <div class="col-md-4">
-                                                    <input type="text" placeholder=""
-                                                           class="form-control input-form notEmpty"/>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <lable class="col-md-3 text-right ">开户行：</lable>
-                                                <div class="col-md-4">
-                                                    <input type="text" placeholder=""
-                                                           class="form-control input-form notEmpty"/>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <lable class="col-md-3 text-right ">注册地址：</lable>
-                                                <div class="col-md-4">
-                                                    <input type="text" placeholder=""
-                                                           class="form-control input-form notEmpty"/>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <lable class="col-md-3 text-right ">企业电话：</lable>
-                                                <div class="col-md-4">
-                                                    <input type="text" placeholder=""
-                                                           class="form-control input-form notEmpty"/>
-                                                </div>
-                                            </div>
-
                                             <div class="form-group">
                                                 <span class="hr text-label"><strong>邮寄信息:</strong></span>
                                             </div>
@@ -254,13 +181,13 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="col-md-3 text-right">
-                                                <a id="validateBtnPersonal"
+                                                <a id="validateBtn"
                                                    class=" btn btn-primary  btn-form">保存</a>
                                             </div>
                                         </div>
 
-                                    </div>
-                                </from>
+                                    </form>
+                                </div>
                         </section>
                     </section>
                 </aside>
