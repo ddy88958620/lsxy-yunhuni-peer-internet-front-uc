@@ -61,10 +61,13 @@ $(function(){
                     identical: {
                         field: 'repassword',
                         message: '两次密码不一致'
+                    },
+                    different: {
+                        field: 'password',
+                        message:'新密码不能与原密码相同'
                     }
                 }
             },
-
             repassword: {
                 selector: '.repassword',
                 validators: {

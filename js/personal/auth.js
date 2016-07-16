@@ -151,12 +151,13 @@ $('#personalAuthForm').bootstrapValidator({
           }
         },
         tel:{
+          selector: '.tel',
           validators: {
             notEmpty: {
               message: '不能为空'
             },
             regexp: {
-              regexp: /^(0[0-9]{2,3}\-)?([2-9][0-9]{6,7})+(\-[0-9]{1,4})?$/,
+              regexp: /^(^(0[0-9]{2,3}\-)?([2-9][0-9]{6,7})+(\-[0-9]{1,4})?$)|(^((\(\d{3}\))|(\d{3}\-))?(1[3578]\d{9})$)$/,
               message: '请输入正确的手机号码或座机号码'
             }
           }
