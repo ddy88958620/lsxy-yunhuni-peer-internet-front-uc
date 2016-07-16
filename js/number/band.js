@@ -29,6 +29,7 @@ $('#send-code').click(function(){
 
 
 $('.modalCancel').click(function(){
+    countdown = 0;
     $('#mobilebox').fadeOut();
     $('#show-bg').fadeOut();
 });
