@@ -20,20 +20,35 @@ function showmsg(tips,cls){
 }
 
 $('#send-code').click(function(){
-    sendCode();
-    settime($(this));
+    if(sendCode()==true){
+        settime($(this));
+    }
+
 });
 
 
 
 $('.modalCancel').click(function(){
+    countdown = 0;
     $('#mobilebox').fadeOut();
     $('#show-bg').fadeOut();
 });
-$('.showMobilebox').click(function(){
 
+function showMobilebox(id){
+
+
+}
+
+$('.showMobilebox').click(function(){
     var id = $(this).attr('data-id');
     var moible = $('#voild-'+id).val();
+
+    if(!regMobile(moible)){
+        showtoast('请输入正确的手机号码');
+        return false;
+    }
+
+
     $('#modalmobile').html(moible);
 
     $('#modalmobile').attr('data-id',id);
@@ -48,13 +63,14 @@ $('input').keyup(function(){
 
 //验证手机格式
 
-function regMobile(){
-    var mobile = $('#modalmobile').html();
+function regMobile(mobile){
     reg = /^(13[0-9]|14[0-9]|15[0-9]|18[0-9]|17[0-9])\d{8}$/;
     if(!reg.test(mobile)){
         return false;
     }
     return true;
 }
+
+
 
 

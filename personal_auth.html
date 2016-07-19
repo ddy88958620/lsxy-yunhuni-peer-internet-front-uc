@@ -205,5 +205,16 @@
 <script src="./bower_components/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
 <script src="js/include.js"></script>
 <script type="text/javascript" src='./js/personal/auth.js'></script>
+<script>
+
+  $('#validateBtnPersonal').click(function(){
+    $('#personalAuthForm').bootstrapValidator('validate');
+
+    var res = $('#personalAuthForm').data('bootstrapValidator').isValid();
+
+  });
+</script>
+
+
 </body>
 </html>

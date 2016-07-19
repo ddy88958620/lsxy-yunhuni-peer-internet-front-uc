@@ -95,7 +95,7 @@ $('#personalAuthForm').bootstrapValidator({
                 }
             }
         },
-        phone: {
+        newphone: {
             validators: {
                 notEmpty: {
                     message: '手机不能为空'
@@ -144,10 +144,22 @@ $('#personalAuthForm').bootstrapValidator({
             },
             file: {
                   extension: 'jpg,jpeg,png,bmp,gif',
-                  type: 'image/jpeg,image/png,image/gif,image/x-ms-bmp',
+                  type: 'image/jpeg,image/png,image/gif,image/x-ms-bmp,image/bmp',
                   maxSize: 2*1024*1024,   // 5 MB,
                   message: '文件大小或者格式不正确'
             },
+          }
+        },
+        tel:{
+          selector: '.tel',
+          validators: {
+            notEmpty: {
+              message: '不能为空'
+            },
+            regexp: {
+              regexp: /^(^(0[0-9]{2,3}\-)?([2-9][0-9]{6,7})+(\-[0-9]{1,4})?$)|(^((\(\d{3}\))|(\d{3}\-))?(1[3578]\d{9})$)$/,
+              message: '请输入正确的手机号码或座机号码'
+            }
           }
         }
     }
