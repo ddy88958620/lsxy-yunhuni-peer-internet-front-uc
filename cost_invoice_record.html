@@ -116,6 +116,8 @@
                                                         <input type="text" class="datepicker form-control"
                                                                data-date-end-date="0m" value=''  id="dateend"/>
                                                         <a class="btn btn-primary query">查询</a>
+                                                        <a class="btn btn-primary" data-toggle="modal"
+                                                           data-target="#myModal" >modal</a>
                                                         <span class="tips-error querytips"></span>
                                                     </div>
                                                     <div class="row invoiceapply" style="display: none">
@@ -248,6 +250,522 @@
 </section>
 
 <!--modal-->
+
+
+<!-- 按钮触发模态框 -->
+<button class="btn btn-primary btn-lg" data-toggle="modal"
+        data-target="#myModal">
+    开始演示模态框
+</button>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade cost-detail-modal" id="myModal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close"
+                        data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                   开票详情
+                </h4>
+            </div>
+            <div class="modal-body">
+                <!--内容-->
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <div class="row title">
+                            <div class="col-md-3">消费时间</div>
+                            <div class="col-md-6">消费金额</div>
+                            <div class="col-md-3">操作</div>
+                        </div>
+                        <div class="row c-title">
+                            <div class="col-md-3">2016-01-01</div>
+                            <div class="col-md-6">3000.00</div>
+                            <div class="col-md-3"><a class="accordion-toggle" data-toggle="collapse"  href="#collapseOne">展开</a></div>
+                        </div>
+                        <div id="collapseOne" class="content accordion-body collapse" style="height: 0px; ">
+                            <div class="accordion-inner">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">单向外呼：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">双向呼叫：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">电话会议：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">电话接入IVR：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">IVR外呼放音：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">短信：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">电话通知：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">通话录音：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">IVR功能费：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">IVR号码租用费：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">录音文件存储：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row c-title">
+                            <div class="col-md-3">2016-01-01</div>
+                            <div class="col-md-6">3000.00</div>
+                            <div class="col-md-3"><a class="accordion-toggle" data-toggle="collapse"  href="#collapse2">展开</a></div>
+                        </div>
+                        <div id="collapse2" class="content accordion-body collapse" style="height: 0px; ">
+                            <div class="accordion-inner">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">单向外呼：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">双向呼叫：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">电话会议：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">电话接入IVR：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">IVR外呼放音：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">短信：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">电话通知：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">通话录音：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">IVR功能费：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">IVR号码租用费：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">录音文件存储：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row c-title">
+                            <div class="col-md-3">2016-01-01</div>
+                            <div class="col-md-6">3000.00</div>
+                            <div class="col-md-3"><a class="accordion-toggle" data-toggle="collapse"  href="#collapse3">展开</a></div>
+                        </div>
+                        <div id="collapse3" class="content accordion-body collapse" style="height: 0px; ">
+                            <div class="accordion-inner">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">单向外呼：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">双向呼叫：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">电话会议：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">电话接入IVR：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">IVR外呼放音：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">短信：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">电话通知：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">通话录音：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">IVR功能费：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">IVR号码租用费：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">录音文件存储：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row c-title">
+                            <div class="col-md-3">2016-01-01</div>
+                            <div class="col-md-6">3000.00</div>
+                            <div class="col-md-3"><a class="accordion-toggle" data-toggle="collapse"  href="#collapse4">展开</a></div>
+                        </div>
+                        <div id="collapse4" class="content accordion-body collapse" style="height: 0px; ">
+                            <div class="accordion-inner">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">单向外呼：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">双向呼叫：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">电话会议：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">电话接入IVR：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">IVR外呼放音：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">短信：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">电话通知：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">通话录音：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">IVR功能费：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">IVR号码租用费：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">录音文件存储：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row c-title">
+                            <div class="col-md-3">2016-01-01</div>
+                            <div class="col-md-6">3000.00</div>
+                            <div class="col-md-3"><a class="accordion-toggle" data-toggle="collapse"  href="#collapse5">展开</a></div>
+                        </div>
+                        <div id="collapse5" class="content accordion-body collapse" style="height: 0px; ">
+                            <div class="accordion-inner">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">单向外呼：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">双向呼叫：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">电话会议：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">电话接入IVR：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">IVR外呼放音：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">短信：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">电话通知：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">通话录音：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">IVR功能费：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">IVR号码租用费：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">录音文件存储：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row c-title">
+                            <div class="col-md-3">2016-01-01</div>
+                            <div class="col-md-6">3000.00</div>
+                            <div class="col-md-3"><a class="accordion-toggle" data-toggle="collapse"  href="#collapse6">展开</a></div>
+                        </div>
+                        <div id="collapse6" class="content accordion-body collapse" style="height: 0px; ">
+                            <div class="accordion-inner">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">单向外呼：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">双向呼叫：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">电话会议：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">电话接入IVR：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">IVR外呼放音：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">短信：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">电话通知：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">通话录音：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">IVR功能费：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">IVR号码租用费：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">录音文件存储：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row c-title">
+                            <div class="col-md-3">2016-01-01</div>
+                            <div class="col-md-6">3000.00</div>
+                            <div class="col-md-3"><a class="accordion-toggle" data-toggle="collapse"  href="#collapse7">展开</a></div>
+                        </div>
+                        <div id="collapse7" class="content accordion-body collapse" style="height: 0px; ">
+                            <div class="accordion-inner">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">单向外呼：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">双向呼叫：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">电话会议：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">电话接入IVR：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">IVR外呼放音：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">短信：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">电话通知：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">通话录音：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">IVR功能费：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">IVR号码租用费：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-md-6">录音文件存储：</label>
+                                        <div class="col-md-6">120元</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!--内容-->
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">关闭
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+
 
 
 <script src="js/app.v2.js"></script> <!-- Bootstrap --> <!-- App -->
