@@ -32,3 +32,25 @@
   font-size: 12px !important;
 }
 
+
+.cost-detail-modal{
+  .title{
+    font-weight: bold;
+    padding-bottom:5px;
+    border-bottom: 1px solid #000000;
+  }
+
+  .c-title{
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #ececec;
+  }
+  .content{
+    background-color: #fbfbfb;
+    padding: 10px 0 0 0;
+    .row{
+      padding-left: 0;
+    }
+  }
+}
+
