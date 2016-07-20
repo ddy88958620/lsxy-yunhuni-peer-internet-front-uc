@@ -9,7 +9,6 @@ $(document).ready(function() {
 
 //初始化modal 数据
 function cleanModal(type){
-    $('#modal-appid').val('');
     hideSpot();
     hideModal(type);
 }
