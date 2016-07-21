@@ -152,3 +152,18 @@ section.panel.pos-rlt {
   margin-left: 5px;
   color:#bb1c1c;
 }
+
+
+.loadding{
+  height: 50px;
+  display: none;
+  width: 50px;
+  z-index: 9999;
+  margin-top: -25px;
+  margin-left: -25px;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  background-color: #1b1b1b;
+  background: url(../images/loading.gif) center center no-repeat;
+}
