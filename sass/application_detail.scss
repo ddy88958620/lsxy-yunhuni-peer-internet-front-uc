@@ -121,6 +121,21 @@
 .font14{
   font-size: 14px!important;
 }
+
 .line32{
   line-height: 32px;
+}
+
+.h10{
+  height: 10px !important;
+}
+
+.application-file-box{
+  height: 380px;
+  margin-top: -190px !important;
+  .overscroll{
+    height: 50px;
+    overfllow:auto;
+    overflow-y: scroll;
+  }
 }
