@@ -13,7 +13,7 @@ $(function () {
 
   $('.currentMonth ').datepicker({
     language: "zh-CN",
-    format: 'yyyy-mm-dd',
+    format: 'yyyy-mm',
     startView: "days",
     minViewMode: "days",
     todayHighlight: true,
