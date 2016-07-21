@@ -4,7 +4,7 @@ $(function () {
     $('.datepicker').datepicker({
         language: "zh-CN",
         setDate: '10/2015',
-        format: 'yyyy-mm-dd',
+        format: 'yyyy-mm',
         viewMode: "day",
         minViewMode: "day",
         todayHighlight: true,
