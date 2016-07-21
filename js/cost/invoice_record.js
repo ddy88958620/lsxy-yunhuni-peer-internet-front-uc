@@ -1,12 +1,17 @@
 $(function () {
     $.fn.datepicker.defaults.autoclose = true;
 
+
+    var date = new Date();
+    var nowmoth = date.getFullYear() +'-' + (date.getMonth())
+
     $('.datepicker').datepicker({
         language: "zh-CN",
-        setDate: '10/2015',
+        setDate: '10/2016',
         format: 'yyyy-mm',
-        viewMode: "day",
-        minViewMode: "day",
+        endDate: nowmoth,
+        viewMode: "months",
+        minViewMode: "months",
         todayHighlight: true,
         todayBtn: true,
         autoclose: true //fail
