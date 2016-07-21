@@ -34,10 +34,23 @@
 
 
 .cost-detail-modal{
+  .a-title{
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px dashed #ececec;
+  }
+
+
+  .accordion-group{
+    height: 500px;
+    display: block;
+    overflow-y: scroll;
+  }
+
   .title{
     font-weight: bold;
-    padding-bottom:5px;
-    border-bottom: 1px solid #000000;
+    padding:10px 0;
+    border-bottom: 1px solid #bfbfbf;
   }
 
   .c-title{
