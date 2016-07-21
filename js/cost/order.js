@@ -14,8 +14,8 @@ $(function () {
   $('.currentMonth ').datepicker({
     language: "zh-CN",
     format: 'yyyy-mm',
-    startView: "days",
-    minViewMode: "days",
+    startView: "months",
+    minViewMode: "months",
     todayHighlight: true,
     todayBtn: true,
     autoclose: true //fail
