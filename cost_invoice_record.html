@@ -110,11 +110,11 @@
                                                     <div class="row">
                                                         选择开票时间：
                                                         <!--默认第一条消费记录的时间-->
-                                                        <input type="text" class="datepicker form-control"
+                                                        <input type="text" class="datepicker form-control "
                                                                value='2016-06-01' data-date-end-date="0m"
                                                                id="datestart"/>到
-                                                        <input type="text" class="datepicker form-control"
-                                                               data-date-end-date="0m" value=''  id="dateend"/>
+                                                        <input type="text" class="datepicker form-control endinputdate"
+                                                               data-date-end-date="0m" value=''  id="dateend" />
                                                         <a class="btn btn-primary query">查询</a>
                                                         <span class="tips-error querytips"></span>
                                                     </div>
@@ -332,6 +332,7 @@
 <script type="text/javascript" src='./js/page.js'></script>
 
 <script>
+
 
 
     $('.query').click(function () {
