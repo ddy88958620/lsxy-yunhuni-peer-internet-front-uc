@@ -84,7 +84,8 @@ $(document).ready(function() {
     }).on('changeDate',function(e){
         $(this).datepicker('hide')
     });
-    
+
+
 
     
 });
@@ -109,3 +110,36 @@ function compareTime(starttime,endtime){
     }
     return '';
 }
+
+
+console.log(2);
+$('#fileFrom').bootstrapValidator({
+    message: '',
+    submitHandler: function(){
+    },
+    fields: {
+        notEmpty: {
+            selector: '.notEmpty',
+            validators: {
+                notEmpty: {
+                    message: '不能为空',
+                }
+            }
+        },
+
+        file: {
+            selector: '.limitFile',
+            validators: {
+                notEmpty: {
+                    message: '请上传文件'
+                },
+                file: {
+                    extension: 'wmv',
+                    type: 'wmv',
+                    maxSize: 2 * 1024 * 1024,   // 5 MB,
+                    message: '文件大小或者格式不正确'
+                },
+            }
+        }
+    }
+});
