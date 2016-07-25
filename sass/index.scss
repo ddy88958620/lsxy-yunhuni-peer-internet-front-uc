@@ -167,3 +167,8 @@ section.panel.pos-rlt {
   background-color: #1b1b1b;
   background: url(../images/loading.gif) center center no-repeat;
 }
+
+input[readonly] {
+  cursor: pointer !important;
+  background-color: #ffffff !important;
+}
