@@ -142,3 +142,13 @@ $('#fileFrom').bootstrapValidator({
         }
     }
 });
+
+
+/**
+ * 获取文件后缀
+ * */
+function getFiletype(filename)
+{
+    var extStart  = filename.lastIndexOf(".")+1;
+    return filename.substring(extStart,filename.length).toUpperCase();
+}

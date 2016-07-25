@@ -315,7 +315,7 @@
                         文件 :
                     </div>
                     <div class="col-md-10">
-                        <input type="file" value="" class="input-text form-control notEmpty"  id="singlefile" multiple="multiple" />
+                        <input type="file" value="" class="input-text form-control"  id="singlefile" multiple="multiple" />
                         <div class="progress h10 mt-10"  id="progress-bar" style="display: none" >
                             <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"  aria-valuemin="0" aria-valuemax="100" style="width: 10%">
                             </div>
@@ -433,13 +433,35 @@
         $('#progress-bar').show();
 
 
-        $('#fileForm').bootstrapValidator('validate');
+        //验证文件格式
+        var file = $('#singlefile');
+
+        if(file[0].files.length==0){
+            showtoast("请上传文件");
+        }
+
+        var allowtype =  ["WAV"];
+        for(var i=0 ; i<file[0].files.length ;i++ ){
+           var names =  getFiletype(file[0].files[i].name);
+           if ($.inArray(names,allowtype) == -1)
+           {
+                showtoast("上传失败，只支持 .wav 格式的文件");
+                return false;
+           }
+           if(file[0].files[i].size> 5* 1024 * 1024){
+               showtoast("上传失败，单条语音最大支持 5M");
+               return false;
+           }
+        }
+
 
 
 
         return ;
         hideModal(id)
     });
+
+
 
     /**
      * 单文件
