@@ -1,13 +1,9 @@
 $(function(){
 
 
+
     $('#invoiceForm').bootstrapValidator({
         message: '',
-        // feedbackIcons: {
-        //     valid: 'glyphicon glyphicon-ok',
-        //     invalid: 'glyphicon glyphicon-remove',
-        //     validating: 'glyphicon glyphicon-refresh'
-        // },
         submitHandler: function(){
         },
         fields: {
@@ -43,9 +39,27 @@ $(function(){
                         message: '请输入正确的手机格式'
                     }
                 }
-            }
+            },
+            file: {
+                selector: '.limitImageFile',
+                validators: {
+                    notEmpty: {
+                        message: '请上传文件'
+                    },
+                    file: {
+                        extension: 'jpg,jpeg,png,bmp,gif',
+                        type: 'image/jpeg,image/png,image/gif,image/bmp,image/x-ms-bmp',
+                        maxSize: 2*1024*1024,   // 5 MB,
+                        message: '文件大小或者格式不正确'
+                    },
+                }
+            },
         }
     });
+
+
+
+
 
     $('#validateBtn').click(function(){
         var form = $(this).parents("form");
@@ -77,6 +91,24 @@ $(function(){
     }
 
     showTab(getSelectRadio());
+
+
+    function getObjectURL(file) {
+        var url = null ;
+        if (window.createObjectURL!=undefined) { // basic
+            url = window.createObjectURL(file) ;
+        } else if (window.URL!=undefined) { // mozilla(firefox)
+            url = window.URL.createObjectURL(file) ;
+        } else if (window.webkitURL!=undefined) { // webkit or chrome
+            url = window.webkitURL.createObjectURL(file) ;
+        }
+        return url ;
+    }
+
+    $('#uploadfile').change(function() {
+        var eImg = $('#imgPre');
+        eImg.attr('src', getObjectURL($(this)[0].files[0]));
+    });
 })
 
 

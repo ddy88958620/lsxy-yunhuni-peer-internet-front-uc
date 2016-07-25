@@ -112,7 +112,6 @@ function compareTime(starttime,endtime){
 }
 
 
-console.log(2);
 $('#fileFrom').bootstrapValidator({
     message: '',
     submitHandler: function(){

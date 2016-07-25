@@ -89,7 +89,7 @@
                                     <form role="form" action="./index.html" method="post" class="invoice-form"
                                           id="costInvoiceForm">
                                         <div class="form-group">
-                                            <span class=" text-label"><strong>开票信息:</strong></span>
+                                            <span class=" text-label"><strong>开票信息:</strong>  <a id="invoice-url">(消费详情)</a>  </span>
                                         </div>
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right">开具发票金额：</lable>
@@ -100,7 +100,7 @@
                                             <lable class="col-md-9 line34">2016-06-06 至 2016-06-15</lable>
                                         </div>
                                         <div class="form-group">
-                                            <span class="hr text-label"><strong>发票信息:</strong> <a id="invoice-url">(查看详情)</a></span>
+                                            <span class="hr text-label"><strong>发票信息:</strong> <span class="grey">(临时修改不改变已保存的邮寄信息)</span></span>
                                         </div>
 
 
@@ -110,28 +110,52 @@
                                         </div>
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right ">发票抬头：</lable>
-                                            <lable class="col-md-9 line34 "> 流水行云</lable>
+                                            <div class="col-md-4">
+                                                <input type="text" placeholder="请填发票抬头" value="流水行云" class="form-control input-form notEmpty" data-bv-field="notEmpty">
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right ">纳税人识别号：</lable>
-                                            <lable class="col-md-9 line34 "> 509175918471494</lable>
+                                            <div class="col-md-4">
+                                                <input type="text" placeholder="请填写纳税人识别号" value="509175918471494" class="form-control input-form notEmpty" data-bv-field="notEmpty">
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right ">银行账户：</lable>
-                                            <lable class="col-md-9 line34 "> 123564564561651561654</lable>
+                                            <div class="col-md-4">
+                                                <input type="text" placeholder="请填写银行账户" value="123564564561651561654" class="form-control input-form notEmpty" data-bv-field="notEmpty">
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right ">开户行：</lable>
-                                            <lable class="col-md-9 line34 ">广东省广州市天河区建设银行龙口东分行</lable>
+                                            <div class="col-md-4">
+                                                <input type="text" placeholder="请填写开户行" value="广东省广州市天河区建设银行龙口东分行" class="form-control input-form notEmpty" data-bv-field="notEmpty">
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right ">注册地址：</lable>
-                                            <lable class="col-md-9 line34 ">广东省广州市天河区建设银行龙口东分行</lable>
+                                            <div class="col-md-4">
+                                                <input type="text" placeholder="请填写注册地址" value="广东省广州市天河区建设银行龙口东分行" class="form-control input-form notEmpty" data-bv-field="notEmpty">
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right ">企业电话：</lable>
-                                            <lable class="col-md-9 line34 ">广东省广州市天河区羊城创意园311号B座24</lable>
+                                            <div class="col-md-4">
+                                                <input type="text" placeholder="请填写企业电话" value="02082354122" class="form-control input-form notEmpty">
+                                            </div>
                                         </div>
+                                        <div class="form-group">
+                                            <lable class="col-md-3 text-right lineheight-24">一般纳税人认证资格证书：</lable>
+                                            <div class="col-md-4">
+                                                <input type="file" class="form-control input-form  limitImageFile"  id="uploadfile"  >
+                                                <img src="./images/index/l6.png" alt="" id="imgPre" width="100" height="100" class="recordimg" />
+                                            </div>
+                                        </div>
+
+
+
+
+
                                         <div class="form-group">
                                             <span class="hr text-label"><strong>邮寄信息:</strong> &nbsp;<span class="grey">(临时修改不改变已保存的邮寄信息)</span></span>
                                         </div>
@@ -145,13 +169,13 @@
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right ">收件人：</lable>
                                             <div class="col-md-4">
-                                                <input type="text" placeholder="请填写收件人" value="小明" class="form-control input-form notEmpty" data-bv-field="notEmpty">
+                                                <input type="text" placeholder="请填写收件人" value="小明" class="form-control input-form notEmpty">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <lable class="col-md-3 text-right ">手机号码：</lable>
                                             <div class="col-md-4">
-                                                <input type="text" placeholder="请填写手机号码" value="13611460986" class="form-control input-form notEmpty" data-bv-field="notEmpty">
+                                                <input type="text" placeholder="请填写手机号码" value="13611460986" class="form-control input-form mobile" >
                                             </div>
                                         </div>
 
@@ -159,7 +183,7 @@
                                         <div class="form-group">
                                             <div class="col-md-3 text-right">
                                                 <button
-                                                        class="btn btn-primary  btn-form ">提交申请</button>
+                                                        class="btn btn-primary btn-form ">提交申请</button>
                                             </div>
                                             <div class="col-md-4 ">
                                                 <button class=" btn btn-default  btn-form">取消</button>
@@ -356,6 +380,23 @@
     function hideladding(){
         $('.modal-loadding').hide();
     }
+
+
+    function showImage()
+    {
+        // 获取文件路径
+        var path = document.getElementById('uploadfile').value;
+        // 显示文件路径
+        //document.getElementById('imgName').innerHTML = path;
+        // 创建 img
+        var img = document.createElement('img');
+        // 载入图像
+        img.src = path;
+        // 插入图像到页面中
+        document.getElementById('imgPrev').appendChild(img);
+    }
+
+
 
 
 </script>
