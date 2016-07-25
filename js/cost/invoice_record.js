@@ -29,14 +29,20 @@ function condition() {
     var currentprice = parseInt($('#invoice-price').attr('data-money'));
     switch (type) {
         case '1':
+	        if(currentprice<100){
+	                // tips('个人增值税普通发票、企业增值税普通发票(100元起),才能开具'); 
+	                return false;
+	            }
         case '2':
             if(currentprice<100){
-                tips('个人增值税普通发票、企业增值税普通发票(100元起),才能开具'); return false;
+                // tips('个人增值税普通发票、企业增值税普通发票(100元起),才能开具'); 
+                return false;
             }
             break;
         case '3':
             if(currentprice<1000){
-                tips('企业增值税专用发票(1000元起),才能开具');return false;
+                // tips('企业增值税专用发票(1000元起),才能开具');
+                return false;
             }
             break;
         default:
