@@ -144,7 +144,7 @@ $('#personalAuthForm').bootstrapValidator({
             },
             file: {
                   extension: 'jpg,jpeg,png,bmp,gif',
-                  type: 'image/jpeg,image/png,image/gif,image/x-ms-bmp,image/bmp',
+                  type: 'image/jpeg,image/png,image/gif,image/bmp,image/x-ms-bmp',
                   maxSize: 2*1024*1024,   // 5 MB,
                   message: '文件大小或者格式不正确'
             },
@@ -164,6 +164,9 @@ $('#personalAuthForm').bootstrapValidator({
         }
     }
 });
+
+
+
 
 
 $('.auth_select').on('click',function(){
