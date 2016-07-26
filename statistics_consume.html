@@ -45,18 +45,17 @@
                             <span class="border-left">&nbsp;消费统计</span>
                         </div>
                         <section class="scrollable wrapper w-f">
-                            <section class="panel panel-default yunhuni-personal">
-                                <div class="row m-l-none m-r-none bg-light lter">
-                                    <div class="col-md-2 col-md-offset-9 padder-v fix-padding">
-                                        <select   class="form-control myselectapp">
-                                            <option value="1">全部应用</option>
-                                            <option value="2">应用2</option>
-                                            <option value="3">应用3</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </section>
 
+                            <section class="panel panel-default pos-rlt clearfix ">
+                                <input type="hidden" value="1" id="defaultapp" />
+                                <ul id="myTab" class="nav nav-tabs">
+                                    <li class="active"><a  data-toggle="tab" data-app="1">全部应用</a></li>
+                                    <li ><a  data-toggle="tab" data-app="phone">应用二</a></li>
+                                    <li ><a  data-toggle="tab" data-app="3">应用三</a></li>
+                                    <li ><a  data-toggle="tab" data-app="4">应用四</a></li>
+                                    <li ><a  data-toggle="tab" data-app="5">应用五</a></li>
+                                </ul>
+                            </section>
 
 
                             <section class="panel panel-default pos-rlt clearfix ">
@@ -250,7 +249,7 @@
      */
     function initchart(){
         var type = $('input[name="stime"]:checked').val();
-        var app = $('.myselectapp').val();
+        var app = $('#defaultapp').val();
         var starttime = initialStartTime(type);
         var endtime = initialEndTime(type);
         //console.log(starttime+','+endtime+','+type+','+app);
@@ -370,6 +369,14 @@
     //当浏览器大小变化时
     $(window).resize(function () {
         initchart()
+    });
+
+
+    //应用
+    $('#myTab li a').click(function(){
+        var app = $(this).attr('data-app');
+        $('#defaultapp').val(app);
+        initchart();
     });
 
 </script>
