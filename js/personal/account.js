@@ -35,13 +35,28 @@ function regMobile(){
     return true;
 }
 
+function regEmail(){
+    var email = $('.modalEmail').val();
+    reg = /^[a-zA-Z0-9._%+-]+@(?!.*\.\..*)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if(!reg.test(email)){
+        return false;
+    }
+    return true;
+}
+
+
 $('.modalCancel').click(function(){
+    $('.addmobile1').show();
+    $('.addmobile2,.addmobile3').hide();
     $('#mobilebox').fadeOut();
     $('#show-bg').fadeOut();
 });
 $('.showMobilebox').click(function(){
     $('#mobilebox').fadeIn();
     $('#show-bg').fadeIn();
+    var type = $(this).attr('data-type');
+    $('#modaltype').val(type);
+
 });
 $('input').keyup(function(){
     $('.tips-error').hide();
