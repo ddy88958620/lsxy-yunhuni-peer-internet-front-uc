@@ -70,3 +70,35 @@ $(".head-box a[href='#subNav']").on('click', function () {
 })
 
 
+/**公用的异步*/
+var _$= function(url, param, fun) {
+  $.ajax({
+    type: "post",
+    url: url,
+    // timeout:2000,
+    data: param,
+    cache: false,
+    dataType: "json",
+    success: function(data) {
+      if (data != null) {
+        var _state = data.state;
+        //请求正常
+        if (_state == '0') {
+          fun(data, 200);
+        }
+        //请求异常
+        else {
+          var _error = data.error;
+          showtoast(_error);
+          fun(data, 500);
+        }
+      }
+    },
+    error: function() {
+      showtoast("网络错误，请重试");
+    }
+  });
+};
+
+
+
