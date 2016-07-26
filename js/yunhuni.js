@@ -71,27 +71,33 @@ $(".head-box a[href='#subNav']").on('click', function () {
 
 
 /**公用的异步*/
-var _$= function(url, param, fun) {
+var ajaxsubmit = function(url, param, fun ,type) {
   $.ajax({
-    type: "post",
+    type: type,
     url: url,
     // timeout:2000,
     data: param,
     cache: false,
     dataType: "json",
-    success: function(data) {
-      if (data != null) {
-        var _state = data.state;
+    success: function(datas) {
+      if (datas != null) {
+        var _code = data.code;
         //请求正常
-        if (_state == '0') {
-          fun(data, 200);
+        if (_code == '0000') {
+          fun(datas, 0000);
+        }
+        else if(_code=='0010'){
+          var _msg = datas.msg;
+          var url = datas.data;
+          showtoast(_msg,url);
         }
         //请求异常
-        else {
-          var _error = data.error;
-          showtoast(_error);
-          fun(data, 500);
+        else (_code =='1111'){
+          var _msg = datas.msg;
+          showtoast(_msg);
+          fun(datas, 1111);
         }
+        //
       }
     },
     error: function() {
