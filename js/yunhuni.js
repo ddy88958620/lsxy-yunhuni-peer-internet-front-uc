@@ -80,8 +80,9 @@ var ajaxsubmit = function(url, param, fun ,type) {
     cache: false,
     dataType: "json",
     success: function(datas) {
-      if (datas != null) {
-        var _code = data.code;
+      console.log(JSON.stringify(datas));
+      if (datas != datas) {
+        var _code = datas.code;
         //请求正常
         if (_code == '0000') {
           fun(datas, 0000);
@@ -106,5 +107,44 @@ var ajaxsubmit = function(url, param, fun ,type) {
   });
 };
 
+
+/**公用的异步 同步*/
+var ajaxsync = function(url, param, fun ,type) {
+  $.ajax({
+    type: type,
+    url: url,
+    // timeout:2000,
+    data: param,
+    cache: false,
+    dataType: "json",
+    async:false,
+    success: function(datas) {
+      console.log(JSON.stringify(datas));
+
+      if (datas != null) {
+        var _code = datas.code;
+        //请求正常
+        if (_code == '0000') {
+          fun(datas, 0000);
+        }
+        else if(_code=='0010'){
+          var _msg = datas.msg;
+          var url = datas.data;
+          showtoast(_msg,url);
+        }
+        //请求异常
+        else (_code =='1111'){
+          var _msg = datas.msg;
+          showtoast(_msg);
+          fun(datas, 1111);
+        }
+        //
+      }
+    },
+    error: function() {
+      showtoast("网络错误，请重试");
+    }
+  });
+};
 
 
