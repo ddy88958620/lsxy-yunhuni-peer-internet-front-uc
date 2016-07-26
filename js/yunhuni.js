@@ -93,11 +93,14 @@ var ajaxsubmit = function(url, param, fun ,type) {
           showtoast(_msg,url);
         }
         //请求异常
-        else (_code =='1111'){
+        else if (_code =='1111'){
           var _msg = datas.msg;
           showtoast(_msg);
           fun(datas, 1111);
+        }else {
+          showtoast("网络异常");
         }
+
         //
       }
     },
@@ -133,10 +136,12 @@ var ajaxsync = function(url, param, fun ,type) {
           showtoast(_msg,url);
         }
         //请求异常
-        else (_code =='1111'){
+        else if (_code =='1111'){
           var _msg = datas.msg;
           showtoast(_msg);
           fun(datas, 1111);
+        }else {
+          showtoast("网络异常");
         }
         //
       }
