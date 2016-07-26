@@ -18,9 +18,10 @@ function settime(val) {
 function showmsg(tips,cls){
     $("."+cls).html(tips).show();
 }
-$('#send-code').click(function(){
+$('#send-code,#send-code-email').click(function(){
+    var type = $(this).attr('data-type');
     if(!regMobile()){
-        showmsg('请输入正确的手机格式','moadltips2'); return false;
+        showmsg('请输入正确的手机格式','moadltips'+type); return false;
     }
     sendCode();
     settime($(this));
@@ -46,6 +47,7 @@ function regEmail(){
 
 
 $('.modalCancel').click(function(){
+    countdown=0;
     $('.addmobile1').show();
     $('.addmobile2,.addmobile3').hide();
     $('#mobilebox').fadeOut();
