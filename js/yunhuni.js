@@ -73,9 +73,9 @@ $(".head-box a[href='#subNav']").on('click', function () {
 /**公用的异步*/
 var ajaxsubmit = function(url, param, fun ,type) {
   $.ajax({
-    type: type,
+    type: isNullStr(type)?"post":type,
     url: url,
-    // timeout:2000,
+    timeout:60*1000,
     data: param,
     cache: false,
     dataType: "json",
@@ -109,13 +109,21 @@ var ajaxsubmit = function(url, param, fun ,type) {
   });
 };
 
+function isNullStr(data){
+  if(data ==null || data.trim() == "" || data == undefined){
+      return true;
+  }else{
+    return false;
+  }
+}
 
 /**公用的异步 同步*/
 var ajaxsync = function(url, param, fun ,type) {
+
   $.ajax({
-    type: type,
+    type: isNullStr(type)?"post":type,
     url: url,
-    // timeout:2000,
+    timeout:60*1000,
     data: param,
     cache: false,
     dataType: "json",
