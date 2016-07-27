@@ -84,25 +84,12 @@ var ajaxsubmit = function(url, param, fun ,type) {
       console.log(fun);
       console.log(eval(fun));
       if (datas) {
-        var _code = datas.code;
-        //请求正常
-        if(_code=='0010'){
-          var _msg = datas.msg;
-          var url = datas.data;
-          showtoast(_msg,url);
-        }
-        //请求异常
-        else if (_code =='1111'){
-          var _msg = datas.msg;
-          showtoast(_msg);
-          fun(datas, 1111);
-        }else if(_code !=null && _code.trim() != ""){
-          fun(datas, 0000);
+        //超时跳转登陆页
+        if(datas.errorCode=='0010'){
+          showtoast(datas.errorMsg,ctx + "/login");
         }else{
-          showtoast("网络异常");
+          fun(datas);
         }
-
-        //
       }
     },
     error: function() {
@@ -131,29 +118,13 @@ var ajaxsync = function(url, param, fun ,type) {
     dataType: "json",
     async:false,
     success: function(datas) {
-      console.log(JSON.stringify(datas));
-      console.log(fun);
-      console.log(eval(fun));
       if (datas) {
-        var _code = datas.code;
-        //请求正常
-        if(_code=='0010'){
-          var _msg = datas.msg;
-          var url = datas.data;
-          showtoast(_msg,url);
-        }
-        //请求异常
-        else if (_code =='1111'){
-          var _msg = datas.msg;
-          showtoast(_msg);
-          fun(datas, 1111);
-        }else if(_code !=null && _code.trim() != ""){
-          fun(datas, 0000);
+        //超时跳转登陆页
+        if(datas.errorCode=='0010'){
+          showtoast(datas.errorMsg,ctx + "/login");
         }else{
-          showtoast("网络异常");
+          fun(datas);
         }
-
-        //
       }
     },
     error: function() {
