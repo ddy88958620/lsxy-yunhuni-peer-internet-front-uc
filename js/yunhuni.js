@@ -84,10 +84,7 @@ var ajaxsubmit = function(url, param, fun ,type) {
       if (datas != datas) {
         var _code = datas.code;
         //请求正常
-        if (_code == '0000') {
-          fun(datas, 0000);
-        }
-        else if(_code=='0010'){
+        if(_code=='0010'){
           var _msg = datas.msg;
           var url = datas.data;
           showtoast(_msg,url);
@@ -97,7 +94,9 @@ var ajaxsubmit = function(url, param, fun ,type) {
           var _msg = datas.msg;
           showtoast(_msg);
           fun(datas, 1111);
-        }else {
+        }else if(_code !=null && _code.trim() != ""){
+          fun(datas, 0000);
+        }else{
           showtoast("网络异常");
         }
 
@@ -124,13 +123,10 @@ var ajaxsync = function(url, param, fun ,type) {
     success: function(datas) {
       console.log(JSON.stringify(datas));
 
-      if (datas != null) {
+      if (datas != datas) {
         var _code = datas.code;
         //请求正常
-        if (_code == '0000') {
-          fun(datas, 0000);
-        }
-        else if(_code=='0010'){
+        if(_code=='0010'){
           var _msg = datas.msg;
           var url = datas.data;
           showtoast(_msg,url);
@@ -140,9 +136,12 @@ var ajaxsync = function(url, param, fun ,type) {
           var _msg = datas.msg;
           showtoast(_msg);
           fun(datas, 1111);
-        }else {
+        }else if(_code !=null && _code.trim() != ""){
+          fun(datas, 0000);
+        }else{
           showtoast("网络异常");
         }
+
         //
       }
     },

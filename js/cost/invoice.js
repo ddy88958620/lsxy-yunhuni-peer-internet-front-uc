@@ -65,8 +65,9 @@ $(function(){
         var form = $(this).parents("form");
         form.bootstrapValidator('validate');
         var v = form.data('bootstrapValidator').isValid();
+        var bf = bfSubmit();
         // 用户是否存在
-        if(v==true)
+        if(v==true && bf)
             form.get(0).submit();
     });
 
