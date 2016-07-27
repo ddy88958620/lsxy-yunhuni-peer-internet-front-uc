@@ -82,9 +82,8 @@ $(function(){
             if(v==e)
                 $(this).show().find("input").addClass("notEmpty");
             else
-                $(this).hide().find("input").removeClass("notEmpty").val("");
+                $(this).hide().find("input").removeClass("notEmpty");
         });
-
     }
 
     function getSelectRadio(){

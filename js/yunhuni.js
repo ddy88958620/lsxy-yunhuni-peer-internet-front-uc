@@ -83,7 +83,7 @@ var ajaxsubmit = function(url, param, fun ,type) {
       console.log(JSON.stringify(datas));
       console.log(fun);
       console.log(eval(fun));
-      if (datas != datas) {
+      if (datas) {
         var _code = datas.code;
         //请求正常
         if(_code=='0010'){
@@ -134,7 +134,7 @@ var ajaxsync = function(url, param, fun ,type) {
       console.log(JSON.stringify(datas));
       console.log(fun);
       console.log(eval(fun));
-      if (datas != datas) {
+      if (datas) {
         var _code = datas.code;
         //请求正常
         if(_code=='0010'){
