@@ -81,6 +81,9 @@ var ajaxsubmit = function(url, param, fun ,type) {
     dataType: "json",
     success: function(datas) {
       console.log(JSON.stringify(datas));
+      console.log(fun);
+      console.log( eval(fun));
+
       if (datas != datas) {
         var _code = datas.code;
         //请求正常
@@ -123,7 +126,8 @@ var ajaxsync = function(url, param, fun ,type) {
     async:false,
     success: function(datas) {
       console.log(JSON.stringify(datas));
-
+      console.log(fun);
+      console.log( eval(fun));
       if (datas != null) {
         var _code = datas.code;
         //请求正常
