@@ -73,24 +73,20 @@ $(".head-box a[href='#subNav']").on('click', function () {
 /**公用的异步*/
 var ajaxsubmit = function(url, param, fun ,type) {
   $.ajax({
-    type: type,
+    type: isNullStr(type)?"post":type,
     url: url,
-    // timeout:2000,
+    timeout:60*1000,
     data: param,
     cache: false,
     dataType: "json",
     success: function(datas) {
       console.log(JSON.stringify(datas));
       console.log(fun);
-      console.log( eval(fun));
-
+      console.log(eval(fun));
       if (datas != datas) {
         var _code = datas.code;
         //请求正常
-        if (_code == '0000') {
-          fun(datas, 0000);
-        }
-        else if(_code=='0010'){
+        if(_code=='0010'){
           var _msg = datas.msg;
           var url = datas.data;
           showtoast(_msg,url);
@@ -100,7 +96,9 @@ var ajaxsubmit = function(url, param, fun ,type) {
           var _msg = datas.msg;
           showtoast(_msg);
           fun(datas, 1111);
-        }else {
+        }else if(_code !=null && _code.trim() != ""){
+          fun(datas, 0000);
+        }else{
           showtoast("网络异常");
         }
 
@@ -113,13 +111,21 @@ var ajaxsubmit = function(url, param, fun ,type) {
   });
 };
 
+function isNullStr(data){
+  if(data ==null || data.trim() == "" || data == undefined){
+      return true;
+  }else{
+    return false;
+  }
+}
 
 /**公用的异步 同步*/
 var ajaxsync = function(url, param, fun ,type) {
+
   $.ajax({
-    type: type,
+    type: isNullStr(type)?"post":type,
     url: url,
-    // timeout:2000,
+    timeout:60*1000,
     data: param,
     cache: false,
     dataType: "json",
@@ -127,14 +133,11 @@ var ajaxsync = function(url, param, fun ,type) {
     success: function(datas) {
       console.log(JSON.stringify(datas));
       console.log(fun);
-      console.log( eval(fun));
-      if (datas != null) {
+      console.log(eval(fun));
+      if (datas != datas) {
         var _code = datas.code;
         //请求正常
-        if (_code == '0000') {
-          fun(datas, 0000);
-        }
-        else if(_code=='0010'){
+        if(_code=='0010'){
           var _msg = datas.msg;
           var url = datas.data;
           showtoast(_msg,url);
@@ -144,9 +147,12 @@ var ajaxsync = function(url, param, fun ,type) {
           var _msg = datas.msg;
           showtoast(_msg);
           fun(datas, 1111);
-        }else {
+        }else if(_code !=null && _code.trim() != ""){
+          fun(datas, 0000);
+        }else{
           showtoast("网络异常");
         }
+
         //
       }
     },
