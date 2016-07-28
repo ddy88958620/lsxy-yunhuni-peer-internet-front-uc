@@ -43,8 +43,12 @@ $(function(){
             file: {
                 selector: '.limitImageFile',
                 validators: {
-                    notEmpty: {
-                        message: '请上传文件'
+                    callback:{
+                    	message: '请上传文件',
+                        callback: function(value, validator) {
+                           var defaultUrl = $("#qualificationUrl").val();
+                           return (value != "" || defaultUrl != "");
+                        }
                     },
                     file: {
                         extension: 'jpg,jpeg,png,bmp,gif',
@@ -106,9 +110,34 @@ $(function(){
     }
 
     $('#uploadfile').change(function() {
-        var eImg = $('#imgPre');
-        eImg.attr('src', getObjectURL($(this)[0].files[0]));
+    	var eImg = $('#imgPre');
+    	if(this.value==""){
+    		eImg.attr('src', $("#qualificationUrl").attr("data-url"));
+    	}else{
+			var flag = true;
+		    var allowtype =  ["jpg","jpeg","png","bmp","gif"];
+            var name =  getFiletype(this.files[0].name);
+            if ($.inArray(name,allowtype) == -1){
+                flag = false;
+            }
+            if(this.files[0].size> 2* 1024 * 1024){
+                flag = false;
+            }
+	        if(flag){
+	        	eImg.attr('src', getObjectURL(this.files[0]));
+	        }else{
+	        	eImg.attr('src',"");
+	        }
+    	}
     });
+
+
+    function getFiletype(filename){
+	    var extStart  = filename.lastIndexOf(".")+1;
+	    return filename.substring(extStart,filename.length).toLowerCase();
+	}
 })
+
+
 
 
