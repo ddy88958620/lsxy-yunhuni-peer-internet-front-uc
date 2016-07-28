@@ -92,19 +92,29 @@ body {
 .register_container a {
   cursor: pointer;
 }
+/* line 87, ../sass/register.scss */
+.register_container .reader {
+  min-height: 30px !important;
+  font-size: 14px;
+  padding: 0;
+}
+/* line 91, ../sass/register.scss */
+.register_container .reader .tips-error {
+  padding: 0 5px !important;
+}
 
-/* line 88, ../sass/register.scss */
+/* line 98, ../sass/register.scss */
 #pw-strength {
   float: right;
   margin-bottom: 20px;
 }
 
-/* line 93, ../sass/register.scss */
+/* line 103, ../sass/register.scss */
 .tbl-txt {
   font-size: 14px;
 }
 
-/* line 97, ../sass/register.scss */
+/* line 107, ../sass/register.scss */
 .tbl-txt input {
   padding: 0 5px;
   height: 22px;
@@ -112,7 +122,7 @@ body {
   margin-bottom: 6px;
 }
 
-/* line 104, ../sass/register.scss */
+/* line 114, ../sass/register.scss */
 .pw-strength {
   clear: both;
   position: relative;
@@ -120,7 +130,7 @@ body {
   width: 180px;
 }
 
-/* line 111, ../sass/register.scss */
+/* line 121, ../sass/register.scss */
 .pw-bar {
   background: url(../images/pwd-1.png) no-repeat;
   position: relative;
@@ -130,7 +140,7 @@ body {
   width: 179px;
 }
 
-/* line 120, ../sass/register.scss */
+/* line 130, ../sass/register.scss */
 .pw-bar-on {
   background: url(../images/pwd-2.png) no-repeat;
   width: 0px;
@@ -144,34 +154,34 @@ body {
   -o-transition: width .5s ease-in;
 }
 
-/* line 133, ../sass/register.scss */
+/* line 143, ../sass/register.scss */
 .pw-weak .pw-defule {
   width: 0px;
 }
 
-/* line 137, ../sass/register.scss */
+/* line 147, ../sass/register.scss */
 .pw-weak .pw-bar-on {
   width: 60px;
 }
 
-/* line 141, ../sass/register.scss */
+/* line 151, ../sass/register.scss */
 .pw-medium .pw-bar-on {
   width: 120px;
 }
 
-/* line 145, ../sass/register.scss */
+/* line 155, ../sass/register.scss */
 .pw-strong .pw-bar-on {
   width: 179px;
 }
 
-/* line 149, ../sass/register.scss */
+/* line 159, ../sass/register.scss */
 .pw-txt {
   padding-top: 2px;
   width: 180px;
   overflow: hidden;
 }
 
-/* line 155, ../sass/register.scss */
+/* line 165, ../sass/register.scss */
 .pw-txt span {
   color: #707070;
   float: left;
@@ -180,7 +190,7 @@ body {
   width: 58px;
 }
 
-/* line 163, ../sass/register.scss */
+/* line 173, ../sass/register.scss */
 .shadow-bg {
   position: fixed;
   display: none;
@@ -192,7 +202,7 @@ body {
   background-color: rgba(0, 0, 0, 0.82);
 }
 
-/* line 174, ../sass/register.scss */
+/* line 184, ../sass/register.scss */
 .modal-phone {
   position: fixed;
   display: none;
@@ -205,7 +215,7 @@ body {
   height: 338px;
   background-color: #FFF;
 }
-/* line 185, ../sass/register.scss */
+/* line 195, ../sass/register.scss */
 .modal-phone .title {
   height: 65px;
   background-color: #0099cc;
@@ -214,7 +224,7 @@ body {
   line-height: 65px;
   font-size: 18px;
 }
-/* line 194, ../sass/register.scss */
+/* line 204, ../sass/register.scss */
 .modal-phone .content .input {
   display: block;
   width: 320px;
@@ -224,18 +234,18 @@ body {
   font-size: 16px;
   color: #737373;
 }
-/* line 203, ../sass/register.scss */
+/* line 213, ../sass/register.scss */
 .modal-phone .content .code-title {
   float: left;
   width: 72px;
 }
-/* line 207, ../sass/register.scss */
+/* line 217, ../sass/register.scss */
 .modal-phone .content .code {
   float: left;
   height: 45px;
   width: 130px !important;
 }
-/* line 212, ../sass/register.scss */
+/* line 222, ../sass/register.scss */
 .modal-phone .content .code-button {
   background: url("../images/register/code_bg.png") repeat-x;
   height: 45px;
@@ -245,14 +255,14 @@ body {
   float: right;
   width: 109px;
 }
-/* line 217, ../sass/register.scss */
+/* line 227, ../sass/register.scss */
 .modal-phone .content .in-block {
   display: inline-block !important;
   margin-left: 70px !important;
   margin-top: 10px !important;
   margin-bottom: 0px !important;
 }
-/* line 225, ../sass/register.scss */
+/* line 235, ../sass/register.scss */
 .modal-phone .footer {
   position: absolute;
   bottom: 0;
@@ -260,7 +270,7 @@ body {
   height: 70px;
   border-top: 1px solid #ebebeb;
 }
-/* line 231, ../sass/register.scss */
+/* line 241, ../sass/register.scss */
 .modal-phone .footer .cancel, .modal-phone .footer .sure {
   cursor: pointer;
   width: 49%;
@@ -271,65 +281,65 @@ body {
   line-height: 70px;
   height: 70px;
 }
-/* line 240, ../sass/register.scss */
+/* line 250, ../sass/register.scss */
 .modal-phone .footer .cancel:hover, .modal-phone .footer .sure:hover {
   text-decoration: none;
   color: #0099cc;
 }
-/* line 245, ../sass/register.scss */
+/* line 255, ../sass/register.scss */
 .modal-phone .footer .sure {
   color: #0099cc;
 }
-/* line 248, ../sass/register.scss */
+/* line 258, ../sass/register.scss */
 .modal-phone .footer .cancel {
   color: #5d5d5d;
   border-right: 1px solid #ebebeb;
 }
 
-/* line 255, ../sass/register.scss */
+/* line 265, ../sass/register.scss */
 .code-img {
   cursor: pointer;
 }
 
-/* line 259, ../sass/register.scss */
+/* line 269, ../sass/register.scss */
 .forget-box {
   width: 400px;
   height: 460px;
   margin: 0 auto;
   border: 1px solid #d9d9d9;
 }
-/* line 264, ../sass/register.scss */
+/* line 274, ../sass/register.scss */
 .forget-box ul li {
   text-align: center;
   width: 50%;
 }
-/* line 268, ../sass/register.scss */
+/* line 278, ../sass/register.scss */
 .forget-box .box {
   width: 315px;
   margin: 10px auto;
 }
-/* line 272, ../sass/register.scss */
+/* line 282, ../sass/register.scss */
 .forget-box .row {
   margin-bottom: 10px;
 }
-/* line 275, ../sass/register.scss */
+/* line 285, ../sass/register.scss */
 .forget-box .code-box {
   margin: 0;
 }
-/* line 277, ../sass/register.scss */
+/* line 287, ../sass/register.scss */
 .forget-box .code-box .col-md-7 {
   padding-left: 0;
 }
-/* line 281, ../sass/register.scss */
+/* line 291, ../sass/register.scss */
 .forget-box input, .forget-box button {
   height: 45px;
 }
-/* line 284, ../sass/register.scss */
+/* line 294, ../sass/register.scss */
 .forget-box .remove-padding {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 288, ../sass/register.scss */
+/* line 298, ../sass/register.scss */
 .forget-box .sendcode {
   background: url("../images/register/code_bg.png") repeat-x;
   height: 45px;
@@ -337,11 +347,11 @@ body {
   border: 1px solid #c3c3c3;
   border-radius: 5px;
 }
-/* line 292, ../sass/register.scss */
+/* line 302, ../sass/register.scss */
 .forget-box .nav-tabs {
   border-bottom: 0;
 }
-/* line 296, ../sass/register.scss */
+/* line 306, ../sass/register.scss */
 .forget-box .nav-tabs > li a {
   margin: 0;
   height: 50px;
@@ -351,7 +361,7 @@ body {
   border-bottom: 1px solid #c3c3c3;
   color: #686868;
 }
-/* line 306, ../sass/register.scss */
+/* line 316, ../sass/register.scss */
 .forget-box .nav-tabs > li.active > a, .forget-box .nav-tabs > li.active > a:hover, .forget-box .nav-tabs > li.active > a:focus {
   color: #0099cc;
   background-color: #FFFFFF;
@@ -359,44 +369,44 @@ body {
   border-radius: 0;
   border: 0;
 }
-/* line 313, ../sass/register.scss */
+/* line 323, ../sass/register.scss */
 .forget-box .nav-tabs .right {
   border-radius: 0;
   border-right: 1px solid #d9d9d9;
 }
-/* line 317, ../sass/register.scss */
+/* line 327, ../sass/register.scss */
 .forget-box .nav-tabs .left {
   border-radius: 0;
   border-left: 1px solid #d9d9d9;
 }
-/* line 322, ../sass/register.scss */
+/* line 332, ../sass/register.scss */
 .forget-box .tab-content {
   padding: 50px 0 80px 0;
 }
-/* line 325, ../sass/register.scss */
+/* line 335, ../sass/register.scss */
 .forget-box .btn-color-bule {
   border-color: #0099cc;
   background-color: #0099cc;
 }
 
-/* line 331, ../sass/register.scss */
+/* line 341, ../sass/register.scss */
 .tips-error {
   color: #be180c;
   font-family: 'Microsoft YaHei';
   font-size: 12px;
 }
 
-/* line 336, ../sass/register.scss */
+/* line 346, ../sass/register.scss */
 .pl-15 {
   padding-left: 15px;
 }
 
-/* line 340, ../sass/register.scss */
+/* line 350, ../sass/register.scss */
 .help-block {
   color: #be180c;
 }
 
-/* line 344, ../sass/register.scss */
+/* line 354, ../sass/register.scss */
 .email-box {
   margin: 0 auto;
   width: 490px;
@@ -410,32 +420,32 @@ body {
   -webkit-box-shadow: 0px 3px 9px #EAEAEA;
   box-shadow: 0px 3px 9px #EAEAEA;
 }
-/* line 356, ../sass/register.scss */
+/* line 366, ../sass/register.scss */
 .email-box img {
   margin-bottom: 20px;
 }
 
-/* line 360, ../sass/register.scss */
+/* line 370, ../sass/register.scss */
 .article-box {
   font-size: 14px;
 }
 
-/* line 363, ../sass/register.scss */
+/* line 373, ../sass/register.scss */
 .size16 {
   font-size: 16px;
 }
 
-/* line 368, ../sass/register.scss */
+/* line 378, ../sass/register.scss */
 .register-form .text-right {
   line-height: 50px;
 }
-/* line 371, ../sass/register.scss */
+/* line 381, ../sass/register.scss */
 .register-form .form-group {
   min-height: 68px;
 }
 
 @media screen and (min-width: 1000px) {
-  /* line 377, ../sass/register.scss */
+  /* line 387, ../sass/register.scss */
   .register_footer {
     position: absolute;
     bottom: 15px;
@@ -444,13 +454,13 @@ body {
     color: #848484;
   }
 
-  /* line 384, ../sass/register.scss */
+  /* line 394, ../sass/register.scss */
   .register-form {
     margin: 20px;
   }
 }
 @media screen and (max-width: 999px) {
-  /* line 390, ../sass/register.scss */
+  /* line 400, ../sass/register.scss */
   .register_footer {
     display: block;
     width: 90%;
@@ -459,12 +469,12 @@ body {
     text-align: center;
   }
 
-  /* line 398, ../sass/register.scss */
+  /* line 408, ../sass/register.scss */
   .register-form .text-right {
     line-height: 32px;
     text-align: left;
   }
-  /* line 402, ../sass/register.scss */
+  /* line 412, ../sass/register.scss */
   .register-form .form-group {
     height: auto;
   }
