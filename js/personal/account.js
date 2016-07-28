@@ -23,8 +23,10 @@ $('#send-code,#send-code-email').click(function(){
     if(!regMobile()){
         showmsg('请输入正确的手机格式','moadltips'+type); return false;
     }
-    sendCode();
-    settime($(this));
+    var flag = sendCode();
+    if(flag){
+        settime($(this));
+    }
 });
 
 function regMobile(){
