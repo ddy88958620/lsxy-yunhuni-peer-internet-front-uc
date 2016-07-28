@@ -20,12 +20,14 @@ function showmsg(tips,cls){
 }
 $('#send-code,#send-code-email').click(function(){
     var type = $(this).attr('data-type');
-    if(!regMobile()){
-        var h='请输入正确的手机格式';
-        if(type==3){
-            h='请输入正确的邮箱格式'
+    if(type==2){
+        if(!regMobile()){
+            showmsg('请输入正确的手机格式','moadltips'+type); return false;
         }
-        showmsg(h,'moadltips'+type); return false;
+    }else if(type==3){
+        if(!regEmail){
+            showmsg('请输入正确的邮箱格式','moadltips'+type); return false;
+        }
     }
     var flag = sendCode();
     if(flag){
