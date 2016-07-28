@@ -8,7 +8,7 @@ $('#modal-hidden').click(function(){
 function showmodal() {
     $('#showtips').hide();
     var mobile = $('input[name="mobile"]').val();
-    var spring =  mobile.substring(0,4) + '****' + mobile.substring(8,11) ;
+    var spring =  mobile.substring(0,3) + '****' + mobile.substring(7,11) ;
     $('#mobile_number').html(spring);
 	if($('#second-codeblock').length>0){
 	   $('#second-codeblock').html('');
@@ -104,16 +104,22 @@ $(document).ready(function() {
     });
 
     $('#validateBtn').click(function(){
-        $('#defaultForm').bootstrapValidator('validate');
-        var login = $('#defaultForm').data('bootstrapValidator').isValid();
-        // 用户是否存在
-        if(login==true){
-            var reg= reg_isexit();
-            if(reg==false){
-                return  false;
+        if(document.getElementById('registerRead').checked){
+            $('#registerReadMsg').hide();
+            $('#defaultForm').bootstrapValidator('validate');
+            var login = $('#defaultForm').data('bootstrapValidator').isValid();
+            // 用户是否存在
+            if(login==true){
+                var reg= reg_isexit();
+                if(reg==false){
+                    return  false;
+                }
+                showmodal();
             }
-            showmodal();
-        }  
+        }else{
+            $('#registerReadMsg').show();
+            return false;
+        }
     });
 
 
