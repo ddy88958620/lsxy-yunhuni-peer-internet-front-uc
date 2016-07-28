@@ -8,7 +8,7 @@ $('#modal-hidden').click(function(){
 function showmodal() {
     $('#showtips').hide();
     var mobile = $('input[name="mobile"]').val();
-    var spring =  mobile.substring(0,4) + '****' + mobile.substring(8,11) ;
+    var spring =  mobile.substring(0,3) + '****' + mobile.substring(7,11) ;
     $('#mobile_number').html(spring);
 	if($('#second-codeblock').length>0){
 	   $('#second-codeblock').html('');
