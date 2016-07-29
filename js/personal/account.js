@@ -25,11 +25,17 @@ $('#send-code,#send-code-email').click(function(){
             showmsg('请输入正确的手机格式','moadltips'+type); return false;
         }
     }else if(type==3){
-        if(!regEmail){
+        if(!regEmail()){
             showmsg('请输入正确的邮箱格式','moadltips'+type); return false;
         }
     }
-    var flag = sendCode();
+    
+    var flag = false;
+    if(type==2){
+        flag = sendCode();
+    }else if(type==3){
+        flag = sendEmailCode();
+    }
     if(flag){
         settime($(this));
     }
@@ -37,7 +43,7 @@ $('#send-code,#send-code-email').click(function(){
 
 function regMobile(){
     var mobile = $('.modalMobile').val();
-    reg = /^(13[0-9]|14[0-9]|15[0-9]|18[0-9]|17[0-9])\d{8}$/;
+    var reg = /^(13[0-9]|14[0-9]|15[0-9]|18[0-9]|17[0-9])\d{8}$/;
     if(!reg.test(mobile)){
         return false;
     }
@@ -46,7 +52,7 @@ function regMobile(){
 
 function regEmail(){
     var email = $('.modalEmail').val();
-    reg = /^[a-zA-Z0-9._%+-]+@(?!.*\.\..*)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    var reg = /^[a-zA-Z0-9._%+-]+@(?!.*\.\..*)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     if(!reg.test(email)){
         return false;
     }
