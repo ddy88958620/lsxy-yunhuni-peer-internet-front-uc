@@ -25,7 +25,13 @@ $(document).ready(function () {
                         //regexp: /^[0-9]+([.]{1}[0-9]+){0,1}$/,
                         regexp: /^(([1-9][0-9]*)|(([0]\.\d{1,2}|[1-9][0-9]*\.\d{1,2})))$/,
                         message: '请输入正确的金额'
-                    }
+                    },
+                    callback:{
+                    	message: '金额不能为0',
+                        callback: function(value, validator) {
+                           return Number(value) > 0;
+                        }
+                    },
                 }
             }
 
