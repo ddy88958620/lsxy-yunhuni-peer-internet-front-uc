@@ -73,6 +73,18 @@ $(document).ready(function() {
                         min: 6,
                         max: 25,
                         message: '用户名长度为6-25位'
+                    },
+                    callback: {
+                        message: '用户名不能包含特殊字符或纯数字',
+                        callback: function(value, validator) {
+                            var pattern=/^[0-9]*$|[`~!@#\$%\^\&\*\(\)_\+<>\?:"\{\},\.\\\/;'\[\]]/im;
+                            if(value.length>=6 && value.length<=25){
+                                if(pattern.test(value)){
+                                    return false;
+                                }
+                            }
+                            return true;
+                        }
                     }
                 }
             },
@@ -108,6 +120,8 @@ $(document).ready(function() {
             $('#registerReadMsg').hide();
             $('#defaultForm').bootstrapValidator('validate');
             var login = $('#defaultForm').data('bootstrapValidator').isValid();
+
+            console.log(login);
             // 用户是否存在
             if(login==true){
                 var reg= reg_isexit();
