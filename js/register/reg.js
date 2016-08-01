@@ -75,9 +75,9 @@ $(document).ready(function() {
                         message: '用户名长度为6-25位'
                     },
                     callback: {
-                        message: '用户名不能包含特殊字符或纯数字',
+                        message: '用户名为纯数字或包含特殊字符',
                         callback: function(value, validator) {
-                            var pattern=/^[0-9]*$|[`~!@#\$%\^\&\*\(\)_\+<>\?:"\{\},\.\\\/;'\[\]]/im;
+                            var pattern=/^[0-9]*$|[`~!@#$%^&*()+=|{}':;',\[\].<>/?~！@#￥%……&*（）——+|{}【】‘；：”“’。，、？]/im;
                             if(value.length>=6 && value.length<=25){
                                 if(pattern.test(value)){
                                     return false;
