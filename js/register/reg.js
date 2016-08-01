@@ -184,7 +184,9 @@ $(document).ready(function() {
         }
     });
 
+
     $('#mobileBtn').click(function(){
+        $('#mobileForm').bootstrapValidator('validate');
         var login = $('#mobileForm').data('bootstrapValidator').isValid();
         // 手机验证码是否通过
         if(login==true){
@@ -193,8 +195,6 @@ $(document).ready(function() {
                 return  false;
             }
         }
-        else
-            $('#mobileForm').bootstrapValidator('validate');
     });
 
 

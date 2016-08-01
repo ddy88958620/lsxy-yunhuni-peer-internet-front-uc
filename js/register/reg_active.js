@@ -81,7 +81,7 @@ $(document).ready(function() {
                     identical: {
                         field: 'password',
                         message: '两次密码不一致'
-                    },
+                    }
 
                 }
             }
