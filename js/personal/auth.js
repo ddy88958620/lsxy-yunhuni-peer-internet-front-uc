@@ -44,6 +44,9 @@ $('#personalAuthForm').bootstrapValidator({
 		max30:{
 			selector: '.max30',
 			validators: {
+			notEmpty: {
+				message: '不能为空',
+			},
 			stringLength: {
 			  max: 30,
 			  message: '最多输入30个字'
@@ -53,6 +56,9 @@ $('#personalAuthForm').bootstrapValidator({
 		max50:{
 			selector: '.max50',
 			validators: {
+			notEmpty: {
+				message: '不能为空',
+			},
 			stringLength: {
 			  max: 50,
 			  message: '最多输入50个字'
@@ -62,6 +68,9 @@ $('#personalAuthForm').bootstrapValidator({
 		max100:{
 			selector: '.max100',
 			validators: {
+			notEmpty: {
+				message: '不能为空',
+			},
 			stringLength: {
 			  max: 100,
 			  message: '最多输入100个字'
