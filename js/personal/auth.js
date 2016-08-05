@@ -41,6 +41,33 @@ $('#personalAuthForm').bootstrapValidator({
             }
           }
         },
+		max30:{
+			selector: '.max30',
+			validators: {
+			stringLength: {
+			  max: 30,
+			  message: '最多输入30个字'
+			}
+		  }
+		},
+		max50:{
+			selector: '.max50',
+			validators: {
+			stringLength: {
+			  max: 50,
+			  message: '最多输入50个字'
+			}
+		  }
+		},
+		max100:{
+			selector: '.max100',
+			validators: {
+			stringLength: {
+			  max: 100,
+			  message: '最多输入100个字'
+			}
+		  }
+		},
         limit15: {
           selector: '.limit15',
           validators: {
