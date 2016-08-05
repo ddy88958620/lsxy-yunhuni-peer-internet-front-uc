@@ -54,6 +54,18 @@ $('#personalAuthForm').bootstrapValidator({
             }
           }
         },
+		limit18: {
+          selector: '.limit18',
+          validators: {
+            notEmpty: {
+                message: '不能为空'
+            },
+			regexp: {
+                    regexp: /^([0-9,A-Z]){18}$/,
+                    message: '18位数字或者大写英文字母'
+			}
+          }
+        },
         username: {
             message: '用户名无效',
             validators: {
