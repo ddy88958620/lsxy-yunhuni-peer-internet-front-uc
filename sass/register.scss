@@ -383,13 +383,30 @@ body{
   }
 }
 
+
+.register_footer {
+  position: fixed;
+  bottom: 15px;
+  width: 100%;
+  color: #848484;
+  p{
+    text-align: center;
+  }
+  .register-form{
+    margin: 20px;
+  }
+}
+
+
 @media screen and (min-width: 1000px) {
   .register_footer {
-    position: absolute;
+    position: fixed;
     bottom: 15px;
-    text-align: center;
     width: 100%;
     color: #848484;
+  }
+  p{
+    text-align: center;
   }
   .register-form{
     margin: 20px;
@@ -398,10 +415,10 @@ body{
 
 @media screen and (max-width: 999px) {
   .register_footer {
-    display: block;
-    width: 90%;
-    margin: 100px auto 0 auto;
+    position: static;
     color: #848484;
+  }
+  p{
     text-align: center;
   }
   .register-form{

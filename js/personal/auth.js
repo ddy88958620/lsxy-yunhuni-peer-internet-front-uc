@@ -41,6 +41,42 @@ $('#personalAuthForm').bootstrapValidator({
             }
           }
         },
+		max30:{
+			selector: '.max30',
+			validators: {
+			notEmpty: {
+				message: '不能为空',
+			},
+			stringLength: {
+			  max: 30,
+			  message: '最多输入30个字'
+			}
+		  }
+		},
+		max50:{
+			selector: '.max50',
+			validators: {
+			notEmpty: {
+				message: '不能为空',
+			},
+			stringLength: {
+			  max: 50,
+			  message: '最多输入50个字'
+			}
+		  }
+		},
+		max100:{
+			selector: '.max100',
+			validators: {
+			notEmpty: {
+				message: '不能为空',
+			},
+			stringLength: {
+			  max: 100,
+			  message: '最多输入100个字'
+			}
+		  }
+		},
         limit15: {
           selector: '.limit15',
           validators: {
@@ -52,6 +88,18 @@ $('#personalAuthForm').bootstrapValidator({
               max: 15,
               message: '需要15位数字'
             }
+          }
+        },
+		limit18: {
+          selector: '.limit18',
+          validators: {
+            notEmpty: {
+                message: '不能为空'
+            },
+			regexp: {
+                    regexp: /^([0-9,A-Z]){18}$/,
+                    message: '18位数字或者大写英文字母'
+			}
           }
         },
         username: {
