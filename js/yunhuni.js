@@ -72,30 +72,28 @@ $(".head-box a[href='#subNav']").on('click', function () {
 
 /**公用的异步*/
 var ajaxsubmit = function(url, param, fun ,type) {
-  $.ajax({
-    type: isNullStr(type)?"post":type,
-    url: url,
-    timeout:60*1000,
-    data: param,
-    cache: false,
-    dataType: "json",
-    success: function(datas) {
-      console.log(JSON.stringify(datas));
-      console.log(fun);
-      console.log(eval(fun));
-      if (datas) {
-        //超时跳转登陆页
-        if(datas.errorCode=='0010'){
-          showtoast(datas.errorMsg,ctx + "/login");
-        }else{
-          fun(datas);
-        }
-      }
-    },
-    error: function() {
-      showtoast("网络错误，请重试");
-    }
-  });
+  return $.ajax({
+                type: isNullStr(type)?"post":type,
+                url: url,
+                timeout:60*1000,
+                data: param,
+                cache: false,
+                dataType: "json"
+              }).done(function(datas){
+                  console.log(JSON.stringify(datas));
+                  console.log(fun);
+                  console.log(eval(fun));
+                  if (datas) {
+                    //超时跳转登陆页
+                    if(datas.errorCode=='0010'){
+                      showtoast(datas.errorMsg,ctx + "/login");
+                    }else{
+                      fun(datas);
+                    }
+                  }
+                }).fail(function(datas){
+                  showtoast("网络错误，请重试");
+                });
 };
 
 function isNullStr(data){
@@ -108,29 +106,29 @@ function isNullStr(data){
 
 /**公用的异步 同步*/
 var ajaxsync = function(url, param, fun ,type) {
-
-  $.ajax({
-    type: isNullStr(type)?"post":type,
-    url: url,
-    timeout:60*1000,
-    data: param,
-    cache: false,
-    dataType: "json",
-    async:false,
-    success: function(datas) {
-      if (datas) {
-        //超时跳转登陆页
-        if(datas.errorCode=='0010'){
-          showtoast(datas.errorMsg,ctx + "/login");
-        }else{
-          fun(datas);
-        }
-      }
-    },
-    error: function() {
-      showtoast("网络错误，请重试");
-    }
-  });
+  return $.ajax({
+                  type: isNullStr(type)?"post":type,
+                  url: url,
+                  timeout:60*1000,
+                  data: param,
+                  cache: false,
+                  dataType: "json",
+                  async:false
+                }).done(function(datas){
+                    console.log(JSON.stringify(datas));
+                    console.log(fun);
+                    console.log(eval(fun));
+                    if (datas) {
+                      //超时跳转登陆页
+                      if(datas.errorCode=='0010'){
+                        showtoast(datas.errorMsg,ctx + "/login");
+                      }else{
+                        fun(datas);
+                      }
+                    }
+                  }).fail(function(datas){
+                    showtoast("网络错误，请重试");
+                  });
 };
 
 
