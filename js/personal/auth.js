@@ -167,8 +167,6 @@ $('#personalAuthForm').bootstrapValidator({
 
 
 
-
-
 $('.auth_select').on('click',function(){
   var isPersonal = $(this).find("input[type='radio']")[0].checked
 
@@ -178,6 +176,26 @@ $('.auth_select').on('click',function(){
   }else {
     $('.company').css('display', 'block')
     $('.personal').css('display', 'none')
+	$('.card_select_0').click();
   }
+})
+
+
+$('.card_select_0').on('click',function(){
+	$('.card_type01').css('display', 'block')
+	$('.card_type02').css('display', 'none')
+	$('.card_type03').css('display', 'none')
+})
+
+$('.card_select_1').on('click',function(){
+	$('.card_type01').css('display', 'none')
+	$('.card_type02').css('display', 'block')
+	$('.card_type03').css('display', 'none')
+})
+
+$('.card_select_2').on('click',function(){
+	$('.card_type01').css('display', 'none')
+	$('.card_type02').css('display', 'none')
+	$('.card_type03').css('display', 'block')
 })
 })
