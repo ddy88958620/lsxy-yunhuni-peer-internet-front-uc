@@ -447,34 +447,40 @@ body {
 @media screen and (min-width: 1000px) {
   /* line 387, ../sass/register.scss */
   .register_footer {
-    position: absolute;
+    position: fixed;
     bottom: 15px;
-    text-align: center;
     width: 100%;
     color: #848484;
   }
 
-  /* line 394, ../sass/register.scss */
+  /* line 393, ../sass/register.scss */
+  p {
+    text-align: center;
+  }
+
+  /* line 396, ../sass/register.scss */
   .register-form {
     margin: 20px;
   }
 }
 @media screen and (max-width: 999px) {
-  /* line 400, ../sass/register.scss */
+  /* line 402, ../sass/register.scss */
   .register_footer {
-    display: block;
-    width: 90%;
-    margin: 100px auto 0 auto;
+    position: static;
     color: #848484;
+  }
+
+  /* line 406, ../sass/register.scss */
+  p {
     text-align: center;
   }
 
-  /* line 408, ../sass/register.scss */
+  /* line 410, ../sass/register.scss */
   .register-form .text-right {
     line-height: 32px;
     text-align: left;
   }
-  /* line 412, ../sass/register.scss */
+  /* line 414, ../sass/register.scss */
   .register-form .form-group {
     height: auto;
   }
