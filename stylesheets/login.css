@@ -113,3 +113,8 @@ body {
 .login-footer {
   color: #848484 !important;
 }
+
+/* line 102, ../sass/login.scss */
+.login-footer-box {
+  color: #848484 !important;
+}
