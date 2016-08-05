@@ -28,6 +28,45 @@ $(function(){
                     }
                 }
             },
+            limit32: {
+                selector: '.limit32',
+                validators: {
+                	notEmpty: {
+                        message: '不能为空'
+                    },
+                    stringLength: {
+                        min: 0,
+                        max: 32,
+                        message: '32字符以内'
+                    }
+                }
+            },
+            limit50: {
+                selector: '.limit50',
+                validators: {
+                	notEmpty: {
+                        message: '不能为空'
+                    },
+                    stringLength: {
+                        min: 0,
+                        max: 50,
+                        message: '50字符以内'
+                    }
+                }
+            },
+            limit100: {
+                selector: '.limit100',
+                validators: {
+                	notEmpty: {
+                        message: '不能为空'
+                    },
+                    stringLength: {
+                        min: 0,
+                        max: 100,
+                        message: '100字符以内'
+                    }
+                }
+            },
             mobile:{
                 selector : '.mobile',
                 validators: {
@@ -84,9 +123,9 @@ $(function(){
         $('.invoice-type').each(function(){
             var e = $(this).attr('data-val');
             if(v==e)
-                $(this).show().find("input").addClass("notEmpty");
+                $(this).show();
             else
-                $(this).hide().find("input").removeClass("notEmpty");
+                $(this).hide();
         });
     }
 

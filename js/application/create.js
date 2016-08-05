@@ -20,6 +20,16 @@ $('#application_create').bootstrapValidator({
               message: '20字符以内'
             }
           }
+        },
+        limit300: {
+          selector: '.limit300',
+          validators: {
+            stringLength: {
+              min: 0,
+              max: 300,
+              message: '300字符以内'
+            }
+          }
         }
       },
 })
