@@ -404,10 +404,11 @@ body{
     bottom: 15px;
     width: 100%;
     color: #848484;
+    p{
+      text-align: center;
+    }
   }
-  p{
-    text-align: center;
-  }
+
   .register-form{
     margin: 20px;
   }
@@ -417,10 +418,11 @@ body{
   .register_footer {
     position: static;
     color: #848484;
+    p{
+      text-align: center;
+    }
   }
-  p{
-    text-align: center;
-  }
+
   .register-form{
     .text-right{
       line-height: 32px;

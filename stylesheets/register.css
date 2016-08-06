@@ -468,35 +468,33 @@ body {
     width: 100%;
     color: #848484;
   }
-
-  /* line 408, ../sass/register.scss */
-  p {
+  /* line 407, ../sass/register.scss */
+  .register_footer p {
     text-align: center;
   }
 
-  /* line 411, ../sass/register.scss */
+  /* line 412, ../sass/register.scss */
   .register-form {
     margin: 20px;
   }
 }
 @media screen and (max-width: 999px) {
-  /* line 417, ../sass/register.scss */
+  /* line 418, ../sass/register.scss */
   .register_footer {
     position: static;
     color: #848484;
   }
-
   /* line 421, ../sass/register.scss */
-  p {
+  .register_footer p {
     text-align: center;
   }
 
-  /* line 425, ../sass/register.scss */
+  /* line 427, ../sass/register.scss */
   .register-form .text-right {
     line-height: 32px;
     text-align: left;
   }
-  /* line 429, ../sass/register.scss */
+  /* line 431, ../sass/register.scss */
   .register-form .form-group {
     height: auto;
   }
