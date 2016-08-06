@@ -1,7 +1,9 @@
 // slimScrollDiv
 function onResize() {
-  var slim = document.querySelector('.slimScrollDiv')
-  slim.style.height = (window.innerHeight - 80) + 'px'
+  $('.slimScrollDiv').css('height',(window.innerHeight - 80) + 'px');
+  //var slim = document.querySelector('.slimScrollDiv')
+
+  //slim.style.height = (window.innerHeight - 80) + 'px'
 }
 
 
