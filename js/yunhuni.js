@@ -1,17 +1,15 @@
 // slimScrollDiv
 function onResize() {
-  $('.slimScrollDiv').css('height',(window.innerHeight - 80) + 'px');
+  var content = document.getElementById('content')
+  var h = $(document.body).height() + 'px';
+  content.style.height = h
   //var slim = document.querySelector('.slimScrollDiv')
-
   //slim.style.height = (window.innerHeight - 80) + 'px'
 }
 
-
 $(window).resize(function(){
-  onResize()
+  onResize();
 })
-
-
 
 // 一级导航 mini 化
 $("#togglerMiniSidebar").on('click',function(event){
