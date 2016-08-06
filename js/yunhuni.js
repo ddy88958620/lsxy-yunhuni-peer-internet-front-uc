@@ -80,9 +80,6 @@ var ajaxsubmit = function(url, param, fun ,type) {
                 cache: false,
                 dataType: "json"
               }).done(function(datas){
-                  console.log(JSON.stringify(datas));
-                  console.log(fun);
-                  console.log(eval(fun));
                   if (datas) {
                     //超时跳转登陆页
                     if(datas.errorCode=='0010'){
@@ -115,9 +112,6 @@ var ajaxsync = function(url, param, fun ,type) {
                   dataType: "json",
                   async:false
                 }).done(function(datas){
-                    console.log(JSON.stringify(datas));
-                    console.log(fun);
-                    console.log(eval(fun));
                     if (datas) {
                       //超时跳转登陆页
                       if(datas.errorCode=='0010'){
