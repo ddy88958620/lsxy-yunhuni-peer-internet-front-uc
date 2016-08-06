@@ -1,13 +1,14 @@
 // slimScrollDiv
-// function onResize() {
-//   var slim = document.querySelector('.slimScrollDiv')
-//   slim.style.height = (window.innerHeight - 80) + 'px'
-// }
-//
-// $(window).resize(function(){
-//   onResize()
-// })
-//
+function onResize() {
+  var slim = document.querySelector('.slimScrollDiv')
+  slim.style.height = (window.innerHeight - 80) + 'px'
+}
+
+
+$(window).resize(function(){
+  onResize()
+})
+
 
 
 // 一级导航 mini 化
