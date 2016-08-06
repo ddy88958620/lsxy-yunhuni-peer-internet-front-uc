@@ -217,12 +217,12 @@ body{
     .code {
       float: left;
       height: 45px;
-      width: 130px !important;
+      width: 110px !important;
     }
     .code-button {
       @include codeimg;
       float: right;
-      width: 109px;
+      width: 120px;
     }
     .in-block{
       display: inline-block !important;
