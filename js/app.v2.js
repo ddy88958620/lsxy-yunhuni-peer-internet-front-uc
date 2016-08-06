@@ -4224,6 +4224,8 @@ Date.now = Date.now || function() {
         }
         $('.no-touch .slim-scroll').each(function() {
             var $self = $(this), $data = $self.data(), $slimResize;
+
+            return ;
             $self.slimScroll($data);
 
             clearTimeout($slimResize);
