@@ -4224,14 +4224,21 @@ Date.now = Date.now || function() {
         }
         $('.no-touch .slim-scroll').each(function() {
             var $self = $(this), $data = $self.data(), $slimResize;
-            
+
+
             $self.slimScroll($data);
-            $(window).resize(function(e) {
+            //延时加载
+            clearTimeout($slimResize);
+            $slimResize = setTimeout(function() {
+                $self.slimScroll($data);
+            }, 500);
+
+            /*$(window).resize(function(e) {
                 clearTimeout($slimResize);
                 $slimResize = setTimeout(function() {
                     $self.slimScroll($data);
                 }, 500);
-            });
+            });*/
         });
         if ($.support.pjax) {
             $(document).on('click', 'a[data-pjax]', function(event) {
