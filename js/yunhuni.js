@@ -3,8 +3,6 @@ function onResize() {
   var content = document.getElementById('content')
   var h = $(document.body).height() + 'px';
   content.style.height = h;
-  alert('调试高度'+h);
-
   //var slim = document.querySelector('.slimScrollDiv')
   //slim.style.height = (window.innerHeight - 80) + 'px'
 }
