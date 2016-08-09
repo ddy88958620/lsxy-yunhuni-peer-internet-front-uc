@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <body>
-
 <!-- header -->
 <div class="include" data-include="header"></div>
 <!-- end header -->
@@ -321,6 +320,21 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-10">
+                      <span class="btn btn-success fileinput-button">
+                        <i class="glyphicon glyphicon-plus"></i>
+                        <span>Select files...</span>
+                        <!-- The file input field used as target for the file upload widget -->
+                        <input id="fileupload" type="file" name="files[]" multiple>
+                      </span>
+                      <br>
+                      <br>
+                      <!-- The global progress bar -->
+                      <div id="progress" class="progress">
+                        <div class="progress-bar progress-bar-success"></div>
+                      </div>
+                     <div id="files" class="files"></div>
+                    </div>
                 </div>
 
                 <div class="row text-left mt-10">
@@ -347,12 +361,61 @@
 <script src="js/charts/flot/demo.js" cache="false"></script>
 <script src="js/include.js"></script>
 <script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
+
+
+<script src="bower_components/blueimp-file-upload/js/vendor/jquery.ui.widget.js"></script>
+<script src="bower_components/blueimp-file-upload/js/jquery.fileupload.js"></script>
+<script src="bower_components/blueimp-file-upload/js/jquery.fileupload-ui.js"></script>
+<script src="bower_components/blueimp-file-upload/js/jquery.fileupload-process.js"></script>
+<!-- <script src="bower_components/blueimp&#45;file&#45;upload/js/jquery.fileupload&#45;jquery&#45;ui.js"></script> -->
+<script src="bower_components/blueimp-file-upload/js/jquery.iframe-transport.js"></script>
+<script src="bower_components/blueimp-file-upload/js/jquery.fileupload-validate.js"></script>
+
 <script type="text/javascript" src='./js/bootstrap-datepicker/js/bootstrap-datepicker.js'> </script>
 <script type="text/javascript" src='./js/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js'> </script>
 <script type="text/javascript" src='./js/application/detail.js'> </script>
 
 <!--syncpage-->
 <script type="text/javascript" src='./js/page.js'></script>
+<script>
+    // 上传多个文件
+    $(function(){
+        
+        var Allfile = [],allFileLength = 0, errorFileArray = []
+        $('#fileupload').fileupload({
+            url: '',
+            maxFileSize: 5* 1024 * 1024,
+            dataType: 'json',
+            autoUpload: false,
+            acceptFileTypes: /(\.|\/)(wav|jpe?g|mp3)$/i,
+            done: function (e, data) {
+                $.each(data.result.files, function (index, file) {
+                    $('<p/>').text(file.name).appendTo('#files');
+                });
+	            console.log('all done')
+                
+            },
+            progressall: function (e, data) {
+                var progress = parseInt(data.loaded / data.total * 100, 10);
+                $('#progress .progress-bar').css(
+                  'width',
+                  progress + '%'
+                );
+            }
+        }).on('fileuploadprocessalways', function (e, data) {
+            var index = data.index,
+              file = data.files[index]
+            if(file.error){
+                errorFileArray.push(file)
+                showtoast("上传格式不正确");
+            }
+        }).on('fileuploaddone', function(e, data) {
+        }).on('fileuploadadd', function(e, data) {
+            //最后有几个错误文件
+            console.log(errorFileArray)
+        })
+    })
+</script>
 
 <script>
     /**
@@ -453,10 +516,6 @@
                return false;
            }
         }
-
-
-
-
         return ;
         hideModal(id)
     });
@@ -638,7 +697,7 @@
             ['4','20160606122333-[sessionid]','1M','123']
         ];
         var html ='';
-        for(var i = 0 ; i<data.length; i++){
+        for(var i = 0 ; i < data.length; i++){
             html +='<tr class="voicetr" id="voice-'+data[i][0]+'"><td class="voice-format">'+data[i][1]+'</td>';
             html+='<td>'+data[i][2]+'</td>';
             html+='<td>'+data[i][3]+'</td>';
