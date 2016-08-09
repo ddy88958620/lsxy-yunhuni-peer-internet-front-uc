@@ -392,10 +392,8 @@
                 $.each(data.result.files, function (index, file) {
                     $('<p/>').text(file.name).appendTo('#files');
                 });
+	            console.log('all done')
                 
-                //最后有几个错误文件
-                console.log(errorFileArray)
-                showtoast("上传失败，单条语音最大支持 5M");
             },
             progressall: function (e, data) {
                 var progress = parseInt(data.loaded / data.total * 100, 10);
@@ -409,8 +407,12 @@
               file = data.files[index]
             if(file.error){
                 errorFileArray.push(file)
-                showtoast("上传失败，单条语音最大支持 5M");
+                showtoast("上传格式不正确");
             }
+        }).on('fileuploaddone', function(e, data) {
+        }).on('fileuploadadd', function(e, data) {
+            //最后有几个错误文件
+            console.log(errorFileArray)
         })
     })
 </script>
