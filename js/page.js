@@ -88,18 +88,17 @@ function Page(count,listRow,showPageCount,divId,getData){
         o.initRow();
         //根据当前页判断重新拼接分页控件
         var html = "";
-        if(o.first > 1)
-        {
-            html +='<li><a class="page-item pre-page"><span>&laquo;</span></a></li>';
-        }
-        for(var i = o.first ; i <= o.last ; i++)
-        {
-            //拼接每一个分页数组按钮，并为其设置id
-            html += "<li><a  id=page"+i+o.obj+" class = 'page-item each-page'>"+i+"</a></li>";
-        }
-        if(o.totalPage > o.last)
-        {
-            html +='<li><a class="page-item next-page"><span aria-hidden="true">&raquo;</span></a></li>';
+        if(o.last!=1) {
+            if (o.first > 1) {
+                html += '<li><a class="page-item pre-page"><span>&laquo;</span></a></li>';
+            }
+            for (var i = o.first; i <= o.last; i++) {
+                //拼接每一个分页数组按钮，并为其设置id
+                html += "<li><a  id=page" + i + o.obj + " class = 'page-item each-page'>" + i + "</a></li>";
+            }
+            if (o.totalPage > o.last) {
+                html += '<li><a class="page-item next-page"><span aria-hidden="true">&raquo;</span></a></li>';
+            }
         }
         html +='</ul>';
         //html+="<li><a href='#' class = 'page-item next-page'><span aria-hidden='true'>&raquo;</span></a>";
