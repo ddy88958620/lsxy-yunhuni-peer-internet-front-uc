@@ -13,18 +13,38 @@ function Page(count,listRow,showPageCount,divId,getData){
     o.totalPage = o.count % o.listRow == 0? parseInt(o.count/ o.listRow) : parseInt(o.count/ o.listRow+1);
     o.showPageCount = showPageCount;
     //显示多少个分页按钮
-    o.showPageCount = o.showPageCount < o.totalPage? o.showPageCount : o.totalPage;
+    //o.showPageCount = o.showPageCount < o.totalPage? o.showPageCount : o.totalPage;
     o.first = 1;//第一个显示的分页按钮是多少
     //最后一个显示的分页按钮是多少
-    o.last = o.totalPage > showPageCount? showPageCount: o.totalPage;
+    o.last = o.showPageCount;
     o.lastEnd =  o.totalPage < showPageCount? showPageCount: o.totalPage;
+    o.initTotalPage = function(){
+        o.totalPage = o.count % o.listRow == 0? parseInt(o.count/ o.listRow) : parseInt(o.count/ o.listRow+1);
+    }
+    o.initRow = function(){
+        o.first = 1;
+        o.last = o.showPageCount;
+        var temp = 0;
+        temp = parseInt((o.showPageCount-1)/2);
+        if( (new Number(o.nowPage) + new Number(temp))> o.showPageCount){
+            o.first = new Number(o.nowPage)-2;
+            o.last = new Number(o.nowPage)+2;
+        }
+        if( o.totalPage <= o.last){
+            o.last = o.totalPage;
 
+        }
+        if((new Number(o.last)-(new Number(o.first)))<(new Number(temp)*2+1)){
+            o.first = 1;
+        }
+        console.info(JSON.stringify(o));
+    }
     /**
      *  显示分页空间
      */
     o.show = function()
     {
-        o.delete();
+        $(".page-div").html(" ");
         o.createPage();
         o.bindAction();
     }
@@ -34,20 +54,21 @@ function Page(count,listRow,showPageCount,divId,getData){
      */
     o.createPage = function()
     {
+        o.initRow();
         var html = '<nav class="pageWrap pageSyncWrap page-div">';
         //一页范围内  不显示
-        if(o.showPageCount>1){
+        if(o.last!=1){
             html +='<ul class="my-page pagination">';
-            if(o.nowPage != 1)
+            if(o.first > 1)
             {
                 html +='<li><a class="page-item pre-page"><span>&laquo;</span></a></li>';
             }
-            for(var i = 0 ; i < o.showPageCount ; i++)
+            for(var i = o.first ; i <= o.last ; i++)
             {
                 //拼接每一个分页数组按钮，并为其设置id
-                html += "<li><a  id=page"+(i+1)+o.obj+" class = 'page-item each-page'>"+(i+1)+"</a></li>";
+                html += "<li><a  id=page"+i+o.obj+" class = 'page-item each-page'>"+i+"</a></li>";
             }
-            if(o.nowPage != o.totalPage)
+            if(o.totalPage > o.last)
             {
                 html +='<li><a class="page-item next-page"><span aria-hidden="true">&raquo;</span></a></li>';
             }
@@ -64,23 +85,23 @@ function Page(count,listRow,showPageCount,divId,getData){
      */
     o.updatePage = function()
     {
-
+        o.initRow();
         //根据当前页判断重新拼接分页控件
         var html = "";
-        if(o.first != 1)
+        if(o.first > 1)
         {
-            html += '<li><a class="page-item pre-page"><span>&laquo;</span></a></li>';
+            html +='<li><a class="page-item pre-page"><span>&laquo;</span></a></li>';
         }
         for(var i = o.first ; i <= o.last ; i++)
         {
-
-            html += "<li><a id=page"+i+o.obj+" class = 'page-item each-page'>"+i+"</a></li>";
+            //拼接每一个分页数组按钮，并为其设置id
+            html += "<li><a  id=page"+i+o.obj+" class = 'page-item each-page'>"+i+"</a></li>";
         }
-
-        if(o.last != o.totalPage)
+        if(o.totalPage > o.last)
         {
-            html+="<li><a class = 'page-item next-page'><span aria-hidden='true'>&raquo;</span></a>";
+            html +='<li><a class="page-item next-page"><span aria-hidden="true">&raquo;</span></a></li>';
         }
+        html +='</ul>';
         //html+="<li><a href='#' class = 'page-item next-page'><span aria-hidden='true'>&raquo;</span></a>";
         $(".my-page").html(html);
         o.bindAction();
@@ -117,36 +138,7 @@ function Page(count,listRow,showPageCount,divId,getData){
     o.bindAction = function()
     {
         $(".pre-page").click(function(){
-
-            //o.nowPage = parseInt(o.nowPage) - 1;
-            /*
-            第一页
-            o.nowPage = 1;
-            o.first = 1 ;
-            if(o.showPageCount< o.totalPage){
-                o.last  = parseInt(o.showPageCount);
-            }else{
-                o.last =  parseInt(o.totalPage);
-            }*/
-            if(o.nowPage/o.showPageCount==1)
-                var nowPage = 0;
-            else
-                var nowPage = parseInt(o.nowPage/o.showPageCount);
-
-            o.first =  (nowPage-1)*o.showPageCount+1;
-            o.last = (nowPage)*o.showPageCount;
-            if(o.first<=1){
-                o.first =  1;
-            }
-            if(o.last<=0){
-                o.last = (nowPage+1)*o.showPageCount;
-            }
-            if(parseInt(o.first+o.last)%2==0){
-                o.nowPage = parseInt(o.first+o.last)/2;
-            }else{
-                o.nowPage = parseInt((o.first+o.last)/2);
-            }
-
+            o.nowPage = o.first-1;
             o.updatePage();
             o.updateColor($(this),$("#page"+ o.nowPage+o.obj));
             o.getData(o.nowPage, o.listRow);
@@ -154,64 +146,13 @@ function Page(count,listRow,showPageCount,divId,getData){
 
         $(".each-page").click(function(){
             o.nowPage = $(this).text();
-            if(o.nowPage >= o.showPageCount/2+1 && o.nowPage <= (o.totalPage - o.showPageCount/2))
-            {
-                if(o.showPageCount%2 == 0)
-                {
-                    o.first =  parseInt(o.nowPage)-parseInt(o.showPageCount/2-1);
-                    o.last =  parseInt(o.nowPage)+parseInt(o.showPageCount/2);
-                }
-                else
-                {
-                    o.first =  parseInt(o.nowPage)-parseInt(o.showPageCount/2);
-                    o.last =  parseInt(o.nowPage)+parseInt(o.showPageCount/2);
-                }
-            }
-            else if(o.nowPage < o.showPageCount/2+1)
-            {
-                o.first =  1;
-                o.last =  o.showPageCount;
-            }
-            else if(o.nowPage > (o.totalPage - o.showPageCount/2))
-            {
-                o.first = parseInt(o.totalPage) - parseInt(o.showPageCount)+1;
-                o.last = parseInt(o.totalPage);
-            }
             o.updatePage();
             o.updateColor($(this),$("#page"+ o.nowPage+o.obj));
             o.getData(o.nowPage, o.listRow);
         });
 
         $(".next-page").click(function(){
-
-            //console.log(o.first+','+ o.last+','+o.nowPage);
-            //o.first = parseInt(o.totalPage) - parseInt(o.showPageCount)+1;
-            //o.last = parseInt(o.totalPage);
-            if(o.nowPage/o.showPageCount==1)
-               var nowPage = 0;
-            else
-               var nowPage = parseInt(o.nowPage/o.showPageCount);
-            o.first =  (nowPage+1)*o.showPageCount+1;
-            o.last = (nowPage+2)*o.showPageCount;
-            if(o.first>o.totalPage){
-                o.first =  (nowPage)*o.showPageCount+1;
-            }
-            if(o.last>=o.totalPage){
-                o.last = o.lastEnd;
-            }
-            if(parseInt(o.first+o.last)%2==0){
-                o.nowPage = parseInt(o.first+o.last)/2;
-            }else{
-                o.nowPage = parseInt((o.first+o.last)/2);
-            }
-
-           /* o.nowPage = parseInt(o.nowPage) + 1;
-            if(o.last < o.totalPage && o.nowPage > o.showPageCount/2+1)
-            {
-                //o.first = parseInt(o.last) -1;
-                o.first = parseInt(o.first);
-                o.last = parseInt(o.last) ;
-            }*/
+            o.nowPage = o.last+1;
             o.updatePage();
             o.updateColor($(this),$("#page"+ o.nowPage+o.obj));
             o.getData(o.nowPage, o.listRow);
