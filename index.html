@@ -13,6 +13,8 @@
             <!-- /.aside -->
 
             <section id="content">
+
+
                 <section class="hbox stretch">
                     <!-- 如果没有三级导航 这段代码注释-->
                     <!-- .aside -->
@@ -49,7 +51,15 @@
                         <section class="vbox xbox">
                           <!-- 如果没有三级导航 这段代码注释-->
                             <!-- <div class="head&#45;box"> <a href="#subNav" data&#45;toggle="class:hide"> <i class="fa fa&#45;angle&#45;left text"></i> <i class="fa fa&#45;angle&#45;right text&#45;active"></i> </a> </div> -->
-                            <section class="scrollable wrapper w-f">
+
+                          <div class="common-info">
+                            <span class="content">云呼你有新的讯息，新的活动，新的动作，市场活动，运营活动， 查看详情</span>
+                            <a href="">查看详情</a>
+                            <span class="close" id="common-close"></span>
+                          </div>
+
+
+                          <section class="scrollable wrapper w-f">
                                 <section class="panel panel-default yunhuni-personal">
                                     <div class="row m-l-none m-r-none bg-light lter">
                                         <div class="col-md-4 padder-v fix-padding">
@@ -100,9 +110,6 @@
                                                  </span>
                                               </div>
                                             </div>
-
-
-
 
                                           </div>
                                         </div>
@@ -252,7 +259,11 @@
             }
         });
     });
+    $('#common-close').click(function(){
+      $('.common-info').fadeOut()
+    })
 
 </script>
+
 </body>
 </html>

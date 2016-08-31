@@ -181,3 +181,29 @@ input[readonly] {
 .tips-warning{
   color:#f18f48 !important;
 }
+
+.common-info{
+  text-align: left;
+  color: #35840d;
+  display: block;
+  font-size: 14px;
+  margin: 10px 20px 0 20px;
+  padding: 15px;
+  background-color: #f2ffea;
+  box-shadow: 0px 1px 1px rgb(221, 221, 221);
+  .content{
+    display: inline-block;
+    float: left;
+  }
+  a {
+    text-decoration: underline;
+    padding: 0 5px;
+  }
+  .close{
+    width: 50px;
+    height: 20px;
+    opacity: 1;
+    float: right;
+    background: url(../images/index/commom_close.png) center center no-repeat;
+  }
+}
