@@ -73,6 +73,13 @@ function Page(count,listRow,showPageCount,divId,getData){
                 html +='<li><a class="page-item next-page"><span aria-hidden="true">&raquo;</span></a></li>';
             }
             html +='</ul>';
+            $('#playpage').show();
+        }else{
+            html +='<ul class="my-page pagination" >';
+            //拼接每一个分页数组按钮，并为其设置id
+            html += "<li><a  id=page"+o.first+o.obj+" class = 'page-item each-page'>"+o.first+"</a></li>";
+            html +='</ul>';
+            $('#playpage').hide();
         }
         html += '</nav>';
         $('#'+o.obj).html(html);
@@ -88,6 +95,8 @@ function Page(count,listRow,showPageCount,divId,getData){
         o.initRow();
         //根据当前页判断重新拼接分页控件
         var html = "";
+        console.info("last:"+o.last)
+        console.info("first:"+o.first)
         if(o.last!=1) {
             if (o.first > 1) {
                 html += '<li><a class="page-item pre-page"><span>&laquo;</span></a></li>';
@@ -99,6 +108,12 @@ function Page(count,listRow,showPageCount,divId,getData){
             if (o.totalPage > o.last) {
                 html += '<li><a class="page-item next-page"><span aria-hidden="true">&raquo;</span></a></li>';
             }
+             $('#playpage').show();
+        }else{
+            //拼接每一个分页数组按钮，并为其设置id
+            console.info("ddddddddddddddddddddddddddddddddd")
+            html += "<li><a  id=page"+o.first+o.obj+" class = 'page-item each-page'>"+o.first+"</a></li>";
+            $('#playpage').hide();
         }
         html +='</ul>';
         //html+="<li><a href='#' class = 'page-item next-page'><span aria-hidden='true'>&raquo;</span></a>";
