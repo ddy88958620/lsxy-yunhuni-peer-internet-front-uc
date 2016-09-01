@@ -80,6 +80,7 @@ function Page(count,listRow,showPageCount,divId,getData){
             html += "<li><a  id=page"+o.first+o.obj+" class = 'page-item each-page'>"+o.first+"</a></li>";
             html +='</ul>';
             $('#playpage').hide();
+            $('#datatablepage').hide();
         }
         html += '</nav>';
         $('#'+o.obj).html(html);
@@ -114,6 +115,7 @@ function Page(count,listRow,showPageCount,divId,getData){
             console.info("ddddddddddddddddddddddddddddddddd")
             html += "<li><a  id=page"+o.first+o.obj+" class = 'page-item each-page'>"+o.first+"</a></li>";
             $('#playpage').hide();
+            $('#datatablepage').hide();
         }
         html +='</ul>';
         //html+="<li><a href='#' class = 'page-item next-page'><span aria-hidden='true'>&raquo;</span></a>";
