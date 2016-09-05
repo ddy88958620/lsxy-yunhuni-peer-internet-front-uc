@@ -1,0 +1,28 @@
+/* line 1, ../sass/cost_order.scss */
+.nosuccess {
+  color: #ff0000;
+}
+/* line 3, ../sass/cost_order.scss */
+.nosuccess:hover {
+  text-decoration: underline;
+}
+
+/* line 7, ../sass/cost_order.scss */
+.text-underline {
+  text-decoration: underline;
+}
+
+/* line 11, ../sass/cost_order.scss */
+.success {
+  color: #9dc940;
+}
+/* line 13, ../sass/cost_order.scss */
+.success:hover {
+  color: #9dc940;
+  text-decoration: none;
+}
+
+/* line 19, ../sass/cost_order.scss */
+.surecolor {
+  color: #9dc940;
+}

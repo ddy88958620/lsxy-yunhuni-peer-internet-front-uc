@@ -1,0 +1,53 @@
+/* line 1, ../sass/cost_history.scss */
+.panel .table-striped > thead th {
+  background: 0px;
+  border-right: 0;
+}
+
+/* line 6, ../sass/cost_history.scss */
+.cost_month_select {
+  padding: 0px;
+  min-height: 0px;
+}
+/* line 7, ../sass/cost_history.scss */
+.cost_month_select a {
+  text-decoration: none;
+  cursor: pointer;
+}
+/* line 15, ../sass/cost_history.scss */
+.cost_month_select .last_month {
+  margin-left: 0px;
+}
+/* line 22, ../sass/cost_history.scss */
+.cost_month_select .row {
+  margin-bottom: 0px;
+}
+
+/* line 28, ../sass/cost_history.scss */
+.cost-table-history {
+  margin: 15px auto;
+}
+
+/* line 32, ../sass/cost_history.scss */
+.pageWrap {
+  position: relative;
+  height: 200px;
+}
+
+/* line 37, ../sass/cost_history.scss */
+.pagination {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 10px;
+}
+/* line 42, ../sass/cost_history.scss */
+.pagination .active a {
+  background-color: #428bca !important;
+  border-color: #428bca !important;
+}
+/* line 47, ../sass/cost_history.scss */
+.pagination .active a:hover {
+  background-color: #428bca !important;
+  border-color: #428bca !important;
+}

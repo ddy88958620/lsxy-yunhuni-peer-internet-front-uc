@@ -1,0 +1,48 @@
+/* line 1, ../sass/cost_month.scss */
+.cost_month {
+  background: none;
+}
+/* line 3, ../sass/cost_month.scss */
+.cost_month lable {
+  display: inline-block;
+  text-align: left;
+  width: 50px;
+}
+/* line 9, ../sass/cost_month.scss */
+.cost_month .form-control {
+  margin: 0 5px;
+  display: inline-block;
+  width: 180px;
+}
+
+/* line 16, ../sass/cost_month.scss */
+.price_info {
+  text-align: center;
+  color: #555;
+  padding: 20px;
+  background-color: #dff0d8;
+}
+/* line 21, ../sass/cost_month.scss */
+.price_info .text-warning {
+  color: #FF940B;
+}
+
+/* line 28, ../sass/cost_month.scss */
+.cost-table tr td {
+  text-align: left;
+}
+/* line 32, ../sass/cost_month.scss */
+.cost-table .extend_width {
+  width: 120px;
+}
+/* line 36, ../sass/cost_month.scss */
+.cost-table caption {
+  margin: 20px 10px 10px 0px;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* line 43, ../sass/cost_month.scss */
+.cost_history_download {
+  margin: 10px auto;
+}
