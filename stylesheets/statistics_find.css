@@ -1,0 +1,15 @@
+/* line 1, ../sass/statistics_find.scss */
+.statistics_row {
+  font-size: 14px;
+  margin: 10px 0 0 0;
+  line-height: 32px;
+}
+/* line 5, ../sass/statistics_find.scss */
+.statistics_row .col-md-1 {
+  width: 60px;
+}
+
+/* line 10, ../sass/statistics_find.scss */
+.p-money {
+  color: #ff9900;
+}

@@ -1,0 +1,55 @@
+/* line 6, ../sass/application_create.scss */
+.application_create .text-right {
+  width: 100px;
+}
+/* line 9, ../sass/application_create.scss */
+.application_create .validateBtnNormal {
+  margin-left: 100px;
+}
+/* line 12, ../sass/application_create.scss */
+.application_create .tips {
+  width: 600px;
+  padding-left: 15px;
+  padding-top: 0px;
+  margin-left: 100px;
+  line-height: 25px;
+}
+/* line 20, ../sass/application_create.scss */
+.application_create .form-group {
+  margin-bottom: 10px;
+}
+/* line 24, ../sass/application_create.scss */
+.application_create .price_info, .application_create .price_info_fail {
+  padding: 10px 15px;
+  color: #619B5A;
+}
+/* line 29, ../sass/application_create.scss */
+.application_create .price_info_fail {
+  background-color: #f2dede;
+  color: #888;
+}
+/* line 35, ../sass/application_create.scss */
+.application_create .app-createbox {
+  padding-top: 5px;
+  padding-bottom: 20px;
+  display: inline-table;
+  width: 100%;
+}
+/* line 41, ../sass/application_create.scss */
+.application_create .ml-36 {
+  margin-left: 36px;
+}
+/* line 44, ../sass/application_create.scss */
+.application_create .min-height20 {
+  min-height: 20px !important;
+}
+/* line 47, ../sass/application_create.scss */
+.application_create .app-tips {
+  padding: 10px;
+  color: #676767;
+  background-color: #EAEDF1;
+}
+/* line 52, ../sass/application_create.scss */
+.application_create .border-bottom {
+  border-bottom: 1px solid #eee;
+}

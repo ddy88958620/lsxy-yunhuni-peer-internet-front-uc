@@ -1,0 +1,23 @@
+/* line 1, ../sass/number_band.scss */
+.number_on {
+  width: 400px;
+  text-align: center;
+  height: 63px;
+  background-color: #ececec;
+  cursor: pointer;
+  line-height: 63px;
+}
+/* line 9, ../sass/number_band.scss */
+.number_on a {
+  color: #4a4a4a;
+  font-size: 32px;
+}
+/* line 12, ../sass/number_band.scss */
+.number_on a:hover {
+  text-decoration: underline;
+}
+
+/* line 18, ../sass/number_band.scss */
+.line32 {
+  line-height: 32px;
+}

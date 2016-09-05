@@ -1,0 +1,32 @@
+/* line 1, ../sass/custom.scss */
+.height-220 {
+  height: 220px !important;
+}
+
+/* line 5, ../sass/custom.scss */
+.bv-form .help-block {
+  font-size: 12px !important;
+}
+
+/* line 9, ../sass/custom.scss */
+.textarea-box {
+  position: relative;
+  height: 213px;
+  width: 710px;
+  border: 1px solid #0000;
+}
+/* line 14, ../sass/custom.scss */
+.textarea-box textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+}
+
+/* line 21, ../sass/custom.scss */
+.textarea-box-tip {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 14px;
+  color: #999999;
+}
