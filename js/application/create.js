@@ -30,8 +30,17 @@ $('#application_create').bootstrapValidator({
               message: '300字符以内'
             }
           }
+        },
+        url:{
+          validators:{
+            notEmpty: {
+              message: '不能为空',
+            },
+          }
         }
       },
+
+
 })
 
 
