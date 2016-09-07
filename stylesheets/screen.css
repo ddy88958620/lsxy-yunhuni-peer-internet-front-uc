@@ -429,6 +429,11 @@ input[readonly] {
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
+/* line 232, ../sass/index.scss */
+.font16 {
+  font-size: 16px;
+}
+
 /* line 3, ../sass/banner.scss */
 .bg-blue {
   background-color: #2E97CB;
