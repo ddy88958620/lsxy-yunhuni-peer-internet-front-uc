@@ -22,22 +22,28 @@ function Page(count,listRow,showPageCount,divId,getData){
         o.totalPage = o.count % o.listRow == 0? parseInt(o.count/ o.listRow) : parseInt(o.count/ o.listRow+1);
     }
     o.initRow = function(){
+        console.info("last1:"+o.last)
+        console.info("first1:"+o.first)
+        console.info("nowPage:"+o.nowPage)
+        o.showPageCount = 5;
+        var temp = 2;
         o.first = 1;
         o.last = o.showPageCount;
-        var temp = 0;
-        temp = parseInt((o.showPageCount-1)/2);
-        if( (new Number(o.nowPage) + new Number(temp))> o.showPageCount){
-            o.first = new Number(o.nowPage)-2;
-            o.last = new Number(o.nowPage)+2;
+        if(Number(o.nowPage)+Number(temp)>Number(o.showPageCount)){
+            o.first = Number(o.nowPage) - Number(temp);
+            o.last = Number(o.nowPage) + Number(temp);
         }
-        if( o.totalPage <= o.last){
+        if(Number(o.totalPage)<Number(o.last)){
             o.last = o.totalPage;
-
         }
-        if((new Number(o.last)-(new Number(o.first)))<(new Number(temp)*2+1)){
+        if(Number(o.last)>Number(2)*Number(temp)){
+            o.first = Number(o.last)-Number(2)*Number(temp);
+        }
+        if(Number(o.last)<Number(o.showPageCount)){
             o.first = 1;
         }
-        console.info(JSON.stringify(o));
+        console.info("last:"+o.last)
+        console.info("first:"+o.first)
     }
     /**
      *  显示分页空间
@@ -96,8 +102,6 @@ function Page(count,listRow,showPageCount,divId,getData){
         o.initRow();
         //根据当前页判断重新拼接分页控件
         var html = "";
-        console.info("last:"+o.last)
-        console.info("first:"+o.first)
         if(o.last!=1) {
             if (o.first > 1) {
                 html += '<li><a class="page-item pre-page"><span>&laquo;</span></a></li>';
@@ -119,6 +123,8 @@ function Page(count,listRow,showPageCount,divId,getData){
         }
         html +='</ul>';
         //html+="<li><a href='#' class = 'page-item next-page'><span aria-hidden='true'>&raquo;</span></a>";
+        $(".my-page").html('');//my-page pagination
+        console.info(html);
         $(".my-page").html(html);
         o.bindAction();
     }
