@@ -7,6 +7,7 @@ $(".btn_actemail").click(function () {
     } else {
         window.location.href="/";//调到首页
         //alert("抱歉!未找到对应的邮箱登录地址，请自己登录邮箱查看邮件！");
+        //test ci
     }
 });
 
