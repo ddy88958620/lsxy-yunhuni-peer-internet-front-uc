@@ -5,7 +5,9 @@ $(".btn_actemail").click(function () {
     if (uurl != "") {
         window.open("http://"+uurl);
     } else {
-        alert("抱歉!未找到对应的邮箱登录地址，请自己登录邮箱查看邮件！");
+        window.location.href="/";//调到首页
+        //alert("抱歉!未找到对应的邮箱登录地址，请自己登录邮箱查看邮件！");
+        //test ci
     }
 });
 
