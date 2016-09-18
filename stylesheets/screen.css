@@ -434,6 +434,20 @@ input[readonly] {
   font-size: 16px;
 }
 
+/* line 236, ../sass/index.scss */
+.header-index-img {
+  padding-bottom: 3px;
+}
+
+/* line 239, ../sass/index.scss */
+#footer {
+  position: absolute;
+  bottom: 20px;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+
 /* line 3, ../sass/banner.scss */
 .bg-blue {
   background-color: #2E97CB;
