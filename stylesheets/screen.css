@@ -443,11 +443,25 @@ input[readonly] {
 #footer {
   position: absolute;
   bottom: 20px;
-  margin-top: 10px;
   text-align: center;
   width: 100%;
 }
 
+@media screen and (max-width: 1500px) {
+  /* line 254, ../sass/index.scss */
+  #footer {
+    position: static;
+    bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  /* line 261, ../sass/index.scss */
+  #footer p {
+    display: inline-block;
+  }
+}
 /* line 3, ../sass/banner.scss */
 .bg-blue {
   background-color: #2E97CB;
