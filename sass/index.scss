@@ -239,7 +239,26 @@ input[readonly] {
 #footer{
   position: absolute;
   bottom:20px;
-  margin-top: 10px;
   text-align: center;
   width: 100%;
+
 }
+
+
+@media screen and (min-width: 1200px) {
+
+
+}
+
+@media screen and (max-width: 1500px) {
+  #footer{
+    position: static;
+    bottom:20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    p{ display:inline-block }
+  }
+}
+
