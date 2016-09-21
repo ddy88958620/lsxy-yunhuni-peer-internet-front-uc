@@ -411,10 +411,9 @@ input[readonly] {
 /* line 211, ../sass/index.scss */
 .common-info .detail {
   float: right;
-  display: inline-block;
 }
 
-/* line 217, ../sass/index.scss */
+/* line 216, ../sass/index.scss */
 .form-control-file {
   width: 100%;
   padding: 4px 12px;
@@ -435,17 +434,17 @@ input[readonly] {
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
-/* line 237, ../sass/index.scss */
+/* line 236, ../sass/index.scss */
 .font16 {
   font-size: 16px;
 }
 
-/* line 241, ../sass/index.scss */
+/* line 240, ../sass/index.scss */
 .header-index-img {
   padding-bottom: 3px;
 }
 
-/* line 244, ../sass/index.scss */
+/* line 243, ../sass/index.scss */
 #footer {
   position: absolute;
   bottom: 20px;
@@ -454,7 +453,7 @@ input[readonly] {
 }
 
 @media screen and (max-width: 1500px) {
-  /* line 259, ../sass/index.scss */
+  /* line 258, ../sass/index.scss */
   #footer {
     position: static;
     bottom: 20px;
@@ -463,7 +462,7 @@ input[readonly] {
     text-align: center;
     width: 100%;
   }
-  /* line 266, ../sass/index.scss */
+  /* line 265, ../sass/index.scss */
   #footer p {
     display: inline-block;
   }

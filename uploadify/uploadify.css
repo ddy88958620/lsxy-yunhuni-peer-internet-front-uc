@@ -1,15 +1,16 @@
 /*
 Uploadify
 Copyright (c) 2012 Reactive Apps, Ronnie Garcia
-Released under the MIT License <http://www.opensource.org/licenses/mit-license.php> 
+Released under the MIT License <http://www.opensource.org/licenses/mit-license.php>
 */
 
 .uploadify {
 	position: relative;
 	margin-bottom: 1em;
 }
-.uploadify-button {
-	background-color: #505050;
+
+.uploadify-button-test{
+	background-color: #000;
 	background-image: linear-gradient(bottom, #505050 0%, #707070 100%);
 	background-image: -o-linear-gradient(bottom, #505050 0%, #707070 100%);
 	background-image: -moz-linear-gradient(bottom, #505050 0%, #707070 100%);
@@ -24,30 +25,49 @@ Released under the MIT License <http://www.opensource.org/licenses/mit-license.p
 	);
 	background-position: center top;
 	background-repeat: no-repeat;
-	-webkit-border-radius: 30px;
-	-moz-border-radius: 30px;
-	border-radius: 30px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
 	border: 2px solid #808080;
 	color: #FFF;
-	font: bold 12px Arial, Helvetica, sans-serif;
+	line-height: 25px;
+	text-align: center;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	width: 100%;
+}
+
+
+.uploadify-button {
+	background-color: #000;
+	background-image: linear-gradient(bottom, #2d8123 0%, #619B5A 100%);
+	background-image: -o-linear-gradient(bottom, #2d8123 0%, #619B5A 100%);
+	background-image: -moz-linear-gradient(bottom, #2d8123 0%, #619B5A 100%);
+	background-image: -webkit-linear-gradient(bottom, #2d8123 0%, #619B5A 100%);
+	background-image: -ms-linear-gradient(bottom, #2d8123 0%, #619B5A 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #2d8123),
+		color-stop(1, #619B5A)
+	);
+	background-position: center top;
+	background-repeat: no-repeat;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 2px solid #619B5A;
+	color: #FFF;
+	line-height: 25px;
 	text-align: center;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
 	width: 100%;
 }
 .uploadify:hover .uploadify-button {
-	background-color: #606060;
-	background-image: linear-gradient(top, #606060 0%, #808080 100%);
-	background-image: -o-linear-gradient(top, #606060 0%, #808080 100%);
-	background-image: -moz-linear-gradient(top, #606060 0%, #808080 100%);
-	background-image: -webkit-linear-gradient(top, #606060 0%, #808080 100%);
-	background-image: -ms-linear-gradient(top, #606060 0%, #808080 100%);
-	background-image: -webkit-gradient(
-		linear,
-		left bottom,
-		left top,
-		color-stop(0, #606060),
-		color-stop(1, #808080)
-	);
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+	-moz-opacity:0.8;
+	-khtml-opacity:0.8;
 	background-position: center bottom;
 }
 .uploadify-button.disabled {
@@ -62,7 +82,6 @@ Released under the MIT License <http://www.opensource.org/licenses/mit-license.p
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
-	font: 11px Verdana, Geneva, sans-serif;
 	margin-top: 5px;
 	max-width: 350px;
 	padding: 10px;

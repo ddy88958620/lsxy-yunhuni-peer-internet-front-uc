@@ -216,7 +216,7 @@
 
 
 <!---mobilebox-->
-<div class="shadow-bg" id="show-bg"></div>
+<div class="shadow-bg" id="show-bg" style="display: block"></div>
 <div class="modal-box application-detail-box" id="modalone" style="display: none">
     <div class="title">绑定测试电话号码<a class="close_a modalCancel" data-id="one"></a></div>
     <div class="content">
@@ -304,7 +304,7 @@
 </div>
 
 <!---上传文件--->
-<div class="modal-box application-detail-box application-file-box" id="modalfour" style="display:none ">
+<div class="modal-box application-detail-box application-file-box" id="modalfour" style="display: ">
     <div class="title">文件上传<a class="close_a modalCancel" data-id="four"></a></div>
     <div class="content">
         <p class="info">只支持 .wav 格式的文件，请将其他格式转换成wav格式（编码为 8k、16位）后再上传；单条语音最大支持 5M；文件名称只允许含英文、数字，其他字符将会造成上传失败。  </p>
@@ -374,6 +374,8 @@
                 'timestamp' : '1474437709',
                 'token'     : '879dd124696ec1a7df8cd2d73629570c'
             },
+            height:35,
+            removeCompleted:false,
             queueSizeLimit  : 1,
             fileTypeDesc    : '只支持wav格式的音频文件',
             fileTypeExts    : '*.wav;',
