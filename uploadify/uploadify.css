@@ -38,29 +38,16 @@ Released under the MIT License <http://www.opensource.org/licenses/mit-license.p
 
 
 .uploadify-button {
-	background-color: #000;
-	background-image: linear-gradient(bottom, #2d8123 0%, #619B5A 100%);
-	background-image: -o-linear-gradient(bottom, #2d8123 0%, #619B5A 100%);
-	background-image: -moz-linear-gradient(bottom, #2d8123 0%, #619B5A 100%);
-	background-image: -webkit-linear-gradient(bottom, #2d8123 0%, #619B5A 100%);
-	background-image: -ms-linear-gradient(bottom, #2d8123 0%, #619B5A 100%);
-	background-image: -webkit-gradient(
-		linear,
-		left bottom,
-		left top,
-		color-stop(0, #2d8123),
-		color-stop(1, #619B5A)
-	);
-	background-position: center top;
-	background-repeat: no-repeat;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
+	background-color: #619B5A;
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 	border: 2px solid #619B5A;
 	color: #FFF;
 	line-height: 25px;
 	text-align: center;
-	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+
 	width: 100%;
 }
 .uploadify:hover .uploadify-button {
@@ -87,7 +74,7 @@ Released under the MIT License <http://www.opensource.org/licenses/mit-license.p
 	padding: 10px;
 }
 .uploadify-error {
-	background-color: #FDE5DD !important;
+	background-color: #FFF !important;
 }
 .uploadify-queue-item .cancel a {
 	background: url('uploadify-cancel.png') 0 0 no-repeat;
@@ -97,10 +84,10 @@ Released under the MIT License <http://www.opensource.org/licenses/mit-license.p
 	width: 16px;
 }
 .uploadify-queue-item.completed {
-	background-color: #E5E5E5;
+	background-color: #619B5A;
 }
 .uploadify-progress {
-	background-color: #E5E5E5;
+	background-color: #619B5A;
 	margin-top: 10px;
 	width: 100%;
 }
