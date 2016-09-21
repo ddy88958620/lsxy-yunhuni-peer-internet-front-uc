@@ -3,14 +3,15 @@
 <body>
 <!-- header -->
 <div class="include" data-include="header"></div>
-<!-- end header -->
+<!--上传文件样式-->
+<link rel="stylesheet" href="uploadify/uploadify.css"/>
 
+<!-- end header -->
 <section class='aside-section'>
     <section class="hbox stretch">
         <!-- .aside -->
         <aside class="bg-Green lter aside hidden-print include" data-include="aside" id="nav"></aside>
         <!-- /.aside -->
-
         <section id="content">
             <section class="hbox stretch">
                 <!-- 如果没有三级导航 这段代码注释-->
@@ -215,7 +216,7 @@
 
 
 <!---mobilebox-->
-<div class="shadow-bg" id="show-bg"></div>
+<div class="shadow-bg" id="show-bg" style="display: block"></div>
 <div class="modal-box application-detail-box" id="modalone" style="display: none">
     <div class="title">绑定测试电话号码<a class="close_a modalCancel" data-id="one"></a></div>
     <div class="content">
@@ -303,7 +304,7 @@
 </div>
 
 <!---上传文件--->
-<div class="modal-box application-detail-box application-file-box" id="modalfour" style="display:none ">
+<div class="modal-box application-detail-box application-file-box" id="modalfour" style="display: ">
     <div class="title">文件上传<a class="close_a modalCancel" data-id="four"></a></div>
     <div class="content">
         <p class="info">只支持 .wav 格式的文件，请将其他格式转换成wav格式（编码为 8k、16位）后再上传；单条语音最大支持 5M；文件名称只允许含英文、数字，其他字符将会造成上传失败。  </p>
@@ -314,26 +315,12 @@
                         文件 :
                     </div>
                     <div class="col-md-10">
-                        <input type="file" value="" class="input-text form-control"  id="singlefile" multiple="multiple" />
-                        <div class="progress h10 mt-10"  id="progress-bar" style="display: none" >
-                            <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"  aria-valuemin="0" aria-valuemax="100" style="width: 10%">
-                            </div>
-                        </div>
+                        <input id="file_upload" name="file_upload" type="file" multiple="true">
+
+                  
                     </div>
                     <div class="col-md-10">
-                      <span class="btn btn-success fileinput-button">
-                        <i class="glyphicon glyphicon-plus"></i>
-                        <span>Select files...</span>
-                        <!-- The file input field used as target for the file upload widget -->
-                        <input id="fileupload" type="file" name="files[]" multiple>
-                      </span>
-                      <br>
-                      <br>
-                      <!-- The global progress bar -->
-                      <div id="progress" class="progress">
-                        <div class="progress-bar progress-bar-success"></div>
-                      </div>
-                     <div id="files" class="files"></div>
+
                     </div>
                 </div>
 
@@ -361,15 +348,18 @@
 <script src="js/charts/flot/demo.js" cache="false"></script>
 <script src="js/include.js"></script>
 <script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
+<!--加载上传控制-->
+<script src="uploadify/jquery.uploadify.min.js"></script>
 
 
-<script src="bower_components/blueimp-file-upload/js/vendor/jquery.ui.widget.js"></script>
+
+<!--<script src="bower_components/blueimp-file-upload/js/vendor/jquery.ui.widget.js"></script>
 <script src="bower_components/blueimp-file-upload/js/jquery.fileupload.js"></script>
 <script src="bower_components/blueimp-file-upload/js/jquery.fileupload-ui.js"></script>
 <script src="bower_components/blueimp-file-upload/js/jquery.fileupload-process.js"></script>
-<!-- <script src="bower_components/blueimp&#45;file&#45;upload/js/jquery.fileupload&#45;jquery&#45;ui.js"></script> -->
+
 <script src="bower_components/blueimp-file-upload/js/jquery.iframe-transport.js"></script>
-<script src="bower_components/blueimp-file-upload/js/jquery.fileupload-validate.js"></script>
+<script src="bower_components/blueimp-file-upload/js/jquery.fileupload-validate.js"></script>-->
 
 <script type="text/javascript" src='./js/bootstrap-datepicker/js/bootstrap-datepicker.js'> </script>
 <script type="text/javascript" src='./js/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js'> </script>
@@ -378,7 +368,84 @@
 <!--syncpage-->
 <script type="text/javascript" src='./js/page.js'></script>
 <script>
-    // 上传多个文件
+    $(function() {
+        $('#file_upload').uploadify({
+            'formData'     : {
+                'timestamp' : '1474437709',
+                'token'     : '879dd124696ec1a7df8cd2d73629570c'
+            },
+            height:35,
+            removeCompleted:false,
+            queueSizeLimit  : 1,
+            fileTypeDesc    : '只支持wav格式的音频文件',
+            fileTypeExts    : '*.wav;',
+            'swf'      : 'uploadify/uploadify.swf',
+            'uploader' : 'uploadify.php'
+        });
+
+        $("#singlefile_upload").uploadify({
+            formData		: {'appId': $("#appId").val()},
+            queueId			: 'singleQueue',
+            method          : 'post',
+            auto            : true,
+            swf             : '/js/uploadify/uploadify.swf',
+            uploader        : '/member/playFile/multiUpLoadFiles;jsessionid=7CD7E232E7A8857525ACA64AB58831B4',
+            cancel          : '/mem/images/uploadify-cancel.png',
+            fileObjName     : 'file',
+            queueSizeLimit  : 1,
+            fileTypeDesc    : '只支持wav格式的音频文件',
+            fileTypeExts    : '*.wav;',
+            uploadLimit     : 1,
+            multi			: false,
+            removeCompleted : false,
+            buttonText      : '选择文件',
+            fileSizeLimit   : '5120KB',  // 测试先设置5MB，系统默认应当设置为5120KB
+            // fileSizeLimit   : '12MB',
+            height          : 32,
+            width           : 135,
+            'onSelectError':function(file, errorCode, errorMsg){
+                switch(errorCode) {
+                    case -100:
+                        alert("上传文件数量已经超出系统限制的"+$('#singlefile_upload').uploadify('settings','queueSizeLimit')+"个文件");
+                        break;
+                    case -110:
+                        alert("文件【"+file.name+"】大小超出系统限制的"+$('#singlefile_upload').uploadify('settings','fileSizeLimit'));
+                        break;
+                    case -120:
+                        alert("文件【"+file.name+"】大小为空");
+                        break;
+                    case -130:
+                        alert("文件 【"+file.name+"】类型不正确，请上传wav格式文件");
+                        break;
+                }
+            },
+            'onFallback':function(){
+                alert("您未安装FLASH控件，无法上传图片！请安装FLASH控件后再试。");
+            },
+            'onCancel' : function(file) {	// 自动上传时，此方法捕捉不到事件
+
+            },
+            'onClearQueue':function(queueItemCount){
+
+            },
+            'onUploadSuccess':function(file, data, response){
+                if(data!=""){
+                    alert(data);
+                }else{
+                    singleFileName = file.name;
+                    if (singleFileName.length > 0){
+                        buttonObject.disabled = false;
+                        buttonObject.className = "btn_save c2";
+                        //alert('上传文件名称： ' + singleFileName);
+                    }
+                }
+            }
+        });
+
+    });
+
+
+   /* // 上传多个文件
     $(function(){
         
         var Allfile = [],allFileLength = 0, errorFileArray = []
@@ -414,7 +481,7 @@
             //最后有几个错误文件
             console.log(errorFileArray)
         })
-    })
+    })*/
 </script>
 
 <script>
