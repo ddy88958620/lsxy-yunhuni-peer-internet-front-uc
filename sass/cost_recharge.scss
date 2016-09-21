@@ -1,6 +1,6 @@
 
 .cost-rechage {
-  @extend .personal-auth;
+  @extend .personal-auth !optional;
  .text-right {
     width: 88px;
   }
