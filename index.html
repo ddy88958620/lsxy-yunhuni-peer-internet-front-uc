@@ -68,7 +68,7 @@
                             //初始化
                             function initMarquee() {
                               var str=marqueeContent[0];
-                              document.write('<div class="common-info" ><div id="marqueeBox" style="overflow:hidden;float:left;height:'+marqueeHeight+'px" onmouseover="clearInterval(marqueeInterval[0])" onmouseout="marqueeInterval[0]=setInterval(\'startMarquee()\',marqueeDelay)"><div>'+str+'</div></div><a>查看详情</a><span class="close" id="common-close"></span></div>');
+                              document.write('<div class="common-info" ><div id="marqueeBox" style="overflow:hidden;float:left;height:'+marqueeHeight+'px" onmouseover="clearInterval(marqueeInterval[0])" onmouseout="marqueeInterval[0]=setInterval(\'startMarquee()\',marqueeDelay)"><div>'+str+'</div></div><span class="close" id="common-close"></span><a class="detail" >查看详情</a></div>');
                               marqueeId++;
                               marqueeInterval[0]=setInterval("startMarquee()",marqueeDelay);
                             }

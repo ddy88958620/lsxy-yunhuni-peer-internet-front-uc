@@ -201,11 +201,16 @@ input[readonly] {
     padding: 0 5px;
   }
   .close{
-    width: 50px;
+    width: 25px;
     height: 20px;
     opacity: 1;
     float: right;
+    display: inline-block;
     background: url(../images/index/commom_close.png) center center no-repeat;
+  }
+  .detail{
+    float: right;
+    display: inline-block;
   }
 }
 

@@ -374,9 +374,72 @@
                 'timestamp' : '1474437709',
                 'token'     : '879dd124696ec1a7df8cd2d73629570c'
             },
+            queueSizeLimit  : 1,
+            fileTypeDesc    : '只支持wav格式的音频文件',
+            fileTypeExts    : '*.wav;',
             'swf'      : 'uploadify/uploadify.swf',
             'uploader' : 'uploadify.php'
         });
+
+        $("#singlefile_upload").uploadify({
+            formData		: {'appId': $("#appId").val()},
+            queueId			: 'singleQueue',
+            method          : 'post',
+            auto            : true,
+            swf             : '/js/uploadify/uploadify.swf',
+            uploader        : '/member/playFile/multiUpLoadFiles;jsessionid=7CD7E232E7A8857525ACA64AB58831B4',
+            cancel          : '/mem/images/uploadify-cancel.png',
+            fileObjName     : 'file',
+            queueSizeLimit  : 1,
+            fileTypeDesc    : '只支持wav格式的音频文件',
+            fileTypeExts    : '*.wav;',
+            uploadLimit     : 1,
+            multi			: false,
+            removeCompleted : false,
+            buttonText      : '选择文件',
+            fileSizeLimit   : '5120KB',  // 测试先设置5MB，系统默认应当设置为5120KB
+            // fileSizeLimit   : '12MB',
+            height          : 32,
+            width           : 135,
+            'onSelectError':function(file, errorCode, errorMsg){
+                switch(errorCode) {
+                    case -100:
+                        alert("上传文件数量已经超出系统限制的"+$('#singlefile_upload').uploadify('settings','queueSizeLimit')+"个文件");
+                        break;
+                    case -110:
+                        alert("文件【"+file.name+"】大小超出系统限制的"+$('#singlefile_upload').uploadify('settings','fileSizeLimit'));
+                        break;
+                    case -120:
+                        alert("文件【"+file.name+"】大小为空");
+                        break;
+                    case -130:
+                        alert("文件 【"+file.name+"】类型不正确，请上传wav格式文件");
+                        break;
+                }
+            },
+            'onFallback':function(){
+                alert("您未安装FLASH控件，无法上传图片！请安装FLASH控件后再试。");
+            },
+            'onCancel' : function(file) {	// 自动上传时，此方法捕捉不到事件
+
+            },
+            'onClearQueue':function(queueItemCount){
+
+            },
+            'onUploadSuccess':function(file, data, response){
+                if(data!=""){
+                    alert(data);
+                }else{
+                    singleFileName = file.name;
+                    if (singleFileName.length > 0){
+                        buttonObject.disabled = false;
+                        buttonObject.className = "btn_save c2";
+                        //alert('上传文件名称： ' + singleFileName);
+                    }
+                }
+            }
+        });
+
     });
 
 
