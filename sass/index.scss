@@ -125,7 +125,7 @@ section.panel.pos-rlt {
 .tips-toast {
   position: fixed;
   width: 300px;
-  z-index: 1003;
+  z-index: 999999;
   height: auto;
   background: #000000;
   filter: alpha(opacity=60);
