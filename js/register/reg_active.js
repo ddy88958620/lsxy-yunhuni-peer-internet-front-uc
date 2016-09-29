@@ -51,9 +51,9 @@ $(document).ready(function() {
                         message: '用户名不能为空'
                     },
                     stringLength: {
-                        min: 6,
+                        min: 2,
                         max: 25,
-                        message: '用户名长度为6-25位'
+                        message: '用户名长度为2-25位'
                     }
                 }
             },

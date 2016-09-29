@@ -57,10 +57,8 @@
 
                           <script language="JavaScript" type="text/javascript">
                             var marqueeContent=new Array();
-                            marqueeContent[0]="<span >云呼你有新的讯息1</span>";
-                            marqueeContent[1]="<span >云呼你有新的讯息2</span>";
-                            marqueeContent[2]="<span >云呼你有新的讯息3云呼你有新的讯息3</span>";
-                            marqueeContent[3]="<span >云呼你有新的讯息4</span>";
+                            marqueeContent[0]="<span >云呼你有新的讯息1云呼你有新的讯息3云呼你有新的讯息3云呼你有云呼你有新的讯息3云呼你有新的讯息3云呼你有新的讯息3云呼你有新的讯息3新的讯息3云呼你有新的讯息3云呼你有新的讯息3云呼你有新的讯息3云呼你有新的讯息3云呼你有新的讯息3云呼你有新的讯息3云呼你有新的讯息3云呼你有新的讯息3云呼你有新的讯息3</span>";
+
                             var marqueeInterval=new Array();
                             var marqueeId=0;
                             var marqueeDelay=2000;
@@ -68,7 +66,7 @@
                             //初始化
                             function initMarquee() {
                               var str=marqueeContent[0];
-                              document.write('<div class="common-info" ><div id="marqueeBox" style="overflow:hidden;float:left;height:'+marqueeHeight+'px" onmouseover="clearInterval(marqueeInterval[0])" onmouseout="marqueeInterval[0]=setInterval(\'startMarquee()\',marqueeDelay)"><div>'+str+'</div></div><span class="close" id="common-close"></span><a class="detail" >查看详情</a></div>');
+                              document.write('<div class="common-info" ><div id="marqueeBox" style="overflow:hidden;float:left;height:'+marqueeHeight+'px; width: 80%;" onmouseover="clearInterval(marqueeInterval[0])" onmouseout="marqueeInterval[0]=setInterval(\'startMarquee()\',marqueeDelay)"><div>'+str+'</div></div><span class="close" id="common-close"></span><a class="detail" >查看详情</a></div>');
                               marqueeId++;
                               marqueeInterval[0]=setInterval("startMarquee()",marqueeDelay);
                             }
