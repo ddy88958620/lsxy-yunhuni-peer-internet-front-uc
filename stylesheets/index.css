@@ -289,3 +289,12 @@ input[readonly] {
     display: inline-block;
   }
 }
+/* line 270, ../sass/index.scss */
+.remove-marigin-bottom {
+  margin-bottom: 0 !important;
+}
+
+/* line 274, ../sass/index.scss */
+.margin-auto {
+  margin: 0 auto !important;
+}
