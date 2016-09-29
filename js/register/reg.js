@@ -70,15 +70,15 @@ $(document).ready(function() {
                         message: '用户名不能为空'
                     },
                     stringLength: {
-                        min: 6,
+                        min: 2,
                         max: 25,
-                        message: '用户名长度为6-25位'
+                        message: '用户名长度为2-25位'
                     },
                     callback: {
                         message: '用户名不能为纯数字或包含特殊字符',
                         callback: function(value, validator) {
                             var pattern=/^[0-9]*$|[`~!@#$%^&*()+=|{}':;',\[\].<>/?~！@#￥%……&*（）——+|{}【】‘；：”“’。，、？]/im;
-                            if(value.length>=6 && value.length<=25){
+                            if(value.length>=2 && value.length<=25){
                                 if(pattern.test(value)){
                                     return false;
                                 }
