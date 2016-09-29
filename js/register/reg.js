@@ -8,8 +8,8 @@ $('#modal-hidden').click(function(){
 function showmodal() {
     $('#showtips').hide();
     var mobile = $('input[name="mobile"]').val();
-    var spring =  mobile.substring(0,3) + '****' + mobile.substring(7,11) ;
-    $('#mobile_number').html(spring);
+    //var spring =  mobile.substring(0,3) + '****' + mobile.substring(7,11) ;
+    $('#mobile_number').html(mobile);
 	if($('#second-codeblock').length>0){
 	   $('#second-codeblock').html('');
 	}
