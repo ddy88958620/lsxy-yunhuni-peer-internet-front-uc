@@ -221,7 +221,7 @@ body{
     }
     .code-button {
       @include codeimg;
-      float: right;
+      margin-left: 20px;
       width: 120px;
     }
     .in-block{
@@ -263,6 +263,7 @@ body{
 }
 
 .code-img{
+  padding-left: 20px;
   cursor:pointer;
 }
 
@@ -433,7 +434,13 @@ body{
 }
 
 
+.remove-marigin-bottom{
+  margin-bottom: 0 !important;
+}
 
+.margin-auto{
+  margin: 0 auto !important;
+}
 
 
 
