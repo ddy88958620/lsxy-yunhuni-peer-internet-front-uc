@@ -85,8 +85,8 @@ section .nav .list li a {
 
 /*一级菜单 start*/
 .head{
-    min-height: 30px;
-    line-height:30px;
+    min-height: 40px;
+    line-height:40px;
 }
 .head a{
     color:#fff;
@@ -386,7 +386,7 @@ transition:color .3s ease-in-out 0s;
 .list>li>a {
     position: relative;
     display: block;
-    padding: 10px 15px;
+    padding: 11px 15px;
     color:#fff;
     font-size:1.6rem;
 }
