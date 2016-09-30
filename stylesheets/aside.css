@@ -132,9 +132,9 @@ aside.aside.bg-Green.lter {
   font-weight: normal;
   display: inline-block;
   text-indent: 50px;
-  height: 44px;
+  height: 40.8px;
   width: 100%;
-  line-height: 44px;
+  line-height: 40px;
 }
 /* line 152, ../sass/aside.scss */
 .aside-li-a.active {
@@ -159,4 +159,9 @@ aside.aside.bg-Green.lter {
 /* line 171, ../sass/aside.scss */
 .tooltip.right {
   width: 80px;
+}
+
+/* line 176, ../sass/aside.scss */
+.navbar-index {
+  width: 125px;
 }

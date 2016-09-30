@@ -144,9 +144,9 @@ aside {
     font-weight: normal;
     display: inline-block;
     text-indent: 50px;
-    height: 44px;
+    height: 40.8px;
     width: 100%;
-    line-height: 44px;
+    line-height: 40px;
   }
 
   &.active {
@@ -173,3 +173,6 @@ aside {
   }
 }
 
+.navbar-index{
+  width: 125px;
+}

@@ -148,9 +148,9 @@ aside.aside.bg-Green.lter {
   font-weight: normal;
   display: inline-block;
   text-indent: 50px;
-  height: 44px;
+  height: 40.8px;
   width: 100%;
-  line-height: 44px;
+  line-height: 40px;
 }
 /* line 152, ../sass/aside.scss */
 .aside-li-a.active {
@@ -175,6 +175,11 @@ aside.aside.bg-Green.lter {
 /* line 171, ../sass/aside.scss */
 .tooltip.right {
   width: 80px;
+}
+
+/* line 176, ../sass/aside.scss */
+.navbar-index {
+  width: 125px;
 }
 
 /* line 3, ../sass/index.scss */
@@ -476,6 +481,13 @@ input[readonly] {
 /* line 274, ../sass/index.scss */
 .margin-auto {
   margin: 0 auto !important;
+}
+
+/* line 278, ../sass/index.scss */
+.index-key {
+  width: 53px;
+  display: inline-block;
+  text-align: right;
 }
 
 /* line 3, ../sass/banner.scss */
@@ -1944,7 +1956,7 @@ a {
 /* line 63, ../sass/screen.scss */
 .wrapper.header {
   padding: 0 15px !important;
-  height: 36px;
+  height: 40px;
   line-height: 40px;
   font-size: 1.6rem;
 }

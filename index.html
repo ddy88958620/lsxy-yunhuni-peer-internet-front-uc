@@ -201,13 +201,15 @@
                                     </header>
                                     <div class="panel-body clearfix border-top-none">
                                       <p>
-                                        REST API: http://api.yunhuni.com/1234135312321414134/
+                                        <span class="index-key">API地址:</span>
+                                        <span id="restapi" data-clipboard-target="restapi">http://api.yunhuni.com/1234135312321414134/</span>
                                         <span>
                                           <a href="#">API文档</a>
                                         </span>
                                       </p>
                                       <p>
-                                        SecretKey <span class="secretkey">1234135312321414134</span>
+                                        <span class="index-key">密钥:</span>
+                                        <span id="secretkey" data-clipboard-target="secretkey">1234135312321414134</span>
                                         <span>
                                           <a class='reset_confirm' >重新生成</a>
                                         </span>
@@ -215,6 +217,10 @@
                                           <a class='tips-error tips-key'>提示</a>
                                         </span>
 
+                                      </p>
+                                      <p>
+                                        <span class="index-key">鉴权账号:</span>
+                                        <span id="certid" data-clipboard-target="certid">123456789123456789</span>
                                       </p>
                                     </div>
                                   </div>
@@ -301,6 +307,61 @@
 <script src="js/charts/flot/jquery.flot.min.js" cache="false"></script>
 <script src="js/bootbox.min.js"></script>
 <script src="js/charts/flot/demo.js" cache="false"></script>
+
+<script type="text/javascript" src="js/zero/ZeroClipboard.js"></script>
+<script type="text/javascript">
+
+  if(window.clipboardData){
+    //支持IE
+    var restapi = document.getElementById("restapi");
+    restapi.onclick = function(){
+      alert(restapi.innerHTML);
+      window.clipboardData.setData('text',restapi.innerHTML);
+    }
+
+    var secretkey = document.getElementById("secretkey");
+    secretkey.onclick = function(){
+      alert(secretkey.innerHTML);
+      window.clipboardData.setData('text',secretkey.innerHTML);
+    }
+
+    var certid = document.getElementById("certid");
+    certid.onclick = function(){
+      alert(certid.innerHTML);
+      window.clipboardData.setData('text',certid.innerHTML);
+    }
+
+
+  }else{
+    var restapi = new ZeroClipboard( document.getElementById("restapi"), {
+      moviePath: "js/zero/ZeroClipboard.swf"
+    } );
+    var secrekey = new ZeroClipboard( document.getElementById("secretkey"), {
+      moviePath: "js/zero/ZeroClipboard.swf"
+    } );
+    var certid = new ZeroClipboard( document.getElementById("certid"), {
+      moviePath: "js/zero/ZeroClipboard.swf"
+    } );
+
+    restapi.on( 'complete', function(client, args) {
+      alert("复制成功"+ args.text);
+    } );
+
+    secrekey.on( 'complete', function(client, args) {
+      alert("复制成功"+ args.text);
+    } );
+
+    certid.on( 'complete', function(client, args) {
+      alert("复制成功"+ args.text);
+    } );
+  }
+
+
+
+
+</script>
+
+
 <script src="js/include.js" aysnc></script>
 <script src="js/include.js"></script>
 <script type="text/javascript">
@@ -321,8 +382,10 @@
 
 
 
-
 </script>
+
+
+
 
 </body>
 </html>

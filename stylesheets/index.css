@@ -298,3 +298,10 @@ input[readonly] {
 .margin-auto {
   margin: 0 auto !important;
 }
+
+/* line 278, ../sass/index.scss */
+.index-key {
+  width: 53px;
+  display: inline-block;
+  text-align: right;
+}
