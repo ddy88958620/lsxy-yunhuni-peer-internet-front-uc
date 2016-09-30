@@ -8047,7 +8047,7 @@ transition:left .25s;
 	font-size:14px;
 	border-top:1px solid transparent;
 	border-color:rgba(255, 255, 255, 0.05);
-transition:color .3s ease-in-out 0s;
+	transition:color .3s ease-in-out 0s;
 }
 .no-borders .nav-primary ul.nav>li>a {
 	border-width:0 !important;

@@ -62,7 +62,9 @@ a {
 
 .wrapper.header {
     padding: 0 15px !important;
-    height: 40px;
+    box-sizing:inherit;
+    bacground-color: rgb(234, 237, 241);
+    height: 41px;
     line-height: 40px;
     font-size: 1.6rem;
 }

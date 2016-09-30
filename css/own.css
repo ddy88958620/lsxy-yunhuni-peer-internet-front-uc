@@ -389,6 +389,9 @@ transition:color .3s ease-in-out 0s;
     padding: 11px 15px;
     color:#fff;
     font-size:1.6rem;
+    border-top: 1px solid transparent;
+    border-color: rgba(255, 255, 255, 0.05);
+
 }
 .list>li>a:hover, .list>li>a:focus {
     text-decoration: none;
