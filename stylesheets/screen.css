@@ -148,9 +148,9 @@ aside.aside.bg-Green.lter {
   font-weight: normal;
   display: inline-block;
   text-indent: 50px;
-  height: 40.8px;
+  height: 41px;
   width: 100%;
-  line-height: 40px;
+  line-height: 41px;
 }
 /* line 152, ../sass/aside.scss */
 .aside-li-a.active {
@@ -1956,7 +1956,9 @@ a {
 /* line 63, ../sass/screen.scss */
 .wrapper.header {
   padding: 0 15px !important;
-  height: 40px;
+  box-sizing: inherit;
+  bacground-color: #eaedf1;
+  height: 41px;
   line-height: 40px;
   font-size: 1.6rem;
 }
