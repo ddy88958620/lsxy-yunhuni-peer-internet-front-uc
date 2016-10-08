@@ -256,7 +256,6 @@
 
 
 
-
     /**
      * 回调数据
      * @param xd 消费数据
@@ -278,6 +277,8 @@
         }
 
         var myChart = echarts.init(document.getElementById('ecpanel'),'wonderland');
+
+
         option = {
             title: {
                 text: '',
@@ -292,9 +293,10 @@
             toolbox: {
                 show: true,
                 feature: {
-                    dataView: {readOnly: false},
-                    restore: {},
-                    saveAsImage: {}
+                    dataView: {show: true, readOnly: false},
+                    magicType: {show: true, type: ['line', 'bar']},
+                    restore: {show: true},
+                    saveAsImage: {show: true}
                 }
             },
             dataZoom: {
@@ -310,19 +312,7 @@
                     name: '日期',
 
                 },
-                {
-                    type: 'category',
-                    boundaryGap: true,
-                    data: (function (){
-                        var res = [];
-                        var len = 0;
-                        while (len<31) {
-                            res.push(len + 1);
-                            len++
-                        }
-                        return res;
-                    })()
-                }
+
             ],
             yAxis: [
                 {
@@ -354,7 +344,6 @@
                 {
                     name:'消费额',
                     type:'bar',
-                    xAxisIndex: 1,
                     yAxisIndex: 1,
                     data:xd
                 },
@@ -365,6 +354,9 @@
                 }
             ]
         };
+
+
+
 
         myChart.setOption(option);
     }
