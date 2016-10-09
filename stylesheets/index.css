@@ -305,3 +305,8 @@ input[readonly] {
   display: inline-block;
   text-align: right;
 }
+
+/* line 284, ../sass/index.scss */
+.inline-block {
+  display: inline-block !important;
+}

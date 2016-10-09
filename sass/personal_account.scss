@@ -129,9 +129,9 @@
   top: 50%;
   left: 50%;
   margin-left: -231px;
-  margin-top: -169px;
+  margin-top: -185px;
   width: 462px;
-  height: 338px;
+  height: 370px;
   background-color: #FFF;
   .title {
     height: 65px;
@@ -161,6 +161,16 @@
       font-size: 16px;
       color: #737373;
     }
+
+    .input-inline-block{
+      display: inline-block;
+      height: auto;
+      margin-top: 10px;
+      margin-left: 70px;
+      line-height: 45px;
+      font-size: 16px;
+      color: #737373;
+    }
     input[type="text"],
     input[type="password"]{
       height: 45px;
@@ -170,9 +180,13 @@
       width: 72px;
     }
     .code {
-      float: left;
       height: 45px;
-      width: 49%;
+      width: 110px;
+      float: left;
+      display: inline-block;
+    }
+    .code-img{
+      margin-left: 10px;
     }
     .code-button {
       background: url("../images/register/code_bg.png") repeat-x;
@@ -180,13 +194,14 @@
       color: #737373;
       border: 1px solid #c3c3c3;
       border-radius: 5px;
-      float: right;
-      width: 49%;
+      float: left;
+      margin-left: 20px;
+      width: 120px;
     }
     .in-block{
       display: inline-block;
       margin-left: 70px;
-      margin-top: 5px;
+      margin-top: 0px;
       margin-bottom: 0;
     }
   }

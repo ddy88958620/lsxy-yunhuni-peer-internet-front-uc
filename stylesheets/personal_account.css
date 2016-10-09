@@ -149,9 +149,9 @@
   top: 50%;
   left: 50%;
   margin-left: -231px;
-  margin-top: -169px;
+  margin-top: -185px;
   width: 462px;
-  height: 338px;
+  height: 370px;
   background-color: #FFF;
 }
 /* line 136, ../sass/personal_account.scss */
@@ -184,44 +184,60 @@
   font-size: 16px;
   color: #737373;
 }
-/* line 164, ../sass/personal_account.scss */
+/* line 165, ../sass/personal_account.scss */
+.modal-box .content .input-inline-block {
+  display: inline-block;
+  height: auto;
+  margin-top: 10px;
+  margin-left: 70px;
+  line-height: 45px;
+  font-size: 16px;
+  color: #737373;
+}
+/* line 174, ../sass/personal_account.scss */
 .modal-box .content input[type="text"],
 .modal-box .content input[type="password"] {
   height: 45px;
 }
-/* line 168, ../sass/personal_account.scss */
+/* line 178, ../sass/personal_account.scss */
 .modal-box .content .code-title {
   float: left;
   width: 72px;
 }
-/* line 172, ../sass/personal_account.scss */
+/* line 182, ../sass/personal_account.scss */
 .modal-box .content .code {
-  float: left;
   height: 45px;
-  width: 49%;
+  width: 110px;
+  float: left;
+  display: inline-block;
 }
-/* line 177, ../sass/personal_account.scss */
+/* line 188, ../sass/personal_account.scss */
+.modal-box .content .code-img {
+  margin-left: 10px;
+}
+/* line 191, ../sass/personal_account.scss */
 .modal-box .content .code-button {
   background: url("../images/register/code_bg.png") repeat-x;
   height: 45px;
   color: #737373;
   border: 1px solid #c3c3c3;
   border-radius: 5px;
-  float: right;
-  width: 49%;
+  float: left;
+  margin-left: 20px;
+  width: 120px;
 }
-/* line 186, ../sass/personal_account.scss */
+/* line 201, ../sass/personal_account.scss */
 .modal-box .content .in-block {
   display: inline-block;
   margin-left: 70px;
-  margin-top: 5px;
+  margin-top: 0px;
   margin-bottom: 0;
 }
-/* line 193, ../sass/personal_account.scss */
+/* line 208, ../sass/personal_account.scss */
 .modal-box .margintop30 {
   margin-top: 30px;
 }
-/* line 197, ../sass/personal_account.scss */
+/* line 212, ../sass/personal_account.scss */
 .modal-box .footer {
   position: absolute;
   bottom: 0;
@@ -229,7 +245,7 @@
   height: 70px;
   border-top: 1px solid #ebebeb;
 }
-/* line 203, ../sass/personal_account.scss */
+/* line 218, ../sass/personal_account.scss */
 .modal-box .footer .cancel, .modal-box .footer .sure {
   cursor: pointer;
   width: 49%;
@@ -241,15 +257,15 @@
   line-height: 70px;
   height: 70px;
 }
-/* line 213, ../sass/personal_account.scss */
+/* line 228, ../sass/personal_account.scss */
 .modal-box .footer .cancel:hover, .modal-box .footer .sure:hover {
   text-decoration: none;
 }
-/* line 217, ../sass/personal_account.scss */
+/* line 232, ../sass/personal_account.scss */
 .modal-box .footer .sure {
   color: #0099cc;
 }
-/* line 220, ../sass/personal_account.scss */
+/* line 235, ../sass/personal_account.scss */
 .modal-box .footer .cancel {
   border-right: 1px solid #ebebeb;
 }
