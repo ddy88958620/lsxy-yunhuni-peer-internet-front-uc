@@ -2405,7 +2405,24 @@ a {
   vertical-align: middle;
 }
 
-/* line 63, ../sass/screen.scss */
+/* line 64, ../sass/screen.scss */
+.none-newapp {
+  text-align: center;
+  padding: 160px 0;
+}
+/* line 67, ../sass/screen.scss */
+.none-newapp span {
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: middle;
+}
+/* line 72, ../sass/screen.scss */
+.none-newapp .app {
+  font-size: 26px;
+  margin-left: 0;
+}
+
+/* line 78, ../sass/screen.scss */
 .wrapper.header {
   padding: 0 15px !important;
   box-sizing: inherit;

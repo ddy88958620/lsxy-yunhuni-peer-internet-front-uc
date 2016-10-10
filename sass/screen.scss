@@ -60,6 +60,21 @@ a {
   }
 }
 
+
+.none-newapp {
+  text-align: center;
+  padding: 160px 0;
+  span {
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: middle;
+  }
+  .app{
+    font-size: 26px;
+    margin-left: 0;
+  }
+}
+
 .wrapper.header {
     padding: 0 15px !important;
     box-sizing:inherit;
