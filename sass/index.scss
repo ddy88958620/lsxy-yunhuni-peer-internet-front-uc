@@ -140,7 +140,7 @@ section.panel.pos-rlt {
       background-color: #f8f9fc;
     }
     .develop-icon{
-      width: 20px;
+      width: 16px;
     }
   }
 
@@ -329,7 +329,7 @@ input[readonly] {
 }
 
 .index-api{
-  width: 350px;
+  width: 320px;
   display: inline-block;
   text-align: left;
 }
@@ -338,3 +338,10 @@ input[readonly] {
   display: inline-block!important;
 }
 
+.remove-left-padding{
+  padding-left: 0 !important;
+}
+
+.remove-right-padding{
+  padding-right: 0 !important;
+}

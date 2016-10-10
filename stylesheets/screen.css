@@ -605,7 +605,7 @@ section.panel.pos-rlt .sectionnewWrap .panel-heading {
 }
 /* line 142, ../sass/index.scss */
 section.panel.pos-rlt .sectionnewWrap .develop-icon {
-  width: 20px;
+  width: 16px;
 }
 
 /* line 150, ../sass/index.scss */
@@ -816,7 +816,7 @@ input[readonly] {
 
 /* line 331, ../sass/index.scss */
 .index-api {
-  width: 350px;
+  width: 320px;
   display: inline-block;
   text-align: left;
 }
@@ -824,6 +824,16 @@ input[readonly] {
 /* line 337, ../sass/index.scss */
 .inline-block {
   display: inline-block !important;
+}
+
+/* line 341, ../sass/index.scss */
+.remove-left-padding {
+  padding-left: 0 !important;
+}
+
+/* line 345, ../sass/index.scss */
+.remove-right-padding {
+  padding-right: 0 !important;
 }
 
 /* line 3, ../sass/banner.scss */
