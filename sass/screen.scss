@@ -12,7 +12,7 @@ body {
 a {
   color: #428bca;
 }
-
+@import './font.scss';
 @import './aside.scss';
 @import './index.scss';
 @import './banner.scss';
@@ -57,6 +57,21 @@ a {
     display: inline-block;
     margin-left: 25px;
     vertical-align: middle;
+  }
+}
+
+
+.none-newapp {
+  text-align: center;
+  padding: 160px 0;
+  span {
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: middle;
+  }
+  .app{
+    font-size: 26px;
+    margin-left: 0;
   }
 }
 
