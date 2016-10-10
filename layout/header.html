@@ -14,10 +14,20 @@
 <link rel="stylesheet" href="bower_components/bootstrapvalidator/dist/css/bootstrapValidator.css">
 <link rel="stylesheet" href="bower_components/blueimp-file-upload/css/jquery.fileupload.css"/>
 <link rel="stylesheet" href="bower_components/blueimp-file-upload/css/jquery.fileupload-ui.css"/>
+<script>
+  function showtoast(tips) {
+    $('.tips-toast').css('display','block').html(tips);
+    setTimeout("hidetoast()",2000);
+  }
+  function hidetoast(){
+    $('.tips-toast').fadeOut(1000);
+  }
 
+</script>
 
 <!--[if lt IE 9]> <script src="js/ie/html5shiv.js" cache="false"></script> <script src="js/ie/respond.min.js" cache="false"></script> <script src="js/ie/excanvas.js" cache="false"></script> <![endif]-->
 </head>
+<div class="tips-toast"></div>
 <section class="vbox">
     <header class="bg-green bg header navbar navbar-fixed-top-xs bg-blue">
         <div class="navbar-header aside logo_b">
@@ -57,7 +67,7 @@
                 </section>-->
             </li>
 
-            <li class="dropdown a-color"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="thumb-sm avatar pull-left"> <img src="images/avatar.jpg"> </span>渠道商<b class="caret"></b> </a>
+            <li class="dropdown a-color"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="thumb-sm avatar pull-left"> <img src="images/index/avatar-small.png"> </span>流水行云<b class="caret"></b> </a>
                 <ul class="dropdown-menu animated fadeInRight">
                     <span class="arrow top"></span>
                     <li> <a href="#">设置</a> </li>

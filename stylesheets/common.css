@@ -83,3 +83,103 @@
   cursor: inherit;
   display: block;
 }
+
+/* line 56, ../sass/common.scss */
+.greenborder {
+  border-color: #76dcd8 !important;
+}
+
+/* line 60, ../sass/common.scss */
+.blueborder {
+  border-color: #80d1ff !important;
+}
+
+/* line 64, ../sass/common.scss */
+.yellowborder {
+  border-color: #f9e993 !important;
+}
+
+/* line 68, ../sass/common.scss */
+.pinkborder {
+  border-color: #f1adc3 !important;
+}
+
+/* line 72, ../sass/common.scss */
+.bigicon {
+  font-size: 2.8rem !important;
+}
+
+/* line 76, ../sass/common.scss */
+.smallicon {
+  font-size: 0.6rem !important;
+}
+
+/* line 80, ../sass/common.scss */
+.middleicon {
+  font-size: 2.0rem !important;
+}
+
+/* line 84, ../sass/common.scss */
+.green {
+  color: #76dcd8 !important;
+}
+
+/* line 87, ../sass/common.scss */
+.blue {
+  color: #80d1ff !important;
+}
+
+/* line 90, ../sass/common.scss */
+.yellow {
+  color: #f9e993 !important;
+}
+
+/* line 93, ../sass/common.scss */
+.pink {
+  color: #f1adc3 !important;
+}
+
+/* line 96, ../sass/common.scss */
+.small-font-size {
+  font-size: 1.2rem !important;
+}
+
+/* line 100, ../sass/common.scss */
+.normal-font-size {
+  font-size: 1.4rem !important;
+}
+
+/* line 104, ../sass/common.scss */
+.middle-font-size {
+  font-size: 1.6rem !important;
+}
+
+/* line 108, ../sass/common.scss */
+.big-font-size {
+  font-size: 1.8rem !important;
+}
+
+/* line 112, ../sass/common.scss */
+.bigger-font-size {
+  font-size: 3.2rem !important;
+}
+
+/* line 116, ../sass/common.scss */
+.remove-border {
+  border: 0;
+}
+
+/* line 120, ../sass/common.scss */
+.width-twenty-percent {
+  width: 20% !important;
+}
+
+/* line 124, ../sass/common.scss */
+.m-t-25 {
+  margin-top: 25px;
+}
+
+/* line 127, ../sass/common.scss */
+.m-r-5 {
+  margin-right: 5px;
+}
