@@ -1,0 +1,415 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+  <!-- header -->
+  <div class="include" data-include="header"></div>
+  <!-- end header -->
+
+    <section class='aside-section'>
+        <section class="hbox stretch">
+          <!-- .aside -->
+          <aside class="bg-Green lter aside hidden-print include" data-include="aside" id="nav"></aside>
+            <!-- /.aside -->
+
+            <section id="content">
+
+
+                <section class="hbox stretch">
+
+                    <aside>
+                        <section class="vbox xbox">
+                          <!-- 如果没有三级导航 这段代码注释-->
+                            <!-- <div class="head&#45;box"> <a href="#subNav" data&#45;toggle="class:hide"> <i class="fa fa&#45;angle&#45;left text"></i> <i class="fa fa&#45;angle&#45;right text&#45;active"></i> </a> </div> -->
+                         <!-- <marquee behavior="scroll">
+                            单方向循环滚动
+                          </marquee>-->
+
+                          <script language="JavaScript" type="text/javascript">
+                            var marqueeContent=new Array();
+                            marqueeContent[0]="<span >云呼你有新的讯息1云呼你有新的讯息3云呼你有新的讯息3云呼你有云呼你有新的讯息3云呼你有新的讯息3云呼你有新的讯息3云呼你有新的讯息3新的讯息3云呼你有新的讯息3云呼你有新的讯息3云呼你有新的讯息3云呼你有新的讯息3云呼你有新的讯息3云呼你有新的讯息3云呼你有新的讯息3云呼你有新的讯息3云呼你有新的讯息3</span>";
+
+                            var marqueeInterval=new Array();
+                            var marqueeId=0;
+                            var marqueeDelay=2000;
+                            var marqueeHeight=20;
+                            //初始化
+                            function initMarquee() {
+                              var str=marqueeContent[0];
+                              document.write('<div class="common-info" ><div id="marqueeBox" style="overflow:hidden;float:left;height:'+marqueeHeight+'px; width: 80%;" onmouseover="clearInterval(marqueeInterval[0])" onmouseout="marqueeInterval[0]=setInterval(\'startMarquee()\',marqueeDelay)"><div>'+str+'</div></div><span class="close" id="common-close"></span><a class="detail" >查看详情</a></div>');
+                              marqueeId++;
+                              marqueeInterval[0]=setInterval("startMarquee()",marqueeDelay);
+                            }
+
+                            //开始滚动
+                            function startMarquee() {
+                              var str=marqueeContent[marqueeId];
+                              marqueeId++;
+                              if(marqueeId>=marqueeContent.length) marqueeId=0;
+                              if(document.getElementById("marqueeBox").childNodes.length==1) {
+                                var nextLine=document.createElement('DIV');
+                                nextLine.innerHTML=str;
+                                document.getElementById("marqueeBox").appendChild(nextLine);
+                              }
+                              else {
+                                document.getElementById("marqueeBox").childNodes[0].innerHTML=str;
+                                document.getElementById("marqueeBox").appendChild(document.getElementById("marqueeBox").childNodes[0]);
+                                document.getElementById("marqueeBox").scrollTop=0;
+                              }
+                              clearInterval(marqueeInterval[1]);
+                              marqueeInterval[1]=setInterval("scrollMarquee()",20);
+                            }
+
+                            //
+                            function scrollMarquee() {
+                              document.getElementById("marqueeBox").scrollTop++;
+                              if(document.getElementById("marqueeBox").scrollTop%marqueeHeight==(marqueeHeight-1)){
+                                clearInterval(marqueeInterval[1]);
+                              }
+                            }
+
+                            initMarquee();
+                          </script>
+
+                          <section class="scrollable wrapper w-f">
+                                <section class="panel panel-default yunhuni-personal">
+                                    <div class="row m-l-none m-r-none bg-light lter">
+
+                                        <div class="col-md-3 padder-v fix-padding">
+                                          <div class='wrappernewBox green-border-top'>
+                                            <span class="pull-left m-r-sm">
+                                              <img src="images/index/avatar-middle.png" width="80"/>
+                                            </span>
+                                            <span class="h5 block m-t-xs">
+                                              <i class="iconfont icon-yue middleicon"></i>
+                                              <span class="inline-block">余额(元)</span>
+                                            </span>
+                                            <span class="block m-t-25">
+                                              <small class="text-muted text-uc account-money green">￥998</small>
+                                              <small class="account-number-decimal green">.00</small>
+                                              元
+                                            </span>
+                                            <div class="box-footer">
+                                              <button class="btn btn-primary" >充值</button>
+                                              <button class="btn btn-default" >消费情况</button>
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div class="col-md-3 padder-v fix-padding">
+                                          <div class='wrappernewBox blue-border-top'>
+                                             <span class="h5 block m-t-xs"> <i class="iconfont icon-oc-appnum middleicon m-r-5"></i><span class="inline-block">应用数（上线数/总数)</span></span>
+                                             <span class="h5 block m-t-25 text-center "><span class="green bigger-font-size">10/25</span>个</span>
+                                             <div class="box-footer">
+                                               <a class="btn btn-primary" >查看详情</a>
+                                             </div>
+                                          </div>
+                                        </div>
+
+                                        <div class="col-md-3 padder-v fix-padding">
+                                          <div class='wrappernewBox yellow-border-top'>
+                                            <span class="h5 block m-t-xs"> <i class="iconfont icon-huawuliang middleicon m-r-5"></i><span class="inline-block">平均通话时长</span></span>
+                                            <span class="h5 block m-t-25 text-center ">
+                                              <span class="green bigger-font-size">--</span>
+                                            </span>
+
+                                          </div>
+                                        </div>
+
+                                        <div class="col-md-3 padder-v fix-padding">
+                                          <div class='wrappernewBox pink-border-top'>
+                                            <span class="h5 block m-t-xs"> <i class="iconfont icon-huawuliang middleicon m-r-5"></i><span class="inline-block">接通率</span></span>
+                                            <span class="h5 block m-t-25 text-center ">
+                                                <span class="green bigger-font-size">90%</span>
+                                              </span>
+
+                                          </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </section>
+                                <section class="panel panel-default pos-rlt clearfix ">
+                                  <div class="sectionnewWrap">
+                                    <header class="panel-heading">
+                                        <div class="h5 ">开发者账号</div>
+                                    </header>
+                                    <div class="panel-body clearfix border-top-none">
+                                      <p>
+                                        <span class="iconfont icon-oc-api smallicon inline-block develop-icon"></span>
+                                        <span class="index-key">接口API:</span>
+                                        <span class="index-api" id="restapi" data-clipboard-target="restapi">http://api.yunhuni.com/1234135312321414134/</span>
+                                        <span>
+                                          <a href="#"><i class="iconfont icon-oc-small-copy"></i>API文档</a>
+                                          <a href="" ><i class="iconfont icon-oc-small-copy"></i>复制</a>
+                                        </span>
+                                      </p>
+                                      <p>
+                                        <span class="iconfont icon-oc-secrekey smallicon inline-block develop-icon"></span>
+                                        <span class="index-key">密钥:</span>
+                                        <span class="index-api" id="secretkey" data-clipboard-target="secretkey">1234135312321414134</span>
+                                        <span>
+                                          <a class='reset_confirm'><i class="iconfont icon-oc-small-copy"></i>重新生成</a>
+                                          <a href="" ><i class="iconfont icon-oc-small-copy"></i>复制</a>
+                                        </span>
+                                        <span>
+                                          <a class='tips-error tips-key'></a>
+                                        </span>
+                                      </p>
+                                      <p>
+                                        <span class="iconfont icon-oc-certid smallicon inline-block develop-icon"></span>
+                                        <span class="index-key">鉴权账号:</span>
+                                        <span class="index-api" id="certid" data-clipboard-target="certid">123456789123456789</span>
+                                        <span>
+                                          <a href="" ><i class="iconfont icon-oc-small-copy"></i>复制</a>
+                                        </span>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </section>
+
+                                <section class="panel panel-default pos-rlt clearfix ">
+                              <div class="sectionnewWrap">
+                                <header class="panel-heading">
+                                  <div class="h5 ">今日数据</div>
+                                </header>
+                                <div class="panel-body clearfix border-top-none remove-padding">
+                                  <div class="row m-l-none m-r-none bg-light lter">
+                                    <div class="col-md-2 padder-v fix-padding width-twenty-percent" >
+
+                                      <div class="warpbox">
+                                        <div class="">
+                                          <i class="icon iconfont icon-oc-wallet bigicon"></i>
+                                          <span class="green money" >188.<span class="small-font-size">33</span> </span>
+                                        </div>
+                                        <div class="middle-font-size middle-font-color" >
+                                          消费额(元)
+                                        </div>
+                                      </div>
+
+                                    </div>
+                                    <div class="col-md-2 padder-v fix-padding width-twenty-percent">
+
+                                      <div class="warpbox">
+                                        <div class="">
+                                          <i class="icon iconfont icon-oc-msg1 bigicon"></i>
+                                          <span class="green money" >123456 </span>
+                                        </div>
+                                        <div class="middle-font-size middle-font-color" >
+                                          会话量(次)
+                                        </div>
+                                      </div>
+
+                                    </div>
+                                    <div class="col-md-2 padder-v fix-padding width-twenty-percent" >
+                                      <div class="warpbox">
+                                        <div class="">
+                                          <i class="icon iconfont icon-oc-mobile bigicon"></i>
+                                          <span class="green money" >0 </span>
+                                        </div>
+                                        <div class="middle-font-size middle-font-color" >
+                                          话务量(分钟)
+                                        </div>
+                                      </div>
+
+
+                                    </div>
+                                    <div class="col-md-2 padder-v fix-padding width-twenty-percent">
+                                      <div class="warpbox">
+                                        <div class="">
+                                          <i class="icon iconfont icon-oc-talktime bigicon"></i>
+                                          <span class="green money" >0 </span>
+                                        </div>
+                                        <div class="middle-font-size middle-font-color" >
+                                          平均通话时长(分钟)
+                                        </div>
+                                      </div>
+
+
+                                    </div>
+                                    <div class="col-md-2 padder-v fix-padding width-twenty-percent" >
+
+                                      <div class="warpbox remove-border">
+                                        <div class="">
+                                          <i class="icon iconfont icon-oc-callrate bigicon"></i>
+                                          <span class="green money" >0 </span>
+                                        </div>
+                                        <div class="middle-font-size middle-font-color" >
+                                          接通率(%)
+                                        </div>
+                                      </div>
+
+                                    </div>
+
+                                  </div>
+
+
+                                </div>
+                              </div>
+                            </section>
+
+                                <section class="panel panel-default pos-rlt clearfix ">
+                                  <div class="sectionWrap">
+                                    <div class="panel-body clearfix">
+                                      <div class="none-app">
+                                        <img src="./images/index/chicken.png" alt="">
+                                        <span>
+                                          还没创建应用，创建应用HAPPY一下吧<br/></br>
+                                          <a href="">创建应用</a>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </section>
+                                <section class="panel panel-default pos-rlt clearfix  app-list">
+                                  <div class="sectionWrap">
+                                    <header class="panel-heading">
+                                        <div class="h5 border-left">应用1</div>
+                                    </header>
+                                    <div class="panel-body clearfix border-top-none">
+                                        <div class="app-status-right dropdown fl">
+                                          <span class="app-icon pull-left m-r-sm">
+                                            <img src="./images/index/cp.png" width="50px"/></span>
+                                          <span class="h5 block m-t-xs text-muted">APPID :
+                                            <span>214132513515135132512334134</span>
+                                            <small class="text-success">已上线</small>
+                                          </span>
+                                          <span class="h5 block m-t-xs text-muted">IVR呼入号码：
+                                            <span>020-84827999</span>
+                                            <a> <i class="fa fa-exclamation-triangle tips-warning"></i> <small class="text-danger ">号码已过期，请及时续费</small></a>
+                                          </span>
+                                          <small class="text-muted m-t-xs text-uc yhn-description">这里是描述适用商户：龙米、集美汇等3个</small>
+                                        </div>
+                                        <div class="app-status-left fr">
+                                          <ul class="app-status-list">
+                                            <li><img src="./images/index/status_1.png" alt=""> 1小时内呼叫量: <span class="number">100</span> </li>
+                                            <li><img src="./images/index/status_2.png" alt=""> 1天内呼叫量: <span class="number">100</span> </li>
+                                            <li><img src="./images/index/status_3.png" alt=""> 当天呼叫并发: <span class="number">100</span> </li>
+                                            <li><img src="./images/index/status_1.png" alt=""> 存储用量: <span class="number">100</span> </li>
+                                          </ul>
+                                          <a href="" class="fr">详情</a>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </section>
+                                <section class="panel panel-default pos-rlt clearfix  app-list">
+                                  <div class="sectionWrap">
+                                    <header class="panel-heading">
+                                        <div class="h5 border-left">应用2</div>
+                                    </header>
+                                    <div class="panel-body clearfix border-top-none">
+                                        <div class="app-status-right dropdown fl">
+                                          <span class="app-icon pull-left m-r-sm">
+                                            <img src="./images/index/cp.png" width="50px"/></span>
+                                          <span class="h5 block m-t-xs text-muted">APPID :
+                                            <span>214132513515135132512334134</span>
+                                            <small class="text-danger">未上线</small>
+                                          </span>
+                                          <small class="text-muted m-t-xs text-uc yhn-description">这里是描述适用商户：龙米、集美汇等3个</small>
+                                        </div>
+                                      <div class="app-status-left fr">
+                                        <a href="" class="fr">详情</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </section>
+                            </section>
+
+                            <div id="footer" style="clear: both">
+                              <p class="text-center">Copyright 2016 云呼你 粤ICP备16048993号 All Rights Reserved 广州流水行云科技有限公司</p>
+                            </div>
+                        </section>
+                    </aside>
+                </section>
+                <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen" data-target="#nav"></a>
+           </section>
+        </section>
+    </section>
+</section>
+<script src="js/app.v2.js"></script> <!-- Bootstrap --> <!-- App -->
+<script src="js/charts/flot/jquery.flot.min.js" cache="false"></script>
+<script src="js/bootbox.min.js"></script>
+<script src="js/charts/flot/demo.js" cache="false"></script>
+
+<script type="text/javascript" src="js/zero/ZeroClipboard.js"></script>
+<script type="text/javascript">
+
+  if(window.clipboardData){
+    //支持IE
+    var restapi = document.getElementById("restapi");
+    restapi.onclick = function(){
+      alert(restapi.innerHTML);
+      window.clipboardData.setData('text',restapi.innerHTML);
+    }
+
+    var secretkey = document.getElementById("secretkey");
+    secretkey.onclick = function(){
+      alert(secretkey.innerHTML);
+      window.clipboardData.setData('text',secretkey.innerHTML);
+    }
+
+    var certid = document.getElementById("certid");
+    certid.onclick = function(){
+      alert(certid.innerHTML);
+      window.clipboardData.setData('text',certid.innerHTML);
+    }
+
+
+  }else{
+    var restapi = new ZeroClipboard( document.getElementById("restapi"), {
+      moviePath: "js/zero/ZeroClipboard.swf"
+    } );
+    var secrekey = new ZeroClipboard( document.getElementById("secretkey"), {
+      moviePath: "js/zero/ZeroClipboard.swf"
+    } );
+    var certid = new ZeroClipboard( document.getElementById("certid"), {
+      moviePath: "js/zero/ZeroClipboard.swf"
+    } );
+
+    restapi.on( 'complete', function(client, args) {
+      alert("复制成功"+ args.text);
+    } );
+
+    secrekey.on( 'complete', function(client, args) {
+      alert("复制成功"+ args.text);
+    } );
+
+    certid.on( 'complete', function(client, args) {
+      alert("复制成功"+ args.text);
+    } );
+  }
+
+
+
+
+</script>
+
+
+<script src="js/include.js" aysnc></script>
+<script src="js/include.js"></script>
+<script type="text/javascript">
+    $('.reset_confirm').click(function(){
+      bootbox.setLocale("zh_CN");
+      bootbox.confirm("确认重新生成？", function(result) {
+            if(result){
+                $('.tips-key').html('错误提示');
+                $('.secretkey').html('aaaaaaaaaaaaaaaaaaaa');
+            }
+        });
+    });
+
+    $('#common-close').click(function(){
+      $('.common-info').fadeOut()
+
+    })
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

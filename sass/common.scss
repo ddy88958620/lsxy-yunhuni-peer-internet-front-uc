@@ -52,3 +52,78 @@
 }
 
 .btn-file { position: relative; overflow: hidden; } .btn-file input[type=file] { position: absolute; top: 0; right: 0; min-width: 100%; min-height: 100%; font-size: 100px; text-align: right; filter: alpha(opacity=0); opacity: 0; outline: none; background: white; cursor: inherit; display: block; }
+
+.greenborder{
+  border-color: #76dcd8 !important;
+}
+
+.blueborder{
+  border-color: #80d1ff !important;
+}
+
+.yellowborder{
+  border-color: #f9e993 !important;
+}
+
+.pinkborder{
+  border-color: #f1adc3 !important;
+}
+
+.bigicon{
+  font-size: 2.8rem !important;
+}
+
+.smallicon{
+  font-size: 0.6rem !important;
+}
+
+.middleicon{
+  font-size: 2.0rem !important;
+}
+
+.green{
+  color: #76dcd8 !important;
+}
+.blue{
+  color: #80d1ff !important;
+}
+.yellow{
+  color: #f9e993 !important;
+}
+.pink{
+  color: #f1adc3 !important;
+}
+.small-font-size{
+  font-size: 1.2rem !important;
+}
+
+.normal-font-size{
+  font-size: 1.4rem !important;
+}
+
+.middle-font-size{
+  font-size: 1.6rem !important;
+}
+
+.big-font-size{
+  font-size: 1.8rem !important;
+}
+
+.bigger-font-size{
+  font-size: 3.2rem !important;
+}
+
+.remove-border{
+  border: 0;
+}
+
+.width-twenty-percent{
+  width: 20% !important;
+}
+
+.m-t-25{
+  margin-top: 25px;
+}
+.m-r-5{
+  margin-right: 5px;
+}
