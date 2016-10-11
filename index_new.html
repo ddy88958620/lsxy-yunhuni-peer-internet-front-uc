@@ -139,7 +139,7 @@
                                       <p>
                                         <span class="iconfont icon-oc-api smallicon inline-block develop-icon"></span>
                                         <span class="index-key"><strong>接口API:</strong></span>
-                                        <span class="index-api" id="restapi">http://api.yunhuni.com/1234135312321414134/</span>
+                                        <span class="index-api" id="restapi">http://api.yunhuni.com/cf20c6553c46d9a28679b400a552f2d5/</span>
                                         <span>
                                           <a href="#"><i class="iconfont icon-oc-small-copy inline-block develop-icon"></i>API文档</a>
                                           <a id="copyapi" data-clipboard-text="http://api.yunhuni.com/1234135312321414134/"><i class="iconfont icon-oc-small-copy inline-block develop-icon"></i>复制</a>
@@ -169,85 +169,84 @@
                                   </div>
                                 </section>
 
-                                <section class="panel panel-default pos-rlt clearfix ">
+                              <section class="panel panel-default pos-rlt clearfix ">
                               <div class="sectionnewWrap">
                                 <header class="panel-heading">
-                                  <div class="h5 ">今日数据</div>
+                                  <div class="h5">
+                                    <a class="tab-data cursor tab-active" data-id="today">今日数据</a>
+                                    <a class="tab-data cursor" data-id="month">本月数据</a>
+                                    <a href="statistics_conversation.html" class="tab-data">更多数据</a>
+                                  </div>
                                 </header>
                                 <div class="panel-body clearfix border-top-none remove-padding">
                                   <div class="row m-l-none m-r-none bg-light lter">
                                     <div class="col-md-2 padder-v fix-padding width-twenty-percent" >
-
                                       <div class="warpbox">
                                         <div class="">
                                           <i class="icon iconfont icon-oc-wallet bigicon"></i>
-                                          <span class="green money" >188.<span class="small-font-size">33</span> </span>
+                                          <span class="green money datatoday" >188.<span class="small-font-size">33</span></span>
+                                          <span class="green money datamonth" >188.<span class="small-font-size">32</span></span>
                                         </div>
                                         <div class="middle-font-size middle-font-color" >
                                           消费额(元)
                                         </div>
                                       </div>
-
                                     </div>
                                     <div class="col-md-2 padder-v fix-padding width-twenty-percent">
-
                                       <div class="warpbox">
                                         <div class="">
                                           <i class="icon iconfont icon-oc-msg1 bigicon"></i>
-                                          <span class="green money" >123456 </span>
+                                          <span class="green money datatoday">123456</span>
+                                          <span class="green money datamonth">123</span>
                                         </div>
                                         <div class="middle-font-size middle-font-color" >
                                           会话量(次)
                                         </div>
                                       </div>
-
                                     </div>
                                     <div class="col-md-2 padder-v fix-padding width-twenty-percent" >
                                       <div class="warpbox">
                                         <div class="">
                                           <i class="icon iconfont icon-oc-mobile bigicon"></i>
-                                          <span class="green money" >0 </span>
+                                          <span class="green money datatoday">0</span>
+                                          <span class="green money datamonth">123</span>
                                         </div>
                                         <div class="middle-font-size middle-font-color" >
                                           话务量(分钟)
                                         </div>
                                       </div>
-
-
                                     </div>
                                     <div class="col-md-2 padder-v fix-padding width-twenty-percent">
                                       <div class="warpbox">
                                         <div class="">
                                           <i class="icon iconfont icon-oc-talktime bigicon"></i>
-                                          <span class="green money" >0 </span>
+                                          <span class="green money datatoday">0</span>
+                                          <span class="green money datamonth">123</span>
                                         </div>
                                         <div class="middle-font-size middle-font-color" >
                                           平均通话时长(分钟)
                                         </div>
                                       </div>
-
-
                                     </div>
                                     <div class="col-md-2 padder-v fix-padding width-twenty-percent" >
-
                                       <div class="warpbox remove-border">
                                         <div class="">
                                           <i class="icon iconfont icon-oc-callrate bigicon"></i>
-                                          <span class="green money" >0 </span>
+                                          <span class="green money datatoday">0</span>
+                                          <span class="green money datamonth">123</span>
                                         </div>
                                         <div class="middle-font-size middle-font-color" >
                                           接通率(%)
                                         </div>
                                       </div>
-
                                     </div>
-
                                   </div>
-
 
                                 </div>
                               </div>
                             </section>
+
+
 
                             <section class="panel panel-default pos-rlt clearfix ">
                               <div class="sectionWrap">
@@ -306,8 +305,6 @@
                                        </div>
                                      </div>
                                   </div>
-
-
                                   <div class="col-md-6 remove-right-padding">
                                     <div class="sectionWrap">
                                       <div class="panel-body clearfix border-top-none">
@@ -317,24 +314,16 @@
                                           </div>
                                         </div>
                                         <div class="row">
-                                          <div class="ecpanel" id="apiecpanel" style=" height: 600px;  "></div>
+                                          <div class="ecpanel" id="apiecpanel" style="height: 600px;"></div>
                                         </div>
                                        </div>
                                     </div>
                                   </div>
                                 </div>
-
-
                             </section>
-
-
-
                             <!--end-->
                             </section>
 
-                            <div id="footer" style="clear: both">
-                              <p class="text-center">Copyright 2016 云呼你 粤ICP备16048993号 All Rights Reserved 广州流水行云科技有限公司</p>
-                            </div>
                         </section>
                     </aside>
                 </section>
@@ -354,6 +343,17 @@
 <!--统计插件主题-->
 <script src="./js/echartstheme/wonderland.js" ></script>
 <script>
+  $('.tab-data').click(function(){
+    var id = $(this).attr('data-id');
+    $('.tab-data').removeClass('tab-active');
+    $(this).addClass('tab-active');
+    if(id=='today'){
+      $('.datatoday').show();$('.datamonth').hide();
+    }else{
+      $('.datatoday').hide();$('.datamonth').show();
+    }
+  })
+
   //查询
   $('.monthstart').change(function(){
     var id = $(this).attr('data-id');
@@ -761,7 +761,9 @@
 <script type="text/javascript" src='./js/bootstrap-datepicker/js/bootstrap-datepicker.js'> </script>
 <script type="text/javascript" src='./js/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js'> </script>
 <script src="js/index/index.js" ></script>
+  <script>
 
+  </script>
 
 
 </body>
