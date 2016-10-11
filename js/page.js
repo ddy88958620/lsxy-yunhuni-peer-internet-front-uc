@@ -22,9 +22,6 @@ function Page(count,listRow,showPageCount,divId,getData){
         o.totalPage = o.count % o.listRow == 0? parseInt(o.count/ o.listRow) : parseInt(o.count/ o.listRow+1);
     }
     o.initRow = function(){
-        console.info("last1:"+o.last)
-        console.info("first1:"+o.first)
-        console.info("nowPage:"+o.nowPage)
         o.showPageCount = 5;
         var temp = 2;
         o.first = 1;
@@ -42,8 +39,6 @@ function Page(count,listRow,showPageCount,divId,getData){
         if(Number(o.last)<Number(o.showPageCount)){
             o.first = 1;
         }
-        console.info("last:"+o.last)
-        console.info("first:"+o.first)
     }
     /**
      *  显示分页空间
@@ -116,7 +111,6 @@ function Page(count,listRow,showPageCount,divId,getData){
              $('#playpage').show();
         }else{
             //拼接每一个分页数组按钮，并为其设置id
-            console.info("ddddddddddddddddddddddddddddddddd")
             html += "<li><a  id=page"+o.first+o.obj+" class = 'page-item each-page'>"+o.first+"</a></li>";
             $('#playpage').hide();
             $('#datatablepage').hide();
@@ -124,7 +118,6 @@ function Page(count,listRow,showPageCount,divId,getData){
         html +='</ul>';
         //html+="<li><a href='#' class = 'page-item next-page'><span aria-hidden='true'>&raquo;</span></a>";
         $(".my-page").html('');//my-page pagination
-        console.info(html);
         $(".my-page").html(html);
         o.bindAction();
     }
