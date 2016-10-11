@@ -47,21 +47,30 @@ $('.showMobilebox').click(function(){
         showtoast('请输入正确的手机号码');
         return false;
     }
-    ajaxsync(ctx+"/console/telenum/bind/isExist",{'number':moible,csrfParameterName:csrfToken},function(response) {
-        if(!response.success){
-            showtoast(response.errorMsg);
-            return false;
-        }else{
-            $('#modalmobile').html(moible);
+    var temp = $('#btn-'+id).html();
+    if(temp=='验证'){
+        ajaxsync(ctx+"/console/telenum/bind/isExist",{'number':moible,csrfParameterName:csrfToken},function(response) {
+            if(!response.success){
+                showtoast(response.errorMsg);
+                return false;
+            }else{
+                showMobileboxOne(moible,id);
+            }
+        });
+    }else{
+        showMobileboxOne(moible,id);
+    }
 
-            $('#modalmobile').attr('data-id',id);
-
-            $('.moadltips').html('');
-            $('#mobilebox').fadeIn();
-            $('#show-bg').fadeIn();
-        }
-    });
 });
+function showMobileboxOne(moible,id){
+    $('#modalmobile').html(moible);
+
+    $('#modalmobile').attr('data-id',id);
+
+    $('.moadltips').html('');
+    $('#mobilebox').fadeIn();
+    $('#show-bg').fadeIn();
+}
 $('input').keyup(function(){
     $('.tips-error').hide();
 });
