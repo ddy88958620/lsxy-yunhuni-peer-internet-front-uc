@@ -83,11 +83,10 @@ $('#personalAuthForm').bootstrapValidator({
             notEmpty: {
                 message: '不能为空'
             },
-            stringLength: {
-              min: 15,
-              max: 15,
-              message: '需要15位数字'
-            }
+              regexp: {
+                  regexp: /^([0-9,A-Z]){15}$/,
+                  message: '15位数字或者大写英文字母'
+              }
           }
         },
 		limit18: {
@@ -101,6 +100,25 @@ $('#personalAuthForm').bootstrapValidator({
                     message: '18位数字或者大写英文字母'
 			}
           }
+        },
+        companyname:{
+            selector: '.companyname',
+            validators: {
+                notEmpty: {
+                    message: '公司名称不能为空'
+                },
+                callback: {
+                    message: '公司名称不能为纯数字或纯英文',
+                    callback: function(value, validator) {
+                        if(value.length<=0){return true};
+                        var pattern=/^[a-zA-Z]*$|^[0-9]*$/im;
+                        if (pattern.test(value)) {
+                            return false;
+                        }
+                        return true;
+                    }
+                }
+            }
         },
         username: {
             message: '用户名无效',
@@ -122,15 +140,15 @@ $('#personalAuthForm').bootstrapValidator({
             }
         },
         idcard: {
+            selector: '.idcard',
           validators: {
             notEmpty: {
               message: '身份证不能为空'
             },
-            stringLength: {
-              min: 18,
-              max: 18,
-              message : '身份证号要求18位'
-            }
+              regexp: {
+                  regexp: /^([0-9]){17}([0-9,X])$/,
+                  message: '身份证长度18位，且末尾为数字或者大写字符‘X’'
+              }
           }
         },
         email: {
