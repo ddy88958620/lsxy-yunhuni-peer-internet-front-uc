@@ -36,10 +36,9 @@ $(function () {
     $(this).datepicker('hide')
   });
 
-
-  initchart();
-  sessioncharts();
-  apicharts();
+  // initchart();
+  // sessioncharts();
+  // apicharts();
 
 
 });
