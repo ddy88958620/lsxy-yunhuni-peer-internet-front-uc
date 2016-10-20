@@ -267,21 +267,21 @@
 }
 
 /* line 69, ../sass/font.scss */
-.icon-call-center:before {
-  content: "\e632";
-}
-
-/* line 70, ../sass/font.scss */
 .icon-call-base:before {
   content: "\e633";
 }
 
-/* line 71, ../sass/font.scss */
+/* line 70, ../sass/font.scss */
 .icon-call-developer:before {
   content: "\e634";
 }
 
-/* line 72, ../sass/font.scss */
+/* line 71, ../sass/font.scss */
 .icon-call-voice:before {
   content: "\e635";
+}
+
+/* line 72, ../sass/font.scss */
+.icon-call-center:before {
+  content: "\e636";
 }
