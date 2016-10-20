@@ -2135,25 +2135,26 @@ a {
 }
 /* line 56, ../sass/application_detail.scss */
 .appliaction-detail .panel-heading i {
+  font-size: 1.4rem;
   margin-right: 10px;
 }
-/* line 59, ../sass/application_detail.scss */
+/* line 60, ../sass/application_detail.scss */
 .appliaction-detail .panel-heading .title {
   color: #333;
   font-weight: 500;
 }
-/* line 64, ../sass/application_detail.scss */
+/* line 65, ../sass/application_detail.scss */
 .appliaction-detail .devbox, .appliaction-detail .basebox {
   min-height: 300px;
 }
-/* line 67, ../sass/application_detail.scss */
+/* line 68, ../sass/application_detail.scss */
 .appliaction-detail .base {
   padding: 0;
   min-width: 80px;
   max-width: 80px;
   text-align: right;
 }
-/* line 73, ../sass/application_detail.scss */
+/* line 74, ../sass/application_detail.scss */
 .appliaction-detail .dev {
   padding: 0;
   min-width: 110px;
@@ -2161,7 +2162,7 @@ a {
   max-width: 110px;
 }
 
-/* line 82, ../sass/application_detail.scss */
+/* line 83, ../sass/application_detail.scss */
 .application-detail-box .info {
   text-align: left;
   color: #619B5A;
@@ -2169,28 +2170,28 @@ a {
   margin: 10px;
   background-color: #dff0d8;
 }
-/* line 89, ../sass/application_detail.scss */
+/* line 90, ../sass/application_detail.scss */
 .application-detail-box .input-box {
   margin: 10px;
 }
-/* line 92, ../sass/application_detail.scss */
+/* line 93, ../sass/application_detail.scss */
 .application-detail-box .mt-20 {
   margin-top: 20px;
 }
-/* line 95, ../sass/application_detail.scss */
+/* line 96, ../sass/application_detail.scss */
 .application-detail-box .mt-10 {
   margin-top: 10px;
 }
-/* line 101, ../sass/application_detail.scss */
+/* line 102, ../sass/application_detail.scss */
 .application-detail-box .check-box {
   height: 14px !important;
   width: 14px;
 }
-/* line 105, ../sass/application_detail.scss */
+/* line 106, ../sass/application_detail.scss */
 .application-detail-box .input-text {
   height: 33px !important;
 }
-/* line 108, ../sass/application_detail.scss */
+/* line 109, ../sass/application_detail.scss */
 .application-detail-box .scrolldiv {
   overflow-y: auto;
   height: 100px;
@@ -2199,13 +2200,13 @@ a {
   margin-top: 10px;
 }
 
-/* line 117, ../sass/application_detail.scss */
+/* line 118, ../sass/application_detail.scss */
 .voice-format {
   background: url("../images/index/voice_fromt.png") no-repeat left center;
   padding-left: 20px !important;
 }
 
-/* line 122, ../sass/application_detail.scss */
+/* line 123, ../sass/application_detail.scss */
 .application_info {
   padding: 10px 15px;
   text-align: left;
@@ -2214,58 +2215,58 @@ a {
   background-color: #dff0d8;
   font-size: 14px;
 }
-/* line 129, ../sass/application_detail.scss */
+/* line 130, ../sass/application_detail.scss */
 .application_info .right {
   float: right;
   margin-right: 10px;
 }
-/* line 133, ../sass/application_detail.scss */
+/* line 134, ../sass/application_detail.scss */
 .application_info a {
   text-decoration: underline;
 }
 
-/* line 138, ../sass/application_detail.scss */
+/* line 139, ../sass/application_detail.scss */
 .border-block {
   border-bottom: 1px solid #eee;
   margin-bottom: 40px;
   margin-top: 40px;
 }
 
-/* line 145, ../sass/application_detail.scss */
+/* line 146, ../sass/application_detail.scss */
 .font14 {
   font-size: 14px !important;
 }
 
-/* line 149, ../sass/application_detail.scss */
+/* line 150, ../sass/application_detail.scss */
 .line32 {
   line-height: 32px;
 }
 
-/* line 153, ../sass/application_detail.scss */
+/* line 154, ../sass/application_detail.scss */
 .h10 {
   height: 10px !important;
 }
 
-/* line 157, ../sass/application_detail.scss */
+/* line 158, ../sass/application_detail.scss */
 .application-file-box {
   height: 380px;
   margin-top: -190px !important;
 }
-/* line 160, ../sass/application_detail.scss */
+/* line 161, ../sass/application_detail.scss */
 .application-file-box .overscroll {
   height: 50px;
   overfllow: auto;
   overflow-y: scroll;
 }
 
-/* line 168, ../sass/application_detail.scss */
+/* line 169, ../sass/application_detail.scss */
 .fileinput-button {
   position: relative;
   overflow: hidden;
   display: inline-block;
 }
 
-/* line 173, ../sass/application_detail.scss */
+/* line 174, ../sass/application_detail.scss */
 .fileinput-button input {
   position: absolute;
   top: 0;
@@ -2280,7 +2281,7 @@ a {
 
 /* Fixes for IE < 8 */
 @media screen\9 {
-  /* line 187, ../sass/application_detail.scss */
+  /* line 188, ../sass/application_detail.scss */
   .fileinput-button input {
     filter: alpha(opacity=0);
     font-size: 100%;
