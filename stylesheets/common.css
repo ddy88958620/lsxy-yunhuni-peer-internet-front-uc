@@ -183,3 +183,54 @@
 .m-r-5 {
   margin-right: 5px;
 }
+
+/* line 130, ../sass/common.scss */
+.height-10 {
+  height: 10px !important;
+}
+
+/* line 134, ../sass/common.scss */
+.remove-padding-right {
+  padding-right: 0 !important;
+}
+
+/* line 138, ../sass/common.scss */
+.remove-padding-left {
+  padding-left: 0 !important;
+}
+
+/* line 144, ../sass/common.scss */
+#app-tag .app-tag {
+  height: 50px;
+  width: 140px;
+  font-size: 16px;
+  margin-right: 25px;
+  color: #3276b1;
+  background: #FFF;
+  border: 1px solid #cccccc;
+}
+/* line 152, ../sass/common.scss */
+#app-tag .app-tag i {
+  margin-right: 10px;
+  display: inline-block;
+  font-size: 24px;
+  color: #3276b1;
+}
+/* line 158, ../sass/common.scss */
+#app-tag .app-tag:hover, #app-tag .app-tag.active {
+  color: #FFFFFF;
+  background: #3276b1;
+  box-shadow: none;
+  border: 1px solid #cccccc;
+}
+/* line 165, ../sass/common.scss */
+#app-tag .app-tag:hover i, #app-tag .app-tag.active i {
+  color: #FFFFFF;
+}
+
+/* line 172, ../sass/common.scss */
+.btn-call {
+  background: #f1f445;
+  border: 1px solid #dade0c;
+  color: #333;
+}

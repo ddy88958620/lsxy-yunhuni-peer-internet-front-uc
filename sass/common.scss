@@ -127,3 +127,50 @@
 .m-r-5{
   margin-right: 5px;
 }
+.height-10{
+  height: 10px !important;
+}
+
+.remove-padding-right{
+  padding-right: 0 !important;
+}
+
+.remove-padding-left{
+  padding-left: 0 !important;
+}
+
+
+#app-tag{
+  .app-tag{
+    height: 50px;
+    width: 140px;
+    font-size: 16px;
+    margin-right: 25px;
+    color:#3276b1;
+    background: #FFF;
+    border: 1px solid #cccccc;
+    i{
+      margin-right: 10px;
+      display: inline-block;
+      font-size: 24px;
+      color:#3276b1;
+    }
+    &:hover,&.active{
+      color:#FFFFFF;
+      background: #3276b1;
+      box-shadow:none;
+
+      border: 1px solid #cccccc;
+
+      i{
+        color:#FFFFFF;
+      }
+    }
+  }
+}
+
+.btn-call{
+  background: #f1f445;
+  border: 1px solid #dade0c;
+  color:#333;
+}

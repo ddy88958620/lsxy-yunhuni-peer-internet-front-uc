@@ -116,31 +116,49 @@
                                         <input type="checkbox" name=""> 鉴权 (网络直拨，回拨，互联网语音，视频通话会涉及鉴权流程，勾选但未实现会呼叫失效)
                                             <a href="">回调说明文档</a> </a>
                                         </p>
-                                        <div class="form-group min-height20">
-                                            <span class="hr text-label" ><strong>选择服务:</strong></span>
-                                        </div>
-                                        <div class="form-group app-createbox border-bottom">
-                                            <lable class="col-md-3 text-right"></lable>
-                                            <div class="col-md-9" >
-                                                <p><strong>基础语音服务</strong></p>
-                                                <p><input type="checkbox" name="" checked='checked'> 启用 &nbsp;&nbsp;语音外呼(嵌入CRM、OA、呼叫中心等产品中发起通话)</p>
-                                                <p><input type="checkbox" name="" checked='checked'> 启用 &nbsp;&nbsp;双向回拨(以不同的通话方式实现茂名通话功能，保护双方号码隐私)</p>
 
+                                        <div class="form-group height-10">
+                                            <span class="hr"></span>
+                                        </div>
+
+                                        <p class="number_info">
+                                            云呼你平台提供多种通信服务,其中：<br/>
+                                            1、语音服务包含语音通知、语音回拨、语音会议、语音验证码和自定义IVR产品适用于快递发件提醒，房屋销售咨询，号码防泄漏，获取验证码等场景，提高企业办公效率，提高用户信息安全，提高验证码到达率；<br/>
+                                            2、呼叫中心服务包含云呼叫中心产品适用于企业为售前售后，业务咨询，业务订购，客户反馈投诉受理等而搭建的客服中心或销售中心。
+                                        </p>
+
+
+                                        <div class="form-group app-createbox" id="app-tag">
+                                            <div class="col-md-3 text-right"><span class="text-label" ><strong>选择服务:</strong></span></div>
+                                            <div class="col-md-9" >
+                                                <div class="btn app-tag active" data-app="voice"><i class="iconfont icon-call-voice"></i><span>语音</span></div>
+                                                <div class="btn app-tag" data-app="call"><i class="iconfont icon-call-center" ></i><span>呼叫中心</span></div>
                                             </div>
                                         </div>
-                                        <div class="form-group app-createbox" >
+
+
+                                        <!--语音-->
+                                        <div class="form-group app-createbox app-tap-child" data-child="voice" >
                                             <lable class="col-md-3 text-right"></lable>
                                             <div class="col-md-9" >
-                                                <p><strong>高级语音定制服务</strong></p>
-                                                <p><input type="checkbox" name="" checked> 启用 &nbsp;&nbsp;<a href="">会议服务</a>(可与互联网会议、视频 会议融合参会，提供丰富的会议管理功能)</p>
-                                                <p><input type="checkbox" name="" checked> 启用 &nbsp;&nbsp;<a>录音服务</a>(以不同的通话方式实现茂名通话功能，保护双方号码隐私)</p>
+                                                <p><input type="checkbox" name="" checked> 启用 &nbsp;&nbsp;<a href="">语音通知</a>(嵌入CRM、OA、呼叫中心等产品中发起通话)</p>
+                                                <p><input type="checkbox" name="" checked> 启用 &nbsp;&nbsp;<a href="">语音回拨</a>(以不同的通话方式实现茂名通话功能，保护双方号码隐私)</p>
+                                                <p><input type="checkbox" name="" checked> 启用 &nbsp;&nbsp;<a href="">语音会议</a>(可与互联网会议、视频 会议融合参会，提供丰富的会议管理功能)</p>
                                                 <p><input type="checkbox" name="" checked> 启用 &nbsp;&nbsp;<a>语音验证码</a>(嵌入CRM、OA、呼叫中心等产品中发起通话)</p>
-                                                <p><input type="checkbox" name="" checked> 启用 &nbsp;&nbsp;<a>IVR定制服务</a>(以不同的通话方式实现茂名通话功能，保护双方号码隐私)</p>
+                                                <p><input type="checkbox" name="" checked> 启用 &nbsp;&nbsp;<a>自定义IVR</a>(以不同的通话方式实现茂名通话功能，保护双方号码隐私)</p>
                                                 <div class="tips ml-36">
-                                                    <p class="app-tips ">IVR定制服务开启后，该应用将产生100元/月的功能费，上线时开始收取，多个应用开启并上线会叠加收费</p>
+                                                    <p class="app-tips ">该选项开启后，将产生1000元的号码租用费以及100元/月的功能费，应用上线时开始收取，多个应用开启并上线会叠加收费</p>
                                                 </div>
                                             </div>
                                         </div>
+                                        <!--呼叫中心-->
+                                        <div class="form-group app-createbox none app-tap-child" data-child="call" >
+                                            <lable class="col-md-3 text-right"></lable>
+                                            <div class="col-md-9" >
+                                                <p><input type="checkbox" name="" checked> 启用 &nbsp;&nbsp;<a href="">云呼叫中心</a>(专业的销售和客服中心，具备IVR导航、坐席管理、呼叫转移等全方位功能)</p>
+                                            </div>
+                                        </div>
+
 
                                         <div class="form-group">
                                             <div class="col-md-9">
