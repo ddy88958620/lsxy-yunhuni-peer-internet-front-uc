@@ -283,23 +283,23 @@ a {
 }
 
 /* line 69, ../sass/font.scss */
-.icon-call-center:before {
-  content: "\e632";
-}
-
-/* line 70, ../sass/font.scss */
 .icon-call-base:before {
   content: "\e633";
 }
 
-/* line 71, ../sass/font.scss */
+/* line 70, ../sass/font.scss */
 .icon-call-developer:before {
   content: "\e634";
 }
 
-/* line 72, ../sass/font.scss */
+/* line 71, ../sass/font.scss */
 .icon-call-voice:before {
   content: "\e635";
+}
+
+/* line 72, ../sass/font.scss */
+.icon-call-center:before {
+  content: "\e636";
 }
 
 /* line 6, ../sass/aside.scss */
@@ -1118,7 +1118,7 @@ header {
 }
 /* line 152, ../sass/common.scss */
 #app-tag .app-tag i {
-  margin-right: 10px;
+  margin-right: 8px;
   display: inline-block;
   font-size: 24px;
   color: #3276b1;
@@ -1128,18 +1128,23 @@ header {
   color: #FFFFFF;
   background: #3276b1;
   box-shadow: none;
-  border: 1px solid #cccccc;
+  border: 1px solid transparent;
 }
-/* line 165, ../sass/common.scss */
+/* line 163, ../sass/common.scss */
 #app-tag .app-tag:hover i, #app-tag .app-tag.active i {
   color: #FFFFFF;
 }
 
-/* line 172, ../sass/common.scss */
+/* line 170, ../sass/common.scss */
 .btn-call {
-  background: #f1f445;
-  border: 1px solid #dade0c;
+  background: #f9e993;
+  border: 1px solid #e4d376;
   color: #333;
+}
+
+/* line 176, ../sass/common.scss */
+.margin_left-20 {
+  margin-left: 20px;
 }
 
 /* line 1, ../sass/admin-index.scss */
@@ -2253,14 +2258,14 @@ a {
   overflow-y: scroll;
 }
 
-/* line 170, ../sass/application_detail.scss */
+/* line 168, ../sass/application_detail.scss */
 .fileinput-button {
   position: relative;
   overflow: hidden;
   display: inline-block;
 }
 
-/* line 175, ../sass/application_detail.scss */
+/* line 173, ../sass/application_detail.scss */
 .fileinput-button input {
   position: absolute;
   top: 0;
@@ -2275,7 +2280,7 @@ a {
 
 /* Fixes for IE < 8 */
 @media screen\9 {
-  /* line 189, ../sass/application_detail.scss */
+  /* line 187, ../sass/application_detail.scss */
   .fileinput-button input {
     filter: alpha(opacity=0);
     font-size: 100%;

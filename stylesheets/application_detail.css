@@ -176,14 +176,14 @@
   overflow-y: scroll;
 }
 
-/* line 170, ../sass/application_detail.scss */
+/* line 168, ../sass/application_detail.scss */
 .fileinput-button {
   position: relative;
   overflow: hidden;
   display: inline-block;
 }
 
-/* line 175, ../sass/application_detail.scss */
+/* line 173, ../sass/application_detail.scss */
 .fileinput-button input {
   position: absolute;
   top: 0;
@@ -198,7 +198,7 @@
 
 /* Fixes for IE < 8 */
 @media screen\9 {
-  /* line 189, ../sass/application_detail.scss */
+  /* line 187, ../sass/application_detail.scss */
   .fileinput-button input {
     filter: alpha(opacity=0);
     font-size: 100%;

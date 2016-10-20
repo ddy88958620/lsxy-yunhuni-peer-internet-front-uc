@@ -150,7 +150,7 @@
     background: #FFF;
     border: 1px solid #cccccc;
     i{
-      margin-right: 10px;
+      margin-right: 8px;
       display: inline-block;
       font-size: 24px;
       color:#3276b1;
@@ -159,9 +159,7 @@
       color:#FFFFFF;
       background: #3276b1;
       box-shadow:none;
-
-      border: 1px solid #cccccc;
-
+      border: 1px solid transparent;
       i{
         color:#FFFFFF;
       }
@@ -170,7 +168,11 @@
 }
 
 .btn-call{
-  background: #f1f445;
-  border: 1px solid #dade0c;
+  background: #f9e993;
+  border: 1px solid #e4d376;
   color:#333;
+}
+
+.margin_left-20{
+  margin-left: 20px;
 }
