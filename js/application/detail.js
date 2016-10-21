@@ -152,3 +152,12 @@ function getFiletype(filename)
     var extStart  = filename.lastIndexOf(".")+1;
     return filename.substring(extStart,filename.length).toUpperCase();
 }
+
+$(window).resize(function()
+{
+    var dh = $('.devbox').height();
+    $('.basebox').css("height",30+dh+"px");
+});
+
+
+
