@@ -43,6 +43,7 @@ $('#application_create').bootstrapValidator({
 
 $('#app-tag .app-tag').click(function(){
   var app = $(this).attr('data-app');
+  $('#serviceType').val(app);
   $(this).addClass("active").siblings().removeClass("active");
   $('.app-tap-child').each(function(){
     if(app==$(this).attr('data-child'))
