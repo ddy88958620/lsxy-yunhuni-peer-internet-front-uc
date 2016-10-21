@@ -20,7 +20,7 @@
         log('ECharts is not Loaded');
         return;
     }
-    echarts.registerTheme('wonderland', {
+    echarts.registerTheme('roma', {
         "color": [
             "#f2eaa6",
             "#d1422f",
