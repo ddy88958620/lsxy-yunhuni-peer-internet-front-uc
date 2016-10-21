@@ -274,7 +274,7 @@
                                   <div class="row">
                                     <div class="col-md-12 scanvas" >
                                       <!--统计列表-->
-                                      <div class="ecpanel" id="ecpanel" style=" height: 600px;  "></div>
+                                      <div class="ecpanel" id="ecpanel" style=" height: 450px;  "></div>
                                     </div>
                                   </div>
                                 </div>
@@ -298,7 +298,7 @@
                                         </div>
                                         <div class="row" >
                                           <div class="col-md-12">
-                                            <div class="ecpanel" id="sessionecpanel" style=" height: 600px;"></div>
+                                            <div class="ecpanel" id="sessionecpanel" style=" height: 450px;"></div>
                                           </div>
                                         </div>
                                        </div>
@@ -313,7 +313,7 @@
                                           </div>
                                         </div>
                                         <div class="row">
-                                          <div class="ecpanel" id="apiecpanel" style="height: 600px;"></div>
+                                          <div class="ecpanel" id="apiecpanel" style="height: 450px;"></div>
                                         </div>
                                        </div>
                                     </div>
@@ -505,6 +505,12 @@
         text: '',
         subtext: ''
       },
+      grid: {
+        left: '0%',
+        right: '0%',
+        bottom: '3%',
+        containLabel: true
+      },
       tooltip: {
         trigger: 'axis'
       },
@@ -540,6 +546,7 @@
           nameTextStyle:{
             color:'#999',
           },
+          areaStyle: {normal: {}},
           boundaryGap: [0.2,0.2]
         },
         {
@@ -549,6 +556,7 @@
           max: 1200,
           min: 0,
           nameGap:32,
+          areaStyle: {normal: {}},
           nameTextStyle:{
             color:'#999',
           },
@@ -596,8 +604,8 @@
         data:['会话量']
       },
       grid: {
-        left: '3%',
-        right: '4%',
+        left: '0%',
+        right: '3%',
         bottom: '3%',
         containLabel: true
       },
@@ -619,7 +627,8 @@
           name:'会话量',
           type:'line',
           stack: '总量',
-          data:xd
+          data:xd,
+          areaStyle: {normal: {}}
         },
       ]
     };
@@ -649,8 +658,8 @@
         data:['api调用次数']
       },
       grid: {
-        left: '3%',
-        right: '4%',
+        left: '0%',
+        right: '3%',
         bottom: '3%',
         containLabel: true
       },
@@ -672,7 +681,8 @@
           name:'api调用次数',
           type:'line',
           stack: '',
-          data:xd
+          data:xd,
+          areaStyle: {normal: {}}
         },
       ]
     };
