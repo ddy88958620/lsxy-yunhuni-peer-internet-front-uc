@@ -302,6 +302,56 @@ a {
   content: "\e636";
 }
 
+/* line 73, ../sass/font.scss */
+.icon-menu-user:before {
+  content: "\e632";
+}
+
+/* line 74, ../sass/font.scss */
+.icon-menu-cost:before {
+  content: "\e637";
+}
+
+/* line 75, ../sass/font.scss */
+.icon-menu-app:before {
+  content: "\e638";
+}
+
+/* line 76, ../sass/font.scss */
+.icon-menu-number:before {
+  content: "\e639";
+}
+
+/* line 77, ../sass/font.scss */
+.icon-menu-msg:before {
+  content: "\e63a";
+}
+
+/* line 78, ../sass/font.scss */
+.icon-menu-server:before {
+  content: "\e63b";
+}
+
+/* line 79, ../sass/font.scss */
+.icon-menu-cost1:before {
+  content: "\e63c";
+}
+
+/* line 80, ../sass/font.scss */
+.icon-menu-session:before {
+  content: "\e63d";
+}
+
+/* line 81, ../sass/font.scss */
+.icon-menu-call:before {
+  content: "\e63e";
+}
+
+/* line 82, ../sass/font.scss */
+.icon-menu-detail:before {
+  content: "\e63f";
+}
+
 /* line 6, ../sass/aside.scss */
 .aside.canbehover:hover, .nav_green ul.nav > li:hover > a, .nav_green ul.nav > li:focus > a, .nav_green ul.nav > li > a:hover, .nav_green ul.nav > li > a:focus, .nav_green ul.nav > li > a:active, .nav_green ul.nav > li.active > a {
   background-color: #2e97cb !important;
