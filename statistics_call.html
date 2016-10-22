@@ -415,7 +415,7 @@
             },
             yAxis: {
                 type: 'value',
-                name:'            通话时长（分钟）',
+                name:'通话时长（分钟）',
                 nameGap:32,
                 nameTextStyle:{
                     color:'#999',
@@ -425,9 +425,8 @@
             },
             series: [
                 {
-                    name:'会话量',
+                    name:'通话时长',
                     type:'line',
-                    stack: '总量',
                     data:xd,
                     areaStyle: {normal: {}}
                 },
@@ -436,57 +435,6 @@
         talkChart.setOption(option);
     }
 
-
-
-
-    /**
-     * 回调数据
-     * @param tdata 标题项
-     * @param tdata 标题项
-     * @param tdata 标题项
-     */
-    function charts(tdata,series,type){
-
-        var Xdata = monthData;
-        if(type=='year'){
-            Xdata = timeData;
-        }
-        var myChart = echarts.init(document.getElementById('ecpanel2'),'wonderland');
-        option = {
-            tooltip: {
-                trigger: 'axis'
-            },
-            legend: {
-                data:tdata
-            },
-            grid: {
-                left: '3%',
-                right: '4%',
-                bottom: '3%',
-                containLabel: true
-            },
-            xAxis: {
-                type: 'category',
-                boundaryGap: true,
-                data: Xdata
-            },
-            yAxis: {
-                type: 'value',
-                name:'呼叫次数（次）'
-            },
-            series: [
-                {
-                    name:'会话量',
-                    type:'line',
-                    stack: '总量',
-                    data:series,
-                    areaStyle: {normal: {}}
-                },
-            ]
-        };
-
-        myChart.setOption(option);
-    }
 
 
 
