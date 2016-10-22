@@ -98,35 +98,39 @@ aside.aside.bg-Green.lter {
 }
 
 /* line 109, ../sass/aside.scss */
-.aside-mini {
-  width: 55px;
+.aside-transition {
   transition: 0.5s;
 }
-/* line 113, ../sass/aside.scss */
+
+/* line 112, ../sass/aside.scss */
+.aside-mini {
+  width: 55px;
+}
+/* line 114, ../sass/aside.scss */
 .aside-mini span {
   display: none;
 }
-/* line 117, ../sass/aside.scss */
+/* line 118, ../sass/aside.scss */
 .aside-mini .list li a {
   padding: 20px 4px;
   height: 40px;
   line-height: 40px;
 }
-/* line 123, ../sass/aside.scss */
+/* line 124, ../sass/aside.scss */
 .aside-mini ul.nav > li > a {
   padding: 21px 3px;
 }
-/* line 131, ../sass/aside.scss */
+/* line 132, ../sass/aside.scss */
 .aside-mini .img-shrink {
   transform: rotate(90deg);
 }
-/* line 135, ../sass/aside.scss */
+/* line 136, ../sass/aside.scss */
 .aside-mini .nav_green li > a > i {
   margin: -19px 0px;
   width: 100%;
 }
 
-/* line 142, ../sass/aside.scss */
+/* line 143, ../sass/aside.scss */
 .aside-li-a a {
   font-size: 1.2rem;
   font-weight: normal;
@@ -136,32 +140,32 @@ aside.aside.bg-Green.lter {
   width: 100%;
   line-height: 41px;
 }
-/* line 152, ../sass/aside.scss */
+/* line 153, ../sass/aside.scss */
 .aside-li-a.active {
   background: white;
 }
-/* line 156, ../sass/aside.scss */
+/* line 157, ../sass/aside.scss */
 .aside-li-a a:hover {
   background: white;
 }
 
-/* line 161, ../sass/aside.scss */
+/* line 162, ../sass/aside.scss */
 .xbox .head-box {
   background: #f7f7f7;
   left: -15px;
 }
 
-/* line 166, ../sass/aside.scss */
+/* line 167, ../sass/aside.scss */
 .bg-white {
   background: white;
 }
 
-/* line 171, ../sass/aside.scss */
+/* line 172, ../sass/aside.scss */
 .tooltip.right {
   width: 80px;
 }
 
-/* line 176, ../sass/aside.scss */
+/* line 177, ../sass/aside.scss */
 .navbar-index {
   width: 125px;
 }

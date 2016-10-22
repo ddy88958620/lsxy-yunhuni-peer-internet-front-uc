@@ -106,10 +106,11 @@ aside {
   color: #090909;
 }
 
+.aside-transition {
+  transition: 0.5s;
+}
 .aside-mini {
   width: 55px;
-  transition: 0.5s;
-
   span {
     display: none;
   }
