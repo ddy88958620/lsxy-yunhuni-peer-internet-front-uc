@@ -17,7 +17,6 @@ $(window).resize(function(){
 $("#togglerMiniSidebar").on('click',function(event){
   // $('#nav').toggleClass('aside-mini')
   var hasMini = $('#nav').hasClass('aside-mini')
-  console.log(hasMini);
   setCookie("hasMini",hasMini,10);
 
   if(hasMini){
