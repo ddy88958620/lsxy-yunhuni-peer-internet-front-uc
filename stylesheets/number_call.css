@@ -4,3 +4,25 @@
   color: #619B5A;
   font-size: 14px;
 }
+
+/* line 8, ../sass/number_call.scss */
+.hr {
+  border-top: 1px solid #eee;
+}
+
+/* line 13, ../sass/number_call.scss */
+.call-detail-modal .title {
+  display: inline-block;
+  font-size: 14px;
+  padding-right: 5px;
+  line-height: 32px;
+}
+/* line 19, ../sass/number_call.scss */
+.call-detail-modal .select-box {
+  display: inline-block;
+  width: 130px;
+}
+/* line 23, ../sass/number_call.scss */
+.call-detail-modal .number_info {
+  margin-bottom: 20px;
+}

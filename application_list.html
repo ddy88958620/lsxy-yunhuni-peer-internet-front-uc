@@ -162,7 +162,7 @@
 <input type="hidden" value="" id="modal-appid" />
 
 <!---mobilebox-->
-<div class="shadow-bg" id="show-bg" ></div>
+<div class="shadow-bg" id="show-bg"></div>
 <div id="mobilebox-1" class="appliation-modal-box" style="display: none;">
     <div class="addmobile1" >
         <div class="title">应用上线流程<a class="close_a modalCancel" data-type="1"></a></div>
@@ -172,14 +172,12 @@
                 <ul class="nav-modal">
                     <li><a class="spot" data-action="1"></a><span class="lines"></span> </li>
                     <li><a class="spot" data-action="2"></a><span class="lines"></span></li>
-                    <li><a class="spot" data-action="3"></a><span class="lines"></span></li>
-                    <li><a class="spot" data-action="4"></a> </li>
+                    <li><a class="spot" data-action="3"></a></li>
                 </ul>
-                <ul class="nav-modal-text">
+                <ul class="nav-modal-text navw-270">
                     <li><span class="text">实名认证</span> </li>
-                    <li><span class="text">IVR号码绑定</span> </li>
-                    <li class="ml-3"><span class="text">支付</span> </li>
-                    <li class="ml-30 mr-0"><span class="text">上线</span>  </li>
+                    <li><span class="text">号码绑定</span> </li>
+                    <li class="ml-20 mr-0"><span class="text">上线</span>  </li>
                 </ul>
             </div>
 
@@ -205,7 +203,82 @@
             </div>
 
             <div class="contentModal" style="display: none" data-action="2">
-                <div class="input text-center">
+
+              <!--可选号码-->
+              <div class="input text-center">
+                <div class="info">
+                  您选择开通IVR功能，需要从我的号码列表中选择一个号码与该应用绑定
+                </div>
+              </div>
+              <div class="phone-table">
+                <table class="table table-striped">
+                  <thead>
+                  <tr>
+                    <th></th>
+                    <th>手机号码</th>
+                    <th>呼入</th>
+                    <th>呼出</th>
+                    <th>归属地</th>
+                    <th>质量(1~5分)</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td><input type="checkbox" name="" /></td>
+                    <td>13611460866</td>
+                    <td>✔</td>
+                    <td>✘</td>
+                    <td>广州</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" /></td>
+                    <td>13611460866</td>
+                    <td>✔</td>
+                    <td>✘</td>
+                    <td>广州</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" /></td>
+                    <td>13611460866</td>
+                    <td>✔</td>
+                    <td>✘</td>
+                    <td>广州</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" /></td>
+                    <td>13611460866</td>
+                    <td>✔</td>
+                    <td>✘</td>
+                    <td>广州</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" /></td>
+                    <td>13611460866</td>
+                    <td>✔</td>
+                    <td>✘</td>
+                    <td>广州</td>
+                    <td>4</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="input text-center" >
+                <a type="button"  class="btn btn-primary btn-box tabModalBtn" data-id="3" data-fun="createorder()" >下一步</a>
+              </div>
+
+              <!--没有可选号码-->
+              <div class="input text-center">
+                我的号码列表没有可选号码，请前往“号码管理”中的“我的号码”，进行号码租用
+              </div>
+              <div class="input text-center" >
+                <a type="button"  class="btn btn-primary btn-box tabModalBtn" href="number_call.html">立即前往</a>
+              </div>
+
+                <!--<div class="input text-center">
                     <p>您选择开通IVR功能，我们给您分配了一个IVR号码供应用使用IVR功能</p>
                 </div>
                 <div class="input text-center">
@@ -215,13 +288,13 @@
                     <a onclick="nolike()" class="font14">不喜欢 换一个?</a>
                 </div>
                 <div class="hideIVR">
-                </div>
-                <div class="input text-center" >
-                    <a type="button"  class="btn btn-primary btn-box tabModalBtn" data-id="3" data-fun="createorder()" >下一步</a>
-                </div>
+                </div>-->
+
+
+
             </div>
 
-            <div class="contentModal" style="display: none" data-action="3">
+            <div class="contentModal" style="display: none" data-action="4">
                 <div class="input text-center mt-0">
                     <p>您需要支付：<span class="money">998.00</span> 元&nbsp;&nbsp;&nbsp; 账号余额：0.00 元 &nbsp;&nbsp;&nbsp; <span class="nomoney">!!余额不足</span>&nbsp;&nbsp;&nbsp;<a href="cost_recharge_sure.html">充值</a> </p>
                 </div>
@@ -237,7 +310,7 @@
                 </div>
             </div>
 
-            <div class="contentModal" style="display:none " data-action="4">
+            <div class="contentModal" style="display:none " data-action="3">
                 <div class="input text-center" >
                     <img src="images/index/l1.png" alt="" class="sre" />
                     <p>上线成功</p>

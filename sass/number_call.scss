@@ -4,3 +4,24 @@
   color: #619B5A;
   font-size: 14px;
 }
+
+.hr{
+  border-top: 1px solid #eee;
+}
+
+.call-detail-modal{
+  .title{
+    display: inline-block;
+    font-size: 14px;
+    padding-right: 5px;
+    line-height: 32px;
+  }
+  .select-box{
+    display: inline-block;
+    width: 130px;
+  }
+  .number_info{
+    margin-bottom: 20px;
+  }
+}
+

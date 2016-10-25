@@ -16,8 +16,11 @@ $(window).resize(function(){
 // 一级导航 mini 化
 $("#togglerMiniSidebar").on('click',function(event){
   // $('#nav').toggleClass('aside-mini')
-  var hasMini = $('#nav').hasClass('aside-mini')
-  setCookie("hasMini",hasMini,10);
+  var hasMini = $('#nav').hasClass('aside-mini');
+  if (window.localStorage) {
+    localStorage.setItem("hasMini", hasMini);
+  }
+
 
   if(hasMini){
     $('#nav').removeClass('aside-mini aside-transition')
@@ -38,8 +41,11 @@ $("#togglerMiniSidebar").on('click',function(event){
 
 //检查是否开启提示模式
 function isHasMini(){
-  var hasMini = getCookie('hasMini');
-  if(hasMini=='false' ||　hasMini==false){
+  var hasMini = true;
+  if (window.localStorage) {
+    var hasMini = localStorage.getItem("hasMini");
+  }
+  if(hasMini==='false'){
     $('#nav').addClass('aside-mini')
     // tooltips
     $('[data-toggle="tooltip"]').tooltip()

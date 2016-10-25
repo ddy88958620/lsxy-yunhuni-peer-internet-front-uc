@@ -176,3 +176,32 @@
 .margin_left-20,.margin-left-20{
   margin-left: 20px;
 }
+
+.block{
+  display: block;
+}
+
+.order-by-box{
+  position: relative;
+  display: inline-block;
+  top: 5px;
+  width: 15px;
+  height:15px;
+   i {
+     position: absolute;
+     width: 15px;
+     text-align: center;
+     &:hover{
+       color:#00a6ce;
+     }
+   }
+  .active{
+    color:#00a6ce;
+  }
+  .up{
+    top:2px;
+  }
+  .down{
+
+  }
+}
