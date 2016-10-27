@@ -305,3 +305,43 @@
 .cursor {
   cursor: pointer;
 }
+
+/* line 237, ../sass/common.scss */
+.search-box .inline-block {
+  margin-bottom: 10px;
+  vertical-align: top;
+}
+/* line 241, ../sass/common.scss */
+.search-box .btn {
+  display: inline-block;
+}
+
+/* line 245, ../sass/common.scss */
+.search-small-title {
+  width: 40px;
+}
+
+/* line 248, ../sass/common.scss */
+.search-title {
+  width: 60px;
+}
+
+/* line 251, ../sass/common.scss */
+.search-bigger-title {
+  width: 80px;
+}
+
+/* line 254, ../sass/common.scss */
+.search-input {
+  max-width: 130px;
+}
+
+/* line 258, ../sass/common.scss */
+.float-right {
+  float: right;
+}
+
+/* line 261, ../sass/common.scss */
+.float-left {
+  float: left;
+}

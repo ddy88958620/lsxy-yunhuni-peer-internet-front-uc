@@ -233,3 +233,31 @@
 .cursor{
   cursor: pointer;
 }
+.search-box{
+  .inline-block{
+    margin-bottom: 10px;
+    vertical-align: top;
+  }
+  .btn{
+    display: inline-block;
+  }
+}
+.search-small-title{
+  width: 40px;
+}
+.search-title{
+  width: 60px;
+}
+.search-bigger-title{
+  width: 80px;
+}
+.search-input{
+  max-width: 130px;
+}
+
+.float-right{
+  float:right;
+}
+.float-left{
+  float:left;
+}

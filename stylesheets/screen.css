@@ -1309,6 +1309,46 @@ header {
   cursor: pointer;
 }
 
+/* line 237, ../sass/common.scss */
+.search-box .inline-block {
+  margin-bottom: 10px;
+  vertical-align: top;
+}
+/* line 241, ../sass/common.scss */
+.search-box .btn {
+  display: inline-block;
+}
+
+/* line 245, ../sass/common.scss */
+.search-small-title {
+  width: 40px;
+}
+
+/* line 248, ../sass/common.scss */
+.search-title {
+  width: 60px;
+}
+
+/* line 251, ../sass/common.scss */
+.search-bigger-title {
+  width: 80px;
+}
+
+/* line 254, ../sass/common.scss */
+.search-input {
+  max-width: 130px;
+}
+
+/* line 258, ../sass/common.scss */
+.float-right {
+  float: right;
+}
+
+/* line 261, ../sass/common.scss */
+.float-left {
+  float: left;
+}
+
 /* line 1, ../sass/admin-index.scss */
 .yhn-description {
   margin-top: 10px;
@@ -2544,80 +2584,75 @@ a {
   color: #999999;
 }
 
-/* line 1, ../sass/cost_invoice_record.scss */
-.float-right {
-  float: right;
-}
-
-/* line 4, ../sass/cost_invoice_record.scss */
+/* line 2, ../sass/cost_invoice_record.scss */
 .invoiceapply {
   margin-top: 20px;
 }
-/* line 6, ../sass/cost_invoice_record.scss */
+/* line 4, ../sass/cost_invoice_record.scss */
 .invoiceapply .font {
   font-size: 18px;
 }
-/* line 9, ../sass/cost_invoice_record.scss */
+/* line 7, ../sass/cost_invoice_record.scss */
 .invoiceapply .price {
   color: #ff9900;
   font-size: 24px;
 }
-/* line 13, ../sass/cost_invoice_record.scss */
+/* line 11, ../sass/cost_invoice_record.scss */
 .invoiceapply .point {
   color: #ff9900;
   font-size: 14px;
 }
 
-/* line 19, ../sass/cost_invoice_record.scss */
+/* line 17, ../sass/cost_invoice_record.scss */
 .text-l {
   text-align: left !important;
 }
 
-/* line 23, ../sass/cost_invoice_record.scss */
+/* line 21, ../sass/cost_invoice_record.scss */
 .price-box {
   background-color: #f1f1f1 !important;
 }
 
-/* line 27, ../sass/cost_invoice_record.scss */
+/* line 25, ../sass/cost_invoice_record.scss */
 .pageSyncWrap {
   height: 50px;
 }
 
-/* line 31, ../sass/cost_invoice_record.scss */
+/* line 29, ../sass/cost_invoice_record.scss */
 .sync-table-box {
   font-size: 12px !important;
 }
 
-/* line 37, ../sass/cost_invoice_record.scss */
+/* line 35, ../sass/cost_invoice_record.scss */
 .cost-detail-modal .a-title {
   height: 30px;
   line-height: 30px;
   border-bottom: 1px dashed #ececec;
 }
-/* line 44, ../sass/cost_invoice_record.scss */
+/* line 42, ../sass/cost_invoice_record.scss */
 .cost-detail-modal .accordion-group {
   height: 500px;
   display: block;
   overflow-y: scroll;
 }
-/* line 50, ../sass/cost_invoice_record.scss */
+/* line 48, ../sass/cost_invoice_record.scss */
 .cost-detail-modal .title {
   font-weight: bold;
   padding: 10px 0;
   border-bottom: 1px solid #bfbfbf;
 }
-/* line 56, ../sass/cost_invoice_record.scss */
+/* line 54, ../sass/cost_invoice_record.scss */
 .cost-detail-modal .c-title {
   height: 30px;
   line-height: 30px;
   border-bottom: 1px solid #ececec;
 }
-/* line 61, ../sass/cost_invoice_record.scss */
+/* line 59, ../sass/cost_invoice_record.scss */
 .cost-detail-modal .content {
   background-color: #fbfbfb;
   padding: 10px 0 0 0;
 }
-/* line 64, ../sass/cost_invoice_record.scss */
+/* line 62, ../sass/cost_invoice_record.scss */
 .cost-detail-modal .content .row {
   padding-left: 0;
 }
