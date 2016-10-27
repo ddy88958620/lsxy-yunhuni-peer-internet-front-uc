@@ -33,321 +33,326 @@ a {
 }
 
 /* line 19, ../sass/font.scss */
+.icon-oc-close:before {
+  content: "\e640";
+}
+
+/* line 20, ../sass/font.scss */
 .icon-oc-money:before {
   content: "\e600";
 }
 
-/* line 20, ../sass/font.scss */
+/* line 21, ../sass/font.scss */
 .icon-oc-handle:before {
   content: "\e601";
 }
 
-/* line 21, ../sass/font.scss */
+/* line 22, ../sass/font.scss */
 .icon-oc-mobile:before {
   content: "\e602";
 }
 
-/* line 22, ../sass/font.scss */
+/* line 23, ../sass/font.scss */
 .icon-oc-member:before {
   content: "\e603";
 }
 
-/* line 23, ../sass/font.scss */
+/* line 24, ../sass/font.scss */
 .icon-oc-monitor:before {
   content: "\e604";
 }
 
-/* line 24, ../sass/font.scss */
+/* line 25, ../sass/font.scss */
 .icon-oc-custom:before {
   content: "\e605";
 }
 
-/* line 25, ../sass/font.scss */
+/* line 26, ../sass/font.scss */
 .icon-oc-verify:before {
   content: "\e606";
 }
 
-/* line 26, ../sass/font.scss */
+/* line 27, ../sass/font.scss */
 .icon-oc-index:before {
   content: "\e607";
 }
 
-/* line 27, ../sass/font.scss */
+/* line 28, ../sass/font.scss */
 .icon-oc-statistics:before {
   content: "\e608";
 }
 
-/* line 28, ../sass/font.scss */
+/* line 29, ../sass/font.scss */
 .icon-oc-wallet:before {
   content: "\e609";
 }
 
-/* line 29, ../sass/font.scss */
+/* line 30, ../sass/font.scss */
 .icon-oc-finance:before {
   content: "\e60a";
 }
 
-/* line 30, ../sass/font.scss */
+/* line 31, ../sass/font.scss */
 .icon-oc-setting:before {
   content: "\e60b";
 }
 
-/* line 31, ../sass/font.scss */
+/* line 32, ../sass/font.scss */
 .icon-oc-msg:before {
   content: "\e60c";
 }
 
-/* line 32, ../sass/font.scss */
+/* line 33, ../sass/font.scss */
 .icon-oc-date:before {
   content: "\e60d";
 }
 
-/* line 33, ../sass/font.scss */
+/* line 34, ../sass/font.scss */
 .icon-oc-app:before {
   content: "\e60e";
 }
 
-/* line 34, ../sass/font.scss */
+/* line 35, ../sass/font.scss */
 .icon-oc-user:before {
   content: "\e60f";
 }
 
-/* line 35, ../sass/font.scss */
+/* line 36, ../sass/font.scss */
 .icon-oc-mobile-small:before {
   content: "\e610";
 }
 
-/* line 36, ../sass/font.scss */
+/* line 37, ../sass/font.scss */
 .icon-oc-msg-small:before {
   content: "\e611";
 }
 
-/* line 37, ../sass/font.scss */
+/* line 38, ../sass/font.scss */
 .icon-oc-wallet-small:before {
   content: "\e612";
 }
 
-/* line 38, ../sass/font.scss */
+/* line 39, ../sass/font.scss */
 .icon-oc-ranking:before {
   content: "\e613";
 }
 
-/* line 39, ../sass/font.scss */
+/* line 40, ../sass/font.scss */
 .icon-oc-exit:before {
   content: "\e614";
 }
 
-/* line 40, ../sass/font.scss */
+/* line 41, ../sass/font.scss */
 .icon-oc-search:before {
   content: "\e615";
 }
 
-/* line 41, ../sass/font.scss */
+/* line 42, ../sass/font.scss */
 .icon-oc-menu:before {
   content: "\e616";
 }
 
-/* line 42, ../sass/font.scss */
+/* line 43, ../sass/font.scss */
 .icon-oc-menu-in:before {
   content: "\e617";
 }
 
-/* line 43, ../sass/font.scss */
+/* line 44, ../sass/font.scss */
 .icon-oc-up:before {
   content: "\e618";
 }
 
-/* line 44, ../sass/font.scss */
+/* line 45, ../sass/font.scss */
 .icon-oc-down:before {
   content: "\e619";
 }
 
-/* line 45, ../sass/font.scss */
-.icon-oc-close:before {
+/* line 46, ../sass/font.scss */
+.icon-oc-close1:before {
   content: "\e623";
 }
 
-/* line 46, ../sass/font.scss */
+/* line 47, ../sass/font.scss */
 .icon-oc-recharge:before {
   content: "\e61a";
 }
 
-/* line 47, ../sass/font.scss */
+/* line 48, ../sass/font.scss */
 .icon-oc-storage:before {
   content: "\e61b";
 }
 
-/* line 48, ../sass/font.scss */
+/* line 49, ../sass/font.scss */
 .icon-huawuliang:before {
   content: "\e61c";
 }
 
-/* line 49, ../sass/font.scss */
+/* line 50, ../sass/font.scss */
 .icon-oc-msg1:before {
   content: "\e61d";
 }
 
-/* line 50, ../sass/font.scss */
+/* line 51, ../sass/font.scss */
 .icon-oc-callrate:before {
   content: "\e61e";
 }
 
-/* line 51, ../sass/font.scss */
+/* line 52, ../sass/font.scss */
 .icon-oc-talktime:before {
   content: "\e61f";
 }
 
-/* line 52, ../sass/font.scss */
+/* line 53, ../sass/font.scss */
 .icon-oc-surplus:before {
   content: "\e620";
 }
 
-/* line 53, ../sass/font.scss */
+/* line 54, ../sass/font.scss */
 .icon-oc-pulldown:before {
   content: "\e621";
 }
 
-/* line 54, ../sass/font.scss */
+/* line 55, ../sass/font.scss */
 .icon-oc-dropdown:before {
   content: "\e622";
 }
 
-/* line 55, ../sass/font.scss */
+/* line 56, ../sass/font.scss */
 .icon-oc-close-middle:before {
   content: "\e624";
 }
 
-/* line 56, ../sass/font.scss */
+/* line 57, ../sass/font.scss */
 .icon-oc-close-small:before {
   content: "\e625";
 }
 
-/* line 57, ../sass/font.scss */
+/* line 58, ../sass/font.scss */
 .icon-oc-login-pwd:before {
   content: "\e626";
 }
 
-/* line 58, ../sass/font.scss */
+/* line 59, ../sass/font.scss */
 .icon-oc-login-user:before {
   content: "\e627";
 }
 
-/* line 59, ../sass/font.scss */
+/* line 60, ../sass/font.scss */
 .icon-oc-app1:before {
   content: "\e628";
 }
 
-/* line 60, ../sass/font.scss */
+/* line 61, ../sass/font.scss */
 .icon-oc-delete:before {
   content: "\e629";
 }
 
-/* line 61, ../sass/font.scss */
+/* line 62, ../sass/font.scss */
 .icon-oc-copy:before {
   content: "\e62a";
 }
 
-/* line 62, ../sass/font.scss */
+/* line 63, ../sass/font.scss */
 .icon-oc-certid:before {
   content: "\e62b";
 }
 
-/* line 63, ../sass/font.scss */
+/* line 64, ../sass/font.scss */
 .icon-oc-api:before {
   content: "\e62c";
 }
 
-/* line 64, ../sass/font.scss */
+/* line 65, ../sass/font.scss */
 .icon-oc-secrekey:before {
   content: "\e62d";
 }
 
-/* line 65, ../sass/font.scss */
+/* line 66, ../sass/font.scss */
 .icon-oc-appnum:before {
   content: "\e62e";
 }
 
-/* line 66, ../sass/font.scss */
+/* line 67, ../sass/font.scss */
 .icon-yue:before {
   content: "\e62f";
 }
 
-/* line 67, ../sass/font.scss */
+/* line 68, ../sass/font.scss */
 .icon-resert:before {
   content: "\e630";
 }
 
-/* line 68, ../sass/font.scss */
+/* line 69, ../sass/font.scss */
 .icon-oc-small-copy:before {
   content: "\e631";
 }
 
-/* line 69, ../sass/font.scss */
+/* line 70, ../sass/font.scss */
 .icon-call-base:before {
   content: "\e633";
 }
 
-/* line 70, ../sass/font.scss */
+/* line 71, ../sass/font.scss */
 .icon-call-developer:before {
   content: "\e634";
 }
 
-/* line 71, ../sass/font.scss */
+/* line 72, ../sass/font.scss */
 .icon-call-voice:before {
   content: "\e635";
 }
 
-/* line 72, ../sass/font.scss */
+/* line 73, ../sass/font.scss */
 .icon-call-center:before {
   content: "\e636";
 }
 
-/* line 73, ../sass/font.scss */
+/* line 74, ../sass/font.scss */
 .icon-menu-user:before {
   content: "\e632";
 }
 
-/* line 74, ../sass/font.scss */
+/* line 75, ../sass/font.scss */
 .icon-menu-cost:before {
   content: "\e637";
 }
 
-/* line 75, ../sass/font.scss */
+/* line 76, ../sass/font.scss */
 .icon-menu-app:before {
   content: "\e638";
 }
 
-/* line 76, ../sass/font.scss */
+/* line 77, ../sass/font.scss */
 .icon-menu-number:before {
   content: "\e639";
 }
 
-/* line 77, ../sass/font.scss */
+/* line 78, ../sass/font.scss */
 .icon-menu-msg:before {
   content: "\e63a";
 }
 
-/* line 78, ../sass/font.scss */
+/* line 79, ../sass/font.scss */
 .icon-menu-server:before {
   content: "\e63b";
 }
 
-/* line 79, ../sass/font.scss */
+/* line 80, ../sass/font.scss */
 .icon-menu-cost1:before {
   content: "\e63c";
 }
 
-/* line 80, ../sass/font.scss */
+/* line 81, ../sass/font.scss */
 .icon-menu-session:before {
   content: "\e63d";
 }
 
-/* line 81, ../sass/font.scss */
+/* line 82, ../sass/font.scss */
 .icon-menu-call:before {
   content: "\e63e";
 }
 
-/* line 82, ../sass/font.scss */
+/* line 83, ../sass/font.scss */
 .icon-menu-detail:before {
   content: "\e63f";
 }
@@ -2248,21 +2253,25 @@ a {
   display: inline-block;
   font-size: 14px;
   padding-right: 5px;
-  line-height: 32px;
 }
-/* line 19, ../sass/number_call.scss */
+/* line 18, ../sass/number_call.scss */
 .call-detail-modal .select-box {
   display: inline-block;
   width: 130px;
 }
-/* line 23, ../sass/number_call.scss */
+/* line 22, ../sass/number_call.scss */
 .call-detail-modal .number_info {
   margin-bottom: 20px;
 }
 
-/* line 28, ../sass/number_call.scss */
+/* line 27, ../sass/number_call.scss */
 .height-100 {
   height: 100px !important;
+}
+
+/* line 33, ../sass/number_call.scss */
+.del-close i:hover {
+  color: #428bca !important;
 }
 
 /* line 1, ../sass/number_band.scss */

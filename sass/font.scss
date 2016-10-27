@@ -16,6 +16,7 @@
   -moz-osx-font-smoothing: grayscale;
   color:#b0b7cd;
 }
+.icon-oc-close:before { content: "\e640"; }
 .icon-oc-money:before { content: "\e600"; }
 .icon-oc-handle:before { content: "\e601"; }
 .icon-oc-mobile:before { content: "\e602"; }
@@ -42,7 +43,7 @@
 .icon-oc-menu-in:before { content: "\e617"; }
 .icon-oc-up:before { content: "\e618"; }
 .icon-oc-down:before { content: "\e619"; }
-.icon-oc-close:before { content: "\e623"; }
+.icon-oc-close1:before { content: "\e623"; }
 .icon-oc-recharge:before { content: "\e61a"; }
 .icon-oc-storage:before { content: "\e61b"; }
 .icon-huawuliang:before { content: "\e61c"; }

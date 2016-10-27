@@ -56,8 +56,8 @@
               <section>
                 <p class="number_info">
                   1.应用未上线前，会员可以使用平台的测试号码进行测试，应用上线后，会员需要租用固定的号码作为某些特定功能的呼入或呼出号码使用。<br/>
-                  2.余额不足以支付每月扣除号码月租费时，号码列表的号码将会过期，过期时间超过7天，号码则自动移除。<br/>
-                  3.应用下线后，号码自动与应用解除关联，应用下线不影响号码的扣费。<br/>
+                  2.租用号码成功后，每个号码统一收取100元/月的号码月租费，余额不足以支付每月扣除号码月租费时，号码列表的号码将会过期，过期时间超过7天，号码则自动移除。<br/>
+                  3.应用下线后，号码自动与应用解除关联，应用下线不影响号码月租费的收取。<br/>
                   4.会员根据自身业务需要，购买不同功能的号码。<br/>
                 </p>
               </section>
@@ -146,8 +146,8 @@
                       <thead>
                       <tr>
                         <th>号码</th>
-                        <th class="text-center">呼入</th>
-                        <th class="text-center">呼出</th>
+                        <th class="text-center">可呼入</th>
+                        <th class="text-center">可呼出</th>
                         <th class="text-center"><span class="text-center-l-fixed">归属地</span></th>
                         <th class="text-center">质量(1~5分)</th>
                         <th class="text-right">资源占用费</th>
@@ -174,7 +174,7 @@
                     </table>
                     <div class="text-right">
                       <a  class="btn btn-primary btnpay">立即支付</a>
-                      <a href="" class="btn btn-default">取消订单</a>
+                      <a  class="btn btn-default" onclick="closepay(1)">取消订单</a>
                     </div>
                   </div>
                 </div>
@@ -206,7 +206,7 @@
       </div>
       <div class="modal-body">
         <div class="number_info">
-          1.会员根据需要租用不同功能的号码，号码功能包括呼入和呼出功能<br/>
+          1.会员根据需要租用不同功能的号码，号码功能包括呼入和呼出功能。<br/>
           2.租用号码时，每个号码需要一次性收取一定的费用作为号码的使用费。<br/>
           3.租用后自动进入我的号码列表，应用上线时可选择购买的号码进行绑定。<br/>
           4.每次最多只能租用5个号码。<br/>
@@ -215,17 +215,17 @@
         <!--内容-->
         <div class="row">
           <div class="col-md-3 remove-padding">
-            <input type="text" v-model="serach.name" placeholder="搜索" id="modal-name" class="form-control"/>
+            <input type="text" v-model="serach.name" @keyup.enter="find" placeholder="号码搜索" id="modal-name" class="form-control"/>
           </div>
           <div class="col-md-4">
             <span class="title">号码功能：</span>
             <select v-model="serach.phone" class="form-control select-box">
               <option value="-1">全部</option>
-              <option value="1">呼入</option>
-              <option value="2">呼出</option>
+              <option value="1">可呼入</option>
+              <option value="2">可呼出</option>
             </select>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 remove-padding">
             <span class="title">归属地：</span>
             <select v-model="serach.place" class="form-control select-box">
               <option value="-1">全部</option>
@@ -234,7 +234,7 @@
             </select>
           </div>
           <div class="col-md-1 text-right remove-padding">
-            <a id="find-modal" class="btn btn-primary">查询</a>
+            <a  @click="find" class="btn btn-primary">查询</a>
           </div>
         </div>
 
@@ -244,8 +244,8 @@
           <tr>
             <th>#</th>
             <th>号码</th>
-            <th class="text-center">呼入</th>
-            <th class="text-center">呼出</th>
+            <th class="text-center">可呼入</th>
+            <th class="text-center">可呼出</th>
             <th class="text-center"><span class="text-center-l-fixed">归属地</span></th>
             <th class="text-center">质量(1~5分)
               <span class="order-by-box">
@@ -286,9 +286,10 @@
             <table class="table">
               <thead>
               <tr>
+                <th>#</th>
                 <th>号码</th>
-                <th class="text-center">呼入</th>
-                <th class="text-center">呼出</th>
+                <th class="text-center">可呼入</th>
+                <th class="text-center">可呼出</th>
                 <th class="text-center"><span class="text-center-l-fixed">归属地</span></th>
                 <th class="text-center">质量(1~5分)</th>
                 <th class="text-right">资源占用费</th>
@@ -296,6 +297,7 @@
               </thead>
               <tbody>
               <tr v-for="item in shoplist">
+                <td><a @click="delshop($index)" class="del-close" title="删除此号码"><i class="iconfont icon-oc-close "></i></a></td>
                 <td>{{ item.phone }}</td>
                 <td class="text-center">{{ isCall[item.call] }}</td>
                 <td class="text-center">{{ isCall[item.callout]}}</td>
@@ -321,7 +323,7 @@
   </div>
 
   <div class="modal fade call-detail-modal" id="pay-modal" tabindex="101" role="dialog"
-     aria-labelledby="myModalLabel" aria-hidden="true">
+     aria-labelledby="myModalLabel" aria-hidden="true"  onclick="cancelpay()">
     <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -334,11 +336,6 @@
         </h4>
       </div>
       <div class="modal-body">
-
-        <div class="row">
-
-        </div>
-
         <div class="row">
           <div class="col-md-12 text-center"  v-if="paystatus==1">
             <img src="./images/register/icon_12.png" /><br/>
@@ -359,8 +356,8 @@
               <thead>
               <tr>
                 <th>号码</th>
-                <th class="text-center">呼入</th>
-                <th class="text-center">呼出</th>
+                <th class="text-center">可呼入</th>
+                <th class="text-center">可呼出</th>
                 <th class="text-center"><span class="text-center-l-fixed">归属地</span></th>
                 <th class="text-center">质量(1~5分)</th>
                 <th class="text-right">资源占用费</th>
@@ -378,7 +375,9 @@
               </tbody>
             </table>
             <div class="row">
-
+                <div class="col-md-12 text-center">
+                  本次租用需要支付：￥<span class="orange">2000.000</span>
+                </div>
             </div>
 
           </div>
@@ -390,7 +389,7 @@
         <a class="btn btn-primary" href="cost_recharge.html" v-if="paystatus==-1">前往充值</a>
         <a class="btn btn-primary" @click="checkMoney" v-if="paystatus==0">立即支付</a>
         <button type="button" class="btn btn-default"
-                data-dismiss="modal">关闭
+                data-dismiss="modal" onclick="cancelpay()">取消
         </button>
       </div>
     </div>
@@ -469,6 +468,13 @@
         }
       },
       methods: {
+        delshop: function(index){
+          var shop = this.shop
+          shop.splice(index,1);
+        },
+        find:function(){
+          modalPage()
+        },
         clear: function () {
           this.shop = []
           this.shoplist = []
@@ -508,7 +514,7 @@
           //请求数据
           var param = { name:this.serach.name,phone:this.serach.phone,place:this.serach.place}
 
-          console.log(param)
+
 
 
 
@@ -580,10 +586,6 @@
       return false;
     }
 
-    //查询
-    $('#find-modal').click(function () {
-      modalPage()
-    })
 
     //分页
     function modalPage() {
@@ -675,19 +677,17 @@
     }
 
 
-    $('.reset_confirm').click(function(){
-      bootbox.setLocale("zh_CN");
-      bootbox.confirm("提示？", function(result) {
-        if(result){
-          $('.tips-key').html('错误提示');
-          $('.secretkey').html('aaaaaaaaaaaaaaaaaaaa');
-        }
-      });
-    });
+
 
     $('#common-close').click(function(){
       $('.common-info').fadeOut()
     })
+
+
+    //取消
+    function cancelpay() {
+      showtoast('您的订单尚未支付，请及时付款！')
+    }
 
     /**
      * id 为号码标识
@@ -705,7 +705,39 @@
               label: "确认",
               className: "btn-primary",
               callback: function () {
+                showtoast("释放成功")
+
+
                //异步加载数据，释放成功
+              }
+            },
+            cancel:{
+              label: "关闭",
+              className: "btn-default",
+            }
+          }
+        }
+      );
+    }
+
+    /**
+     * id 为订单标识
+     * @param id
+     */
+    function closepay(id){
+      bootbox.setLocale("zh_CN");
+      bootbox.dialog({
+          title: "提示",
+          message: '<div class="row">  ' +
+          '<div class="col-md-12 text-center">您确认取消此订单吗？</div>  </div>',
+          buttons: {
+            success: {
+              label: "确认",
+              className: "btn-primary",
+              callback: function () {
+                //取消成功 刷新页面
+                showtoast('取消订单成功')
+                //异步加载数据，释放成功
               }
             },
             cancel:{

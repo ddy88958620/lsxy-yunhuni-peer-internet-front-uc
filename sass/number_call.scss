@@ -14,7 +14,6 @@
     display: inline-block;
     font-size: 14px;
     padding-right: 5px;
-    line-height: 32px;
   }
   .select-box{
     display: inline-block;
@@ -29,3 +28,11 @@
   height: 100px !important;
 }
 
+.del-close{
+  i{
+    &:hover{
+      color:#428bca !important;
+    }
+  }
+
+}
