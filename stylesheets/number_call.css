@@ -26,3 +26,8 @@
 .call-detail-modal .number_info {
   margin-bottom: 20px;
 }
+
+/* line 28, ../sass/number_call.scss */
+.height-100 {
+  height: 100px !important;
+}

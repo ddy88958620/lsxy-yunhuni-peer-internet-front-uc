@@ -281,3 +281,22 @@
 .order-by-box .up {
   top: 2px;
 }
+
+/* line 217, ../sass/common.scss */
+.text-center-l-fixed {
+  width: 50px;
+  display: inline-block;
+  text-align: left;
+}
+
+/* line 223, ../sass/common.scss */
+.text-center-r-fixed {
+  width: 50px;
+  display: inline-block;
+  text-align: right;
+}
+
+/* line 229, ../sass/common.scss */
+.text-left-fixed {
+  padding-left: 50px !important;
+}

@@ -213,3 +213,19 @@
 
   }
 }
+
+.text-center-l-fixed{
+  width: 50px;
+  display: inline-block;
+  text-align: left;
+}
+
+.text-center-r-fixed{
+  width: 50px;
+  display: inline-block;
+  text-align: right;
+}
+
+.text-left-fixed{
+  padding-left: 50px !important;
+}

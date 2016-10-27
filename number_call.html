@@ -75,8 +75,8 @@
                     <th>号码</th>
                     <th class="text-center">可呼入</th>
                     <th class="text-center">可呼出</th>
-                    <th>关联应用</th>
-                    <th>归属地</th>
+                    <th class="text-left-fixed">关联应用</th>
+                    <th class="text-left-fixed"><span class="">归属地</span></th>
                     <th>有效期</th>
                     <th>操作</th>
                   </tr>
@@ -87,27 +87,26 @@
                     <td>13971068693</td>
                     <td class="text-center">✔</td>
                     <td class="text-center">✘</td>
-                    <td><a href="#">demo001</a></td>
-                    <td>广州</td>
+                    <td class="text-left-fixed"><a href="#">demo001</a></td>
+                    <td class="text-left-fixed">020</td>
                     <td>2016-06-40</td>
-                    <td><a>释放</a></td>
+                    <td><a onclick="release(1)">释放</a></td>
                   </tr>
                   <tr>
                     <td scope="row">2</td>
                     <td>13971068693</td>
                     <td class="text-center">✔</td>
                     <td class="text-center">✘</td>
-                    <td><a href="#">demo001</a></td>
-                    <td>广州</td>
+                    <td class="text-left-fixed"><a href="#">demo001</a></td>
+                    <td class="text-left-fixed">0757</td>
                     <td>2016-06-40</td>
-                    <td><a>释放</a></td>
+                    <td><a onclick="release(2)">释放</a></td>
                   </tr>
-
                   </tbody>
                 </table>
               </section>
               <section class="panel panel-default yunhuni-personal">
-                <nav class='pageWrap'>
+                <nav class='pageWrap height-100'>
                   <ul class="pagination">
                     <li>
                       <a href="#" aria-label="Previous">
@@ -129,7 +128,7 @@
               </section>
 
               <!--待支付订单-->
-              <section class="panel panel-default pos-rlt clearfix" id="nopaid" style="display: none">
+              <section class="panel panel-default pos-rlt clearfix" id="nopaid" style="display:">
                 <div class="from-group hr">
                   <h5 class="orange">待支付号码订单</h5>
                 </div>
@@ -142,7 +141,6 @@
                       订单创建时间：<span id="paycreatetime" class="m-r-20">2016-03-03 16:00 </span>
                       订单过期时间：<span id="paylasttime" class="m-r-20">2016-03-03 16:00</span>
                       本次租用需要支付：￥<span id="paymoney" class="m-r-20 orange">2000.000</span>
-
                     </p>
                     <table class="table">
                       <thead>
@@ -150,7 +148,7 @@
                         <th>号码</th>
                         <th class="text-center">呼入</th>
                         <th class="text-center">呼出</th>
-                        <th>归属地</th>
+                        <th class="text-center"><span class="text-center-l-fixed">归属地</span></th>
                         <th class="text-center">质量(1~5分)</th>
                         <th class="text-right">资源占用费</th>
                       </tr>
@@ -160,9 +158,17 @@
                         <td>13971068693</td>
                         <td class="text-center">✔</td>
                         <td class="text-center">✘</td>
-                        <td>广州</td>
+                        <td class="text-center"><span class="text-center-l-fixed">020</span></td>
                         <td class="text-center">4</td>
-                        <td class="text-right">￥122</td>
+                        <td class="text-right">￥122.000</td>
+                      </tr>
+                      <tr>
+                        <td>13971068693</td>
+                        <td class="text-center">✔</td>
+                        <td class="text-center">✘</td>
+                        <td class="text-center"><span class="text-center-l-fixed">0757</span></td>
+                        <td class="text-center">4</td>
+                        <td class="text-right">￥122.000</td>
                       </tr>
                       </tbody>
                     </table>
@@ -240,17 +246,17 @@
             <th>号码</th>
             <th class="text-center">呼入</th>
             <th class="text-center">呼出</th>
-            <th>归属地</th>
+            <th class="text-center"><span class="text-center-l-fixed">归属地</span></th>
             <th class="text-center">质量(1~5分)
               <span class="order-by-box">
-                  <i class="fa fa-sort-asc up"></i>
-                  <i class="fa fa-sort-desc down"></i>
+                  <i class="fa fa-sort-asc up {{ orderby==1 ? 'active' : '' }}" @click="sort(1)"></i>
+                  <i class="fa fa-sort-desc down {{ orderby==2 ? 'active' : '' }}" @click="sort(2)"></i>
                 </span>
             </th>
             <th class="text-right">资源占用费
               <span class="order-by-box">
-                  <i class="fa fa-sort-asc up"></i>
-                  <i class="fa fa-sort-desc down"></i>
+                  <i class="fa fa-sort-asc up {{ orderby==3 ? 'active' : '' }}" @click="sort(3)"></i>
+                  <i class="fa fa-sort-desc down {{ orderby==4 ? 'active' : '' }}" @click="sort(4)"></i>
               </span>
             </th>
           </tr>
@@ -261,9 +267,9 @@
             <td>{{ item.phone }}</td>
             <td class="text-center">{{ isCall[item.call] }}</td>
             <td class="text-center">{{ isCall[item.callout]}}</td>
-            <td>{{ item.place}}</td>
+            <td class="text-center"><span class="text-center-l-fixed">{{ item.place}}</span></td>
             <td class="text-center">{{ item.quality}}</td>
-            <td class="text-right">{{ item.price}}</td>
+            <td class="text-right">￥{{ item.price}}</td>
           </tr>
           </tbody>
         </table>
@@ -283,7 +289,7 @@
                 <th>号码</th>
                 <th class="text-center">呼入</th>
                 <th class="text-center">呼出</th>
-                <th>归属地</th>
+                <th class="text-center"><span class="text-center-l-fixed">归属地</span></th>
                 <th class="text-center">质量(1~5分)</th>
                 <th class="text-right">资源占用费</th>
               </tr>
@@ -293,9 +299,9 @@
                 <td>{{ item.phone }}</td>
                 <td class="text-center">{{ isCall[item.call] }}</td>
                 <td class="text-center">{{ isCall[item.callout]}}</td>
-                <td>{{ item.place}}</td>
+                <td class="text-center"><span class="text-center-l-fixed">{{ item.place}}</span></td>
                 <td class="text-center">{{ item.quality}}</td>
-                <td class="text-right">{{ item.price}}</td>
+                <td class="text-right">￥{{ item.price}}</td>
               </tr>
               </tbody>
             </table>
@@ -355,7 +361,7 @@
                 <th>号码</th>
                 <th class="text-center">呼入</th>
                 <th class="text-center">呼出</th>
-                <th>归属地</th>
+                <th class="text-center"><span class="text-center-l-fixed">归属地</span></th>
                 <th class="text-center">质量(1~5分)</th>
                 <th class="text-right">资源占用费</th>
               </tr>
@@ -365,12 +371,16 @@
                 <td>{{ item.phone }}</td>
                 <td class="text-center">{{ isCall[item.call] }}</td>
                 <td class="text-center">{{ isCall[item.callout]}}</td>
-                <td>{{ item.place}}</td>
+                <td class="text-center"><span class="text-center-l-fixed">{{ item.place}}</span></td>
                 <td class="text-center">{{ item.quality}}</td>
                 <td class="text-right">￥{{ item.price}}</td>
               </tr>
               </tbody>
             </table>
+            <div class="row">
+
+            </div>
+
           </div>
         </div>
       </div>
@@ -420,6 +430,7 @@
         },
         isCall: ["✔", "✘"],
         paystatus:0,
+        orderby:0,
         shop: [],
         shoplist: [],
         phonelist: [],
@@ -459,19 +470,31 @@
       },
       methods: {
         clear: function () {
+          this.shop = []
+          this.shoplist = []
           this.serach = {name: '', phone: -1, place: -1}
+        },
+        clearpay: function(){
+          this.paystatus = 0
+          this.paylist = []
+        },
+        sort :function(v){
+          this.orderby = v
+          modalPage()
         },
         payOrder:function(){
           $('#call-modal').modal('hide');
+          //立即下单，下单成功 ，获取订单数据，
+          //回调订单数据
+          var paylist = this.paylist
+
+          noPay()
+
           $('#pay-modal').modal('show');
         },
         checkMoney:function(){
           //判断是否需要充值，提交订单
-          //回调订单数据
-          var paylist = this.paylist
 
-
-          noPay()
 
           //支付成功状态，同时3秒后刷新页面
           this.paystatus = 1
@@ -483,7 +506,12 @@
         setPhoneList: function (nowPage, listRows) {
 
           //请求数据
-          var param = {}
+          var param = { name:this.serach.name,phone:this.serach.phone,place:this.serach.place}
+
+          console.log(param)
+
+
+
           var url = ''
           //ajaxsync(url,param,function(result){
 
@@ -589,6 +617,7 @@
     }
 
     $('.btnpay').click(function(){
+      vue.clearpay();
       $('#pay-modal').modal('show');
     })
 
@@ -638,11 +667,54 @@
 
 
       for(var i =0 ; i<data.length; i++){
-        html +='<tr><td>'+data[i].phone+'</td><td class="text-center">'+data[i].call+'</td><td  class="text-center">'+data[i].callout+'</td><td>'+data[i].place+'</td><td  class="text-center">'+data[i].quality+'</td><td class="text-right">'+data[i].price.toFixed(3)+'</td></tr>'
+        html +='<tr><td>'+data[i].phone+'</td><td class="text-center">'+data[i].call+'</td><td  class="text-center">'+data[i].callout+'</td><td class="text-center"><span class="text-center-l-fixed">'+data[i].place+'</span></td><td  class="text-center">'+data[i].quality+'</td><td class="text-right">￥'+data[i].price+'</td></tr>'
       }
 
       $('#nopaid-table').html(html);
 
+    }
+
+
+    $('.reset_confirm').click(function(){
+      bootbox.setLocale("zh_CN");
+      bootbox.confirm("提示？", function(result) {
+        if(result){
+          $('.tips-key').html('错误提示');
+          $('.secretkey').html('aaaaaaaaaaaaaaaaaaaa');
+        }
+      });
+    });
+
+    $('#common-close').click(function(){
+      $('.common-info').fadeOut()
+    })
+
+    /**
+     * id 为号码标识
+     * @param id
+     */
+    function release(id){
+      $('#editmark-tips').html('');
+      bootbox.setLocale("zh_CN");
+      bootbox.dialog({
+          title: "提示",
+          message: '<div class="row">  ' +
+          '<div class="col-md-12 text-center">您是否需要释放当前号码，如需再次使用需要重新购买新的号码 </div>  </div>',
+          buttons: {
+            success: {
+              label: "确认",
+              className: "btn-primary",
+              callback: function () {
+               //异步加载数据，释放成功
+              }
+            },
+            cancel:{
+              label: "关闭",
+              className: "btn-default",
+            }
+          }
+        }
+      );
     }
 
 
