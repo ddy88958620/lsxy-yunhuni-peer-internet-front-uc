@@ -277,7 +277,7 @@
         <!--分页-->
         <div id="datatablepage"></div>
 
-        <div class="row" v-if="shop.length > 0">
+        <div class="row" v-if="shoplist.length > 0">
           <div class="col-md-12 remove-padding">
             <h5 class="modal-title orange">
               你选择的号码
@@ -312,7 +312,7 @@
       </div>
 
       <div class="modal-footer">
-        <a class="btn btn-primary" @click="payOrder" v-if="shop.length > 0">立即下单</a>
+        <a class="btn btn-primary" @click="payOrder" v-if="shoplist.length > 0">立即下单</a>
         <button type="button" class="btn btn-default"
                 data-dismiss="modal">关闭
         </button>
@@ -323,12 +323,12 @@
   </div>
 
   <div class="modal fade call-detail-modal" id="pay-modal" tabindex="101" role="dialog"
-     aria-labelledby="myModalLabel" aria-hidden="true"  onclick="cancelpay()">
+     aria-labelledby="myModalLabel" aria-hidden="true"  >
     <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close"
-                data-dismiss="modal" aria-hidden="true">
+                data-dismiss="modal" aria-hidden="true" onclick="cancelpay()">
           &times;
         </button>
         <h4 class="modal-title" id="">
@@ -437,6 +437,10 @@
       },
       watch: {
         'shop': function (v) {
+          //判断是否有支付订单，如果有支付订单，则提示
+          showtoast('您有未支付的订单，请完成支付后，再进行号码租用')
+          return
+          
           var s = this.shoplist
           var p = this.phonelist
           //添加数据
