@@ -1304,6 +1304,11 @@ header {
   padding-left: 50px !important;
 }
 
+/* line 233, ../sass/common.scss */
+.cursor {
+  cursor: pointer;
+}
+
 /* line 1, ../sass/admin-index.scss */
 .yhn-description {
   margin-top: 10px;

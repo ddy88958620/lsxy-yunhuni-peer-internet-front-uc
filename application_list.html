@@ -216,53 +216,22 @@
                   <tr>
                     <th></th>
                     <th>手机号码</th>
-                    <th>呼入</th>
-                    <th>呼出</th>
-                    <th>归属地</th>
-                    <th>质量(1~5分)</th>
+                    <th class="text-center">可呼入</th>
+                    <th class="text-center">可呼出</th>
+                    <th class="text-left-fixed"><span class="">归属地</span></th>
+                    <th  class="text-center">质量(1~5分)</th>
                   </tr>
                   </thead>
-                  <tbody>
+                  <tbody id="phonelist">
                   <tr>
                     <td><input type="checkbox" name="" /></td>
                     <td>13611460866</td>
-                    <td>✔</td>
-                    <td>✘</td>
-                    <td>广州</td>
-                    <td>4</td>
+                    <td class="text-center" >✔</td>
+                    <td class="text-center">✘</td>
+                    <td class="text-left-fixed">0757</td>
+                    <td class="text-center">4</td>
                   </tr>
-                  <tr>
-                    <td><input type="checkbox" name="" /></td>
-                    <td>13611460866</td>
-                    <td>✔</td>
-                    <td>✘</td>
-                    <td>广州</td>
-                    <td>4</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" name="" /></td>
-                    <td>13611460866</td>
-                    <td>✔</td>
-                    <td>✘</td>
-                    <td>广州</td>
-                    <td>4</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" name="" /></td>
-                    <td>13611460866</td>
-                    <td>✔</td>
-                    <td>✘</td>
-                    <td>广州</td>
-                    <td>4</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" name="" /></td>
-                    <td>13611460866</td>
-                    <td>✔</td>
-                    <td>✘</td>
-                    <td>广州</td>
-                    <td>4</td>
-                  </tr>
+
                   </tbody>
                 </table>
               </div>
@@ -424,6 +393,60 @@
 
   //生成IVR
   function creatIVR(){
+    //加载号码列表
+    var html  = "";
+    var data =  [
+      {
+        id: '2',
+        phone: '13611460983',
+        call: 0,
+        callout: 1,
+        place: '0757',
+        quality: 3,
+        price: '111.000'
+      },
+      {
+        id: '3',
+        phone: '13611460983',
+        call: 0,
+        callout: 1,
+        place: '0757',
+        quality: 3,
+        price: '111.000'
+      },
+      {
+        id: '4',
+        phone: '13611460983',
+        call: 0,
+        callout: 1,
+        place: '0757',
+        quality: 3,
+        price: '111.000'
+      },
+    ]
+
+    var isCall =  ["✔", "✘"] ;
+    //特殊判断 <i class="fa fa-exclamation-triangle"></i>
+
+
+    if(data.length>0){
+        for (var i = 0 ; i< data.length ; i ++){
+          html += '<tr><td><input type="checkbox" name="phonelist" value="'+data[i].id+'" /></td>'
+          //特殊判断 <i class="fa fa-exclamation-triangle"></i>
+          html += '<td title="此号码为该应用上一次进行号码绑定时选择的号码">'+data[i].phone+'<i class="fa fa-exclamation-triangle cursor orange" ></i> </td>'
+          //普通号码
+          //html +='<td>'+data[i].phone+'</td>'
+
+          html +='<td class="text-center" >'+isCall[data[i].call]+'</td><td class="text-center" >'+isCall[data[i].callout]+'</td><td class="text-left-fixed" >'+data[i].place+'</td>'
+          html +='<td class="text-center">'+data[i].quality+'</td><td class="text-center">￥'+data[i].price+'</td>'
+        }
+    }
+
+    $('#phonelist').html(html)
+
+
+
+
     $('.hideIVR').html('');
     //异步生成
     var ivr = ['02000100','02000200','02000300','0200400','0200500'];
@@ -511,7 +534,21 @@
 
 
   function createorder(){
-      return true;
+
+    var number  = []
+    $('input[name="phonelist"]:checked').each(function(){
+      number.push($(this).val())
+      console.log("选中"+$(this).val())
+    })
+    if(number.length<=0){
+      showtoast('请至少选择一个号码与该应用绑定')
+      return false
+    }
+    //异步绑定号码
+
+
+
+    return true;
   }
 
   function pay(){

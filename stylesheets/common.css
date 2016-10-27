@@ -300,3 +300,8 @@
 .text-left-fixed {
   padding-left: 50px !important;
 }
+
+/* line 233, ../sass/common.scss */
+.cursor {
+  cursor: pointer;
+}
