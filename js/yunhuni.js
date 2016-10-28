@@ -16,9 +16,10 @@ $(window).resize(function () {
 $("#togglerMiniSidebar").on('click', function (event) {
   // $('#nav').toggleClass('aside-mini')
   var hasMini = $('#nav').hasClass('aside-mini');
-  if (window.localStorage) {
+  $.cookie("hasMini", hasMini, { expires:3,path: "/"});
+/*  if (window.localStorage) {
     localStorage.setItem("hasMini", hasMini);
-  }
+  }*/
   if (hasMini) {
     $('#nav').removeClass('aside-mini aside-transition')
     // tooltips destroy
@@ -35,10 +36,11 @@ $("#togglerMiniSidebar").on('click', function (event) {
 
 //检查是否开启提示模式
 function isHasMini() {
-  var hasMini = true;
-  if (window.localStorage) {
+  //var hasMini = true;
+  var hasMini = $.cookie("hasMini");
+/*  if (window.localStorage) {
     var hasMini = localStorage.getItem("hasMini");
-  }
+  }*/
   if (hasMini === 'false') {
     $('#nav').addClass('aside-mini')
     // tooltips
@@ -46,7 +48,7 @@ function isHasMini() {
   }
 }
 
-isHasMini();
+//isHasMini();
 
 // 二级导航 隐藏 显示
 $('.list a.side-menu-link').on('click', function () {
