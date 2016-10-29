@@ -2082,6 +2082,8 @@ a {
 
 /* line 21, ../sass/application_list.scss */
 .appliation-modal-box {
+  position: absolute;
+  margin-bottom: 100px;
   margin-left: -400px;
   margin-top: -240px;
   width: 800px;
@@ -2090,18 +2092,18 @@ a {
   min-height: 480px;
   font-size: 18px;
 }
-/* line 30, ../sass/application_list.scss */
+/* line 32, ../sass/application_list.scss */
 .appliation-modal-box .btn-box {
   height: 46px;
   width: 169px;
   font-size: 18px;
   line-height: 32px;
 }
-/* line 37, ../sass/application_list.scss */
+/* line 39, ../sass/application_list.scss */
 .appliation-modal-box .content .input {
   width: auto;
 }
-/* line 40, ../sass/application_list.scss */
+/* line 42, ../sass/application_list.scss */
 .appliation-modal-box .defulatTips {
   width: 400px;
   height: 48px;
@@ -2109,19 +2111,19 @@ a {
   color: #0d0d0d;
   background-color: #dbdbdb;
 }
-/* line 47, ../sass/application_list.scss */
+/* line 49, ../sass/application_list.scss */
 .appliation-modal-box .font14 {
   font-size: 14px;
 }
-/* line 50, ../sass/application_list.scss */
+/* line 52, ../sass/application_list.scss */
 .appliation-modal-box .money {
   color: #ff9900;
 }
-/* line 53, ../sass/application_list.scss */
+/* line 55, ../sass/application_list.scss */
 .appliation-modal-box .nomoney {
   color: #ff0000;
 }
-/* line 56, ../sass/application_list.scss */
+/* line 58, ../sass/application_list.scss */
 .appliation-modal-box .info {
   width: 80%;
   color: #619B5A;
@@ -2129,20 +2131,20 @@ a {
   font-size: 14px;
   background-color: #dff0d8;
 }
-/* line 63, ../sass/application_list.scss */
+/* line 65, ../sass/application_list.scss */
 .appliation-modal-box .phone-table {
   width: 80%;
   margin: 0 auto;
 }
-/* line 67, ../sass/application_list.scss */
+/* line 69, ../sass/application_list.scss */
 .appliation-modal-box .table {
   font-size: 14px;
 }
-/* line 69, ../sass/application_list.scss */
+/* line 71, ../sass/application_list.scss */
 .appliation-modal-box .table td {
   padding: 4px;
 }
-/* line 73, ../sass/application_list.scss */
+/* line 75, ../sass/application_list.scss */
 .appliation-modal-box .nav-modal-box {
   margin-top: 50px;
   width: 80%;
@@ -2151,7 +2153,7 @@ a {
   margin: 50px auto 0 auto;
   text-align: center;
 }
-/* line 81, ../sass/application_list.scss */
+/* line 83, ../sass/application_list.scss */
 .appliation-modal-box .nav-modal-box .nav-modal {
   height: 30px;
   display: inline-block;
@@ -2159,13 +2161,13 @@ a {
   text-align: center;
   padding: 0;
 }
-/* line 87, ../sass/application_list.scss */
+/* line 89, ../sass/application_list.scss */
 .appliation-modal-box .nav-modal-box .nav-modal li {
   float: left;
   height: 20px;
   list-style: none;
 }
-/* line 91, ../sass/application_list.scss */
+/* line 93, ../sass/application_list.scss */
 .appliation-modal-box .nav-modal-box .nav-modal li .spot {
   width: 19px;
   display: block;
@@ -2174,11 +2176,11 @@ a {
   height: 19px;
   background: url("../images/index/l4.png") no-repeat left center;
 }
-/* line 99, ../sass/application_list.scss */
+/* line 101, ../sass/application_list.scss */
 .appliation-modal-box .nav-modal-box .nav-modal li .s-active {
   background: url("../images/index/l5.png") no-repeat left center;
 }
-/* line 102, ../sass/application_list.scss */
+/* line 104, ../sass/application_list.scss */
 .appliation-modal-box .nav-modal-box .nav-modal li .lines {
   height: 19px;
   width: 60px;
@@ -2186,47 +2188,47 @@ a {
   float: left;
   background: url("../images/index/l2.png") no-repeat left center;
 }
-/* line 109, ../sass/application_list.scss */
+/* line 111, ../sass/application_list.scss */
 .appliation-modal-box .nav-modal-box .nav-modal li .text {
   float: left;
   display: block;
 }
-/* line 115, ../sass/application_list.scss */
+/* line 117, ../sass/application_list.scss */
 .appliation-modal-box .nav-modal-box .modal-nav {
   width: 100%;
   text-align: center;
   border: 1px solid #000;
   height: 50px;
 }
-/* line 122, ../sass/application_list.scss */
+/* line 124, ../sass/application_list.scss */
 .appliation-modal-box .nav-modal-box .modal-nav .spot {
   width: 19px;
   height: 19px;
   display: inline-block;
 }
-/* line 128, ../sass/application_list.scss */
+/* line 130, ../sass/application_list.scss */
 .appliation-modal-box .nav-modal-box .modal-nav .s-active {
   background: url("../images/index/l5.png") no-repeat left center;
 }
-/* line 131, ../sass/application_list.scss */
+/* line 133, ../sass/application_list.scss */
 .appliation-modal-box .nav-modal-box .modal-nav .lines {
   height: 19px;
   width: 60px;
   background: url("../images/index/l2.png") no-repeat left center;
 }
-/* line 142, ../sass/application_list.scss */
+/* line 144, ../sass/application_list.scss */
 .appliation-modal-box .nav-modal-box .navw-200 {
   width: 200px !important;
 }
-/* line 145, ../sass/application_list.scss */
+/* line 147, ../sass/application_list.scss */
 .appliation-modal-box .nav-modal-box .navw-150 {
   width: 150px !important;
 }
-/* line 148, ../sass/application_list.scss */
+/* line 150, ../sass/application_list.scss */
 .appliation-modal-box .nav-modal-box .navw-270 {
   width: 270px !important;
 }
-/* line 153, ../sass/application_list.scss */
+/* line 155, ../sass/application_list.scss */
 .appliation-modal-box .nav-modal-box .nav-modal-text {
   height: 30px;
   display: block;
@@ -2234,7 +2236,7 @@ a {
   width: 380px;
   padding: 0;
 }
-/* line 159, ../sass/application_list.scss */
+/* line 161, ../sass/application_list.scss */
 .appliation-modal-box .nav-modal-box .nav-modal-text li {
   float: left;
   font-size: 14px;
@@ -2243,40 +2245,40 @@ a {
   margin-left: 5px;
   margin-right: 38px;
 }
-/* line 167, ../sass/application_list.scss */
+/* line 169, ../sass/application_list.scss */
 .appliation-modal-box .nav-modal-box .nav-modal-text .ml-3 {
   margin-left: 3px;
 }
-/* line 170, ../sass/application_list.scss */
+/* line 172, ../sass/application_list.scss */
 .appliation-modal-box .nav-modal-box .nav-modal-text .ml-30 {
   margin-left: 30px;
 }
-/* line 173, ../sass/application_list.scss */
+/* line 175, ../sass/application_list.scss */
 .appliation-modal-box .nav-modal-box .nav-modal-text .ml-20 {
   margin-left: 20px;
 }
-/* line 176, ../sass/application_list.scss */
+/* line 178, ../sass/application_list.scss */
 .appliation-modal-box .nav-modal-box .nav-modal-text .mr-0 {
   margin-right: 0;
 }
 
-/* line 186, ../sass/application_list.scss */
+/* line 188, ../sass/application_list.scss */
 .tablelist .operation a {
   text-decoration: underline;
   width: auto;
   padding-right: 5px;
 }
-/* line 193, ../sass/application_list.scss */
+/* line 195, ../sass/application_list.scss */
 .tablelist .operation span {
   border-left: 1px dotted #ecedec;
   padding: 0 5px;
 }
-/* line 197, ../sass/application_list.scss */
+/* line 199, ../sass/application_list.scss */
 .tablelist .operation .apply {
   border: 0 !important;
   padding: 0 !important;
 }
-/* line 202, ../sass/application_list.scss */
+/* line 204, ../sass/application_list.scss */
 .tablelist tr {
   height: 45px;
 }

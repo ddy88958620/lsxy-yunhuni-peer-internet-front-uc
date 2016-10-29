@@ -361,6 +361,7 @@
 <script src="js/charts/flot/jquery.flot.min.js" cache="false"></script>
 <script src="js/bootbox.min.js"></script>
 <script src="js/charts/flot/demo.js" cache="false"></script>
+<script src="js/jquery.cookie.min.js"></script>
 <script src="js/include.js"></script>
 <script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
 <script type="text/javascript" src='./js/bootstrap-datepicker/js/bootstrap-datepicker.js'> </script>
@@ -423,6 +424,87 @@
         quality: 3,
         price: '111.000'
       },
+      {
+        id: '2',
+        phone: '13611460983',
+        call: 0,
+        callout: 1,
+        place: '0757',
+        quality: 3,
+        price: '111.000'
+      },
+      {
+        id: '3',
+        phone: '13611460983',
+        call: 0,
+        callout: 1,
+        place: '0757',
+        quality: 3,
+        price: '111.000'
+      },
+      {
+        id: '4',
+        phone: '13611460983',
+        call: 0,
+        callout: 1,
+        place: '0757',
+        quality: 3,
+        price: '111.000'
+      },
+      {
+        id: '2',
+        phone: '13611460983',
+        call: 0,
+        callout: 1,
+        place: '0757',
+        quality: 3,
+        price: '111.000'
+      },
+      {
+        id: '3',
+        phone: '13611460983',
+        call: 0,
+        callout: 1,
+        place: '0757',
+        quality: 3,
+        price: '111.000'
+      },
+      {
+        id: '4',
+        phone: '13611460983',
+        call: 0,
+        callout: 1,
+        place: '0757',
+        quality: 3,
+        price: '111.000'
+      },
+      {
+        id: '2',
+        phone: '13611460983',
+        call: 0,
+        callout: 1,
+        place: '0757',
+        quality: 3,
+        price: '111.000'
+      },
+      {
+        id: '3',
+        phone: '13611460983',
+        call: 0,
+        callout: 1,
+        place: '0757',
+        quality: 3,
+        price: '111.000'
+      },
+      {
+        id: '4',
+        phone: '13611460983',
+        call: 0,
+        callout: 1,
+        place: '0757',
+        quality: 3,
+        price: '111.000'
+      },
     ]
 
     var isCall =  ["✔", "✘"] ;
@@ -433,7 +515,7 @@
         for (var i = 0 ; i< data.length ; i ++){
           html += '<tr><td><input type="checkbox" name="phonelist" value="'+data[i].id+'" /></td>'
           //特殊判断 <i class="fa fa-exclamation-triangle"></i>
-          html += '<td title="此号码为该应用上一次进行号码绑定时选择的号码">'+data[i].phone+'<i class="fa fa-exclamation-triangle cursor orange" ></i> </td>'
+          html += '<td data-toggle="tooltip" data-placement="right"  title="此号码为该应用上一次进行号码绑定时选择的号码">'+data[i].phone+'<i class="fa fa-exclamation-triangle cursor orange" ></i> </td>'
           //普通号码
           //html +='<td>'+data[i].phone+'</td>'
 

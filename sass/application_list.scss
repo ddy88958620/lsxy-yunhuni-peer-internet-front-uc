@@ -20,6 +20,8 @@ a{
 
 .appliation-modal-box {
   @extend .modal-box !optional;
+  position: absolute;
+  margin-bottom: 100px;
   margin-left: -400px;
   margin-top: -240px;
   width: 800px;
