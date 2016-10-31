@@ -207,7 +207,7 @@
               <!--可选号码-->
               <div class="input text-center">
                 <div class="info">
-                  您选择开通IVR功能，需要从我的号码列表中选择一个号码与该应用绑定
+                  若您选择开通IVR功能，则需要从我的号码列表中选择一个可呼入的号码与该应用绑定
                 </div>
               </div>
               <div class="phone-table">
@@ -219,7 +219,6 @@
                     <th class="text-center">可呼入</th>
                     <th class="text-center">可呼出</th>
                     <th class="text-left-fixed"><span class="">归属地</span></th>
-                    <th  class="text-center">质量(1~5分)</th>
                   </tr>
                   </thead>
                   <tbody id="phonelist">
@@ -229,7 +228,6 @@
                     <td class="text-center" >✔</td>
                     <td class="text-center">✘</td>
                     <td class="text-left-fixed">0757</td>
-                    <td class="text-center">4</td>
                   </tr>
 
                   </tbody>
@@ -241,7 +239,7 @@
 
               <!--没有可选号码-->
               <div class="input text-center">
-                我的号码列表没有可选号码，请前往“号码管理”中的“我的号码”，进行号码租用
+                我的号码列表没有可选号码，如需租用号码，请前往“号码管理”中的“我的号码”
               </div>
               <div class="input text-center" >
                 <a type="button"  class="btn btn-primary btn-box tabModalBtn" href="number_call.html">立即前往</a>
@@ -258,8 +256,6 @@
                 </div>
                 <div class="hideIVR">
                 </div>-->
-
-
 
             </div>
 
@@ -398,113 +394,33 @@
     var html  = "";
     var data =  [
       {
-        id: '2',
         phone: '13611460983',
         call: 0,
         callout: 1,
         place: '0757',
-        quality: 3,
-        price: '111.000'
+        quality: 3
       },
       {
-        id: '3',
         phone: '13611460983',
         call: 0,
         callout: 1,
         place: '0757',
-        quality: 3,
-        price: '111.000'
+        quality: 3
       },
       {
-        id: '4',
         phone: '13611460983',
         call: 0,
         callout: 1,
         place: '0757',
-        quality: 3,
-        price: '111.000'
+        quality: 3
       },
       {
-        id: '2',
         phone: '13611460983',
         call: 0,
         callout: 1,
         place: '0757',
-        quality: 3,
-        price: '111.000'
-      },
-      {
-        id: '3',
-        phone: '13611460983',
-        call: 0,
-        callout: 1,
-        place: '0757',
-        quality: 3,
-        price: '111.000'
-      },
-      {
-        id: '4',
-        phone: '13611460983',
-        call: 0,
-        callout: 1,
-        place: '0757',
-        quality: 3,
-        price: '111.000'
-      },
-      {
-        id: '2',
-        phone: '13611460983',
-        call: 0,
-        callout: 1,
-        place: '0757',
-        quality: 3,
-        price: '111.000'
-      },
-      {
-        id: '3',
-        phone: '13611460983',
-        call: 0,
-        callout: 1,
-        place: '0757',
-        quality: 3,
-        price: '111.000'
-      },
-      {
-        id: '4',
-        phone: '13611460983',
-        call: 0,
-        callout: 1,
-        place: '0757',
-        quality: 3,
-        price: '111.000'
-      },
-      {
-        id: '2',
-        phone: '13611460983',
-        call: 0,
-        callout: 1,
-        place: '0757',
-        quality: 3,
-        price: '111.000'
-      },
-      {
-        id: '3',
-        phone: '13611460983',
-        call: 0,
-        callout: 1,
-        place: '0757',
-        quality: 3,
-        price: '111.000'
-      },
-      {
-        id: '4',
-        phone: '13611460983',
-        call: 0,
-        callout: 1,
-        place: '0757',
-        quality: 3,
-        price: '111.000'
-      },
+        quality: 3
+      }
     ]
 
     var isCall =  ["✔", "✘"] ;
@@ -513,14 +429,13 @@
 
     if(data.length>0){
         for (var i = 0 ; i< data.length ; i ++){
-          html += '<tr><td><input type="checkbox" name="phonelist" value="'+data[i].id+'" /></td>'
+          html += '<tr><td><input type="checkbox" name="phonelist" value="'+data[i].phone+'" /></td>'
           //特殊判断 <i class="fa fa-exclamation-triangle"></i>
           html += '<td data-toggle="tooltip" data-placement="right"  title="此号码为该应用上一次进行号码绑定时选择的号码">'+data[i].phone+'<i class="fa fa-exclamation-triangle cursor orange" ></i> </td>'
           //普通号码
           //html +='<td>'+data[i].phone+'</td>'
 
-          html +='<td class="text-center" >'+isCall[data[i].call]+'</td><td class="text-center" >'+isCall[data[i].callout]+'</td><td class="text-left-fixed" >'+data[i].place+'</td>'
-          html +='<td class="text-center">'+data[i].quality+'</td><td class="text-center">￥'+data[i].price+'</td>'
+          html +='<td class="text-center" >'+isCall[data[i].call]+'</td><td class="text-center" >'+isCall[data[i].callout]+'</td><td class="text-left-fixed" >'+data[i].place+'</td></tr>'
         }
     }
 
@@ -617,13 +532,24 @@
 
   function createorder(){
 
-    var number  = []
+    var number  = ''
     $('input[name="phonelist"]:checked').each(function(){
+      if(number!=''){
+
+      }
       number.push($(this).val())
       console.log("选中"+$(this).val())
     })
+
+    console.log(number);
+
+    //异步请求
+
+
+
+
     if(number.length<=0){
-      showtoast('请至少选择一个号码与该应用绑定')
+      showtoast('请选择一个可呼入的号码')
       return false
     }
     //异步绑定号码
