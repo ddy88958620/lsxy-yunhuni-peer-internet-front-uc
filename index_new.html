@@ -99,9 +99,9 @@
                                         <div class="col-md-3 padder-v fix-padding">
                                           <div class='wrappernewBox blue-border-top'>
                                              <span class="h5 block m-t-xs"> <i class="iconfont icon-oc-appnum middleicon m-r-5"></i><span class="inline-block">应用数（上线数/总数)</span></span>
-                                             <span class="h5 block m-t-25 text-center "><span class="green bigger-font-size">10/25</span>个</span>
+                                             <a class="h5 block m-t-25 text-center" href="application_list.html"><span class="green bigger-font-size">10/25</span>个</a>
                                              <div class="box-footer">
-                                               <a class="btn btn-primary" >查看详情</a>
+                                               <a class="btn btn-primary" href="application_create.html" >创建应用</a>
                                              </div>
                                           </div>
                                         </div>
@@ -112,13 +112,12 @@
                                             <span class="h5 block m-t-25 text-center ">
                                               <span class="green bigger-font-size">--</span>
                                             </span>
-
                                           </div>
                                         </div>
 
                                         <div class="col-md-3 padder-v fix-padding">
                                           <div class='wrappernewBox pink-border-top'>
-                                            <span class="h5 block m-t-xs"> <i class="iconfont icon-huawuliang middleicon m-r-5"></i><span class="inline-block">接通率</span></span>
+                                            <span class="h5 block m-t-xs"> <i class="iconfont icon-oc-callrate middleicon m-r-5"></i><span class="inline-block">接通率</span></span>
                                             <span class="h5 block m-t-25 text-center ">
                                                 <span class="green bigger-font-size">90%</span>
                                               </span>
@@ -139,19 +138,19 @@
                                       <p>
                                         <span class="iconfont icon-oc-api smallicon inline-block develop-icon"></span>
                                         <span class="index-key"><strong>接口API:</strong></span>
-                                        <span class="index-api" id="restapi" data-clipboard-target="restapi">http://api.yunhuni.com/1234135312321414134/</span>
+                                        <span class="index-api" id="restapi">http://api.yunhuni.com/cf20c6553c46d9a28679b400a552f2d5/</span>
                                         <span>
-                                          <a href="#"><i class="iconfont icon-oc-small-copy"></i>API文档</a>
-                                          <a href="" ><i class="iconfont icon-oc-small-copy"></i>复制</a>
+                                          <a href="#"><i class="iconfont icon-oc-small-copy inline-block develop-icon"></i>API文档</a>
+                                          <a id="copyapi" data-clipboard-text="http://api.yunhuni.com/1234135312321414134/"><i class="iconfont icon-oc-small-copy inline-block develop-icon"></i>复制</a>
                                         </span>
                                       </p>
                                       <p>
                                         <span class="iconfont icon-oc-secrekey smallicon inline-block develop-icon"></span>
                                         <span class="index-key"><strong>密钥:</strong></span>
-                                        <span class="index-api" id="secretkey" data-clipboard-target="secretkey">1234135312321414134</span>
+                                        <span class="index-api" id="secretkey">1234135312321414134</span>
                                         <span>
-                                          <a class='reset_confirm'><i class="iconfont icon-oc-small-copy"></i>重新生成</a>
-                                          <a href="" ><i class="iconfont icon-oc-small-copy"></i>复制</a>
+                                          <a class='reset_confirm'><i class="iconfont icon-resert smallicon inline-block develop-icon"></i>重新生成</a>
+                                          <a id="copysecrekey" data-clipboard-text="123456789" ><i class="iconfont icon-oc-small-copy"></i>复制</a>
                                         </span>
                                         <span>
                                           <a class='tips-error tips-key'></a>
@@ -160,94 +159,93 @@
                                       <p>
                                         <span class="iconfont icon-oc-certid smallicon inline-block develop-icon"></span>
                                         <span class="index-key"><strong>鉴权账号:</strong></span>
-                                        <span class="index-api" id="certid" data-clipboard-target="certid">123456789123456789</span>
+                                        <span class="index-api" id="certid" >123456789123456789</span>
                                         <span>
-                                          <a href="" ><i class="iconfont icon-oc-small-copy"></i>复制</a>
+                                          <a id="copycertid" data-clipboard-text="11111111" ><i class="iconfont icon-oc-small-copy inline-block develop-icon"></i>复制</a>
                                         </span>
                                       </p>
                                     </div>
                                   </div>
                                 </section>
 
-                                <section class="panel panel-default pos-rlt clearfix ">
+                              <section class="panel panel-default pos-rlt clearfix ">
                               <div class="sectionnewWrap">
                                 <header class="panel-heading">
-                                  <div class="h5 ">今日数据</div>
+                                  <div class="h5">
+                                    <a class="tab-data cursor tab-active" data-id="today">今日数据</a>
+                                    <a class="tab-data cursor" data-id="month">本月数据</a>
+                                    <a href="statistics_conversation.html" class="tab-data">更多数据</a>
+                                  </div>
                                 </header>
                                 <div class="panel-body clearfix border-top-none remove-padding">
                                   <div class="row m-l-none m-r-none bg-light lter">
                                     <div class="col-md-2 padder-v fix-padding width-twenty-percent" >
-
                                       <div class="warpbox">
                                         <div class="">
                                           <i class="icon iconfont icon-oc-wallet bigicon"></i>
-                                          <span class="green money" >188.<span class="small-font-size">33</span> </span>
+                                          <span class="green money datatoday" >188.<span class="small-font-size">33</span></span>
+                                          <span class="green money datamonth" >188.<span class="small-font-size">32</span></span>
                                         </div>
                                         <div class="middle-font-size middle-font-color" >
                                           消费额(元)
                                         </div>
                                       </div>
-
                                     </div>
                                     <div class="col-md-2 padder-v fix-padding width-twenty-percent">
-
                                       <div class="warpbox">
                                         <div class="">
                                           <i class="icon iconfont icon-oc-msg1 bigicon"></i>
-                                          <span class="green money" >123456 </span>
+                                          <span class="green money datatoday">123456</span>
+                                          <span class="green money datamonth">123</span>
                                         </div>
                                         <div class="middle-font-size middle-font-color" >
                                           会话量(次)
                                         </div>
                                       </div>
-
                                     </div>
                                     <div class="col-md-2 padder-v fix-padding width-twenty-percent" >
                                       <div class="warpbox">
                                         <div class="">
                                           <i class="icon iconfont icon-oc-mobile bigicon"></i>
-                                          <span class="green money" >0 </span>
+                                          <span class="green money datatoday">0</span>
+                                          <span class="green money datamonth">123</span>
                                         </div>
                                         <div class="middle-font-size middle-font-color" >
                                           话务量(分钟)
                                         </div>
                                       </div>
-
-
                                     </div>
                                     <div class="col-md-2 padder-v fix-padding width-twenty-percent">
                                       <div class="warpbox">
                                         <div class="">
                                           <i class="icon iconfont icon-oc-talktime bigicon"></i>
-                                          <span class="green money" >0 </span>
+                                          <span class="green money datatoday">0</span>
+                                          <span class="green money datamonth">123</span>
                                         </div>
                                         <div class="middle-font-size middle-font-color" >
                                           平均通话时长(分钟)
                                         </div>
                                       </div>
-
-
                                     </div>
                                     <div class="col-md-2 padder-v fix-padding width-twenty-percent" >
-
                                       <div class="warpbox remove-border">
                                         <div class="">
                                           <i class="icon iconfont icon-oc-callrate bigicon"></i>
-                                          <span class="green money" >0 </span>
+                                          <span class="green money datatoday">0</span>
+                                          <span class="green money datamonth">123</span>
                                         </div>
                                         <div class="middle-font-size middle-font-color" >
                                           接通率(%)
                                         </div>
                                       </div>
-
                                     </div>
-
                                   </div>
-
 
                                 </div>
                               </div>
                             </section>
+
+
 
                             <section class="panel panel-default pos-rlt clearfix ">
                               <div class="sectionWrap">
@@ -263,15 +261,68 @@
                                 </div>
                               </div>
                             </section>
+                            <!--话务量消费额-->
+                            <section class="panel panel-default pos-rlt clearfix ">
+                              <div class="sectionWrap">
+                                <div class="panel-body clearfix border-top-none">
+                                  <div class="row monthform" >
+                                    <div class="col-md-12">
+                                      <input type="text" class="datepicker currentMonth form-control date_block monthstart" value="2016-07" data-time="2016-06-07" />
+                                    </div>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col-md-12 scanvas" >
+                                      <!--统计列表-->
+                                      <div class="ecpanel" id="ecpanel" style=" height: 450px;  "></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
 
 
+                            </section>
+                            <!--话务量消费额end-->
 
+                            <section class="panel panel-default pos-rlt clearfix ">
+
+
+                                  <div class="row ">
+                                  <div class="col-md-6 remove-left-padding" >
+                                    <div class="sectionWrap">
+                                      <div class="panel-body clearfix border-top-none">
+                                        <div class="row">
+                                          <div class="col-md-12">
+                                             <input type="text" class="datepicker currentMonth form-control date_block sessionstart" value="2016-07" data-time="2016-06-07" />
+                                           </div>
+                                        </div>
+                                        <div class="row" >
+                                          <div class="col-md-12">
+                                            <div class="ecpanel" id="sessionecpanel" style=" height: 450px;"></div>
+                                          </div>
+                                        </div>
+                                       </div>
+                                     </div>
+                                  </div>
+                                  <div class="col-md-6 remove-right-padding">
+                                    <div class="sectionWrap">
+                                      <div class="panel-body clearfix border-top-none">
+                                        <div class="row">
+                                          <div class="col-md-12">
+                                            <input type="text" class="datepicker currentMonth form-control date_block apistart" value="2016-07" data-time="2016-06-07" />
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="ecpanel" id="apiecpanel" style="height: 450px;"></div>
+                                        </div>
+                                       </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </section>
                             <!--end-->
                             </section>
 
-                            <div id="footer" style="clear: both">
-                              <p class="text-center">Copyright 2016 云呼你 粤ICP备16048993号 All Rights Reserved 广州流水行云科技有限公司</p>
-                            </div>
                         </section>
                     </aside>
                 </section>
@@ -285,44 +336,407 @@
 <script src="js/bootbox.min.js"></script>
 <script src="js/charts/flot/demo.js" cache="false"></script>
 
+
+<!--统计插件-->
+<script src="./js/echarts.min.js" ></script>
+<!--统计插件主题-->
+<script src="./js/echartstheme/wonderland.js" ></script>
+<script>
+  $('.tab-data').click(function(){
+    var id = $(this).attr('data-id');
+    $('.tab-data').removeClass('tab-active');
+    $(this).addClass('tab-active');
+    if(id=='today'){
+      $('.datatoday').show();$('.datamonth').hide();
+    }else{
+      $('.datatoday').hide();$('.datamonth').show();
+    }
+  })
+
+  //查询
+  $('.monthstart').change(function(){
+    var id = $(this).attr('data-id');
+    var tipsclass  = '.'+id+'tips';
+    $(tipsclass).html('');
+    var starttime =  $('.'+id+'start').val();
+    if(starttime==''){
+      tips(tipsclass,'请先填写时间'); return;
+    }
+    initchart();
+  });
+
+  //查询
+  $('.sessionstart').change(function(){
+    var id = $(this).attr('data-id');
+    var tipsclass  = '.'+id+'tips';
+    $(tipsclass).html('');
+    var starttime =  $('.'+id+'start').val();
+    if(starttime==''){
+      tips(tipsclass,'请先填写时间'); return;
+    }
+    initsessionchart();
+  });
+
+  //查询
+  $('.apistart').change(function(){
+    var id = $(this).attr('data-id');
+    var tipsclass  = '.'+id+'tips';
+    $(tipsclass).html('');
+    var starttime =  $('.'+id+'start').val();
+    if(starttime==''){
+      tips(tipsclass,'请先填写时间'); return;
+    }
+    initapichart();
+  });
+
+
+
+
+  //初始时间
+  function initialStartTime(id){
+    var starttime =  $('.'+id+'start').val();
+    if(starttime==''){
+      starttime = $('.'+id+'start').attr('data-time');
+    }
+    return starttime;
+  }
+
+
+  //触发函数
+  /**
+   * starttime 时间
+   * endtime 对比时间
+   */
+  function initchart(){
+    var starttime = initialStartTime();
+    var param  = {starttime:starttime};
+    //异步查询 返回json 数据
+    //消费额最大值
+    //会话次数最大值
+    //数据处理
+
+      //注意 tdata 等于 seriesjson[name]
+      var tdata = new Array('5月','6月');
+      var seriesjson  ="[{name:'5月',type:'line',data:[120, 132, 101, 134, 90, 230, 210,120, 132, 101, 134, 90, 230, 210,120, 132, 101, 134, 90, 230, 210,120, 132, 101,4000]},{name:'6月',type:'line',data:[220, 182, 191, 234, 290, 330, 310]}]";
+      var seriesjson = eval('('+seriesjson+')');
+
+    charts(tdata,seriesjson);
+  }
+
+  function initsessionchart(){
+
+    var starttime = initialStartTime();
+    var param  = {starttime:starttime};
+    //异步查询 返回json 数据
+    //消费额最大值
+    //会话次数最大值
+    //数据处理
+
+
+    sessioncharts();
+  }
+
+  function initapichart(){
+    apicharts();
+  }
+
+
+  var monthData = ['1日','2日','3日','4日','5日','6日','7日','8日','9日','10日','11日','12日','13日','14日','15日','16日','17日','18日','19日','20日','21日','22日','23日','24日','25日','26日','27日','28日','29日','30日','31日'];
+
+  //测试随机生成数据
+  function moneyDataMonth(){
+    var res = [];
+    var len = 31;
+    while (len--) {
+      res.push(Math.round(Math.random() * 1000));
+    }
+    return res;
+  }
+
+  //测试随机生成数据
+  function moneyDataYear(){
+    var res = [];
+    var len = 12;
+    while (len--) {
+      res.push(Math.round(Math.random() * 1000));
+    }
+    return res;
+  }
+
+  //测试随机生成数据
+  function meetDataMonth(){
+    var res = [];
+    var len = 0;
+    while (len < 31) {
+      res.push((Math.random()*10 + 5).toFixed(1) - 0);
+      len++;
+    }
+    return res;
+  }
+
+  //测试随机生成数据
+  function meetDataYear(){
+    var res = [];
+    var len = 0;
+    while (len < 12) {
+      res.push((Math.random()*10 + 5).toFixed(1) - 0);
+      len++;
+    }
+    return res;
+  }
+
+
+
+  /**
+   * 回调数据
+   * @param xd 消费数据
+   * @param yd 会话数据
+   *
+   *
+   * @param type 年月
+   */
+  function charts(xd,yd){
+    var Xdata = monthData;
+    var xd = moneyDataMonth();
+    var yd = meetDataMonth();
+    var myChart = echarts.init(document.getElementById('ecpanel'),'wonderland');
+    option = {
+      title: {
+        text: '',
+        subtext: ''
+      },
+      grid: {
+        left: '0%',
+        right: '0%',
+        bottom: '3%',
+        containLabel: true
+      },
+      tooltip: {
+        trigger: 'axis'
+      },
+      legend: {
+        data:['话务量', '消费额']
+      },
+      toolbox: {
+        show: true,
+      },
+      dataZoom: {
+        show: false,
+        start: 0,
+        end: 100
+      },
+      xAxis: [
+        {
+          type: 'category',
+          boundaryGap: true,
+          data : Xdata,
+          name: '日期',
+
+        },
+
+      ],
+      yAxis: [
+        {
+          type: 'value',
+          scale: true,
+          name: '会话(次)',
+          max: 30,
+          min: 0,
+          nameGap:32,
+          nameTextStyle:{
+            color:'#999',
+          },
+          areaStyle: {normal: {}},
+          boundaryGap: [0.2,0.2]
+        },
+        {
+          type: 'value',
+          scale: true,
+          name: '消费额(元)',
+          max: 1200,
+          min: 0,
+          nameGap:32,
+          areaStyle: {normal: {}},
+          nameTextStyle:{
+            color:'#999',
+          },
+          boundaryGap: [0.2, 0.2]
+        }
+      ],
+      series: [
+        {
+          name:'消费额',
+          type:'bar',
+          yAxisIndex: 1,
+          data:xd
+        },
+        {
+          name:'话务量',
+          type:'line',
+          data:yd
+        }
+      ]
+    };
+    myChart.setOption(option);
+  }
+
+
+  /**
+   * 会话量 回调数据
+   * @param xd 消费数据
+   * @param yd 会话数据
+   *
+   */
+  function sessioncharts(){
+    var Xdata = monthData;
+    var xd = moneyDataMonth();
+    var yd = meetDataMonth();
+    var sessionChart = echarts.init(document.getElementById('sessionecpanel'),'wonderland');
+
+    option = {
+      title: {
+        text: ''
+      },
+      tooltip: {
+        trigger: 'axis'
+      },
+      legend: {
+        data:['会话量']
+      },
+      grid: {
+        left: '0%',
+        right: '3%',
+        bottom: '3%',
+        containLabel: true
+      },
+      toolbox: {
+        feature: {
+        }
+      },
+      xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data : Xdata,
+        name: '',
+      },
+      yAxis: {
+        type: 'value'
+      },
+      series: [
+        {
+          name:'会话量',
+          type:'line',
+          stack: '总量',
+          data:xd,
+          areaStyle: {normal: {}}
+        },
+      ]
+    };
+    sessionChart.setOption(option);
+  }
+
+  /**
+   * 会话量 回调数据
+   * @param xd 消费数据
+   * @param yd 会话数据
+   *
+   */
+  function apicharts(){
+    var Xdata = monthData;
+    var xd = moneyDataMonth();
+    var yd = meetDataMonth();
+    var sessionChart = echarts.init(document.getElementById('apiecpanel'),'wonderland');
+
+    option = {
+      title: {
+        text: ''
+      },
+      tooltip: {
+        trigger: 'axis'
+      },
+      legend: {
+        data:['api调用次数']
+      },
+      grid: {
+        left: '0%',
+        right: '3%',
+        bottom: '3%',
+        containLabel: true
+      },
+      toolbox: {
+        feature: {
+        }
+      },
+      xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data : Xdata,
+        name: '',
+      },
+      yAxis: {
+        type: 'value'
+      },
+      series: [
+        {
+          name:'api调用次数',
+          type:'line',
+          stack: '',
+          data:xd,
+          areaStyle: {normal: {}}
+        },
+      ]
+    };
+    sessionChart.setOption(option);
+  }
+
+
+  //当浏览器大小变化时
+  $(window).resize(function () {
+    initchart();
+    sessioncharts();
+    apicharts();
+  });
+</script>
+
+
 <script type="text/javascript" src="js/zero/ZeroClipboard.js"></script>
 <script type="text/javascript">
-
   if(window.clipboardData){
     //支持IE
     var restapi = document.getElementById("restapi");
     restapi.onclick = function(){
-      alert(restapi.innerHTML);
       window.clipboardData.setData('text',restapi.innerHTML);
+      showtoast('复制成功');
     }
 
     var secretkey = document.getElementById("secretkey");
     secretkey.onclick = function(){
-      alert(secretkey.innerHTML);
       window.clipboardData.setData('text',secretkey.innerHTML);
+      showtoast('复制成功');
     }
 
     var certid = document.getElementById("certid");
     certid.onclick = function(){
-      alert("复制成功"+ args.text);
       window.clipboardData.setData('text',certid.innerHTML);
+      showtoast('复制成功');
     }
 
 
   }else{
-    var restapi = new ZeroClipboard( document.getElementById("restapi"), {
-      moviePath: "js/zero/ZeroClipboard.swf"
-    } );
-    var secrekey = new ZeroClipboard( document.getElementById("secretkey"), {
-      moviePath: "js/zero/ZeroClipboard.swf"
-    } );
-    var certid = new ZeroClipboard( document.getElementById("certid"), {
-      moviePath: "js/zero/ZeroClipboard.swf"
-    } );
 
+   var restapi = new ZeroClipboard( document.getElementById("copyapi"), {
+      moviePath: "js/zero/ZeroClipboard.swf"
+    } );
+    var secrekey = new ZeroClipboard( document.getElementById("copysecrekey"), {
+      moviePath: "js/zero/ZeroClipboard.swf"
+    } );
+    var certid = new ZeroClipboard( document.getElementById("copycertid"), {
+      moviePath: "js/zero/ZeroClipboard.swf"
+    } );
     restapi.on( 'complete', function(client, args) {
       showtoast('复制成功');
     } );
+
 
   }
 
@@ -353,8 +767,12 @@
 
 
 </script>
+<script type="text/javascript" src='./js/bootstrap-datepicker/js/bootstrap-datepicker.js'> </script>
+<script type="text/javascript" src='./js/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js'> </script>
+<script src="js/index/index.js" ></script>
+  <script>
 
-
+  </script>
 
 
 </body>

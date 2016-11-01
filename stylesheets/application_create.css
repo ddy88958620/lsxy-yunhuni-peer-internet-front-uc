@@ -36,20 +36,24 @@
   width: 100%;
 }
 /* line 41, ../sass/application_create.scss */
+.application_create .none {
+  display: none;
+}
+/* line 45, ../sass/application_create.scss */
 .application_create .ml-36 {
   margin-left: 36px;
 }
-/* line 44, ../sass/application_create.scss */
+/* line 48, ../sass/application_create.scss */
 .application_create .min-height20 {
   min-height: 20px !important;
 }
-/* line 47, ../sass/application_create.scss */
+/* line 51, ../sass/application_create.scss */
 .application_create .app-tips {
   padding: 10px;
   color: #676767;
   background-color: #EAEDF1;
 }
-/* line 52, ../sass/application_create.scss */
+/* line 56, ../sass/application_create.scss */
 .application_create .border-bottom {
   border-bottom: 1px solid #eee;
 }

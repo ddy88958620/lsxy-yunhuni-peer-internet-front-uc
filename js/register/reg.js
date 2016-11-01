@@ -1,6 +1,7 @@
 var countdown = 60;
 
 $('#modal-hidden').click(function(){
+    countdown=0;
     $('#shadow-bg').fadeOut();
     $('#modal-mobile').fadeOut();
 });
