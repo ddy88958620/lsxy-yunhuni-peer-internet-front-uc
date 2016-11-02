@@ -69,7 +69,7 @@
                                     </header>
                                     <div class="panel-body clearfix border-top-none remove-padding">
                                         <div class="row m-l-none m-r-none bg-light lter">
-                                            <div class="col-md-2 padder-v fix-padding width-twenty-percent" >
+                                            <div class="col-md-2 padder-v fix-padding" >
                                                 <div class="warpbox">
                                                     <div class="">
                                                         <i class="icon iconfont icon-oc-wallet bigicon"></i>
@@ -80,7 +80,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-2 padder-v fix-padding width-twenty-percent">
+                                            <div class="col-md-2 padder-v fix-padding ">
                                                 <div class="warpbox">
                                                     <div class="">
                                                         <i class="icon iconfont icon-oc-msg1 bigicon"></i>
@@ -91,7 +91,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-2 padder-v fix-padding width-twenty-percent" >
+                                            <div class="col-md-2 padder-v fix-padding " >
                                                 <div class="warpbox">
                                                     <div class="">
                                                         <i class="icon iconfont icon-oc-mobile bigicon"></i>
@@ -102,7 +102,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-2 padder-v fix-padding width-twenty-percent">
+                                            <div class="col-md-2 padder-v fix-padding ">
                                                 <div class="warpbox">
                                                     <div class="">
                                                         <i class="icon iconfont icon-oc-talktime bigicon"></i>
@@ -113,7 +113,18 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-2 padder-v fix-padding width-twenty-percent" >
+                                            <div class="col-md-2 padder-v fix-padding ">
+                                                <div class="warpbox">
+                                                    <div class="">
+                                                        <i class="icon iconfont icon-oc-talktime bigicon"></i>
+                                                        <span class="green money datatoday">0</span>
+                                                    </div>
+                                                    <div class="middle-font-size middle-font-color" >
+                                                        平均通话时长（秒）
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 padder-v fix-padding " >
                                                 <div class="warpbox remove-border">
                                                     <div class="">
                                                         <i class="icon iconfont icon-oc-callrate bigicon"></i>
@@ -299,6 +310,9 @@
         var type = $('input[name="calltime"]:checked').val();
         var app = $('#defaultapp').val();
         var starttime = initialStartTime(type);
+
+      console.log(starttime);
+
         var param  = {starttime:starttime,type:type,app:app};
         if(type=='year'){
            var xd  = meetDataYear();

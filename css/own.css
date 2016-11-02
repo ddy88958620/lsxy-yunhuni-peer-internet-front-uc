@@ -258,12 +258,13 @@ b-green{
     border-top-left-radius:2px;
     z-index:999;
     height:40px;
+    width: 16px;
     line-height:40px;
 }
 .head-box a{
     font-size:larger;
     color:#31B5A0;
-    padding:0px 5px;
+
 }
 .nav_green {
 	border-bottom:1px solid rgba(255, 255, 255, 0.05);
