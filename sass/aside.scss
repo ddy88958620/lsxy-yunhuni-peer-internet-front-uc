@@ -35,9 +35,15 @@ aside {
     line-height: 37px;
   }
 }
+.list>li>a i{
+  color:#FFF;
+}
 
 .list li .nav>li>a {
     font-size: 1.2rem;
+  i{
+    color:#FFF;
+  }
 }
 
 .list {

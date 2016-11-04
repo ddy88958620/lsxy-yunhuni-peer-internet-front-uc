@@ -2622,6 +2622,9 @@ display:none;
 	padding-bottom:10px;
 	line-height:20px;
 }
+.navbar-nav>li>a i{
+	color: #FFF;
+}
 @media (max-width: 767px) {
 .navbar-nav .open .dropdown-menu {
 position:static;
