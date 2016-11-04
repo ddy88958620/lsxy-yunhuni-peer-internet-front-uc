@@ -359,3 +359,13 @@
 .icon-menu-up:before {
   content: "\e66b";
 }
+
+/* line 157, ../sass/font.scss */
+.icon-menu-kefu:before {
+  content: "\e66c";
+}
+
+/* line 159, ../sass/font.scss */
+.icon-menu-index:before {
+  content: "\e66d";
+}
