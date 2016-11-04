@@ -1,0 +1,1 @@
+$(function(){var t=$(".include");jQuery.each(t,function(){var t="layout/"+$(this).data("include")+".html";$(this).load(t,function(){var t=document.createElement("script");t.type="text/javascript",t.src="js/yunhuni.js",$("body").append(t)})})});
