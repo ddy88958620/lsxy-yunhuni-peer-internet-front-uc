@@ -56,7 +56,7 @@
                                         </li>
                                         <li>
                                             <div class="aside-li-a">
-                                                <a href="statistics_find_call.html">呼叫中心</a>
+                                                <a href="statistics_find_call.html">云呼叫中心</a>
                                             </div>
                                         </li>
                                     </ul>
@@ -108,6 +108,7 @@
                                                 <th>通话状态</th>
                                                 <th>时长（秒）</th>
                                                 <th>消费金额（元）</th>
+                                                <th>操作</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -118,6 +119,7 @@
                                                 <td>正常</td>
                                                 <td>1'23"</td>
                                                 <td>0.01</td>
+                                                <td><a id="downVoid1" onclick="downVoid(1)" data-statu="2">正在下载<span class="download"></span></a></td>
                                             </tr>
                                             <tr>
                                                 <td>2015-07-12</td>
@@ -126,6 +128,7 @@
                                                 <td>正常</td>
                                                 <td>1'23"</td>
                                                 <td>0.01</td>
+                                                <td><a id="downVoid2" onclick="downVoid(2)" data-statu="1">录音下载</a></td>
                                             </tr>
                                             <tr>
                                                 <td>2015-07-12</td>
@@ -134,6 +137,7 @@
                                                 <td>正常</td>
                                                 <td>1'23"</td>
                                                 <td>0.01</td>
+                                                <td><a id="downVoid3" onclick="downVoid(3)" data-statu="3">下载失败,请重试</a></td>
                                             </tr>
                                             <tr>
                                                 <td>2015-07-12</td>
@@ -142,6 +146,7 @@
                                                 <td>正常</td>
                                                 <td>1'23"</td>
                                                 <td>0.01</td>
+                                                <td><a id="downVoid4" onclick="downVoid(4)">录音下载</a></td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -158,7 +163,8 @@
                                                 <th>被叫</th>
                                                 <th>通话状态</th>
                                                 <th>时长（秒）</th>
-                                                <th>消费金额（元）</th>
+                                                <th>消费金额</th>
+                                                <th>操作</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -169,6 +175,7 @@
                                                 <td>正常</td>
                                                 <td>1'23"</td>
                                                 <td>0.01</td>
+                                                <td><a id="downVoid1" onclick="downVoid(1)" data-statu="2">正在下载<span class="download"></span></a></td>
                                             </tr>
                                             <tr>
                                                 <td>2015-07-12</td>
@@ -177,6 +184,7 @@
                                                 <td>正常</td>
                                                 <td>1'23"</td>
                                                 <td>0.01</td>
+                                                <td><a id="downVoid2" onclick="downVoid(2)" data-statu="1">录音下载</a></td>
                                             </tr>
                                             <tr>
                                                 <td>2015-07-12</td>
@@ -185,6 +193,7 @@
                                                 <td>正常</td>
                                                 <td>1'23"</td>
                                                 <td>0.01</td>
+                                                <td><a id="downVoid3" onclick="downVoid(3)" data-statu="3">下载失败,请重试</a></td>
                                             </tr>
                                             <tr>
                                                 <td>2015-07-12</td>
@@ -193,6 +202,7 @@
                                                 <td>正常</td>
                                                 <td>1'23"</td>
                                                 <td>0.01</td>
+                                                <td><a id="downVoid4" onclick="downVoid(4)">录音下载</a></td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -249,10 +259,20 @@
 <script src="js/jquery.cookie.min.js"></script>
 
 <script>
-
-
+    function downVoid(id) {
+        var tag  = $('#downVoid'+id);
+        var ststus = tag.attr('data-statu');
+        if(ststus==1){
+            //查询录音是否下载到oss,是下载到本地，否下载到oss显示 正在下载 ,下载oss失败，显示重试
+            tag.html('正在下载<span class="download"></span>').attr("data-statu","2");
+            window.open('update.sh');
+        }else if(ststus==2){
+            tag.html('下载失败,请重试').attr("data-statu","3");
+        }else{
+            tag.html('录音下载').attr("data-statu","1");
+        }
+    }
 </script>
-
 
 <!--must-->
 <script type="text/javascript" src='./js/statistics/find.js'> </script>

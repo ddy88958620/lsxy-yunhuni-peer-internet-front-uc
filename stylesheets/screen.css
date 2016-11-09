@@ -1393,6 +1393,17 @@ header {
   float: left;
 }
 
+/* line 270, ../sass/common.scss */
+.download {
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  vertical-align: bottom;
+  background-size: cover;
+  display: inline-block;
+  background-image: url(../images/loading.gif);
+}
+
 /* line 1, ../sass/admin-index.scss */
 .yhn-description {
   margin-top: 10px;
@@ -2597,6 +2608,11 @@ a {
     height: 100%;
   }
 }
+/* line 195, ../sass/application_detail.scss */
+.max-width-120 {
+  max-width: 120px;
+}
+
 /* line 1, ../sass/custom.scss */
 .height-220 {
   height: 220px !important;

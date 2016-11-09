@@ -350,3 +350,14 @@
 .float-left {
   float: left;
 }
+
+/* line 270, ../sass/common.scss */
+.download {
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  vertical-align: bottom;
+  background-size: cover;
+  display: inline-block;
+  background-image: url(../images/loading.gif);
+}
