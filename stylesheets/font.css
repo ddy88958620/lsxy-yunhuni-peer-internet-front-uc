@@ -368,5 +368,30 @@
 
 /* line 160, ../sass/font.scss */
 .icon-menu-index:before {
-  content: "\e66d";
+  content: "\e66e";
+}
+
+/* line 162, ../sass/font.scss */
+.icon-oc-exhale:before {
+  content: "\e66f";
+}
+
+/* line 164, ../sass/font.scss */
+.icon-oc-incoming:before {
+  content: "\e670";
+}
+
+/* line 166, ../sass/font.scss */
+.icon-oc-wastage:before {
+  content: "\e671";
+}
+
+/* line 168, ../sass/font.scss */
+.icon-oc-transfer:before {
+  content: "\e672";
+}
+
+/* line 170, ../sass/font.scss */
+.icon-oc-lineup:before {
+  content: "\e673";
 }
