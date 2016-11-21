@@ -1,1 +1,0 @@
-$(function(){$.fn.datepicker.defaults.autoclose=!0,$(".datepicker").datepicker({language:"zh-CN",setDate:"10/2015",format:"yyyy-mm",viewMode:"months",minViewMode:"months",todayHighlight:!0,todayBtn:!0,autoclose:!0}).on("changeDate",function(e){$(this).datepicker("hide")})});
