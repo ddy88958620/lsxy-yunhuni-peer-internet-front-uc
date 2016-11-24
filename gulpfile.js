@@ -16,8 +16,8 @@ gulp.task('default', function() {
     .pipe(gulp.dest('./dist/js'));
 
   //单独css文件
-  gulp.src('js/bootstrap-datepicker/css/**/*')
-    .pipe(gulp.dest('./dist/js/bootstrap-datepicker/css'));
+/*  gulp.src('js/bootstrap-datepicker/css/!**!/!*')
+    .pipe(gulp.dest('./dist/js/bootstrap-datepicker/css'));*/
 
   //图片
   gulp.src('images/**/*')
