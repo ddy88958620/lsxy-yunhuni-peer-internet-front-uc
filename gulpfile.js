@@ -10,8 +10,6 @@ gulp.task('default', function() {
   gulp.src('bower_components/**/*')
     .pipe(gulp.dest('./dist/bower_components'));
 
-
-
   //所有js文件
   gulp.src('js/**/*.js')
     .pipe(uglify())
@@ -26,17 +24,17 @@ gulp.task('default', function() {
     .pipe(gulp.dest('./dist/images'));
 
   //css
-  gulp.src('css/!**!/!*')
+  gulp.src('css/**/*')
     .pipe(cssmin())
     .pipe(gulp.dest('./dist/css'));
 
   //压缩样式
-  gulp.src('stylesheets/!**!/!*.css')
+  gulp.src('stylesheets/**/*.css')
     .pipe(cssmin())
     .pipe(gulp.dest('./dist/stylesheets'));
 
   //字体
-  gulp.src('fonts/!**/!*')
+  gulp.src('fonts/**/*')
     .pipe(gulp.dest('./dist/fonts'));
 
 });
