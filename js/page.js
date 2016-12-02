@@ -75,6 +75,7 @@ function Page(count,listRow,showPageCount,divId,getData){
             }
             html +='</ul>';
             $('#playpage').show();
+            $('#datatablepage').show();
         }else{
             html +='<ul class="my-page pagination" >';
             //拼接每一个分页数组按钮，并为其设置id
