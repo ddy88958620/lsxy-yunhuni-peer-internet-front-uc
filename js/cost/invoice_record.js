@@ -40,7 +40,7 @@ function condition() {
             }
             break;
         case '3':
-            if(currentprice<1000){
+            if(currentprice<100){
                 // tips('企业增值税专用发票(1000元起),才能开具');
                 return false;
             }
