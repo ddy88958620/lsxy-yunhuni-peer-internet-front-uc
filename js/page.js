@@ -39,7 +39,11 @@ function Page(count,listRow,showPageCount,divId,getData){
         */
         //一页范围内  不显示
         //获取最大页数
-        var total = parseInt(o.count/o.listRow)+1;
+        var total = parseInt(o.count/o.listRow);
+        if(o.count % o.listRow > 0){
+            total += 1;
+        }
+        console.info("total:"+total+" ;count:"+o.count+" ;listRow:"+o.listRow);
         //第一页
         o.first = o.nowPage;
         //最后一页
@@ -90,7 +94,10 @@ function Page(count,listRow,showPageCount,divId,getData){
          */
         //一页范围内  不显示
         //获取最大页数
-        var total = parseInt(o.count/o.listRow)+1;
+        var total = parseInt(o.count/o.listRow);
+        if(o.count % o.listRow > 0){
+            total += 1;
+        }
         //是否需要修改最后一页：如果选中页数超过显示页数的中间页数，则修改最后一页
         //中间页数操作
         var middle = parseInt(o.showPageCount/2);
