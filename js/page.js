@@ -60,7 +60,7 @@ function Page(count,listRow,showPageCount,divId,getData){
         }
         html += '</ul>';
         html += '</nav>';
-        console.info("id="+'#'+o.obj+" ;first="+o.first+" ;last="+o.last+" ;total="+total+" ;count"+o.count);
+        // console.info("id="+'#'+o.obj+" ;first="+o.first+" ;last="+o.last+" ;total="+total+" ;count"+o.count);
         //设置分页内容和是否显示和隐藏
         $('#'+o.obj).html(html);
         //设置被选中
@@ -118,7 +118,7 @@ function Page(count,listRow,showPageCount,divId,getData){
         }
         html += '</ul>';
         html += '</nav>';
-        console.info("id="+'#'+o.obj+" ;first="+o.first+" ;last="+o.last+" ;total="+total+" ;count"+o.count);
+        // console.info("id="+'#'+o.obj+" ;first="+o.first+" ;last="+o.last+" ;total="+total+" ;count"+o.count);
         //设置分页内容和是否显示和隐藏
         $('#'+o.obj).html(html);
         //设置被选中
