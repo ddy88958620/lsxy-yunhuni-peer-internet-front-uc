@@ -122,7 +122,6 @@ function Page(count,listRow,showPageCount,divId,getData){
         //设置分页内容和是否显示和隐藏
         $('#'+o.obj).html(html);
         //设置被选中
-        page1datatablepage
         $("#page"+o.nowPage+o.obj).parent().addClass('active');
         //设置分页内容是否显示或隐藏
         if(total > 1){
