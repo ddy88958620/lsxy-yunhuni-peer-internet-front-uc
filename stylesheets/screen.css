@@ -1006,6 +1006,41 @@ input[readonly] {
   border-bottom: 3px solid #76dcd8;
 }
 
+/* line 371, ../sass/index.scss */
+.tooltip {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: left;
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  white-space: normal;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  line-break: auto;
+}
+
+/* line 394, ../sass/index.scss */
+.tooltip-inner {
+  max-width: 200px;
+  padding: 5px 8px;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+  border-radius: 4px;
+}
+
 /* line 3, ../sass/banner.scss */
 .bg-blue {
   background-color: #2E97CB;
