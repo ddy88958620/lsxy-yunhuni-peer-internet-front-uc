@@ -86,7 +86,7 @@ var ajaxsubmit = function (url, param, fun, type) {
   return $.ajax({
     type: isNullStr(type) ? "post" : type,
     url: url,
-    timeout: 60 * 1000,
+    timeout: 60 * 1000 * 5,
     data: param,
     cache: false,
     dataType: "json"
@@ -117,7 +117,7 @@ var ajaxsync = function (url, param, fun, type) {
   return $.ajax({
     type: isNullStr(type) ? "post" : type,
     url: url,
-    timeout: 60 * 1000,
+    timeout: 60 * 1000 * 5,
     data: param,
     cache: false,
     dataType: "json",
